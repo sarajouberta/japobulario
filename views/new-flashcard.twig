@@ -1,0 +1,40 @@
+<!-- Formulario para añadir flashcards desde la web: -->
+{% extends "layout.twig" %}
+
+{% block body %}
+    <h1>Añadir nueva Flashcard</h1>
+    <form action="/flashcards/new" method="POST">
+        <p>
+            <label>Kanji:<br>
+                <input type="text" name="kanji" required>
+            </label>
+        </p>
+        <p>
+            <label>Lectura:<br>
+                <input type="text" name="reading" required>
+            </label>
+        </p>
+        <p>
+            <label>Categoría:<br>
+                <input type="text" name="category" required>
+                <!-- CAMBIAR A SELECT CUANDO SEPA LAS CATEGORÍAS-->
+            </label>
+        </p>
+        <p>
+            <label>Significado:<br>
+                <input type="text" name="meaning" required>
+            </label>
+        </p>
+        <p>
+            <label>Nivel:<br>
+                <select name="level" required>
+                    <option value="N5">N5</option>
+                    <option value="N4">N4</option>
+                </select>
+            </label>
+        </p>
+        <button type="submit">Guardar Flashcard</button>
+    </form>
+{% endblock %}
+
+
