@@ -4,8 +4,19 @@ var router = express.Router();
 var Flashcard = require('../models/Flashcard');
 
 /* GET flashcards listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+// esto se traduce en GET /flashcards/, hasta cambio de rutas
+router.get('/', async(req, res) => {
+  //res.send('respond with a resource');
+  //CUIDADO CON REDIRECT: BUCLE INFINITO PORQUE EN APP TENGO: app.use('/japobulario/flashcards', flashcardsRouter);
+  //res.redirect('/japobulario/flashcards');
+
+  //mejor mostrar directamente:
+  try {
+    const flashcards = await Flashcard.find().sort({ createdAt: -1 });
+    res.render('flashcards', { flashcards });
+  } catch (error) {
+    res.status(500).send('Error al obtener las flashcards');
+  }
 });
 
 
@@ -23,6 +34,16 @@ router.post('/new', async (req, res, next) => {
     res.redirect('/flashcards'); // Redirige al listado de flashcards después de guardar
   } catch (error) {
     next(error);
+  }
+});
+
+// Ruta para listar todas las flashcards
+router.get('/flashcards', async (req, res) => {
+  try {
+    const flashcards = await Flashcard.find().sort({ createdAt: -1 });
+    res.render('flashcards', { flashcards });
+  } catch (error) {
+    res.status(500).send('Error al obtener las flashcards');
   }
 });
 

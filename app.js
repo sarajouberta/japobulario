@@ -12,6 +12,10 @@ var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/flashcards');
 var flashcardsRouter = require('./routes/flashcards');
 
+var japobularioRouter = require('./routes/japobulario');
+
+/*
+MÑETODO connect DEPRECATED: simplificado justo debajo
 
 mongoose.connect('mongodb://localhost/japobulario', {
   useNewUrlParser: true,
@@ -19,7 +23,11 @@ mongoose.connect('mongodb://localhost/japobulario', {
 })
     .then(() => console.log('MongoDB conectado'))
     .catch(err => console.error('Error de conexión a MongoDB:', err));
+*/
 
+mongoose.connect('mongodb://localhost/japobulario')
+    .then(() => console.log('MongoDB conectado'))
+    .catch(err => console.error('Error de conexión a MongoDB:', err));
 
 
 var app = express();
@@ -41,7 +49,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-app.use('/flashcards', flashcardsRouter);
+app.use('/japobulario', japobularioRouter);  //enrutador para las opciones de estudios, entre ellas la que llame a flashcards?
+app.use('/japobulario/flashcards', flashcardsRouter);
 
 
 
