@@ -13,9 +13,10 @@ var indexRouter = require('./routes/index');
 var flashcardsRouter = require('./routes/flashcards');
 
 var japobularioRouter = require('./routes/japobulario');
+var studyRouter = require('./routes/study');
 
 /*
-MÑETODO connect DEPRECATED: simplificado justo debajo
+MÉTOD connect DEPRECATED: simplificado justo debajo
 
 mongoose.connect('mongodb://localhost/japobulario', {
   useNewUrlParser: true,
@@ -49,8 +50,11 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-app.use('/japobulario', japobularioRouter);  //enrutador para las opciones de estudios, entre ellas la que llame a flashcards?
+app.use('/japobulario', japobularioRouter);  //enrutador para las opciones de la aplicación, entre ellas la que llame a flashcards
+
+//esto quiere decir que todas las rutas definidas en el router se "pegan" después de /japobulario/flashcards:
 app.use('/japobulario/flashcards', flashcardsRouter);
+app.use('/japobulario/study', studyRouter);
 
 
 

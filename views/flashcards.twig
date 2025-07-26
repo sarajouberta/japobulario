@@ -16,13 +16,37 @@
                 </li>
                 <hr> -->
                 <article class="flashcard">
-                    <div class="kanji-box">
-                        <h2>{{ card.kanji }}</h2>
-                    </div>
-                    <p><strong>Lectura:</strong> {{ card.reading }}</p>
-                    <p><strong>Significado:</strong> {{ card.meaning }}</p>
-                    <p><strong>Categoría:</strong> {{ card.category }}</p>
-                    <p><strong>Nivel:</strong> {{ card.level }}</p>
+                    <!--¡¡ refactorizar !!-->
+                    {% if mode == 'kanji' %}
+                        <div class="kanji-box">
+                            <h2>{{ card.kanji }}</h2>
+                        </div>
+                        <p><strong>Lectura kun:</strong> {{ card.kunReading }}</p>
+                        <p><strong>Lectura on:</strong> {{ card.onReading }}</p>
+                        <p><strong>Significado:</strong> {{ card.meaning }}</p>
+                        <p><strong>Nivel:</strong> {{ card.level }}</p>
+
+                    {% elseif mode == 'vocabulario' %}
+                        <div class="kanji-box">
+                            {% if card.mainReading == 'kun' %}
+                                <h2>{{ card.kunReading }}</h2>
+                            {%  else %}
+                                <h2>{{ card.onReading }}</h2>
+                            {% endif %}
+                        </div>
+                        <p><strong>Significado:</strong> {{ card.meaning }}</p>
+                        <p><strong>Nivel:</strong> {{ card.level }}</p>
+
+                    {% else %}
+                        <div class="kanji-box">
+                            <h2>{{ card.kanji }}</h2>
+                        </div>
+                        <p><strong>Lectura kun:</strong> {{ card.kunReading }}</p>
+                        <p><strong>Lectura on:</strong> {{ card.onReading }}</p>
+                        <p><strong>Significado:</strong> {{ card.meaning }}</p>
+                        <p><strong>Nivel:</strong> {{ card.level }}</p>
+                        <p><strong>Categoría:</strong> {{ card.category }}</p>
+                    {% endif %}
                 </article>
             {% endfor %}
         </ul>
@@ -30,6 +54,6 @@
         <p>No hay flashcards aún.</p>
     {% endif %}
 
-    <p><a href="/japobulario/flashcards/new">Añadir nueva flashcard</a></p>
+        <p><a href="/japobulario/flashcards/new">Añadir nueva flashcard</a></p>
 
-{% endblock %}
+    {% endblock %}

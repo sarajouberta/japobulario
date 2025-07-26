@@ -3,26 +3,39 @@
 
 {% block body %}
     <h1>Añadir nueva Flashcard</h1>
-    <form action="/flashcards/new" method="POST">
+    <form action="/japobulario/flashcards/new" method="POST">
         <p>
             <label>Kanji:<br>
                 <input type="text" name="kanji" required>
             </label>
         </p>
         <p>
-            <label>Lectura:<br>
-                <input type="text" name="reading" required>
+            <label>Lectura japonesa (訓読み):<br>
+                <input type="text" name="kunReading" required>
+            </label>
+        </p>
+        <p>
+            <label>Lectura china (音読み):<br>
+                <input type="text" name="onReading" required>
+            </label>
+        </p>
+        <p>
+            <label>Lectura principal (estudio de vocabulario):<br>
+                <select name="mainReading" required>
+                    <option value="kunReading">Kun</option>
+                    <option value="onReading">On</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>Significado:<br>
+                <input type="text" name="meaning" required>
             </label>
         </p>
         <p>
             <label>Categoría:<br>
                 <input type="text" name="category" required>
                 <!-- CAMBIAR A SELECT CUANDO SEPA LAS CATEGORÍAS-->
-            </label>
-        </p>
-        <p>
-            <label>Significado:<br>
-                <input type="text" name="meaning" required>
             </label>
         </p>
         <p>
