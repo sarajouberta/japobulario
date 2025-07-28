@@ -13,7 +13,9 @@ router.get('/', (req, res) => {
 router.get('/kanji', async (req, res) => {
     try {
         const flashcards = await Flashcard.find();  //Flashcard.find() <- métod de Mongoose
-        res.render('flashcards.twig', { flashcards, mode: 'kanji' });
+        //res.render('flashcards.twig', { flashcards, mode: 'kanji' });
+        res.render('study-kanji.twig', { flashcards, mode: 'kanji' });
+
     } catch (error) {
         res.status(500).send('Error al cargar los kanjis');
     }

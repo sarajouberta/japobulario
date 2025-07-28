@@ -9,13 +9,15 @@ const mongoose = require('mongoose');
 
 //modelo de datos de cada flashcard:
 const flashcardSchema = new mongoose.Schema({
-    kanji: { type: String, required: true },
-    kunReading: { type: String, required: true },
-    onReading: { type: String, required: true },
-    mainReading: { type: String, required: true },
+    type: { type: String, enum: ['kanji', 'vocabulary'], required: true },
+    kanji: { type: String},
+    word: { type: String},
+    kunReading: { type: String},  //no required: para fichas kanji solo
+    onReading: { type: String},
+    //mainReading: { type: String, required: true },
     meaning: { type: String, required: true },
-    category: { type: String, required: true },
-    level: { type: String, required: true }
+    category: { type: String},
+    level: { type: String, enum: ['N5', 'N4'], required: true },
 });
 
 /* Para crear modelo representado de mongoose basado en el schema (representando la "tabla" de flashcards en MongoDB

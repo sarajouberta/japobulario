@@ -28,13 +28,28 @@ router.get('/new', (req, res) => {
 // Procesar formulario y guardar flashcard (equivale a POST /japobulario/flashcards/new)
 router.post('/new', async (req, res, next) => {
   try {
-    const { kanji, kunReading, onReading, mainReading, meaning, category, level } = req.body;
-    const flashcard = new Flashcard( { kanji, kunReading, onReading, mainReading, meaning, category, level });
+    const { type, kanji, kunReading, onReading, word, meaning, category, level } = req.body;
+    // Validaciones según tipo
+    if (type === 'kanji') {
+      if (!kanji || !kunReading || !onReading) {
+        return res.status(400).send('Para una ficha de kanji, debes rellenar Kanji,訓読み y 音読み.');
+      }
+    } else if (type === 'vocabulario') {
+      if (!word) {
+        return res.status(400).send('Para una ficha de vocabulario, debes proporcionar una palabra japonesa.');
+      }
+    } else {
+      return res.status(400).send('Tipo de flashcard no válido.');
+    }
+  //MODIFICACIÓN: CAMPOS VACÍOS SEGÚN TIPO:
+    const flashcard = new Flashcard( { type, kanji: kanji || null, kunReading: kunReading || null, onReading: onReading || null, word: word || null, meaning, category: category || '', level});
     await flashcard.save();
     res.redirect('/japobulario/flashcards'); // Redirige al listado de flashcards después de guardar: ¡CUIDADO! sale del prefijo /japobulario si no se indica en el redirect
   } catch (error) {
     next(error);
   }
+
+
 });
 
 // Ruta para listar todas las flashcards (equivale a GET /japobulario/flashcards)

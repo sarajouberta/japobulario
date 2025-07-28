@@ -5,26 +5,34 @@
     <h1>Añadir nueva Flashcard</h1>
     <form action="/japobulario/flashcards/new" method="POST">
         <p>
-            <label>Kanji:<br>
-                <input type="text" name="kanji" required>
-            </label>
-        </p>
-        <p>
-            <label>Lectura japonesa (訓読み):<br>
-                <input type="text" name="kunReading" required>
-            </label>
-        </p>
-        <p>
-            <label>Lectura china (音読み):<br>
-                <input type="text" name="onReading" required>
-            </label>
-        </p>
-        <p>
-            <label>Lectura principal (estudio de vocabulario):<br>
-                <select name="mainReading" required>
-                    <option value="kunReading">Kun</option>
-                    <option value="onReading">On</option>
+            <label>Tipo de flashcard:<br>
+                <select name="type" id="typeSelect" required>
+                    <option value="kanji">Kanji</option>
+                    <option value="vocabulary">Vocabulario</option>
                 </select>
+            </label>
+        </p>
+        <!--campos marcados con id para ejecutar el javascript que conmutará campos del formulario según el tipo:-->
+         <div id="kanjiFields">
+            <p>
+                <label>Kanji:<br>
+                    <input type="text" name="kanji">
+                </label>
+            </p>
+            <p>
+                <label>Lectura japonesa (kunyomi):<br>
+                    <input type="text" name="kunReading">
+                </label>
+            </p>
+            <p>
+                <label>Lectura china (onyomi):<br>
+                    <input type="text" name="onReading">
+                </label>
+            </p>
+        </div>
+        <p id="vocabFields">
+            <label>Palabra:<br>
+                <input type="text" name="word">
             </label>
         </p>
         <p>
@@ -34,7 +42,7 @@
         </p>
         <p>
             <label>Categoría:<br>
-                <input type="text" name="category" required>
+                <input type="text" name="category">
                 <!-- CAMBIAR A SELECT CUANDO SEPA LAS CATEGORÍAS-->
             </label>
         </p>
@@ -48,6 +56,25 @@
         </p>
         <button type="submit">Guardar Flashcard</button>
     </form>
+
+    {% block scripts %}
+        <!--script para conmutar campos del formulario según selección: -->
+        <script>
+            function toggleFields() {
+                const type = document.getElementById('typeSelect').value;
+                document.getElementById('kanjiFields').style.display = type === 'kanji' ? 'block' : 'none';
+                document.getElementById('vocabFields').style.display = type === 'vocabulary' ? 'block' : 'none';
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.getElementById('typeSelect').addEventListener('change', toggleFields);
+                toggleFields(); // Ejecuta en la carga inicial
+            });
+        </script>
+    {% endblock %}
+
 {% endblock %}
+
+
 
 
