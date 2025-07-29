@@ -5,16 +5,11 @@
     <h1> A VER CÓMO MUESTRO YO LAS FLASHCARDS XDXXD</h1>
 
     {% if flashcards.length > 0 %}
-        <ul>
+        <!--cambio ul por div para usar flexbox-->
+        <div class="flashcard-container">
             {% for card in flashcards %}
-                <!-- <li>
-                    <strong>{{ card.kanji }}</strong><br>
-                    Lectura: {{ card.reading }}<br>
-                    Significado: {{ card.meaning }}<br>
-                    Categoría: {{ card.category }}<br>
-                    Nivel: {{ card.level }}<br>
-                </li>
-                <hr> -->
+                <!-- cambio li: articles.
+                <hr> horizontal rule” (regla horizontal)-->
                 <article class="flashcard">
                     <!--¡¡ refactorizar !!-->
                     {% if mode == 'kanji' %}
@@ -49,7 +44,7 @@
                     {% endif %}
                 </article>
             {% endfor %}
-        </ul>
+        </div>
     {% else %}
         <p>No hay flashcards aún.</p>
     {% endif %}
