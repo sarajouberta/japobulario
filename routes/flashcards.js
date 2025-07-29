@@ -22,7 +22,8 @@ router.get('/', async(req, res) => {
 
 // Mostrar formulario para crear flashcard
 router.get('/new', (req, res) => {
-  res.render('new-flashcard.twig');
+  //res.render('new-flashcard.twig');
+  res.render('flashcards/new.twig');
 });
 
 // Procesar formulario y guardar flashcard (equivale a POST /japobulario/flashcards/new)
@@ -34,7 +35,7 @@ router.post('/new', async (req, res, next) => {
       if (!kanji || !kunReading || !onReading) {
         return res.status(400).send('Para una ficha de kanji, debes rellenar Kanji,訓読み y 音読み.');
       }
-    } else if (type === 'vocabulario') {
+    } else if (type === 'vocabulary') {
       if (!word) {
         return res.status(400).send('Para una ficha de vocabulario, debes proporcionar una palabra japonesa.');
       }
@@ -49,8 +50,24 @@ router.post('/new', async (req, res, next) => {
     next(error);
   }
 
-
 });
+
+/* RUTA PARA OBTENER EL FRAGMENTO CORRESPONDIENTE DEL FORMULARIO, según su tipo
+ */
+router.get('/form-fields/:type', (req, res) => {
+  const type = req.params.type;
+  //aunque no debería ser nunca erróneo, porque es un select:
+  if (!['kanji', 'vocabulary'].includes(type)) {
+    return res.status(400).send('Tipo inválido');
+  }
+  res.render(`fragments/form-${type}.twig`, {}, (err, html) => {
+    if (err) return res.status(500).send('Error al cargar campos');
+    res.send(html);
+  });
+});
+
+
+
 
 // Ruta para listar todas las flashcards (equivale a GET /japobulario/flashcards)
 router.get('/flashcards', async (req, res) => {

@@ -1,0 +1,79 @@
+<!-- TWIG BASE PARA HACER FORMULARIO DINÁMICO CON AJAX -->
+{% extends "../layout.twig" %}
+
+{% block body %}
+    <h1>Añadir nueva Flashcard</h1>
+
+    <form action="/japobulario/flashcards/new" method="POST">
+        <p>
+            <label>Tipo de flashcard:<br>
+                <select name="type" id="typeSelect" required>
+                    <option value="kanji">Kanji</option>
+                    <option value="vocabulary">Vocabulario</option>
+                </select>
+            </label>
+        </p>
+
+        <!-- Aquí se insertarán dinámicamente los campos según el tipo -->
+        <div id="dynamicFields"></div>
+
+        <p>
+            <label>Significado:<br>
+                <input type="text" name="meaning" required>
+            </label>
+        </p>
+        <p>
+            <label>Categoría:<br>
+                <input type="text" name="category">
+            </label>
+        </p>
+        <p>
+            <label>Nivel:<br>
+                <select name="level" required>
+                    <option value="N5">N5</option>
+                    <option value="N4">N4</option>
+                </select>
+            </label>
+        </p>
+        <button type="submit">Guardar Flashcard</button>
+    </form>
+
+{% endblock %}
+
+{% block scripts %}
+    <!--nuevo script para AJAX-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const typeSelect = document.getElementById('typeSelect');
+            const dynamicFields = document.getElementById('dynamicFields');
+
+            async function loadFormFields(type) {
+                <!--imp: LOG EN CONSOLA DEL NAVEGADOR, NO DEL IDE (¡¡¡¡¡¡está dentro de script!!!!!!)-->
+                console.log('Cargando campos para tipo:', type);
+
+                //para deshabilitar botón enviar hasta que se complete la carga del formulario:
+                const submitBtn = document.querySelector('button[type="submit"]');
+
+                try {
+                    const response = await fetch(`/japobulario/flashcards/form-fields/${type}`);
+                    if (!response.ok) throw new Error('Error al cargar fragmento');
+                    const html = await response.text();
+                    dynamicFields.innerHTML = html;
+                } catch (err) {
+                    console.error('Error al cargar campos del formulario:', err);
+                    dynamicFields.innerHTML = '<p style="color:red;">No se pudo cargar el formulario.</p>';
+                } finally {
+                    submitBtn.disabled = false;
+                }
+            }
+            // Carga inicial:
+            loadFormFields(typeSelect.value);
+
+            // Al cambiar el tipo de flashcard
+            typeSelect.addEventListener('change', () => {
+                loadFormFields(typeSelect.value);
+            });
+        });
+    </script>
+
+{% endblock %}
