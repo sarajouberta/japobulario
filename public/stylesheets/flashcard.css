@@ -1,0 +1,55 @@
+/*CSS PARA EL FUNCIONAMIENTO DE LAS FLASHCARDS EN MODO ESTUDIO */
+
+.flashcard-container {
+    perspective: 1000px; /* simula una cámara 3D desde donde "miramos" la carta. Si no, el giro parecería plano o ni visible */
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.flashcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*para indicar que su contenido debe tratarse como un objeto 3D y que cualquier transformación se animará en 0.6 seg: */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+
+    cursor: pointer;
+}
+
+.flashcard.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  /* cuando una cara está "detrás", no se ve*/
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #f7f7f7;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    font-size: 1em;
+    flex-direction: column;
+    padding: 15px;
+    text-align: left;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1em;
+}

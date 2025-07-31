@@ -1,0 +1,10 @@
+vocabulary;あう;encontrarse/reunirse;verbo;N5
+vocabulary;青い/あおい;azul;adjetivo;N5
+vocabulary;赤い/あかい;rojo;adjetivo;N5
+vocabulary;/あかるい;brillante/claro;adjetivo;N5
+vocabulary;秋/あき;otoño;sustantivo;N5
+vocabulary;あく;abrirse;verbo;N5
+vocabulary;あける;abrir (algo);verbo;N5
+vocabulary;あげる;dar, levantar;verbo;N5
+vocabulary;朝/あさ;mañana (morning);sustantivo;N5
+vocabulary;あさごはん;desayuno;sustantivo;N5

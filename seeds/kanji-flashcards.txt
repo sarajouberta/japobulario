@@ -29,5 +29,7 @@ kanji;九;ここの-つ;きゅう/く;nueve;número;N5
 kanji;十;とう;じゅう;diez;número;N5
 kanji;百;;ひゃく/-びゃく/-ぴゃく;diez;número;N5
 kanji;千;-;せん/-ぜん;mil;número;N5
-kanji;万;-;マン/バン;diezmil/all/cada;número;N5
+kanji;万;-;マン/バン;10 000/all/cada;número;N5
 kanji;年;とし;ねん;año/edad;sustantivo;N5
+vocabulary;明るい;あかるい;brillante/claro;adjetivo;N5
+
