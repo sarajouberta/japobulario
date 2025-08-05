@@ -16,8 +16,8 @@ mongoose.connect('mongodb://localhost:27017/japobulario', {   //conexión con la
 });
 
 async function importAllFlashcards() {
-    await importKanjiFlashcards();
-    //await importVocabFlashcards();
+    //await importKanjiFlashcards();
+    await importVocabFlashcards();
     mongoose.connection.close();
 }
 

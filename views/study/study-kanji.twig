@@ -28,48 +28,56 @@
 
 {% block scripts %}
     <script>
-        //todas las flashcards como un array JS:
-        const flashcards = {{ flashcards|json_encode|raw }};
-        let currentIndex = 0;
-        const total = flashcards.length;
+        //se envuelve para controlar que no se ejecute hasta que se cargue el DOM:
+        document.addEventListener("DOMContentLoaded", () => {
+            //todas las flashcards como un array JS:
+            const flashcards = {{ flashcards|json_encode|raw }};
+            let currentIndex = 0;
+            const total = flashcards.length;
 
-        const front = document.getElementById('flashcard-front');
-        const back = document.getElementById('flashcard-back');
-        const counter = document.getElementById('counter');
-        const flashcard = document.getElementById('flashcard');
+            const front = document.getElementById('flashcard-front');
+            const back = document.getElementById('flashcard-back');
+            const counter = document.getElementById('counter');
+            const flashcard = document.getElementById('flashcard');
 
-        function renderCard(index) {
-            //por cada carta del array:
-            const card = flashcards[index];
-            front.textContent = card.kanji;
-            back.innerHTML = `
-                <p><strong>Lectura kun:</strong> ${card.kunReading || '-'}</p>
-                <p><strong>Lectura on:</strong> ${card.onReading || '-'}</p>
-                <p><strong>Significado:</strong> ${card.meaning || '-'}</p>
-                <p><strong>Categoría:</strong> ${card.category || '-'}</p>
-                <p><strong>Nivel:</strong> ${card.level || '-'}</p>
-            `;
-            counter.textContent = `${index + 1} / ${total}`;
-            //asegurarse de que la carta está “frontal” al cambiar
-            flashcard.classList.remove('is-flipped');
-        }
-        function toggleFlip() {
-            flashcard.classList.toggle('is-flipped');
-        }
-        function nextCard() {
-            if (currentIndex < total - 1) {
-                currentIndex++;
-                renderCard(currentIndex);
+            function renderCard(index) {
+                //por cada carta del array:
+                const card = flashcards[index];
+                front.textContent = card.kanji;
+                back.innerHTML = `
+                    <p><strong>Lectura kun:</strong> ${card.kunReading || '-'}</p>
+                    <p><strong>Lectura on:</strong> ${card.onReading || '-'}</p>
+                    <p><strong>Significado:</strong> ${card.meaning || '-'}</p>
+                    <p><strong>Categoría:</strong> ${card.category || '-'}</p>
+                    <p><strong>Nivel:</strong> ${card.level || '-'}</p>
+                `;
+                counter.textContent = `${index + 1} / ${total}`;
+                //asegurarse de que la carta está “frontal” al cambiar
+                flashcard.classList.remove('is-flipped');
             }
-        }
-        function prevCard() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                renderCard(currentIndex);
+            function toggleFlip() {
+                flashcard.classList.toggle('is-flipped');
             }
-        }
-        // Render inicial
-        console.log("log antes de renderCard: " + flashcards);
-        renderCard(currentIndex);
+            function nextCard() {
+                if (currentIndex < total - 1) {
+                    currentIndex++;
+                    renderCard(currentIndex);
+                }
+            }
+            function prevCard() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    renderCard(currentIndex);
+                }
+            }
+            // Render inicial
+            console.log("log antes de renderCard: " + flashcards);
+            renderCard(currentIndex);
+
+            // Exponer funciones globalmente si los botones las necesitan
+            window.nextCard = nextCard;
+            window.prevCard = prevCard;
+            window.toggleFlip = toggleFlip;
+        });
     </script>
 {% endblock %}

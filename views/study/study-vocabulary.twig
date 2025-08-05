@@ -1,0 +1,93 @@
+{% extends "layout.twig" %}
+
+{% block title %}Modo Estudio – Kanji{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/flashcard.css'>
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Modo Estudio – Vocabulario</h1>
+
+    <p>Total de flashcards: {{ flashcards|length }}</p>
+    <p>Total de tarjetas: {{ flashcards.length }}</p>
+    <ul>
+        {% for card in flashcards %}
+            <li>
+                {{ card.word }} – {{ card.meaning }} – {{ card.category }} – {{ card.level }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    <div class="flashcard-container" onclick="toggleFlip()">
+        <div class="flashcard" id="flashcard">
+            <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
+            <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevCard()">Anterior</button>
+        <button onclick="nextCard()">Siguiente</button>
+        <p id="counter"></p>
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+    //se envuelve para controlar que nos e ejecute hasta que se cargue el DOM:
+    document.addEventListener("DOMContentLoaded", () => {
+        //todas las flashcards como un array JS:
+        const flashcards = {{ flashcards|json_encode|raw }};
+        let currentIndex = 0;
+        const total = flashcards.length;
+
+        const front = document.getElementById('flashcard-front');
+        const back = document.getElementById('flashcard-back');
+        const counter = document.getElementById('counter');
+        const flashcard = document.getElementById('flashcard');
+
+        function renderCard(index) {
+            //por cada carta del array:
+            const card = flashcards[index];
+            front.textContent = card.word;
+            back.innerHTML = `
+                    <p><strong>Significado:</strong> ${card.meaning|| '-'}</p>
+                    <p><strong>Categoría:</strong> ${card.category || '-'}</p>
+                    <p><strong>Nivel:</strong> ${card.level || '-'}</p>
+                `;
+            counter.textContent = `${index + 1} / ${total}`;
+            //asegurarse de que la carta está “frontal” al cambiar
+            flashcard.classList.remove('is-flipped');
+        }
+        function toggleFlip() {
+            flashcard.classList.toggle('is-flipped');
+        }
+        function nextCard() {
+            if (currentIndex < total - 1) {
+                currentIndex++;
+                renderCard(currentIndex);
+            }
+        }
+        function prevCard() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderCard(currentIndex);
+            }
+        }
+        // Render inicial
+        console.log("log antes de renderCard: " + flashcards);
+        console.log("renderCard:", flashcards[currentIndex]);
+        console.log("front element:", front);
+
+        renderCard(currentIndex);
+
+        // Exponer funciones globalmente si los botones las necesitan
+        window.nextCard = nextCard;
+        window.prevCard = prevCard;
+        window.toggleFlip = toggleFlip;
+    });
+</script>
+{% endblock %}
