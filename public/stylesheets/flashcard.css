@@ -2,14 +2,16 @@
 
 .flashcard-container {
     perspective: 1000px; /* simula una cámara 3D desde donde "miramos" la carta. Si no, el giro parecería plano o ni visible */
-    width: 300px;
-    height: 200px;
+    /* ancho de hasta 500px (o el de la pantalla si es menor); el alto se ajusta al contenido */
+    width: 100%;
+    max-width: 500px;
     margin: 50px auto;
 }
 
+/* las dos caras se colocan en la misma celda del grid (una encima de otra): así la tarjeta
+   crece con el contenido y mide lo que la cara más alta, sin cambiar de tamaño al girarla */
 .flashcard {
-    width: 100%;
-    height: 100%;
+    display: grid;
     position: relative;
     /*para indicar que su contenido debe tratarse como un objeto 3D y que cualquier transformación se animará en 0.6 seg: */
     transform-style: preserve-3d;
@@ -23,16 +25,20 @@
 }
 
 .flashcard-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    grid-area: 1 / 1;  /* misma celda para las dos caras */
+    box-sizing: border-box;  /* el padding y el borde cuentan dentro del tamaño */
+    min-height: 200px;
+    padding: 15px;
+    overflow-wrap: anywhere;  /* las palabras largas bajan de línea en vez de salirse */
     backface-visibility: hidden;  /* cuando una cara está "detrás", no se ve*/
+    -webkit-backface-visibility: hidden;
     border: 2px solid #333;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3em;
+    text-align: center;  /* si la palabra ocupa varias líneas, que sigan centradas */
     background-color: #f7f7f7;
 }
 
@@ -40,7 +46,7 @@
     transform: rotateY(180deg);
     font-size: 1em;
     flex-direction: column;
-    padding: 15px;
+    align-items: stretch;  /* cada línea ocupa todo el ancho, alineada a la izquierda */
     text-align: left;
 }
 
