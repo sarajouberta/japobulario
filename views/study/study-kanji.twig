@@ -1,13 +1,13 @@
 {% extends "layout.twig" %}
 
-{% block title %}Modo Estudio – Kanji{% endblock %}
+{% block title %}Modo Estudio - Kanji{% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href='/stylesheets/flashcard.css'>
 {% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Modo Estudio – Kanji</h1>
+    <h1 class="text-center">Modo Estudio - Kanji</h1>
 
     <p>Total de flashcards: {{ flashcards|length }}</p>
 
@@ -52,7 +52,7 @@
                     <p><strong>Nivel:</strong> ${card.level || '-'}</p>
                 `;
                 counter.textContent = `${index + 1} / ${total}`;
-                //asegurarse de que la carta está “frontal” al cambiar
+                //asegurarse de que la carta está "frontal" al cambiar
                 flashcard.classList.remove('is-flipped');
             }
             function toggleFlip() {
