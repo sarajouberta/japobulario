@@ -28,6 +28,3 @@ logs/
 
 # Tests
 coverage/
-
-# Express-generator
-/public/stylesheets/style.css
