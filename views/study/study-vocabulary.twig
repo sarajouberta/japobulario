@@ -56,7 +56,6 @@
                     ${card.reading && card.reading !== card.word ? `<p><strong>Lectura:</strong> ${card.reading}</p>` : ''}
                     <p><strong>Significado:</strong> ${card.meaning|| '-'}</p>
                     ${example ? `<p><strong>Ejemplo:</strong> ${example.ja}<br><em>${example.en || ''}</em></p>` : ''}
-                    <p><strong>Categoría:</strong> ${card.category || '-'}</p>
                     <p><strong>Nivel:</strong> ${card.level || '-'}</p>
                 `;
             counter.textContent = `${index + 1} / ${total}`;
