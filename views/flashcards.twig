@@ -1,8 +1,18 @@
 <!-- Vista para las flashcards: -->
 {% extends "layout.twig" %}
 
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/tabs.css'>
+{% endblock %}
+
 {% block body %}
     <h1> A VER CÓMO MUESTRO YO LAS FLASHCARDS XDXXD</h1>
+
+    <!--pestañas: tarjetas propias creadas con el formulario / tarjetas de los libros-->
+    <nav class="tabs">
+        <a href="/japobulario/flashcards" class="{{ tab == 'mias' ? 'active' : '' }}">Mis tarjetas ({{ ownTotal }})</a>
+        <a href="/japobulario/flashcards?tab=libros" class="{{ tab == 'libros' ? 'active' : '' }}">Libros ({{ bookTotal }})</a>
+    </nav>
 
     {% if flashcards.length > 0 %}
         <!--cambio ul por div para usar flexbox-->
@@ -12,7 +22,8 @@
                 <hr> horizontal rule" (regla horizontal)-->
                 <article class="flashcard">
                     <!--¡¡ refactorizar !!-->
-                    {% if mode == 'kanji' %}
+                    <!--cada tarjeta se muestra según su tipo (kanji / vocabulario)-->
+                    {% if card.type == 'kanji' %}
                         <div class="kanji-box">
                             <h2>{{ card.kanji }}</h2>
                         </div>
@@ -21,16 +32,16 @@
                         <p><strong>Significado:</strong> {{ card.meaning }}</p>
                         <p><strong>Nivel:</strong> {{ card.level }}</p>
 
-                    {% elseif mode == 'vocabulario' %}
+                    {% elseif card.type == 'vocabulary' %}
                         <div class="kanji-box">
-                            {% if card.mainReading == 'kun' %}
-                                <h2>{{ card.kunReading }}</h2>
-                            {%  else %}
-                                <h2>{{ card.onReading }}</h2>
-                            {% endif %}
+                            <h2>{{ card.word }}</h2>
                         </div>
+                        {% if card.reading and card.reading != card.word %}
+                            <p><strong>Lectura:</strong> {{ card.reading }}</p>
+                        {% endif %}
                         <p><strong>Significado:</strong> {{ card.meaning }}</p>
                         <p><strong>Nivel:</strong> {{ card.level }}</p>
+                        <p><strong>Categoría:</strong> {{ card.category }}</p>
 
                     {% else %}
                         <div class="kanji-box">
@@ -46,7 +57,7 @@
             {% endfor %}
         </div>
     {% else %}
-        <p>No hay flashcards aún.</p>
+        <p>{{ tab == 'mias' ? 'Todavía no has creado tarjetas.' : 'No hay tarjetas de los libros. Ejecuta node seeds/import-book-vocabulary.js' }}</p>
     {% endif %}
 
         <p><a href="/japobulario/flashcards/new">Añadir nueva flashcard</a></p>

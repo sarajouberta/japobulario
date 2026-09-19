@@ -3,41 +3,85 @@
 {% block title %}Modo Estudio{% endblock %}
 
 {% block styles %}
+    <link rel="stylesheet" href='/stylesheets/tabs.css'>
     <link rel="stylesheet" href='/stylesheets/study-menu.css'>
 {% endblock %}
 
 {% block body %}
     <div class="study-menu">
         <h1>Modo Estudio - Vocabulario</h1>
-        <p>Elige un nivel completo o una sección del libro.</p>
 
-        <div class="levels">
-            {% for level in levels %}
-                <section class="level">
-                    <h2>{{ level.level }}</h2>
-                    <p>
-                        <a class="all" href="/japobulario/study/vocabulario?level={{ level.level }}">
-                            Todo el {{ level.level }} ({{ level.total }} tarjetas)
-                        </a>
-                    </p>
+        <!--pestañas: tarjetas de los libros / tarjetas propias creadas con el formulario-->
+        <nav class="tabs">
+            <a href="/japobulario/study" class="{{ tab == 'libros' ? 'active' : '' }}">Libros ({{ bookTotal }})</a>
+            <a href="/japobulario/study?tab=mias" class="{{ tab == 'mias' ? 'active' : '' }}">Mis tarjetas ({{ ownTotal }})</a>
+        </nav>
 
-                    {% for chapter in level.chapters %}
-                        <h3>Capítulo {{ chapter.chapter }} · {{ chapter.chapterTitle }}</h3>
-                        <ul>
-                            {% for section in chapter.sections %}
-                                <li>
-                                    <a href="/japobulario/study/vocabulario?level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}">
-                                        {{ section.section }}. {{ section.sectionTitle }}
+        {% if tab == 'libros' %}
+            <p>Elige un nivel completo o una sección del libro.</p>
+
+            <div class="levels">
+                {% for level in levels %}
+                    <section class="level">
+                        <h2>{{ level.level }}</h2>
+                        <p>
+                            <a class="all" href="/japobulario/study/vocabulario?source=libros&level={{ level.level }}">
+                                Todo el {{ level.level }} ({{ level.total }} tarjetas)
+                            </a>
+                        </p>
+
+                        {% for chapter in level.chapters %}
+                            <h3>Capítulo {{ chapter.chapter }} · {{ chapter.chapterTitle }}</h3>
+                            <ul>
+                                {% for section in chapter.sections %}
+                                    <li>
+                                        <a href="/japobulario/study/vocabulario?source=libros&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}">
+                                            {{ section.section }}. {{ section.sectionTitle }}
+                                        </a>
+                                        <span class="info">{{ section.category }} · {{ section.count }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="info">No hay vocabulario de este nivel. Ejecuta <code>node seeds/import-book-vocabulary.js</code>.</p>
+                        {% endfor %}
+                    </section>
+                {% endfor %}
+            </div>
+
+        {% else %}
+            <p>Tus tarjetas de vocabulario, por nivel y por la categoría que les pusiste al crearlas.</p>
+
+            {% if ownTotal == 0 %}
+                <p class="info">Todavía no has creado tarjetas de vocabulario. <a href="/japobulario/flashcards/new">Crear una tarjeta</a></p>
+            {% else %}
+                <div class="levels">
+                    {% for level in ownLevels %}
+                        <section class="level">
+                            <h2>{{ level.level }}</h2>
+                            {% if level.total == 0 %}
+                                <p class="info">No tienes tarjetas de este nivel.</p>
+                            {% else %}
+                                <p>
+                                    <a class="all" href="/japobulario/study/vocabulario?source=mias&level={{ level.level }}">
+                                        Todas mis tarjetas del {{ level.level }} ({{ level.total }})
                                     </a>
-                                    <span class="info">{{ section.category }} · {{ section.count }}</span>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <p class="info">No hay vocabulario de este nivel. Ejecuta <code>node seeds/import-book-vocabulary.js</code>.</p>
+                                </p>
+                                <ul>
+                                    {% for cat in level.categories %}
+                                        <li>
+                                            <a href="/japobulario/study/vocabulario?source=mias&level={{ level.level }}&category={{ cat.category|url_encode }}">
+                                                {{ cat.category ?: 'Sin categoría' }}
+                                            </a>
+                                            <span class="info">{{ cat.count }}</span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </section>
                     {% endfor %}
-                </section>
-            {% endfor %}
-        </div>
+                </div>
+            {% endif %}
+        {% endif %}
     </div>
 {% endblock %}

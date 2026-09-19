@@ -12,8 +12,17 @@ router.get('/', async(req, res) => {
 
   //mejor mostrar directamente:
   try {
-    const flashcards = await Flashcard.find().sort({ createdAt: -1 });
-    res.render('flashcards', { flashcards });
+    //dos pestañas: mis tarjetas (por defecto: las creadas con el formulario) y las de los libros.
+    //Las propias se buscan como "no son del libro" para incluir también las antiguas sin campo source:
+    const tab = req.query.tab === 'libros' ? 'libros' : 'mias';
+    const filter = tab === 'libros' ? { source: 'book' } : { source: { $ne: 'book' } };
+    //las propias, las más nuevas primero; las del libro, en el orden del libro:
+    const sort = tab === 'libros' ? { level: -1, bookId: 1 } : { createdAt: -1 };
+
+    const flashcards = (await Flashcard.find(filter).sort(sort)).map(doc => doc.toObject());
+    const ownTotal = await Flashcard.countDocuments({ source: { $ne: 'book' } });
+    const bookTotal = await Flashcard.countDocuments({ source: 'book' });
+    res.render('flashcards', { flashcards, tab, ownTotal, bookTotal });
   } catch (error) {
     res.status(500).send('Error al obtener las flashcards');
   }

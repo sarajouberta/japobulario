@@ -1,0 +1,29 @@
+/* CSS DE LAS PESTAÑAS (Libros / Mis tarjetas) */
+
+.tabs {
+    display: flex;
+    gap: 4px;
+    margin: 16px 0;
+    border-bottom: 2px solid #333;
+}
+
+.tabs a {
+    padding: 8px 16px;
+    border: 2px solid #ccc;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    color: #333;
+    text-decoration: none;
+    background-color: #f7f7f7;
+}
+
+.tabs a:hover {
+    background-color: #eee;
+}
+
+/* pestaña seleccionada: fondo oscuro, unida a la línea de abajo */
+.tabs a.active {
+    border-color: #333;
+    background-color: #333;
+    color: #f7f7f7;
+}
