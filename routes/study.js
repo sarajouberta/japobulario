@@ -93,8 +93,6 @@ router.get('/kanji', async (req, res) => {
         const flashcards = flashcardsDocs.map(doc => doc.toObject());
 
         //res.render('flashcards.twig', { flashcards, mode: 'kanji' });
-        console.log('Primer flashcard:', flashcards[0]);
-        console.log('Flashcards recibidas:', flashcards);
         res.render('study/study-kanji.twig', { flashcards, mode: 'kanji'});
 
     } catch (error) {

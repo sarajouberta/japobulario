@@ -31,7 +31,6 @@ router.get('/', async(req, res) => {
 
 // Mostrar formulario para crear flashcard
 router.get('/new', (req, res) => {
-  //res.render('new-flashcard.twig');
   res.render('flashcards/new.twig');
 });
 
@@ -74,20 +73,6 @@ router.get('/form-fields/:type', (req, res) => {
     res.send(html);
   });
 });
-
-
-
-
-// Ruta para listar todas las flashcards (equivale a GET /japobulario/flashcards)
-router.get('/flashcards', async (req, res) => {
-  try {
-    const flashcards = await Flashcard.find().sort({ createdAt: -1 });
-    res.render('flashcards', { flashcards , mode:'flashcard' });
-  } catch (error) {
-    res.status(500).send('Error al obtener las flashcards');
-  }
-});
-
 
 
 module.exports = router;

@@ -41,18 +41,15 @@ app.set('view engine', 'twig');
 
 app.use(logger('dev'));
 app.use(express.json());
+//middleware para poder obtener la info del POST (formularios):
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//middleware para poder obtener la info del POST:
-app.use(express.urlencoded({ extended: false }));
-
-
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-app.use('/japobulario', japobularioRouter);  //enrutador para las opciones de la aplicación, entre ellas la que llame a flashcards
+app.use('/japobulario', japobularioRouter);  //enrutador para la página principal de la aplicación
 
 //esto quiere decir que todas las rutas definidas en el router se "pegan" después de /japobulario/flashcards:
 app.use('/japobulario/flashcards', flashcardsRouter);
