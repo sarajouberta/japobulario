@@ -32,6 +32,8 @@
 
 
 {% block scripts %}
+<!--highlightWord(): marca en negrita la palabra de la tarjeta dentro de la frase de ejemplo-->
+<script src="/javascripts/highlight-word.js"></script>
 <script>
     //se envuelve para controlar que nos e ejecute hasta que se cargue el DOM:
     document.addEventListener("DOMContentLoaded", () => {
@@ -55,7 +57,7 @@
             back.innerHTML = `
                     ${card.reading && card.reading !== card.word ? `<p><strong>Lectura:</strong> ${card.reading}</p>` : ''}
                     <p><strong>Significado:</strong> ${card.meaning|| '-'}</p>
-                    ${example ? `<p><strong>Ejemplo:</strong> ${example.ja}<br><em>${example.en || ''}</em></p>` : ''}
+                    ${example ? `<p><strong>Ejemplo:</strong> ${highlightWord(card, example.ja)}<br><em>${example.en || ''}</em></p>` : ''}
                     <p><strong>Nivel:</strong> ${card.level || '-'}</p>
                 `;
             counter.textContent = `${index + 1} / ${total}`;
