@@ -4,8 +4,9 @@ var express = require('express');
 var router = express.Router();
 const Flashcard = require('../models/Flashcard');
 
-//filtro común: solo vocabulario completo (las incompletas del libro no tienen significado o ejemplo)
-const COMPLETE_VOCABULARY = { type: 'vocabulary', complete: { $ne: false } };
+//filtro común: vocabulario con significado. Las fichas sin ejemplo sí se estudian (la tarjeta no muestra ejemplo);
+//solo se quedan fuera las del libro que no tienen significado (missing incluye 'meaning_en'):
+const STUDY_VOCABULARY = { type: 'vocabulary', missing: { $ne: 'meaning_en' } };
 const LEVELS = ['N5', 'N4'];
 
 //pantalla para elegir qué estudiar: nivel, capítulo y sección del libro
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
     try {
         //nº de tarjetas por sección del libro:
         const sections = await Flashcard.aggregate([
-            { $match: { ...COMPLETE_VOCABULARY, source: 'book' } },
+            { $match: { ...STUDY_VOCABULARY, source: 'book' } },
             { $group: {
                 _id: { level: '$level', chapter: '$chapter', section: '$section' },
                 chapterTitle: { $first: '$chapterTitle' },
@@ -25,7 +26,7 @@ router.get('/', async (req, res) => {
         ]);
         //nº total por nivel (incluye las fichas hechas a mano):
         const totals = await Flashcard.aggregate([
-            { $match: COMPLETE_VOCABULARY },
+            { $match: STUDY_VOCABULARY },
             { $group: { _id: '$level', count: { $sum: 1 } } },
         ]);
 
@@ -91,7 +92,7 @@ La clave estuvo en transformar esos documentos a objetos JavaScript simples, usa
 router.get('/vocabulario', async (req, res) => {
     try {
         //filtros opcionales desde la pantalla de elección: ?level=N4&chapter=2&section=1
-        const filter = { ...COMPLETE_VOCABULARY };
+        const filter = { ...STUDY_VOCABULARY };
         const chapter = parseInt(req.query.chapter, 10);
         const section = parseInt(req.query.section, 10);
         if (LEVELS.includes(req.query.level)) {
