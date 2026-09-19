@@ -35,6 +35,10 @@ const flashcardSchema = new mongoose.Schema({
     category: { type: String},
     level: { type: String, enum: ['N5', 'N4'], required: true },
 
+    //dueño de las tarjetas propias (las creadas con el formulario); las de los libros no tienen dueño.
+    //Cada usuario solo ve y estudia sus propias tarjetas (ver lib/visibility.js):
+    owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User', index: true },
+
     //campos del vocabulario importado de los libros (seeds/data/vocabulary_N*.json):
     source: { type: String, enum: ['manual', 'book'], default: 'manual' },
     bookId: { type: Number },         //número de la palabra en el libro (único por nivel)

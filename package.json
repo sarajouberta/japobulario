@@ -9,9 +9,12 @@
     "import:atlas": "node --env-file=.env.atlas seeds/import-book-vocabulary.js"
   },
   "dependencies": {
+    "connect-mongo": "^5.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "^4.21.2",
+    "express-session": "^1.19.0",
+    "firebase-admin": "^13.10.0",
     "http-errors": "~1.6.3",
     "i18n": "^0.15.4",
     "mongoose": "^8.16.4",

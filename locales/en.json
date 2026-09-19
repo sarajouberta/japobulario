@@ -5,7 +5,8 @@
     "studyKanji": "Study kanji",
     "flashcards": "Flashcards",
     "newCard": "New card",
-    "language": "Language"
+    "language": "Language",
+    "logout": "Log out"
   },
   "home": {
     "viewFlashcards": "View flashcards",
@@ -81,5 +82,12 @@
     "selectionOwn": "My cards",
     "allVocabulary": "All vocabulary",
     "allKanji": "All kanji"
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginIntro": "Log in with your Google account. Only you will see your cards.",
+    "googleButton": "Log in with Google",
+    "loginError": "Could not log in. Please try again.",
+    "loggedAs": "Logged in as {{name}}"
   }
 }

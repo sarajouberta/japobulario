@@ -12,8 +12,14 @@ var mongoose = require('mongoose'); //importar mongoose
 //traducción de la interfaz (español / inglés):
 var i18n = require('i18n');
 
+//sesiones de usuario (inicio de sesión con Google), guardadas en MongoDB:
+var session = require('express-session');
+var MongoStore = require('connect-mongo');
+const { requireLogin } = require('./lib/auth');
+
 
 var indexRouter = require('./routes/index');
+var authRouter = require('./routes/auth');
 //var usersRouter = require('./routes/flashcards');
 var flashcardsRouter = require('./routes/flashcards');
 
@@ -70,9 +76,41 @@ app.use((req, res, next) => {
   next();
 });
 
+/* SESIONES: al iniciar sesión con Google (routes/auth.js) se guarda el usuario en req.session.user.
+   - La sesión se guarda en MongoDB (colección sessions): no se pierde al reiniciar la app.
+   - SESSION_SECRET firma la cookie de sesión. En desarrollo hay uno por defecto; al publicar la app
+     hay que definir uno propio y largo en las variables de entorno (ver .env.example). */
+const isProduction = process.env.NODE_ENV === 'production';
+if (isProduction && !process.env.SESSION_SECRET) {
+  throw new Error('Falta la variable de entorno SESSION_SECRET');
+}
+if (isProduction) app.set('trust proxy', 1);  //el hosting suele ir detrás de un proxy (necesario para cookie secure)
+app.use(session({
+  name: 'japobulario.sid',
+  secret: process.env.SESSION_SECRET || 'secreto-solo-para-desarrollo',
+  resave: false,
+  saveUninitialized: false,  //no se crea sesión hasta que alguien inicia sesión
+  store: MongoStore.create({ mongoUrl: MONGO_URL }),
+  cookie: {
+    httpOnly: true,            //el JavaScript de la página no puede leer la cookie
+    sameSite: 'lax',           //no se envía en peticiones POST desde otras webs
+    secure: isProduction,      //al publicar, solo por https
+    maxAge: 30 * 24 * 60 * 60 * 1000,  //la sesión dura 30 días
+  },
+}));
+//usuario de la sesión disponible en todas las vistas (para el menú):
+app.use((req, res, next) => {
+  res.locals.currentUser = req.session.user || null;
+  next();
+});
+
 
 app.use('/', indexRouter);
+app.use('/', authRouter);  //login, sesión y logout
 //app.use('/users', usersRouter);
+
+//todo lo que hay bajo /japobulario necesita haber iniciado sesión:
+app.use('/japobulario', requireLogin);
 app.use('/japobulario', japobularioRouter);  //enrutador para la página principal de la aplicación
 
 //esto quiere decir que todas las rutas definidas en el router se "pegan" después de /japobulario/flashcards:

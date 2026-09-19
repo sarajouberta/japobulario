@@ -15,6 +15,8 @@
     <!--MENÚ: al estar en layout, aparece en todas las vistas que heredan de él-->
     <nav class="main-menu">
       <a class="brand" href="/japobulario">Japobulario</a>
+      <!--los enlaces de la app solo se muestran con la sesión iniciada (sin sesión, todo lleva al login)-->
+      {% if currentUser %}
       <ul>
         <li><a href="/japobulario">{{ __('menu.home') }}</a></li>
         <li><a href="/japobulario/study">{{ __('menu.studyVocabulary') }}</a></li>
@@ -22,12 +24,20 @@
         <li><a href="/japobulario/flashcards">{{ __('menu.flashcards') }}</a></li>
         <li><a href="/japobulario/flashcards/new">{{ __('menu.newCard') }}</a></li>
       </ul>
+      {% endif %}
       <!--selector de idioma: guarda la elección en una cookie (ruta /lang/:locale en routes/index.js)-->
       <div class="lang-switch" title="{{ __('menu.language') }}">
         <a href="/lang/es" class="{{ locale == 'es' ? 'active' : '' }}">ES</a>
         |
         <a href="/lang/en" class="{{ locale == 'en' ? 'active' : '' }}">EN</a>
       </div>
+      <!--usuario de la sesión y cerrar sesión (POST, ver routes/auth.js)-->
+      {% if currentUser %}
+      <form class="user-box" action="/logout" method="POST">
+        <span>{{ __('auth.loggedAs', {'name': currentUser.name}) }}</span>
+        <button type="submit">{{ __('menu.logout') }}</button>
+      </form>
+      {% endif %}
     </nav>
 
     {% block body %}{% endblock %}

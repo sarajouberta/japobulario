@@ -3,18 +3,21 @@
 var express = require('express');
 var router = express.Router();
 const Flashcard = require('../models/Flashcard');
+//qué tarjetas puede ver cada usuario (libros: todos; propias: solo su dueño):
+const { BOOK_FILTER, ownFilter, visibleFilter } = require('../lib/visibility');
 
 //filtro común: vocabulario con significado. Las fichas sin ejemplo sí se estudian (la tarjeta no muestra ejemplo);
 //solo se quedan fuera las del libro que no tienen significado (missing incluye 'meaning_en'):
 const STUDY_VOCABULARY = { type: 'vocabulary', missing: { $ne: 'meaning_en' } };
 const LEVELS = ['N5', 'N4'];
 
-//origen de las tarjetas: las de los libros (importadas) y las propias (creadas con el formulario).
-//Las propias se buscan como "no son del libro" para incluir también las antiguas sin campo source:
-const SOURCES = {
-    book: { source: 'book' },
-    own: { source: { $ne: 'book' } },
-};
+//origen de las tarjetas: las de los libros (importadas, comunes a todos) o las propias del usuario
+//de la sesión (creadas con el formulario). Sin origen: todo lo que puede ver el usuario.
+function sourceFilter(req, source) {
+    if (source === 'book') return BOOK_FILTER;
+    if (source === 'own') return ownFilter(req);
+    return visibleFilter(req);
+}
 
 //pantalla para elegir qué estudiar, con dos pestañas:
 // - book (por defecto): nivel, capítulo y sección del libro
@@ -25,7 +28,7 @@ router.get('/', async (req, res) => {
 
         //nº de tarjetas por sección del libro:
         const sections = await Flashcard.aggregate([
-            { $match: { ...STUDY_VOCABULARY, ...SOURCES.book } },
+            { $match: { ...STUDY_VOCABULARY, ...sourceFilter(req, 'book') } },
             { $group: {
                 _id: { level: '$level', chapter: '$chapter', section: '$section' },
                 chapterTitle: { $first: '$chapterTitle' },
@@ -37,12 +40,12 @@ router.get('/', async (req, res) => {
         ]);
         //nº total de tarjetas del libro por nivel:
         const totals = await Flashcard.aggregate([
-            { $match: { ...STUDY_VOCABULARY, ...SOURCES.book } },
+            { $match: { ...STUDY_VOCABULARY, ...sourceFilter(req, 'book') } },
             { $group: { _id: '$level', count: { $sum: 1 } } },
         ]);
         //tarjetas propias por nivel y categoría (la categoría es la que se escribe en el formulario):
         const ownCategories = await Flashcard.aggregate([
-            { $match: { ...STUDY_VOCABULARY, ...SOURCES.own } },
+            { $match: { ...STUDY_VOCABULARY, ...sourceFilter(req, 'own') } },
             { $group: { _id: { level: '$level', category: '$category' }, count: { $sum: 1 } } },
             { $sort: { '_id.category': 1 } },
         ]);
@@ -88,7 +91,7 @@ router.get('/', async (req, res) => {
 // Ruta para estudiar kanji
 router.get('/kanji', async (req, res) => {
     try {
-        const flashcardsDocs = await Flashcard.find({ type: 'kanji' });  //Flashcard.find() <- métod de Mongoose
+        const flashcardsDocs = await Flashcard.find({ type: 'kanji', ...visibleFilter(req) });  //Flashcard.find() <- métod de Mongoose
         //LO MISMO QUE PARA RESOLVER PROBLEMAS AL RENDERIZAR CONTENIDO DE FLASHCARD EN CLIENTE de vocabulario:
         const flashcards = flashcardsDocs.map(doc => doc.toObject());
 
@@ -123,7 +126,7 @@ router.get('/vocabulary', async (req, res) => {
         //  propias: ?source=own&level=N5&category=verbos
         const filter = { ...STUDY_VOCABULARY };
         const source = ['book', 'own'].includes(req.query.source) ? req.query.source : null;
-        if (source) Object.assign(filter, SOURCES[source]);
+        Object.assign(filter, sourceFilter(req, source));  //sin source: libros + propias del usuario
 
         const chapter = parseInt(req.query.chapter, 10);
         const section = parseInt(req.query.section, 10);

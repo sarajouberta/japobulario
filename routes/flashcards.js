@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 //IMPORTAR EL MODELO:
 var Flashcard = require('../models/Flashcard');
+//qué tarjetas puede ver cada usuario (libros: todos; propias: solo su dueño):
+const { BOOK_FILTER, ownFilter } = require('../lib/visibility');
 
 /* GET flashcards listing. */
 // esto se traduce en GET /flashcards/, hasta cambio de rutas  (equivale a GET /japobulario/flashcards/new)
@@ -12,16 +14,15 @@ router.get('/', async(req, res) => {
 
   //mejor mostrar directamente:
   try {
-    //dos pestañas: mis tarjetas (por defecto: las creadas con el formulario) y las de los libros.
-    //Las propias se buscan como "no son del libro" para incluir también las antiguas sin campo source:
+    //dos pestañas: mis tarjetas (por defecto: las creadas con el formulario por este usuario) y las de los libros
     const tab = req.query.tab === 'book' ? 'book' : 'own';
-    const filter = tab === 'book' ? { source: 'book' } : { source: { $ne: 'book' } };
+    const filter = tab === 'book' ? BOOK_FILTER : ownFilter(req);
     //las propias, las más nuevas primero; las del libro, en el orden del libro:
     const sort = tab === 'book' ? { level: -1, bookId: 1 } : { createdAt: -1 };
 
     const flashcards = (await Flashcard.find(filter).sort(sort)).map(doc => doc.toObject());
-    const ownTotal = await Flashcard.countDocuments({ source: { $ne: 'book' } });
-    const bookTotal = await Flashcard.countDocuments({ source: 'book' });
+    const ownTotal = await Flashcard.countDocuments(ownFilter(req));
+    const bookTotal = await Flashcard.countDocuments(BOOK_FILTER);
     res.render('flashcards', { flashcards, tab, ownTotal, bookTotal });
   } catch (error) {
     res.status(500).send(req.__('errors.loadFlashcards'));
@@ -51,7 +52,8 @@ router.post('/new', async (req, res, next) => {
       return res.status(400).send(req.__('errors.invalidType'));
     }
   //MODIFICACIÓN: CAMPOS VACÍOS SEGÚN TIPO:
-    const flashcard = new Flashcard( { type, kanji: kanji || null, kunReading: kunReading || null, onReading: onReading || null, word: word || null, meaning, category: category || '', level});
+    //la tarjeta es del usuario de la sesión (owner): solo él la verá
+    const flashcard = new Flashcard( { type, kanji: kanji || null, kunReading: kunReading || null, onReading: onReading || null, word: word || null, meaning, category: category || '', level, owner: req.session.user.id});
     await flashcard.save();
     res.redirect('/japobulario/flashcards'); // Redirige al listado de flashcards después de guardar: ¡CUIDADO! sale del prefijo /japobulario si no se indica en el redirect
   } catch (error) {

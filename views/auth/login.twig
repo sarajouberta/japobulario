@@ -1,0 +1,88 @@
+{#
+Inicio de sesión con Google a través de Firebase Authentication.
+El navegador hace el login con Google y envía a /auth/session el token que le da Firebase;
+el servidor lo comprueba y crea la sesión de la app (routes/auth.js).
+#}
+{% extends "../layout.twig" %}
+
+{% block title %}{{ __('auth.loginTitle') }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/auth.css'>
+{% endblock %}
+
+{% block body %}
+    <div class="auth-box">
+        <h1>{{ __('auth.loginTitle') }}</h1>
+        <p>{{ __('auth.loginIntro') }}</p>
+
+        <p id="login-error" class="auth-error" hidden>{{ __('auth.loginError') }}</p>
+
+        <button id="google-login" type="button">{{ __('auth.googleButton') }}</button>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<!--SDK de Firebase desde su CDN (misma versión que en la app del taller)-->
+<script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js';
+    import {
+        getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signOut,
+    } from 'https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js';
+
+    const app = initializeApp({{ firebaseConfig|json_encode|raw }});
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });  //dejar elegir cuenta de Google siempre
+
+    const button = document.getElementById('google-login');
+    const errorBox = document.getElementById('login-error');
+    const nextUrl = {{ next|json_encode|raw }};  //a dónde volver después del login
+
+    function showError() {
+        errorBox.hidden = false;
+        button.disabled = false;
+    }
+
+    //envía el token de Firebase al servidor, que comprueba quién es y crea la sesión de la app
+    async function createSession(user) {
+        const idToken = await user.getIdToken();
+        const response = await fetch('/auth/session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ idToken, next: nextUrl }),
+        });
+        //la sesión de la app ya está en el servidor: la de Firebase en el navegador no hace falta
+        await signOut(auth);
+        if (!response.ok) return showError();
+        window.location.href = (await response.json()).redirect;
+    }
+
+    //al volver de un login por redirección (si el popup estaba bloqueado), se recoge aquí el resultado
+    getRedirectResult(auth)
+        .then(result => { if (result) return createSession(result.user); })
+        .catch(showError);
+
+    button.addEventListener('click', async () => {
+        button.disabled = true;
+        errorBox.hidden = true;
+        try {
+            const result = await signInWithPopup(auth, provider);
+            await createSession(result.user);
+        } catch (e) {
+            //popup bloqueado o no disponible: se usa la redirección, que funciona en todas partes
+            if (['auth/popup-blocked', 'auth/cancelled-popup-request',
+                 'auth/operation-not-supported-in-environment'].includes(e.code)) {
+                return signInWithRedirect(auth, provider);
+            }
+            //la persona cerró la ventana de Google: no es un error
+            if (e.code === 'auth/popup-closed-by-user') {
+                button.disabled = false;
+                return;
+            }
+            console.error('Error al iniciar sesión con Google:', e);
+            showError();
+        }
+    });
+</script>
+{% endblock %}

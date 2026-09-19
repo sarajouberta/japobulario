@@ -48,3 +48,18 @@
     color: #f7f7f7;
     font-weight: bold;
 }
+
+/* usuario de la sesión y botón de cerrar sesión */
+.main-menu .user-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #ccc;
+}
+
+.main-menu .user-box button {
+    padding: 4px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+/* CSS DE LAS PANTALLAS DE INICIO DE SESIÓN Y REGISTRO */
+
+.auth-box {
+    max-width: 360px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.auth-box input[type="text"],
+.auth-box input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 1em;
+}
+
+.auth-box small {
+    color: #777;
+}
+
+.auth-error {
+    padding: 8px 12px;
+    border: 1px solid #c33;
+    border-radius: 6px;
+    background-color: #fdecec;
+    color: #a00;
+}

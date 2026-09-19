@@ -5,7 +5,8 @@
     "studyKanji": "Estudiar kanji",
     "flashcards": "Flashcards",
     "newCard": "Nueva tarjeta",
-    "language": "Idioma"
+    "language": "Idioma",
+    "logout": "Cerrar sesión"
   },
   "home": {
     "viewFlashcards": "Ver flashcards",
@@ -81,5 +82,12 @@
     "selectionOwn": "Mis tarjetas",
     "allVocabulary": "Todo el vocabulario",
     "allKanji": "Todos los kanji"
+  },
+  "auth": {
+    "loginTitle": "Iniciar sesión",
+    "loginIntro": "Entra con tu cuenta de Google. Tus tarjetas solo las verás tú.",
+    "googleButton": "Iniciar sesión con Google",
+    "loginError": "No se ha podido iniciar sesión. Inténtalo de nuevo.",
+    "loggedAs": "Sesión de {{name}}"
   }
 }
