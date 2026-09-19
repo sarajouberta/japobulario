@@ -1,8 +1,8 @@
 /* para controlar menú principal (opciones ded japobulario para estudiar)
 /japobulario como una sección o módulo completo, que puede contener varias funcionalidades:
-    -/japobulario/flashcards → Para ver, crear y gestionar tarjetas
-    -/japobulario/study → Para estudiar tarjetas (quiz, modo aleatorio, etc.)
-    -/japobulario/user → Para configuración del usuario o inicio de sesión
+    -/japobulario/flashcards -> Para ver, crear y gestionar tarjetas
+    -/japobulario/study -> Para estudiar tarjetas (quiz, modo aleatorio, etc.)
+    -/japobulario/user -> Para configuración del usuario o inicio de sesión
 */
 
 const express = require('express');

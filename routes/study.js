@@ -78,7 +78,7 @@ router.get('/kanji', async (req, res) => {
 /*
 NOTA: SOBRE POR QUÉ NO SE MOSTRABA EL CONTENIDO DE CADA FLASHCARD AUNQUE SÍ LLEGABAN CORRECTAMENTE AL FRONT
 El problema principal radicaba en que los documentos que traías directamente de MongoDB (con Mongoose)
-no son objetos JSON “puros” sino instancias de documentos Mongoose, que incluyen propiedades internas y métodos,
+no son objetos JSON "puros" sino instancias de documentos Mongoose, que incluyen propiedades internas y métodos,
 no directamente serializables ni accesibles como un JSON normal en el frontend.
 
 Cuando intentaba pasar esos objetos a la plantilla Twig y luego convertirlos en JavaScript con json_encode,

@@ -44,9 +44,9 @@ async function importKanjiFlashcards() {
     try {
         //intentar insertar en la bdd:
         const result = await Flashcard.insertMany(flashcards);
-        console.log(`✔️ Insertadas ${result.length} flashcards de kanji`);
+        console.log(`OK Insertadas ${result.length} flashcards de kanji`);
     } catch (err) {
-        console.error('❌ Error al insertar flashcards de kanji:', err);
+        console.error('ERROR Error al insertar flashcards de kanji:', err);
     }
 }
 
@@ -68,8 +68,8 @@ async function importVocabFlashcards() {
 
     try {
         const result = await Flashcard.insertMany(flashcards);
-        console.log(`✔️ Insertadas ${result.length} flashcards de vocabulario`);
+        console.log(`OK Insertadas ${result.length} flashcards de vocabulario`);
     } catch (err) {
-        console.error('❌ Error al insertar flashcards de vocabulario:', err);
+        console.error('ERROR Error al insertar flashcards de vocabulario:', err);
     }
 }
