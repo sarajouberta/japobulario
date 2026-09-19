@@ -61,7 +61,7 @@ function validate(cards) {
     for (const card of cards) {
         const err = new Flashcard(card).validateSync();
         if (err) {
-            console.error(`❌ ${card.level} #${card.bookId} (${card.word}) no es válida: ${err.message}`);
+            console.error(`ERROR ${card.level} #${card.bookId} (${card.word}) no es válida: ${err.message}`);
         } else {
             valid.push(card);
         }
@@ -83,7 +83,7 @@ async function importLevel(level) {
             upsert: true,
         },
     })));
-    console.log(`✔️ ${level}: ${result.upsertedCount} insertadas, ${result.modifiedCount} actualizadas`);
+    console.log(`OK ${level}: ${result.upsertedCount} insertadas, ${result.modifiedCount} actualizadas`);
 }
 
 async function main() {
@@ -99,7 +99,7 @@ async function main() {
 
 main()
     .catch(err => {
-        console.error('❌ Error al importar el vocabulario:', err);
+        console.error('ERROR al importar el vocabulario:', err);
         process.exitCode = 1;
     })
     .finally(() => mongoose.connection.close());
