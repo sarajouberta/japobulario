@@ -15,8 +15,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const Flashcard = require('../models/Flashcard');
 
-//se puede cambiar con la variable de entorno MONGO_URL (por ejemplo, para probar contra otra bdd):
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/japobulario';
+//dirección de la bdd (config/database.js); se puede cambiar con la variable de entorno MONGO_URL:
+const { MONGO_URL } = require('../config/database');
 const LEVELS = ['N5', 'N4'];
 const dryRun = process.argv.includes('--dry-run');
 

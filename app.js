@@ -31,7 +31,9 @@ mongoose.connect('mongodb://localhost/japobulario', {
     .catch(err => console.error('Error de conexión a MongoDB:', err));
 */
 
-mongoose.connect('mongodb://localhost/japobulario')
+//la dirección de la bdd está en config/database.js (la comparten la app y los seeds):
+const { MONGO_URL } = require('./config/database');
+mongoose.connect(MONGO_URL)
     .then(() => console.log('MongoDB conectado'))
     .catch(err => console.error('Error de conexión a MongoDB:', err));
 

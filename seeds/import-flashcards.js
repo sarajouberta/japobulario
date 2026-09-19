@@ -3,12 +3,10 @@ const path = require('path');
 const mongoose = require('mongoose');
 const Flashcard = require('../models/Flashcard'); // Ajusta según tu estructura
 
-/* mongodb://localhost:27017 == puerto por el que MongoDB escucha conexiones x defecto
-(esto es para desarrollo local: me conecto de forma local ene sta aplicación) */
-mongoose.connect('mongodb://localhost:27017/japobulario', {   //conexión con la bdd local
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
+/* conexión con la bdd local: la dirección está en config/database.js
+(useNewUrlParser y useUnifiedTopology ya no hacen falta en Mongoose 8, solo daban avisos) */
+const { MONGO_URL } = require('../config/database');
+mongoose.connect(MONGO_URL).then(() => {
     console.log('Conectado a MongoDB');
     importAllFlashcards();
 }).catch(err => {
