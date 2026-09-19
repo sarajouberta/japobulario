@@ -20,9 +20,11 @@ ehthumbs.db
 logs/
 *.log
 
-# Producción
+# Producción: archivos con contraseñas (p. ej. .env.atlas con la dirección de MongoDB Atlas).
+# Nunca se suben; solo .env.example, que es la plantilla sin datos reales.
 .env
-.env.local
+.env.*
+!.env.example
 
 # Tests
 coverage/

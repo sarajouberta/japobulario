@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "start:atlas": "node --env-file=.env.atlas ./bin/www",
+    "import": "node seeds/import-book-vocabulary.js",
+    "import:atlas": "node --env-file=.env.atlas seeds/import-book-vocabulary.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
