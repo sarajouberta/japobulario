@@ -1,25 +1,20 @@
 {% extends "layout.twig" %}
 
-{% block title %}Modo Estudio – Kanji{% endblock %}
+{% block title %}Modo Estudio – Vocabulario{% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href='/stylesheets/flashcard.css'>
 {% endblock %}
 
 {% block body %}
+    <p><a href="/japobulario/study">← Elegir otra sección</a></p>
     <h1 class="text-center">Modo Estudio – Vocabulario</h1>
 
-    <p>Total de flashcards: {{ flashcards|length }}</p>
-    <p>Total de tarjetas: {{ flashcards.length }}</p>
-    <ul>
-        {% for card in flashcards %}
-            <li>
-                {{ card.word }} – {{ card.meaning }} – {{ card.category }} – {{ card.level }}
-            </li>
-        {% endfor %}
-    </ul>
+    <p><strong>{{ selection }}</strong> · {{ flashcards|length }} tarjetas</p>
 
-
+    {% if flashcards|length == 0 %}
+        <p>No hay tarjetas para esta selección.</p>
+    {% else %}
     <div class="flashcard-container" onclick="toggleFlip()">
         <div class="flashcard" id="flashcard">
             <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
@@ -32,6 +27,7 @@
         <button onclick="nextCard()">Siguiente</button>
         <p id="counter"></p>
     </div>
+    {% endif %}
 {% endblock %}
 
 
@@ -43,6 +39,7 @@
         const flashcards = {{ flashcards|json_encode|raw }};
         let currentIndex = 0;
         const total = flashcards.length;
+        if (total === 0) return;  //no hay tarjeta que pintar
 
         const front = document.getElementById('flashcard-front');
         const back = document.getElementById('flashcard-back');
@@ -53,8 +50,12 @@
             //por cada carta del array:
             const card = flashcards[index];
             front.textContent = card.word;
+            //primera frase de ejemplo del libro (si la hay):
+            const example = (card.examples && card.examples.length) ? card.examples[0] : null;
             back.innerHTML = `
+                    ${card.reading && card.reading !== card.word ? `<p><strong>Lectura:</strong> ${card.reading}</p>` : ''}
                     <p><strong>Significado:</strong> ${card.meaning|| '-'}</p>
+                    ${example ? `<p><strong>Ejemplo:</strong> ${example.ja}<br><em>${example.en || ''}</em></p>` : ''}
                     <p><strong>Categoría:</strong> ${card.category || '-'}</p>
                     <p><strong>Nivel:</strong> ${card.level || '-'}</p>
                 `;

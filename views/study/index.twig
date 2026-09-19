@@ -1,0 +1,43 @@
+{% extends "layout.twig" %}
+
+{% block title %}Modo Estudio{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/study-menu.css'>
+{% endblock %}
+
+{% block body %}
+    <div class="study-menu">
+        <h1>Modo Estudio – Vocabulario</h1>
+        <p>Elige un nivel completo o una sección del libro.</p>
+
+        <div class="levels">
+            {% for level in levels %}
+                <section class="level">
+                    <h2>{{ level.level }}</h2>
+                    <p>
+                        <a class="all" href="/japobulario/study/vocabulario?level={{ level.level }}">
+                            Todo el {{ level.level }} ({{ level.total }} tarjetas)
+                        </a>
+                    </p>
+
+                    {% for chapter in level.chapters %}
+                        <h3>Capítulo {{ chapter.chapter }} · {{ chapter.chapterTitle }}</h3>
+                        <ul>
+                            {% for section in chapter.sections %}
+                                <li>
+                                    <a href="/japobulario/study/vocabulario?level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}">
+                                        {{ section.section }}. {{ section.sectionTitle }}
+                                    </a>
+                                    <span class="info">{{ section.category }} · {{ section.count }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="info">No hay vocabulario de este nivel. Ejecuta <code>node seeds/import-book-vocabulary.js</code>.</p>
+                    {% endfor %}
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
