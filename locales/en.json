@@ -1,0 +1,85 @@
+{
+  "menu": {
+    "home": "Home",
+    "studyVocabulary": "Study vocabulary",
+    "studyKanji": "Study kanji",
+    "flashcards": "Flashcards",
+    "newCard": "New card",
+    "language": "Language"
+  },
+  "home": {
+    "viewFlashcards": "View flashcards",
+    "addCard": "Add a new card",
+    "study": "Study:",
+    "kanji": "Kanji",
+    "vocabulary": "Vocabulary"
+  },
+  "tabs": {
+    "book": "Books ({{count}})",
+    "own": "My cards ({{count}})"
+  },
+  "card": {
+    "reading": "Reading",
+    "kunReading": "Kun reading",
+    "onReading": "On reading",
+    "meaning": "Meaning",
+    "example": "Example",
+    "category": "Category",
+    "level": "Level"
+  },
+  "flashcards": {
+    "title": "My flashcards",
+    "emptyOwn": "You haven't created any cards yet.",
+    "emptyBook": "There are no cards from the books. Run node seeds/import-book-vocabulary.js",
+    "addNew": "Add a new flashcard"
+  },
+  "form": {
+    "title": "Add a new Flashcard",
+    "type": "Flashcard type:",
+    "kanji": "Kanji",
+    "vocabulary": "Vocabulary",
+    "meaning": "Meaning:",
+    "category": "Category:",
+    "level": "Level:",
+    "save": "Save Flashcard",
+    "loadError": "The form could not be loaded.",
+    "word": "Word:",
+    "kanjiField": "Kanji:",
+    "kunyomi": "Japanese reading (kunyomi):",
+    "onyomi": "Chinese reading (onyomi):"
+  },
+  "errors": {
+    "kanjiRequired": "For a kanji card, you must fill in Kanji, 訓読み and 音読み.",
+    "wordRequired": "For a vocabulary card, you must enter a Japanese word.",
+    "invalidType": "Invalid flashcard type.",
+    "loadFields": "Error loading the fields",
+    "loadFlashcards": "Error loading the flashcards",
+    "loadStudyOptions": "Error loading the study options",
+    "loadKanji": "Error loading the kanji",
+    "loadVocabulary": "Error loading the vocabulary"
+  },
+  "study": {
+    "title": "Study Mode",
+    "titleVocabulary": "Study Mode - Vocabulary",
+    "titleKanji": "Study Mode - Kanji",
+    "back": "Back to choose a section",
+    "cardsCount": "{{count}} cards",
+    "noCards": "There are no cards for this selection.",
+    "prev": "Previous",
+    "next": "Next",
+    "chooseBook": "Choose a whole level or a section of the book.",
+    "allLevel": "All of {{level}} ({{count}} cards)",
+    "chapter": "Chapter {{number}}",
+    "noBookVocabulary": "There is no vocabulary for this level. Run",
+    "ownIntro": "Your vocabulary cards, by level and by the category you gave them when you created them.",
+    "ownNone": "You haven't created any vocabulary cards yet.",
+    "createCard": "Create a card",
+    "ownNoneLevel": "You have no cards for this level.",
+    "ownAllLevel": "All my {{level}} cards ({{count}})",
+    "noCategory": "No category",
+    "selectionBook": "Books",
+    "selectionOwn": "My cards",
+    "allVocabulary": "All vocabulary",
+    "allKanji": "All kanji"
+  }
+}

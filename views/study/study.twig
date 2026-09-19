@@ -1,0 +1,88 @@
+{#
+Vista única del modo estudio (kanji y vocabulario). Recibe:
+  - mode: 'kanji' o 'vocabulary' (decide el título y qué se pinta en cada cara)
+  - flashcards: las tarjetas a estudiar
+  - selection: texto de lo que se está estudiando
+  - backUrl (opcional): enlace para volver a elegir qué estudiar
+La navegación entre tarjetas está en public/javascripts/study.js.
+#}
+{% extends "layout.twig" %}
+
+{% block title %}{{ mode == 'kanji' ? __('study.titleKanji') : __('study.titleVocabulary') }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/flashcard.css'>
+{% endblock %}
+
+{% block body %}
+    {% if backUrl %}
+        <p><a href="{{ backUrl }}">{{ __('study.back') }}</a></p>
+    {% endif %}
+    <h1 class="text-center">{{ mode == 'kanji' ? __('study.titleKanji') : __('study.titleVocabulary') }}</h1>
+
+    <p><strong>{{ selection }}</strong> · {{ __('study.cardsCount', {'count': flashcards|length}) }}</p>
+
+    {% if flashcards|length == 0 %}
+        <p>{{ __('study.noCards') }}</p>
+    {% else %}
+    <div class="flashcard-container" onclick="toggleFlip()">
+        <div class="flashcard" id="flashcard">
+            <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
+            <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevCard()">{{ __('study.prev') }}</button>
+        <button onclick="nextCard()">{{ __('study.next') }}</button>
+        <p id="counter"></p>
+    </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block scripts %}
+<!--highlightWord(): marca en negrita la palabra de la tarjeta dentro de la frase de ejemplo-->
+<script src="/javascripts/highlight-word.js"></script>
+<!--startStudy(): navegación entre tarjetas, común a todos los modos-->
+<script src="/javascripts/study.js"></script>
+<script>
+    //se envuelve para controlar que no se ejecute hasta que se cargue el DOM:
+    document.addEventListener("DOMContentLoaded", () => {
+        //todas las flashcards como un array JS:
+        const flashcards = {{ flashcards|json_encode|raw }};
+
+        //lo único que cambia entre modos: qué se pinta en cada cara de la tarjeta
+        //(las etiquetas las traduce twig al generar la página, con __())
+
+        function kanjiFaces(card) {
+            return {
+                front: card.kanji,
+                back: `
+                    <p><strong>{{ __('card.kunReading') }}:</strong> ${card.kunReading || '-'}</p>
+                    <p><strong>{{ __('card.onReading') }}:</strong> ${card.onReading || '-'}</p>
+                    <p><strong>{{ __('card.meaning') }}:</strong> ${card.meaning || '-'}</p>
+                    <p><strong>{{ __('card.category') }}:</strong> ${card.category || '-'}</p>
+                    <p><strong>{{ __('card.level') }}:</strong> ${card.level || '-'}</p>
+                `,
+            };
+        }
+
+        function vocabularyFaces(card) {
+            //primera frase de ejemplo del libro (si la hay):
+            const example = (card.examples && card.examples.length) ? card.examples[0] : null;
+            return {
+                front: card.word,
+                back: `
+                    ${card.reading && card.reading !== card.word ? `<p><strong>{{ __('card.reading') }}:</strong> ${card.reading}</p>` : ''}
+                    <p><strong>{{ __('card.meaning') }}:</strong> ${card.meaning || '-'}</p>
+                    ${example ? `<p><strong>{{ __('card.example') }}:</strong> ${highlightWord(card, example.ja)}<br><em>${example.en || ''}</em></p>` : ''}
+                    <p><strong>{{ __('card.level') }}:</strong> ${card.level || '-'}</p>
+                `,
+            };
+        }
+
+        startStudy(flashcards, {{ mode == 'kanji' ? 'kanjiFaces' : 'vocabularyFaces' }});
+    });
+</script>
+{% endblock %}

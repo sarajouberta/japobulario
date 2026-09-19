@@ -1,0 +1,85 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "studyVocabulary": "Estudiar vocabulario",
+    "studyKanji": "Estudiar kanji",
+    "flashcards": "Flashcards",
+    "newCard": "Nueva tarjeta",
+    "language": "Idioma"
+  },
+  "home": {
+    "viewFlashcards": "Ver flashcards",
+    "addCard": "Añadir nueva tarjeta",
+    "study": "Estudiar:",
+    "kanji": "Kanji",
+    "vocabulary": "Vocabulario"
+  },
+  "tabs": {
+    "book": "Libros ({{count}})",
+    "own": "Mis tarjetas ({{count}})"
+  },
+  "card": {
+    "reading": "Lectura",
+    "kunReading": "Lectura kun",
+    "onReading": "Lectura on",
+    "meaning": "Significado",
+    "example": "Ejemplo",
+    "category": "Categoría",
+    "level": "Nivel"
+  },
+  "flashcards": {
+    "title": "Mis flashcards",
+    "emptyOwn": "Todavía no has creado tarjetas.",
+    "emptyBook": "No hay tarjetas de los libros. Ejecuta node seeds/import-book-vocabulary.js",
+    "addNew": "Añadir nueva flashcard"
+  },
+  "form": {
+    "title": "Añadir nueva Flashcard",
+    "type": "Tipo de flashcard:",
+    "kanji": "Kanji",
+    "vocabulary": "Vocabulario",
+    "meaning": "Significado:",
+    "category": "Categoría:",
+    "level": "Nivel:",
+    "save": "Guardar Flashcard",
+    "loadError": "No se pudo cargar el formulario.",
+    "word": "Palabra:",
+    "kanjiField": "Kanji:",
+    "kunyomi": "Lectura japonesa (kunyomi):",
+    "onyomi": "Lectura china (onyomi):"
+  },
+  "errors": {
+    "kanjiRequired": "Para una ficha de kanji, debes rellenar Kanji, 訓読み y 音読み.",
+    "wordRequired": "Para una ficha de vocabulario, debes proporcionar una palabra japonesa.",
+    "invalidType": "Tipo de flashcard no válido.",
+    "loadFields": "Error al cargar campos",
+    "loadFlashcards": "Error al obtener las flashcards",
+    "loadStudyOptions": "Error al cargar las opciones de estudio",
+    "loadKanji": "Error al cargar los kanjis",
+    "loadVocabulary": "Error al cargar el vocabulario"
+  },
+  "study": {
+    "title": "Modo Estudio",
+    "titleVocabulary": "Modo Estudio - Vocabulario",
+    "titleKanji": "Modo Estudio - Kanji",
+    "back": "Volver a elegir sección",
+    "cardsCount": "{{count}} tarjetas",
+    "noCards": "No hay tarjetas para esta selección.",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "chooseBook": "Elige un nivel completo o una sección del libro.",
+    "allLevel": "Todo el {{level}} ({{count}} tarjetas)",
+    "chapter": "Capítulo {{number}}",
+    "noBookVocabulary": "No hay vocabulario de este nivel. Ejecuta",
+    "ownIntro": "Tus tarjetas de vocabulario, por nivel y por la categoría que les pusiste al crearlas.",
+    "ownNone": "Todavía no has creado tarjetas de vocabulario.",
+    "createCard": "Crear una tarjeta",
+    "ownNoneLevel": "No tienes tarjetas de este nivel.",
+    "ownAllLevel": "Todas mis tarjetas del {{level}} ({{count}})",
+    "noCategory": "Sin categoría",
+    "selectionBook": "Libros",
+    "selectionOwn": "Mis tarjetas",
+    "allVocabulary": "Todo el vocabulario",
+    "allKanji": "Todos los kanji"
+  }
+}

@@ -14,17 +14,17 @@ router.get('/', async(req, res) => {
   try {
     //dos pestañas: mis tarjetas (por defecto: las creadas con el formulario) y las de los libros.
     //Las propias se buscan como "no son del libro" para incluir también las antiguas sin campo source:
-    const tab = req.query.tab === 'libros' ? 'libros' : 'mias';
-    const filter = tab === 'libros' ? { source: 'book' } : { source: { $ne: 'book' } };
+    const tab = req.query.tab === 'book' ? 'book' : 'own';
+    const filter = tab === 'book' ? { source: 'book' } : { source: { $ne: 'book' } };
     //las propias, las más nuevas primero; las del libro, en el orden del libro:
-    const sort = tab === 'libros' ? { level: -1, bookId: 1 } : { createdAt: -1 };
+    const sort = tab === 'book' ? { level: -1, bookId: 1 } : { createdAt: -1 };
 
     const flashcards = (await Flashcard.find(filter).sort(sort)).map(doc => doc.toObject());
     const ownTotal = await Flashcard.countDocuments({ source: { $ne: 'book' } });
     const bookTotal = await Flashcard.countDocuments({ source: 'book' });
     res.render('flashcards', { flashcards, tab, ownTotal, bookTotal });
   } catch (error) {
-    res.status(500).send('Error al obtener las flashcards');
+    res.status(500).send(req.__('errors.loadFlashcards'));
   }
 });
 
@@ -41,14 +41,14 @@ router.post('/new', async (req, res, next) => {
     // Validaciones según tipo
     if (type === 'kanji') {
       if (!kanji || !kunReading || !onReading) {
-        return res.status(400).send('Para una ficha de kanji, debes rellenar Kanji,訓読み y 音読み.');
+        return res.status(400).send(req.__('errors.kanjiRequired'));
       }
     } else if (type === 'vocabulary') {
       if (!word) {
-        return res.status(400).send('Para una ficha de vocabulario, debes proporcionar una palabra japonesa.');
+        return res.status(400).send(req.__('errors.wordRequired'));
       }
     } else {
-      return res.status(400).send('Tipo de flashcard no válido.');
+      return res.status(400).send(req.__('errors.invalidType'));
     }
   //MODIFICACIÓN: CAMPOS VACÍOS SEGÚN TIPO:
     const flashcard = new Flashcard( { type, kanji: kanji || null, kunReading: kunReading || null, onReading: onReading || null, word: word || null, meaning, category: category || '', level});
@@ -66,10 +66,10 @@ router.get('/form-fields/:type', (req, res) => {
   const type = req.params.type;
   //aunque no debería ser nunca erróneo, porque es un select:
   if (!['kanji', 'vocabulary'].includes(type)) {
-    return res.status(400).send('Tipo inválido');
+    return res.status(400).send(req.__('errors.invalidType'));
   }
   res.render(`fragments/form-${type}.twig`, {}, (err, html) => {
-    if (err) return res.status(500).send('Error al cargar campos');
+    if (err) return res.status(500).send(req.__('errors.loadFields'));
     res.send(html);
   });
 });

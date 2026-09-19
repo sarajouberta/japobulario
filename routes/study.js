@@ -12,20 +12,20 @@ const LEVELS = ['N5', 'N4'];
 //origen de las tarjetas: las de los libros (importadas) y las propias (creadas con el formulario).
 //Las propias se buscan como "no son del libro" para incluir también las antiguas sin campo source:
 const SOURCES = {
-    libros: { source: 'book' },
-    mias: { source: { $ne: 'book' } },
+    book: { source: 'book' },
+    own: { source: { $ne: 'book' } },
 };
 
 //pantalla para elegir qué estudiar, con dos pestañas:
-// - libros (por defecto): nivel, capítulo y sección del libro
-// - mias: tarjetas propias por nivel y categoría
+// - book (por defecto): nivel, capítulo y sección del libro
+// - own: tarjetas propias por nivel y categoría
 router.get('/', async (req, res) => {
     try {
-        const tab = req.query.tab === 'mias' ? 'mias' : 'libros';
+        const tab = req.query.tab === 'own' ? 'own' : 'book';
 
         //nº de tarjetas por sección del libro:
         const sections = await Flashcard.aggregate([
-            { $match: { ...STUDY_VOCABULARY, ...SOURCES.libros } },
+            { $match: { ...STUDY_VOCABULARY, ...SOURCES.book } },
             { $group: {
                 _id: { level: '$level', chapter: '$chapter', section: '$section' },
                 chapterTitle: { $first: '$chapterTitle' },
@@ -37,12 +37,12 @@ router.get('/', async (req, res) => {
         ]);
         //nº total de tarjetas del libro por nivel:
         const totals = await Flashcard.aggregate([
-            { $match: { ...STUDY_VOCABULARY, ...SOURCES.libros } },
+            { $match: { ...STUDY_VOCABULARY, ...SOURCES.book } },
             { $group: { _id: '$level', count: { $sum: 1 } } },
         ]);
         //tarjetas propias por nivel y categoría (la categoría es la que se escribe en el formulario):
         const ownCategories = await Flashcard.aggregate([
-            { $match: { ...STUDY_VOCABULARY, ...SOURCES.mias } },
+            { $match: { ...STUDY_VOCABULARY, ...SOURCES.own } },
             { $group: { _id: { level: '$level', category: '$category' }, count: { $sum: 1 } } },
             { $sort: { '_id.category': 1 } },
         ]);
@@ -81,7 +81,7 @@ router.get('/', async (req, res) => {
         res.render('study/index.twig', { tab, levels, ownLevels, bookTotal, ownTotal });
     } catch (error) {
         console.error('Error en /study:', error);
-        res.status(500).send('Error al cargar las opciones de estudio');
+        res.status(500).send(req.__('errors.loadStudyOptions'));
     }
 });
 
@@ -93,11 +93,12 @@ router.get('/kanji', async (req, res) => {
         const flashcards = flashcardsDocs.map(doc => doc.toObject());
 
         //res.render('flashcards.twig', { flashcards, mode: 'kanji' });
-        res.render('study/study-kanji.twig', { flashcards, mode: 'kanji'});
+        //misma vista que vocabulario (study/study.twig); mode decide qué se pinta en cada cara
+        res.render('study/study.twig', { flashcards, mode: 'kanji', selection: req.__('study.allKanji') });
 
     } catch (error) {
         console.error('Error en /study/kanji:', error);
-        res.status(500).send('Error al cargar los kanjis');
+        res.status(500).send(req.__('errors.loadKanji'));
     }
 });
 
@@ -115,13 +116,13 @@ quería mostrar.
 La clave estuvo en transformar esos documentos a objetos JavaScript simples, usando:
     const flashcards = flashcardsDocs.map(doc => doc.toObject());
  */
-router.get('/vocabulario', async (req, res) => {
+router.get('/vocabulary', async (req, res) => {
     try {
         //filtros opcionales desde la pantalla de elección:
-        //  libros: ?source=libros&level=N4&chapter=2&section=1
-        //  propias: ?source=mias&level=N5&category=verbos
+        //  libros: ?source=book&level=N4&chapter=2&section=1
+        //  propias: ?source=own&level=N5&category=verbos
         const filter = { ...STUDY_VOCABULARY };
-        const source = ['libros', 'mias'].includes(req.query.source) ? req.query.source : null;
+        const source = ['book', 'own'].includes(req.query.source) ? req.query.source : null;
         if (source) Object.assign(filter, SOURCES[source]);
 
         const chapter = parseInt(req.query.chapter, 10);
@@ -134,7 +135,7 @@ router.get('/vocabulario', async (req, res) => {
             }
         }
         //categoría de las propias (vacía = tarjetas sin categoría):
-        const category = source === 'mias' && typeof req.query.category === 'string' ? req.query.category : null;
+        const category = source === 'own' && typeof req.query.category === 'string' ? req.query.category : null;
         if (category !== null) filter.category = category === '' ? { $in: [null, ''] } : category;
 
         //orden del libro (primero N5, después N4, y por número de palabra); las propias, por fecha de creación:
@@ -145,23 +146,23 @@ router.get('/vocabulario', async (req, res) => {
 
         //texto de lo que se está estudiando, p. ej. "Libros · N4 · 勉強と仕事 · 学校 (School)":
         const parts = [];
-        if (source) parts.push(source === 'mias' ? 'Mis tarjetas' : 'Libros');
+        if (source) parts.push(req.__(source === 'own' ? 'study.selectionOwn' : 'study.selectionBook'));
         if (filter.level) {
             const first = flashcards[0];
             parts.push(filter.level);
             if (first && filter.chapter) parts.push(first.chapterTitle);
             if (first && filter.section) parts.push(`${first.sectionTitle} (${first.category})`);
         }
-        if (category !== null) parts.push(category || 'Sin categoría');
-        const selection = parts.length ? parts.join(' · ') : 'Todo el vocabulario';
+        if (category !== null) parts.push(category || req.__('study.noCategory'));
+        const selection = parts.length ? parts.join(' · ') : req.__('study.allVocabulary');
 
         //el enlace de volver lleva a la pestaña de la que se viene:
-        const backUrl = source === 'mias' ? '/japobulario/study?tab=mias' : '/japobulario/study';
+        const backUrl = source === 'own' ? '/japobulario/study?tab=own' : '/japobulario/study';
 
-        res.render('study/study-vocabulary.twig', { flashcards, mode: 'vocabulario', selection, backUrl });
+        res.render('study/study.twig', { flashcards, mode: 'vocabulary', selection, backUrl });
     } catch (error) {
         console.error('Error cargando flashcards:', error); //añado log para consola
-        res.status(500).send('Error al cargar el vocabulario');
+        res.status(500).send(req.__('errors.loadVocabulary'));
     }
 });
 

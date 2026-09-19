@@ -9,6 +9,9 @@ var logger = require('morgan');
 //flashcards en mongoose:
 var mongoose = require('mongoose'); //importar mongoose
 
+//traducción de la interfaz (español / inglés):
+var i18n = require('i18n');
+
 
 var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/flashcards');
@@ -45,6 +48,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+/* TRADUCCIÓN (i18n): los textos de la interfaz están en locales/es.json y locales/en.json.
+   - El idioma se lee de la cookie "lang" (la guarda el selector ES / EN del menú); por defecto, español.
+   - En las vistas: {{ __('clave') }}; en las rutas: req.__('clave').
+   - objectNotation: las claves se agrupan por pantalla, p. ej. 'study.next'. */
+i18n.configure({
+  locales: ['es', 'en'],
+  defaultLocale: 'es',
+  directory: path.join(__dirname, 'locales'),
+  cookie: 'lang',
+  objectNotation: true,
+  updateFiles: false,  //no crear claves nuevas automáticamente en los .json
+});
+app.use(i18n.init);  //después de cookieParser, para poder leer la cookie
+//idioma actual disponible en todas las vistas (para <html lang> y el selector del menú):
+app.use((req, res, next) => {
+  res.locals.locale = req.getLocale();
+  next();
+});
 
 
 app.use('/', indexRouter);

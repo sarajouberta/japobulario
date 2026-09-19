@@ -32,3 +32,19 @@
     margin: 0;
     padding: 0;
 }
+
+/* selector de idioma ES | EN, a la derecha del menú */
+.main-menu .lang-switch {
+    margin-left: auto;
+    color: #999;
+}
+
+.main-menu .lang-switch a {
+    color: #999;
+}
+
+/* idioma elegido: resaltado */
+.main-menu .lang-switch a.active {
+    color: #f7f7f7;
+    font-weight: bold;
+}

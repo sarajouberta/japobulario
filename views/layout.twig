@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ locale }}">
   <head>
     <!--cada vista puede definir su título con el bloque title; si no, sale "Japobulario"-->
     <title>{% block title %}Japobulario{% endblock %}</title>
@@ -16,12 +16,18 @@
     <nav class="main-menu">
       <a class="brand" href="/japobulario">Japobulario</a>
       <ul>
-        <li><a href="/japobulario">Inicio</a></li>
-        <li><a href="/japobulario/study">Estudiar vocabulario</a></li>
-        <li><a href="/japobulario/study/kanji">Estudiar kanji</a></li>
-        <li><a href="/japobulario/flashcards">Flashcards</a></li>
-        <li><a href="/japobulario/flashcards/new">Nueva tarjeta</a></li>
+        <li><a href="/japobulario">{{ __('menu.home') }}</a></li>
+        <li><a href="/japobulario/study">{{ __('menu.studyVocabulary') }}</a></li>
+        <li><a href="/japobulario/study/kanji">{{ __('menu.studyKanji') }}</a></li>
+        <li><a href="/japobulario/flashcards">{{ __('menu.flashcards') }}</a></li>
+        <li><a href="/japobulario/flashcards/new">{{ __('menu.newCard') }}</a></li>
       </ul>
+      <!--selector de idioma: guarda la elección en una cookie (ruta /lang/:locale en routes/index.js)-->
+      <div class="lang-switch" title="{{ __('menu.language') }}">
+        <a href="/lang/es" class="{{ locale == 'es' ? 'active' : '' }}">ES</a>
+        |
+        <a href="/lang/en" class="{{ locale == 'en' ? 'active' : '' }}">EN</a>
+      </div>
     </nav>
 
     {% block body %}{% endblock %}

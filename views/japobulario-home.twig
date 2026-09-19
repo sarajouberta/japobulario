@@ -4,12 +4,12 @@
 <div class="container">
     <h1>Japobulario</h1>
     <ul>
-        <li><a href="/japobulario/flashcards">Ver flashcards</a></li>
-        <li><a href="/japobulario/flashcards/new">Añadir nueva tarjeta</a></li>
-        <li>Estudiar:
+        <li><a href="/japobulario/flashcards">{{ __('home.viewFlashcards') }}</a></li>
+        <li><a href="/japobulario/flashcards/new">{{ __('home.addCard') }}</a></li>
+        <li>{{ __('home.study') }}
             <ul>
-                <li><a href="/japobulario/study/kanji">Kanji</a></li>
-                <li><a href="/japobulario/study">Vocabulario</a></li>
+                <li><a href="/japobulario/study/kanji">{{ __('home.kanji') }}</a></li>
+                <li><a href="/japobulario/study">{{ __('home.vocabulary') }}</a></li>
             </ul>
         </li>
     </ul>

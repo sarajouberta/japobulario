@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1> A VER CÓMO MUESTRO YO LAS FLASHCARDS XDXXD</h1>
+    <h1>{{ __('flashcards.title') }}</h1>
 
     <!--pestañas: tarjetas propias creadas con el formulario / tarjetas de los libros-->
     <nav class="tabs">
-        <a href="/japobulario/flashcards" class="{{ tab == 'mias' ? 'active' : '' }}">Mis tarjetas ({{ ownTotal }})</a>
-        <a href="/japobulario/flashcards?tab=libros" class="{{ tab == 'libros' ? 'active' : '' }}">Libros ({{ bookTotal }})</a>
+        <a href="/japobulario/flashcards" class="{{ tab == 'own' ? 'active' : '' }}">{{ __('tabs.own', {'count': ownTotal}) }}</a>
+        <a href="/japobulario/flashcards?tab=book" class="{{ tab == 'book' ? 'active' : '' }}">{{ __('tabs.book', {'count': bookTotal}) }}</a>
     </nav>
 
     {% if flashcards.length > 0 %}
@@ -27,39 +27,39 @@
                         <div class="kanji-box">
                             <h2>{{ card.kanji }}</h2>
                         </div>
-                        <p><strong>Lectura kun:</strong> {{ card.kunReading }}</p>
-                        <p><strong>Lectura on:</strong> {{ card.onReading }}</p>
-                        <p><strong>Significado:</strong> {{ card.meaning }}</p>
-                        <p><strong>Nivel:</strong> {{ card.level }}</p>
+                        <p><strong>{{ __('card.kunReading') }}:</strong> {{ card.kunReading }}</p>
+                        <p><strong>{{ __('card.onReading') }}:</strong> {{ card.onReading }}</p>
+                        <p><strong>{{ __('card.meaning') }}:</strong> {{ card.meaning }}</p>
+                        <p><strong>{{ __('card.level') }}:</strong> {{ card.level }}</p>
 
                     {% elseif card.type == 'vocabulary' %}
                         <div class="kanji-box">
                             <h2>{{ card.word }}</h2>
                         </div>
                         {% if card.reading and card.reading != card.word %}
-                            <p><strong>Lectura:</strong> {{ card.reading }}</p>
+                            <p><strong>{{ __('card.reading') }}:</strong> {{ card.reading }}</p>
                         {% endif %}
-                        <p><strong>Significado:</strong> {{ card.meaning }}</p>
-                        <p><strong>Nivel:</strong> {{ card.level }}</p>
-                        <p><strong>Categoría:</strong> {{ card.category }}</p>
+                        <p><strong>{{ __('card.meaning') }}:</strong> {{ card.meaning }}</p>
+                        <p><strong>{{ __('card.level') }}:</strong> {{ card.level }}</p>
+                        <p><strong>{{ __('card.category') }}:</strong> {{ card.category }}</p>
 
                     {% else %}
                         <div class="kanji-box">
                             <h2>{{ card.kanji }}</h2>
                         </div>
-                        <p><strong>Lectura kun:</strong> {{ card.kunReading }}</p>
-                        <p><strong>Lectura on:</strong> {{ card.onReading }}</p>
-                        <p><strong>Significado:</strong> {{ card.meaning }}</p>
-                        <p><strong>Nivel:</strong> {{ card.level }}</p>
-                        <p><strong>Categoría:</strong> {{ card.category }}</p>
+                        <p><strong>{{ __('card.kunReading') }}:</strong> {{ card.kunReading }}</p>
+                        <p><strong>{{ __('card.onReading') }}:</strong> {{ card.onReading }}</p>
+                        <p><strong>{{ __('card.meaning') }}:</strong> {{ card.meaning }}</p>
+                        <p><strong>{{ __('card.level') }}:</strong> {{ card.level }}</p>
+                        <p><strong>{{ __('card.category') }}:</strong> {{ card.category }}</p>
                     {% endif %}
                 </article>
             {% endfor %}
         </div>
     {% else %}
-        <p>{{ tab == 'mias' ? 'Todavía no has creado tarjetas.' : 'No hay tarjetas de los libros. Ejecuta node seeds/import-book-vocabulary.js' }}</p>
+        <p>{{ tab == 'own' ? __('flashcards.emptyOwn') : __('flashcards.emptyBook') }}</p>
     {% endif %}
 
-        <p><a href="/japobulario/flashcards/new">Añadir nueva flashcard</a></p>
+        <p><a href="/japobulario/flashcards/new">{{ __('flashcards.addNew') }}</a></p>
 
     {% endblock %}

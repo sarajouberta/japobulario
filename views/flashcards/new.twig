@@ -2,14 +2,14 @@
 {% extends "../layout.twig" %}
 
 {% block body %}
-    <h1>Añadir nueva Flashcard</h1>
+    <h1>{{ __('form.title') }}</h1>
 
     <form action="/japobulario/flashcards/new" method="POST">
         <p>
-            <label>Tipo de flashcard:<br>
+            <label>{{ __('form.type') }}<br>
                 <select name="type" id="typeSelect" required>
-                    <option value="kanji">Kanji</option>
-                    <option value="vocabulary">Vocabulario</option>
+                    <option value="kanji">{{ __('form.kanji') }}</option>
+                    <option value="vocabulary">{{ __('form.vocabulary') }}</option>
                 </select>
             </label>
         </p>
@@ -18,24 +18,24 @@
         <div id="dynamicFields"></div>
 
         <p>
-            <label>Significado:<br>
+            <label>{{ __('form.meaning') }}<br>
                 <input type="text" name="meaning" required>
             </label>
         </p>
         <p>
-            <label>Categoría:<br>
+            <label>{{ __('form.category') }}<br>
                 <input type="text" name="category">
             </label>
         </p>
         <p>
-            <label>Nivel:<br>
+            <label>{{ __('form.level') }}<br>
                 <select name="level" required>
                     <option value="N5">N5</option>
                     <option value="N4">N4</option>
                 </select>
             </label>
         </p>
-        <button type="submit">Guardar Flashcard</button>
+        <button type="submit">{{ __('form.save') }}</button>
     </form>
 
 {% endblock %}
@@ -61,7 +61,7 @@
                     dynamicFields.innerHTML = html;
                 } catch (err) {
                     console.error('Error al cargar campos del formulario:', err);
-                    dynamicFields.innerHTML = '<p style="color:red;">No se pudo cargar el formulario.</p>';
+                    dynamicFields.innerHTML = '<p style="color:red;">{{ __('form.loadError') }}</p>';
                 } finally {
                     submitBtn.disabled = false;
                 }
