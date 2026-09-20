@@ -184,6 +184,10 @@ cualquiera con el enlace podría entrar.
   IP del hosting en Atlas.
 - **Las 14 palabras sin significado** del N5 (la familia de la página 19 y algunos contadores).
 - **Importar las tablas de los libros** (`extras`).
+- **Sección de estudio para los contadores y otros grupos de palabras** que no son vocabulario
+  general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
+  conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
+  las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Furigana encima de los kanji** en la tarjeta, con `<ruby>` (los datos ya lo tienen).
 - **Orden aleatorio** en el modo estudio.
 - **No hay kanji:** al borrar los `.txt` de prueba, la parte de kanji se ha quedado sin datos.
