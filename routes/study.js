@@ -32,6 +32,7 @@ router.get('/', async (req, res) => {
             { $group: {
                 _id: { level: '$level', chapter: '$chapter', section: '$section' },
                 chapterTitle: { $first: '$chapterTitle' },
+                chapterTitleEn: { $first: '$chapterTitleEn' },
                 sectionTitle: { $first: '$sectionTitle' },
                 category: { $first: '$category' },
                 count: { $sum: 1 },
@@ -56,7 +57,7 @@ router.get('/', async (req, res) => {
             for (const s of sections.filter(s => s._id.level === level)) {
                 let chapter = chapters.find(c => c.chapter === s._id.chapter);
                 if (!chapter) {
-                    chapter = { chapter: s._id.chapter, chapterTitle: s.chapterTitle, sections: [] };
+                    chapter = { chapter: s._id.chapter, chapterTitle: s.chapterTitle, chapterTitleEn: s.chapterTitleEn, sections: [] };
                     chapters.push(chapter);
                 }
                 chapter.sections.push({

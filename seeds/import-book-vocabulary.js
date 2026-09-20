@@ -35,6 +35,7 @@ function toFlashcard(entry, complete) {
         category: entry.section_title_en,  //tema de la sección del libro (Family, Weather...)
         chapter: entry.chapter,
         chapterTitle: entry.chapter_title,
+        chapterTitleEn: entry.chapter_title_en,
         section: entry.section,
         sectionTitle: entry.section_title,
         examples: entry.examples.map(ex => ({ ja: ex.ja, jaFurigana: ex.ja_furigana, en: ex.en })),

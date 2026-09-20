@@ -47,6 +47,7 @@ const flashcardSchema = new mongoose.Schema({
     pos: [{ type: String }],          //categoría gramatical (solo N4)
     chapter: { type: Number },
     chapterTitle: { type: String },
+    chapterTitleEn: { type: String },  //el mismo título del capítulo, en inglés
     section: { type: Number },
     sectionTitle: { type: String },
     examples: [exampleSchema],
