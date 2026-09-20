@@ -177,7 +177,7 @@ cualquiera con el enlace podría entrar.
 - **Coste:** plan gratuito de Firebase (Spark) y cluster gratuito de Atlas (M0), sin tarjeta de
   crédito, así que no puede llegar ninguna factura.
 
-## 2026-09-20 - Furigana, significado arriba y títulos del índice
+## 2026-09-20 - Furigana, significado arriba, títulos del índice y pie de página
 
 En la parte de atrás de la tarjeta, la frase de ejemplo ya muestra la lectura encima de los kanji,
 con la etiqueta `<ruby>` de HTML. Los datos transcritos de los libros ya la traían: las 1940
@@ -207,6 +207,16 @@ palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢�
   no tenían traducción: el JSON trae `chapter_title_en`, así que se ha añadido `chapterTitleEn` al
   modelo y al importador, y se ha vuelto a importar (1046 + 894 fichas actualizadas, ninguna
   duplicada, porque el importador hace upsert por nivel y número del libro).
+- **Pie de página en todas las pantallas**, con el aviso de que la web está en desarrollo
+  ("Japobulario is being developed by Saritastar", en `locales/*.json` como `menu.developedBy`) y
+  una llave inglesa dibujada en SVG dentro del layout, no un emoji ni un icono de fuente. Es una
+  tira como la del menú pero más estrecha y en un gris algo más claro.
+- **El pie va fijo al borde de abajo de la ventana**, así se ve siempre sin bajar la página. El
+  primer intento fue dejarlo al final del documento y empujarlo con una columna flex, pero en el
+  modo estudio quedaba escondido justo encima de la barra de botones, que también es fija. Ahora
+  la barra se apoya encima del pie (`bottom: 30px`) y la página reserva abajo el hueco de las dos
+  tiras, así que ya no tapan nada. Medido con el navegador: el pie ocupa los últimos 28px de la
+  ventana y la barra queda justo encima.
 - **Comprobado con node** sobre los 1655 ejemplos: en todos se encuentra la palabra y el texto sin
   etiquetas coincide exactamente con la frase original, así que la conversión no se come ni cambia
   nada.
