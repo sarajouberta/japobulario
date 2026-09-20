@@ -44,6 +44,8 @@ La navegación entre tarjetas está en public/javascripts/study.js.
 {% block scripts %}
 <!--highlightWord(): marca en negrita la palabra de la tarjeta dentro de la frase de ejemplo-->
 <script src="/javascripts/highlight-word.js"></script>
+<!--exampleHtml(): la frase de ejemplo con la lectura encima de los kanji ({漢字|かな} -> <ruby>)-->
+<script src="/javascripts/furigana.js"></script>
 <!--startStudy(): navegación entre tarjetas, común a todos los modos-->
 <script src="/javascripts/study.js"></script>
 <script>
@@ -55,13 +57,18 @@ La navegación entre tarjetas está en public/javascripts/study.js.
         //lo único que cambia entre modos: qué se pinta en cada cara de la tarjeta
         //(las etiquetas las traduce twig al generar la página, con __())
 
+        //el significado va arriba del todo y centrado, igual en todas las tarjetas (con lectura o sin ella)
+        function meaningTop(card) {
+            return `<p class="card-meaning">${card.meaning || '-'}</p>`;
+        }
+
         function kanjiFaces(card) {
             return {
                 front: card.kanji,
                 back: `
+                    ${meaningTop(card)}
                     <p><strong>{{ __('card.kunReading') }}:</strong> ${card.kunReading || '-'}</p>
                     <p><strong>{{ __('card.onReading') }}:</strong> ${card.onReading || '-'}</p>
-                    <p><strong>{{ __('card.meaning') }}:</strong> ${card.meaning || '-'}</p>
                     <p><strong>{{ __('card.category') }}:</strong> ${card.category || '-'}</p>
                     <p><strong>{{ __('card.level') }}:</strong> ${card.level || '-'}</p>
                 `,
@@ -74,9 +81,9 @@ La navegación entre tarjetas está en public/javascripts/study.js.
             return {
                 front: card.word,
                 back: `
+                    ${meaningTop(card)}
                     ${card.reading && card.reading !== card.word ? `<p><strong>{{ __('card.reading') }}:</strong> ${card.reading}</p>` : ''}
-                    <p><strong>{{ __('card.meaning') }}:</strong> ${card.meaning || '-'}</p>
-                    ${example ? `<p><strong>{{ __('card.example') }}:</strong> ${highlightWord(card, example.ja)}<br><em>${example.en || ''}</em></p>` : ''}
+                    ${example ? `<p><strong>{{ __('card.example') }}:</strong><br><span class="furigana">${exampleHtml(card, example)}</span><br><em>${example.en || ''}</em></p>` : ''}
                     <p><strong>{{ __('card.level') }}:</strong> ${card.level || '-'}</p>
                 `,
             };

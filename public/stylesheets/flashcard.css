@@ -5,8 +5,7 @@
     /* ancho de hasta 500px (o el de la pantalla si es menor); el alto se ajusta al contenido */
     width: 100%;
     max-width: 500px;
-    /* margen inferior grande para que la barra fija de botones no tape una tarjeta alta */
-    margin: 50px auto 140px;
+    margin: 50px auto 24px;
 }
 
 /* las dos caras se colocan en la misma celda del grid (una encima de otra): así la tarjeta
@@ -51,12 +50,19 @@
     text-align: left;
 }
 
-/* barra de botones fija en la parte de abajo de la ventana: no se mueve aunque cambie el tamaño de la tarjeta */
+/* aquí abajo hay dos tiras fijas, el pie y la barra de botones: se deja al final de la página el
+   hueco de las dos para que no tapen el contenido */
+body {
+    padding-bottom: 145px;
+}
+
+/* barra de botones fija en la parte de abajo de la ventana: no se mueve aunque cambie el tamaño de
+   la tarjeta. Se apoya justo encima del pie, de ahí el hueco de abajo */
 .controls {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 30px;
     padding: 12px 16px 4px;
     text-align: center;
     background-color: #fff;
@@ -66,4 +72,25 @@
 button {
     padding: 8px 16px;
     font-size: 1em;
+}
+
+/* el significado: lo primero de la parte de atrás, centrado y algo más grande que el resto, igual
+   en todas las tarjetas (las que tienen lectura y las que no) */
+.card-meaning {
+    margin: 0 0 14px;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/* frase de ejemplo con la lectura encima de los kanji (<ruby>): un poco más grande, y con sitio
+   arriba para que las lecturas no se peguen a la línea anterior */
+.furigana {
+    font-size: 1.3em;
+    line-height: 2.2;
+}
+
+.furigana rt {
+    font-size: 0.5em;
+    /* la lectura no se separa de su kanji al justificar */
+    ruby-align: center;
 }
