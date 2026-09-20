@@ -177,6 +177,40 @@ cualquiera con el enlace podría entrar.
 - **Coste:** plan gratuito de Firebase (Spark) y cluster gratuito de Atlas (M0), sin tarjeta de
   crédito, así que no puede llegar ninguna factura.
 
+## 2026-09-20 - Furigana, significado arriba y títulos del índice
+
+En la parte de atrás de la tarjeta, la frase de ejemplo ya muestra la lectura encima de los kanji,
+con la etiqueta `<ruby>` de HTML. Los datos transcritos de los libros ya la traían: las 1940
+palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢字|かな}`.
+
+- **La lectura va solo encima de los kanji.** De los 3573 grupos `{..|..}` del dataset, 106 no
+  llevan ninguno (números como `{1998|...}` y siglas como `{CD|シーディー}`): esos se escriben tal
+  cual, sin nada encima.
+- **`public/javascripts/furigana.js`** hace la conversión. Parte el texto en trozos (los que tienen
+  lectura y los que no) y los va pintando; `exampleHtml(card, example)` es lo que llama la vista.
+- **Lo más delicado fue juntarlo con la negrita** de `highlight-word.js`, que marca la palabra de la
+  tarjeta dentro de la frase: las posiciones que devuelve son del texto sin furigana, así que al
+  pintar hay que ir contando cuánto ocupa cada trozo. Un ruby no se puede partir por la mitad, así
+  que si la negrita lo toca entra entero.
+- **Las tarjetas propias no tienen furigana** (no se pide en el formulario): para ellas se sigue
+  usando la frase tal cual, con la palabra en negrita.
+- **La cara delantera no lleva furigana** a propósito: si no, la lectura se vería antes de girar la
+  tarjeta y no habría nada que recordar.
+- **El significado pasa a la parte de arriba de la tarjeta**, centrado y algo más grande que el
+  resto del reverso. Es lo primero que se busca al girarla, así que sale siempre en el mismo sitio,
+  tenga la tarjeta lectura o no, y en los dos modos (kanji y vocabulario). Se pinta con una sola
+  función (`meaningTop`) para que no se pueda desajustar entre modos, y ya sin la etiqueta
+  "Significado:", que ahí sobra.
+- **En el índice de los libros, los títulos van en original y la traducción al lado**, en gris y
+  más pequeña (clase `.translation`). Las secciones ya salían en japonés, pero su traducción
+  compartía hueco con el número de tarjetas y parecía lo mismo; ahora van separadas. Los capítulos
+  no tenían traducción: el JSON trae `chapter_title_en`, así que se ha añadido `chapterTitleEn` al
+  modelo y al importador, y se ha vuelto a importar (1046 + 894 fichas actualizadas, ninguna
+  duplicada, porque el importador hace upsert por nivel y número del libro).
+- **Comprobado con node** sobre los 1655 ejemplos: en todos se encuentra la palabra y el texto sin
+  etiquetas coincide exactamente con la frase original, así que la conversión no se come ni cambia
+  nada.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -188,7 +222,9 @@ cualquiera con el enlace podría entrar.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Furigana encima de los kanji** en la tarjeta, con `<ruby>` (los datos ya lo tienen).
+- **Marcar una tarjeta como estudiada** desde el modo estudio, y que en otro sitio se puedan ver
+  las tarjetas ya aprendidas. Como las tarjetas de los libros son comunes a todos, la marca tiene
+  que guardarse por usuario, no en la tarjeta.
 - **Orden aleatorio** en el modo estudio.
 - **No hay kanji:** al borrar los `.txt` de prueba, la parte de kanji se ha quedado sin datos.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
