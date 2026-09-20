@@ -68,7 +68,7 @@ separando alternativas (・ /) y recortando el final para las formas conjugadas 
         return sentence.slice(0, start) + '<strong>' + sentence.slice(start, end) + '</strong>' + sentence.slice(end);
     }
 
-    //en el navegador queda disponible como window.highlightWord; en node se puede importar para probarlo
+    //en el navegador quedan disponibles como window.highlightWord / window.findWord; en node se pueden importar para probarlos
     if (typeof module !== 'undefined') module.exports = { findWord, highlightWord };
-    else window.highlightWord = highlightWord;
+    else Object.assign(window, { findWord, highlightWord });
 })();
