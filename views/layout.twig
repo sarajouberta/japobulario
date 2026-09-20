@@ -41,7 +41,20 @@
       {% endif %}
     </nav>
 
-    {% block body %}{% endblock %}
+    <main>{% block body %}{% endblock %}</main>
+
+    <!--pie de página: aviso de que la web está en desarrollo. Va en el layout, así sale en todas.
+        La llave inglesa está dibujada en SVG (no es un icono de fuente ni un emoji)-->
+    <footer class="dev-banner">
+      <svg class="wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+           stroke-linecap="round" aria-hidden="true" focusable="false">
+        <!--cabeza: arco casi cerrado, con la boca abierta hacia la derecha-->
+        <path d="M18.6 4.4a4.3 4.3 0 1 0 0 7.2"/>
+        <!--mango-->
+        <path d="M13 11 4.6 19.4"/>
+      </svg>
+      {{ __('menu.developedBy') }}
+    </footer>
 
     {% block scripts %}{% endblock %}
   </body>

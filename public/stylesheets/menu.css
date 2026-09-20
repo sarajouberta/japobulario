@@ -1,4 +1,10 @@
-/* CSS DEL MENÚ DE NAVEGACIÓN (views/layout.twig) */
+/* CSS DEL MENÚ DE NAVEGACIÓN Y DEL PIE (views/layout.twig) */
+
+/* el pie va fijo abajo del todo, así se ve siempre; se deja su hueco al final de la página para
+   que no tape el final del contenido */
+body {
+    padding-bottom: 38px;
+}
 
 .main-menu {
     display: flex;
@@ -62,4 +68,30 @@
     padding: 4px 10px;
     font-size: 0.9em;
     cursor: pointer;
+}
+
+/* pie de página: una tira como la del menú pero más estrecha y en un gris algo más claro. Va
+   pegado al borde de abajo de la ventana (de ahí que ocupe todo el ancho, sin el margen del
+   navegador que sí tiene el menú) */
+.dev-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 6px 16px;
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+    font-size: 0.85em;
+}
+
+/* la llave inglesa, del tamaño del texto que tiene al lado */
+.dev-banner .wrench {
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;  /* en pantallas estrechas se encoge el texto, no el dibujo */
 }
