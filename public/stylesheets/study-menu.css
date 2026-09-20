@@ -37,3 +37,11 @@
     color: #777;
     font-size: 0.9em;
 }
+
+/* traducción al inglés del título del libro: al lado del original, en gris y más pequeña, para que
+   se lea como un apoyo y no se confunda con el título ni con el número de tarjetas */
+.translation {
+    color: #555;
+    font-size: 0.85em;
+    font-weight: normal;
+}

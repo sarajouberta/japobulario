@@ -31,14 +31,18 @@
                         </p>
 
                         {% for chapter in level.chapters %}
-                            <h3>{{ __('study.chapter', {'number': chapter.chapter}) }} · {{ chapter.chapterTitle }}</h3>
+                            {#el título tal cual viene del libro; al lado, más pequeña, su traducción#}
+                            <h3>{{ __('study.chapter', {'number': chapter.chapter}) }} · {{ chapter.chapterTitle }}
+                                {% if chapter.chapterTitleEn %}<span class="translation">{{ chapter.chapterTitleEn }}</span>{% endif %}
+                            </h3>
                             <ul>
                                 {% for section in chapter.sections %}
                                     <li>
                                         <a href="/japobulario/study/vocabulary?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}">
                                             {{ section.section }}. {{ section.sectionTitle }}
                                         </a>
-                                        <span class="info">{{ section.category }} · {{ section.count }}</span>
+                                        {% if section.category %}<span class="translation">{{ section.category }}</span>{% endif %}
+                                        <span class="info">· {{ section.count }}</span>
                                     </li>
                                 {% endfor %}
                             </ul>
