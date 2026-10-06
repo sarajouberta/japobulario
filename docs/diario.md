@@ -224,6 +224,38 @@ palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢�
   tiras, así que ya no tapan nada. Medido con el navegador: el pie ocupa los últimos 28px de la
   ventana y la barra queda justo encima.
 
+## 2026-10-06 - Marcar tarjetas como aprendidas
+
+Desde el modo estudio se puede marcar una tarjeta como aprendida, y el índice de estudio enseña el
+progreso y deja elegir si se estudian todas, solo las aprendidas o solo las que faltan. Se hizo
+antes que los kanji porque es pequeño, se usa ya con las 1940 palabras y no depende del tipo de
+tarjeta: cuando lleguen los kanji tendrán la marca sin tocar nada.
+
+- **La marca va por usuario, no en la tarjeta.** Las tarjetas de los libros son comunes a todos,
+  así que cada marca es un documento aparte en un modelo nuevo, `Learned` (usuario + tarjeta, con
+  un índice único para que no se repita). Desmarcar borra el documento.
+- **Un solo botón "Aprendida"** entre "Anterior" y "Siguiente", que pone y quita la marca. Cuando
+  la tarjeta ya está aprendida se pone en verde y dice "OK Aprendida". Se descartó "La sé / No la
+  sé", que es más tipo test pero solo guardaría la última respuesta.
+- **Se guarda al momento** con `fetch` (`POST /japobulario/study/learned/:id`). El servidor solo
+  deja marcar tarjetas que el usuario puede ver (las de los libros y las suyas), y si algo falla la
+  página lo avisa en rojo en vez de dar la marca por buena.
+- **Índice de estudio:** al lado de cada nivel, sección y categoría sale "x / n aprendidas", y
+  arriba un selector "Todas / Sin aprender / Aprendidas". El filtro elegido se aplica a la lista
+  (solo salen las secciones que tienen alguna tarjeta que abrir, y si en un nivel no queda ninguna
+  lo dice), a los enlaces del modo estudio y al enlace de volver, y se conserva al cambiar de
+  pestaña. En el modo estudio aparece en la línea de lo que se está estudiando.
+- **Dos fallos encontrados al probarlo en el navegador.** El primero: la marca no se guardaba nunca,
+  porque `json_encode` de Twig escribe el `_id` de Mongo como un objeto con sus bytes y el botón
+  acababa llamando a `/learned/[object Object]`; ahora el id se pasa como texto a la vista. Las
+  pruebas con node no lo habían visto porque mandaban el id desde el servidor, no desde la página.
+  El segundo: el selector solo cambiaba a dónde llevaban los enlaces y la lista seguía igual, así
+  que parecía que no filtraba.
+- **Comprobado** con una app de prueba que monta las rutas de estudio con una sesión falsa:
+  marcar dos veces no duplica, desmarcar borra, un id mal escrito da error 400 y una tarjeta que no
+  existe da 404, y en la sección 1 del capítulo 1 del N5 salen 13 tarjetas en total, 2 aprendidas
+  y 11 sin aprender tras marcar dos. Después, a mano en el navegador.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -235,10 +267,9 @@ palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢�
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Marcar una tarjeta como estudiada** desde el modo estudio, y que en otro sitio se puedan ver
-  las tarjetas ya aprendidas. Como las tarjetas de los libros son comunes a todos, la marca tiene
-  que guardarse por usuario, no en la tarjeta.
 - **Orden aleatorio** en el modo estudio.
 - **No hay kanji:** al borrar los `.txt` de prueba, la parte de kanji se ha quedado sin datos.
+  Hay que decidir de dónde salen (quizá el Basic Kanji Book) y qué datos lleva cada kanji. Deben
+  seguir siendo `Flashcard` con `type: "kanji"`, para que les sirva la marca de aprendida.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
