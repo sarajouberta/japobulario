@@ -74,6 +74,18 @@ button {
     font-size: 1em;
 }
 
+/* botón "Aprendida" cuando la tarjeta ya lo está: en verde, para verlo de un vistazo */
+#learned-button.is-learned {
+    background-color: #2e7d32;
+    border: 1px solid #2e7d32;
+    color: #fff;
+}
+
+.error {
+    color: #c62828;
+    margin: 4px 0;
+}
+
 /* el significado: lo primero de la parte de atrás, centrado y algo más grande que el resto, igual
    en todas las tarjetas (las que tienen lectura y las que no) */
 .card-meaning {

@@ -10,12 +10,22 @@
 {% block body %}
     <div class="study-menu">
         <h1>{{ __('study.titleVocabulary') }}</h1>
+        {#parámetros que se conservan al cambiar de pestaña o de filtro#}
+        {% set tabQuery = tab == 'own' ? 'tab=own&' : '' %}
 
         <!--pestañas: tarjetas de los libros / tarjetas propias creadas con el formulario-->
         <nav class="tabs">
-            <a href="/japobulario/study" class="{{ tab == 'book' ? 'active' : '' }}">{{ __('tabs.book', {'count': bookTotal}) }}</a>
-            <a href="/japobulario/study?tab=own" class="{{ tab == 'own' ? 'active' : '' }}">{{ __('tabs.own', {'count': ownTotal}) }}</a>
+            <a href="/japobulario/study{{ learned ? '?learned=' ~ learned }}" class="{{ tab == 'book' ? 'active' : '' }}">{{ __('tabs.book', {'count': bookTotal}) }}</a>
+            <a href="/japobulario/study?tab=own{{ learned ? '&learned=' ~ learned }}" class="{{ tab == 'own' ? 'active' : '' }}">{{ __('tabs.own', {'count': ownTotal}) }}</a>
         </nav>
+
+        <!--qué tarjetas se abren al pulsar un enlace: todas, solo las que faltan por aprender o solo las aprendidas-->
+        <p class="learned-filter">
+            {{ __('study.learnedFilter') }}
+            <a href="/japobulario/study{{ tab == 'own' ? '?tab=own' }}" class="{{ learned ? '' : 'active' }}">{{ __('study.filterAll') }}</a>
+            <a href="/japobulario/study?{{ tabQuery }}learned=no" class="{{ learned == 'no' ? 'active' : '' }}">{{ __('study.filterNotLearned') }}</a>
+            <a href="/japobulario/study?{{ tabQuery }}learned=yes" class="{{ learned == 'yes' ? 'active' : '' }}">{{ __('study.filterLearned') }}</a>
+        </p>
 
         {% if tab == 'book' %}
             <p>{{ __('study.chooseBook') }}</p>
@@ -24,10 +34,15 @@
                 {% for level in levels %}
                     <section class="level">
                         <h2>{{ level.level }}</h2>
+                        {#con el filtro de aprendidas, solo salen las secciones que tienen alguna tarjeta que abrir#}
+                        {% if level.total > 0 and level.matching == 0 %}
+                            <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
+                        {% else %}
                         <p>
-                            <a class="all" href="/japobulario/study/vocabulary?source=book&level={{ level.level }}">
+                            <a class="all" href="/japobulario/study/vocabulary?source=book&level={{ level.level }}{{ learnedQuery }}">
                                 {{ __('study.allLevel', {'level': level.level, 'count': level.total}) }}
                             </a>
+                            <span class="info">· {{ __('study.progress', {'learned': level.learned, 'count': level.total}) }}</span>
                         </p>
 
                         {% for chapter in level.chapters %}
@@ -38,17 +53,18 @@
                             <ul>
                                 {% for section in chapter.sections %}
                                     <li>
-                                        <a href="/japobulario/study/vocabulary?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}">
+                                        <a href="/japobulario/study/vocabulary?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}{{ learnedQuery }}">
                                             {{ section.section }}. {{ section.sectionTitle }}
                                         </a>
                                         {% if section.category %}<span class="translation">{{ section.category }}</span>{% endif %}
-                                        <span class="info">· {{ section.count }}</span>
+                                        <span class="info">· {{ __('study.progress', {'learned': section.learned, 'count': section.count}) }}</span>
                                     </li>
                                 {% endfor %}
                             </ul>
                         {% else %}
                             <p class="info">{{ __('study.noBookVocabulary') }} <code>node seeds/import-book-vocabulary.js</code>.</p>
                         {% endfor %}
+                        {% endif %}
                     </section>
                 {% endfor %}
             </div>
@@ -65,19 +81,22 @@
                             <h2>{{ level.level }}</h2>
                             {% if level.total == 0 %}
                                 <p class="info">{{ __('study.ownNoneLevel') }}</p>
+                            {% elseif level.matching == 0 %}
+                                <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
                             {% else %}
                                 <p>
-                                    <a class="all" href="/japobulario/study/vocabulary?source=own&level={{ level.level }}">
+                                    <a class="all" href="/japobulario/study/vocabulary?source=own&level={{ level.level }}{{ learnedQuery }}">
                                         {{ __('study.ownAllLevel', {'level': level.level, 'count': level.total}) }}
                                     </a>
+                                    <span class="info">· {{ __('study.progress', {'learned': level.learned, 'count': level.total}) }}</span>
                                 </p>
                                 <ul>
                                     {% for cat in level.categories %}
                                         <li>
-                                            <a href="/japobulario/study/vocabulary?source=own&level={{ level.level }}&category={{ cat.category|url_encode }}">
+                                            <a href="/japobulario/study/vocabulary?source=own&level={{ level.level }}&category={{ cat.category|url_encode }}{{ learnedQuery }}">
                                                 {{ cat.category ?: __('study.noCategory') }}
                                             </a>
-                                            <span class="info">{{ cat.count }}</span>
+                                            <span class="info">· {{ __('study.progress', {'learned': cat.learned, 'count': cat.count}) }}</span>
                                         </li>
                                     {% endfor %}
                                 </ul>

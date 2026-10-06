@@ -58,7 +58,10 @@
     "loadFlashcards": "Error loading the flashcards",
     "loadStudyOptions": "Error loading the study options",
     "loadKanji": "Error loading the kanji",
-    "loadVocabulary": "Error loading the vocabulary"
+    "loadVocabulary": "Error loading the vocabulary",
+    "invalidRequest": "Invalid request",
+    "cardNotFound": "Card not found",
+    "saveLearned": "Could not save the mark. Please try again."
   },
   "study": {
     "title": "Study Mode",
@@ -82,7 +85,18 @@
     "selectionBook": "Books",
     "selectionOwn": "My cards",
     "allVocabulary": "All vocabulary",
-    "allKanji": "All kanji"
+    "allKanji": "All kanji",
+    "markLearned": "Learned",
+    "learned": "OK Learned",
+    "progress": "{{learned}} / {{count}} learned",
+    "learnedFilter": "Study:",
+    "filterAll": "All",
+    "filterNotLearned": "Not learned",
+    "filterLearned": "Learned",
+    "onlyLearned": "Learned",
+    "onlyNotLearned": "Not learned",
+    "noneLearned": "You have not marked any card of this level as learned yet.",
+    "allLearned": "You have learned every card of this level."
   },
   "auth": {
     "loginTitle": "Log in",

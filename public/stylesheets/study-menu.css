@@ -45,3 +45,19 @@
     font-size: 0.85em;
     font-weight: normal;
 }
+
+/* selector de qué tarjetas abrir (todas / sin aprender / aprendidas): la opción elegida, resaltada */
+.learned-filter a {
+    margin-left: 8px;
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.learned-filter a.active {
+    border-color: #333;
+    background-color: #333;
+    color: #f7f7f7;
+}

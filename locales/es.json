@@ -58,7 +58,10 @@
     "loadFlashcards": "Error al obtener las flashcards",
     "loadStudyOptions": "Error al cargar las opciones de estudio",
     "loadKanji": "Error al cargar los kanjis",
-    "loadVocabulary": "Error al cargar el vocabulario"
+    "loadVocabulary": "Error al cargar el vocabulario",
+    "invalidRequest": "Petición no válida",
+    "cardNotFound": "No se ha encontrado la tarjeta",
+    "saveLearned": "No se ha podido guardar la marca. Inténtalo de nuevo."
   },
   "study": {
     "title": "Modo Estudio",
@@ -82,7 +85,18 @@
     "selectionBook": "Libros",
     "selectionOwn": "Mis tarjetas",
     "allVocabulary": "Todo el vocabulario",
-    "allKanji": "Todos los kanji"
+    "allKanji": "Todos los kanji",
+    "markLearned": "Aprendida",
+    "learned": "OK Aprendida",
+    "progress": "{{learned}} / {{count}} aprendidas",
+    "learnedFilter": "Estudiar:",
+    "filterAll": "Todas",
+    "filterNotLearned": "Sin aprender",
+    "filterLearned": "Aprendidas",
+    "onlyLearned": "Aprendidas",
+    "onlyNotLearned": "Sin aprender",
+    "noneLearned": "Todavía no has marcado ninguna tarjeta de este nivel como aprendida.",
+    "allLearned": "Ya tienes aprendidas todas las tarjetas de este nivel."
   },
   "auth": {
     "loginTitle": "Iniciar sesión",

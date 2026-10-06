@@ -4,6 +4,7 @@ Vista única del modo estudio (kanji y vocabulario). Recibe:
   - flashcards: las tarjetas a estudiar
   - selection: texto de lo que se está estudiando
   - backUrl (opcional): enlace para volver a elegir qué estudiar
+Cada tarjeta trae learned (true si el usuario la tiene aprendida), para el botón "Aprendida".
 La navegación entre tarjetas está en public/javascripts/study.js.
 #}
 {% extends "layout.twig" %}
@@ -34,8 +35,12 @@ La navegación entre tarjetas está en public/javascripts/study.js.
 
     <div class="controls">
         <button onclick="prevCard()">{{ __('study.prev') }}</button>
+        <!--pone o quita la marca de aprendida (los dos textos los usa study.js según el estado)-->
+        <button id="learned-button" onclick="toggleLearned()"
+                data-label="{{ __('study.markLearned') }}" data-label-on="{{ __('study.learned') }}"></button>
         <button onclick="nextCard()">{{ __('study.next') }}</button>
         <p id="counter"></p>
+        <p id="learned-error" class="error" hidden>{{ __('errors.saveLearned') }}</p>
     </div>
     {% endif %}
 {% endblock %}
