@@ -179,6 +179,9 @@ cualquiera con el enlace podría entrar.
 
 ## 2026-09-20 - Furigana, significado arriba, títulos del índice y pie de página
 
+Cuatro cosas: el furigana en la frase de ejemplo, el significado arriba de la tarjeta, los títulos
+del índice de los libros en original con su traducción, y un pie de página en toda la web.
+
 En la parte de atrás de la tarjeta, la frase de ejemplo ya muestra la lectura encima de los kanji,
 con la etiqueta `<ruby>` de HTML. Los datos transcritos de los libros ya la traían: las 1940
 palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢字|かな}`.
@@ -196,6 +199,9 @@ palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢�
   usando la frase tal cual, con la palabra en negrita.
 - **La cara delantera no lleva furigana** a propósito: si no, la lectura se vería antes de girar la
   tarjeta y no habría nada que recordar.
+- **Comprobado con node** sobre los 1655 ejemplos: en todos se encuentra la palabra y el texto sin
+  etiquetas coincide exactamente con la frase original, así que la conversión no se come ni cambia
+  nada.
 - **El significado pasa a la parte de arriba de la tarjeta**, centrado y algo más grande que el
   resto del reverso. Es lo primero que se busca al girarla, así que sale siempre en el mismo sitio,
   tenga la tarjeta lectura o no, y en los dos modos (kanji y vocabulario). Se pinta con una sola
@@ -217,9 +223,6 @@ palabras y los 1655 ejemplos tienen su versión con furigana en notación `{漢�
   la barra se apoya encima del pie (`bottom: 30px`) y la página reserva abajo el hueco de las dos
   tiras, así que ya no tapan nada. Medido con el navegador: el pie ocupa los últimos 28px de la
   ventana y la barra queda justo encima.
-- **Comprobado con node** sobre los 1655 ejemplos: en todos se encuentra la palabra y el texto sin
-  etiquetas coincide exactamente con la frase original, así que la conversión no se come ni cambia
-  nada.
 
 ### Pendiente
 
