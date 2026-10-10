@@ -27,7 +27,8 @@
     "meaning": "Meaning",
     "example": "Example",
     "category": "Category",
-    "level": "Level"
+    "level": "Level",
+    "japanFlag": "Flag of Japan: Japanese reading"
   },
   "flashcards": {
     "title": "My flashcards",

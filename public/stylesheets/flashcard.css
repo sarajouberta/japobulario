@@ -115,6 +115,36 @@ button {
     line-height: 2.2;
 }
 
+/* lecturas kun y on de los kanji: dos columnas una al lado de la otra, sin bordes, centradas en la
+   tarjeta y cada lectura centrada en su columna */
+.readings {
+    margin: 0 auto 10px;
+    border-collapse: collapse;
+}
+
+.readings th,
+.readings td {
+    padding: 2px 16px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.readings td {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* bandera de Japón dibujada con CSS (no es un emoji ni un icono): rectángulo 2:3 blanco con borde
+   fino y el círculo rojo en el centro, de 3/5 del alto (0.6em de diámetro en 1em de alto) */
+.flag-jp {
+    display: inline-block;
+    width: 1.5em;
+    height: 1em;
+    vertical-align: -0.15em;
+    border: 1px solid #ccc;
+    background: #fff radial-gradient(circle at center, #bc002d 0.3em, transparent 0.31em);
+}
+
 /* palabras de ejemplo de los kanji del libro: una por línea, sin viñeta */
 .kanji-examples {
     margin: 0 0 8px;

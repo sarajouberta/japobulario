@@ -82,6 +82,23 @@ La navegación entre tarjetas está en public/javascripts/study.js.
             return `<li><span class="furigana">${word}</span>${alt} - ${example.en || ''}</li>`;
         }
 
+        //lecturas kun y on una al lado de la otra (tabla sin bordes), cada lectura en su línea. Al lado de
+        //kun, la bandera de Japón (dibujada con CSS, .flag-jp) para distinguir la lectura japonesa
+        function readingsTable(card) {
+            const lines = text => text ? text.split('、').join('<br>') : '-';
+            return `
+                <table class="readings">
+                    <tr>
+                        <th><span class="flag-jp" role="img" aria-label="{{ __('card.japanFlag') }}"></span> {{ __('card.kunReading') }}</th>
+                        <th>{{ __('card.onReading') }}</th>
+                    </tr>
+                    <tr>
+                        <td>${lines(card.kunReading)}</td>
+                        <td>${lines(card.onReading)}</td>
+                    </tr>
+                </table>`;
+        }
+
         function kanjiFaces(card) {
             //las del libro traen palabras de ejemplo y nº de trazos; las propias, categoría
             const examples = card.examples && card.examples.length
@@ -91,8 +108,7 @@ La navegación entre tarjetas está en public/javascripts/study.js.
                 front: card.kanji,
                 back: `
                     ${meaningTop(card)}
-                    <p><strong>{{ __('card.kunReading') }}:</strong> ${card.kunReading || '-'}</p>
-                    <p><strong>{{ __('card.onReading') }}:</strong> ${card.onReading || '-'}</p>
+                    ${readingsTable(card)}
                     ${card.strokes ? `<p><strong>{{ __('study.strokes') }}:</strong> ${card.strokes}</p>` : ''}
                     ${examples}
                     ${card.source !== 'book' ? `<p><strong>{{ __('card.category') }}:</strong> ${card.category || '-'}</p>` : ''}
