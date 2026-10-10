@@ -365,6 +365,29 @@ la carpeta `japo`.
   (`NODE_ENV=production`) se mantiene, porque va más rápido. Esto explica por qué antes algunos
   cambios no salían hasta reiniciar.
 
+## 2026-10-10 - Kanji: el Basic Kanji Book entero (lecciones 12 a 22)
+
+Con estas tres tandas está transcrito el libro completo: **22 lecciones, 251 kanji y 825 palabras
+de ejemplo**, todo importado y estudiable por lecciones.
+
+- **Lecciones 12 a 15:** radicales arriba y abajo (宅, 家, 薬...), arriba a la izquierda y los
+  que rodean (広, 病, 国, 開...), abajo a la izquierda (近, 遠, 道...), y la familia (父, 母, 兄,
+  姉...).
+- **Lecciones 16 a 19:** adjetivos de な (元気, 有名, 親切...), verbos de movimiento (出, 入,
+  乗, 降...), posición (右, 左, 東, 西...) y afijos de lugar (〜場, 〜館, 〜園, 〜所...).
+- **Lecciones 20 a 22:** la división administrativa de Japón (市, 町, 村, 都, 府, 県...), los
+  verbos con する (練習, 勉強, 研究, 質問...) y los nombres de dos kanji (政治, 経済, 歴史...).
+- **Lo mismo que en las tandas anteriores:** llevan nota las lecturas irregulares que el libro
+  marca con `*` (今日, お父さん, お母さん, お兄さん, お姉さん, 弟子, 部屋), y donde el libro
+  iguala dos palabras salen como dos ejemplos (奥さん = 奥様). Las palabras con dos lecturas
+  guardan la segunda aparte (市場: いちば / しじょう).
+- **Solo va lo que pone la ficha.** La lección 5 dice que 働 es un kanji creado en Japón, y se le
+  iba a poner esa nota, como a 畑. Pero 畑 no tiene lectura on y 働 sí (ドウ), así que la nota
+  habría confundido: se quitó.
+- **Comprobado** en cada tanda reimportando todo (sin duplicados): los 825 ejemplos salen con el
+  kanji en negrita sin cambiar la palabra, y el índice enseña las 22 lecciones con sus títulos.
+  Después, a mano en el navegador.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -376,6 +399,5 @@ la carpeta `japo`.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Transcribir el resto del Basic Kanji Book:** lecciones 20 a 22 (kanji 218 a 251).
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
