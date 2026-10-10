@@ -376,6 +376,6 @@ la carpeta `japo`.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Transcribir el resto del Basic Kanji Book:** lecciones 16 a 22 (kanji 170 a 251).
+- **Transcribir el resto del Basic Kanji Book:** lecciones 20 a 22 (kanji 218 a 251).
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).

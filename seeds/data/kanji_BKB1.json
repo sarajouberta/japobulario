@@ -19,9 +19,13 @@
     12,
     13,
     14,
-    15
+    15,
+    16,
+    17,
+    18,
+    19
   ],
-  "entry_count": 169,
+  "entry_count": 217,
   "entries": [
     {
       "id": 1,
@@ -6735,6 +6739,1926 @@
       ],
       "notes": [],
       "page": 140
+    },
+    {
+      "id": 170,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "元",
+      "meaning_en": "origin, source, base",
+      "kun": [
+        "もと"
+      ],
+      "on": [
+        "ゲン",
+        "ガン"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "元気な",
+          "reading": "げんきな",
+          "word_furigana": "{元|げん}{気|き}な",
+          "en": "healthy, fine"
+        },
+        {
+          "word": "元日",
+          "reading": "がんじつ",
+          "word_furigana": "{元|がん}{日|じつ}",
+          "en": "New Year's Day"
+        }
+      ],
+      "notes": [],
+      "page": 149
+    },
+    {
+      "id": 171,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "気",
+      "meaning_en": "spirit, mind, air, atmosphere",
+      "kun": [],
+      "on": [
+        "キ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "気持ち",
+          "reading": "きもち",
+          "word_furigana": "{気|き}{持|も}ち",
+          "en": "a feeling"
+        },
+        {
+          "word": "気分",
+          "reading": "きぶん",
+          "word_furigana": "{気|き}{分|ぶん}",
+          "en": "a mood, a state of mind"
+        },
+        {
+          "word": "天気",
+          "reading": "てんき",
+          "word_furigana": "{天|てん}{気|き}",
+          "en": "weather"
+        },
+        {
+          "word": "病気",
+          "reading": "びょうき",
+          "word_furigana": "{病|びょう}{気|き}",
+          "en": "sickness"
+        }
+      ],
+      "notes": [],
+      "page": 149
+    },
+    {
+      "id": 172,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "有",
+      "meaning_en": "have, possess, exist",
+      "kun": [
+        "(あ-る)"
+      ],
+      "on": [
+        "ユウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "有る",
+          "reading": "ある",
+          "word_furigana": "{有|あ}る",
+          "en": "to exist, to have"
+        },
+        {
+          "word": "有名な",
+          "reading": "ゆうめいな",
+          "word_furigana": "{有|ゆう}{名|めい}な",
+          "en": "famous"
+        },
+        {
+          "word": "有力な",
+          "reading": "ゆうりょくな",
+          "word_furigana": "{有|ゆう}{力|りょく}な",
+          "en": "powerful"
+        },
+        {
+          "word": "所有する",
+          "reading": "しょゆうする",
+          "word_furigana": "{所|しょ}{有|ゆう}する",
+          "en": "to possess"
+        }
+      ],
+      "notes": [],
+      "page": 149
+    },
+    {
+      "id": 173,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "名",
+      "meaning_en": "name, famous, members",
+      "kun": [
+        "な"
+      ],
+      "on": [
+        "メイ",
+        "ミョウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "名前",
+          "reading": "なまえ",
+          "word_furigana": "{名|な}{前|まえ}",
+          "en": "a name"
+        },
+        {
+          "word": "名古屋",
+          "reading": "なごや",
+          "word_furigana": "{名|な}{古|ご}{屋|や}",
+          "en": "Nagoya"
+        },
+        {
+          "word": "名所",
+          "reading": "めいしょ",
+          "word_furigana": "{名|めい}{所|しょ}",
+          "en": "famous places"
+        },
+        {
+          "word": "名物",
+          "reading": "めいぶつ",
+          "word_furigana": "{名|めい}{物|ぶつ}",
+          "en": "special products"
+        }
+      ],
+      "notes": [],
+      "page": 150
+    },
+    {
+      "id": 174,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "親",
+      "meaning_en": "parent, kinship",
+      "kun": [
+        "おや",
+        "した-しい"
+      ],
+      "on": [
+        "シン"
+      ],
+      "strokes": 16,
+      "examples": [
+        {
+          "word": "親",
+          "reading": "おや",
+          "word_furigana": "{親|おや}",
+          "en": "a parent"
+        },
+        {
+          "word": "父親",
+          "reading": "ちちおや",
+          "word_furigana": "{父|ちち}{親|おや}",
+          "en": "father"
+        },
+        {
+          "word": "親しい",
+          "reading": "したしい",
+          "word_furigana": "{親|した}しい",
+          "en": "intimate, friendly"
+        },
+        {
+          "word": "親切な",
+          "reading": "しんせつな",
+          "word_furigana": "{親|しん}{切|せつ}な",
+          "en": "kind"
+        }
+      ],
+      "notes": [],
+      "page": 150
+    },
+    {
+      "id": 175,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "切",
+      "meaning_en": "cut, end, moderate",
+      "kun": [
+        "き-る",
+        "きっ-"
+      ],
+      "on": [
+        "セツ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "切る",
+          "reading": "きる",
+          "word_furigana": "{切|き}る",
+          "en": "to cut"
+        },
+        {
+          "word": "切手",
+          "reading": "きって",
+          "word_furigana": "{切|きっ}{手|て}",
+          "en": "a postage stamp"
+        },
+        {
+          "word": "切符",
+          "reading": "きっぷ",
+          "word_furigana": "{切|きっ}{符|ぷ}",
+          "en": "a ticket"
+        },
+        {
+          "word": "大切な",
+          "reading": "たいせつな",
+          "word_furigana": "{大|たい}{切|せつ}な",
+          "en": "important"
+        }
+      ],
+      "notes": [],
+      "page": 150
+    },
+    {
+      "id": 176,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "便",
+      "meaning_en": "current, traffic, convenience",
+      "kun": [
+        "たよ-り"
+      ],
+      "on": [
+        "ベン",
+        "ビン"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "便り",
+          "reading": "たより",
+          "word_furigana": "{便|たよ}り",
+          "en": "a letter, news"
+        },
+        {
+          "word": "便利な",
+          "reading": "べんりな",
+          "word_furigana": "{便|べん}{利|り}な",
+          "en": "convenient"
+        },
+        {
+          "word": "航空便",
+          "reading": "こうくうびん",
+          "word_furigana": "{航|こう}{空|くう}{便|びん}",
+          "en": "air mail"
+        },
+        {
+          "word": "便所",
+          "reading": "べんじょ",
+          "word_furigana": "{便|べん}{所|じょ}",
+          "en": "a toilet"
+        }
+      ],
+      "notes": [],
+      "page": 150
+    },
+    {
+      "id": 177,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "利",
+      "meaning_en": "profit, proficient",
+      "kun": [
+        "(き-く)"
+      ],
+      "on": [
+        "リ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "左利き",
+          "reading": "ひだりきき",
+          "word_furigana": "{左|ひだり}{利|き}き",
+          "en": "left-handed"
+        },
+        {
+          "word": "有利な",
+          "reading": "ゆうりな",
+          "word_furigana": "{有|ゆう}{利|り}な",
+          "en": "advantageous"
+        },
+        {
+          "word": "利子",
+          "reading": "りし",
+          "word_furigana": "{利|り}{子|し}",
+          "en": "interest"
+        },
+        {
+          "word": "利用する",
+          "reading": "りようする",
+          "word_furigana": "{利|り}{用|よう}する",
+          "en": "to use"
+        }
+      ],
+      "notes": [],
+      "page": 151
+    },
+    {
+      "id": 178,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "不",
+      "meaning_en": "un-, in-, not",
+      "kun": [],
+      "on": [
+        "フ",
+        "ブ-"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "不便な",
+          "reading": "ふべんな",
+          "word_furigana": "{不|ふ}{便|べん}な",
+          "en": "inconvenient"
+        },
+        {
+          "word": "不運な",
+          "reading": "ふうんな",
+          "word_furigana": "{不|ふ}{運|うん}な",
+          "en": "unlucky"
+        },
+        {
+          "word": "不足する",
+          "reading": "ふそくする",
+          "word_furigana": "{不|ふ}{足|そく}する",
+          "en": "to lack of"
+        },
+        {
+          "word": "不親切な",
+          "reading": "ふしんせつな",
+          "word_furigana": "{不|ふ}{親|しん}{切|せつ}な",
+          "en": "unkind"
+        }
+      ],
+      "notes": [],
+      "page": 151
+    },
+    {
+      "id": 179,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "若",
+      "meaning_en": "young",
+      "kun": [
+        "わか-い"
+      ],
+      "on": [
+        "(ジャク)"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "若い",
+          "reading": "わかい",
+          "word_furigana": "{若|わか}い",
+          "en": "young"
+        },
+        {
+          "word": "若さ",
+          "reading": "わかさ",
+          "word_furigana": "{若|わか}さ",
+          "en": "youthfulness"
+        },
+        {
+          "word": "若者",
+          "reading": "わかもの",
+          "word_furigana": "{若|わか}{者|もの}",
+          "en": "a young man"
+        }
+      ],
+      "notes": [],
+      "page": 151
+    },
+    {
+      "id": 180,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "早",
+      "meaning_en": "early",
+      "kun": [
+        "はや-い"
+      ],
+      "on": [
+        "ソウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "早い",
+          "reading": "はやい",
+          "word_furigana": "{早|はや}い",
+          "en": "early"
+        },
+        {
+          "word": "早く",
+          "reading": "はやく",
+          "word_furigana": "{早|はや}く",
+          "en": "early, soon"
+        },
+        {
+          "word": "早朝",
+          "reading": "そうちょう",
+          "word_furigana": "{早|そう}{朝|ちょう}",
+          "en": "early morning"
+        }
+      ],
+      "notes": [],
+      "page": 151
+    },
+    {
+      "id": 181,
+      "lesson": 16,
+      "lesson_title": "形容詞の漢字 -2-",
+      "lesson_title_en": "Kanji for Adjectives -2-",
+      "kanji": "忙",
+      "meaning_en": "busy",
+      "kun": [
+        "いそが-しい"
+      ],
+      "on": [
+        "ボウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "忙しい",
+          "reading": "いそがしい",
+          "word_furigana": "{忙|いそが}しい",
+          "en": "busy"
+        },
+        {
+          "word": "多忙な",
+          "reading": "たぼうな",
+          "word_furigana": "{多|た}{忙|ぼう}な",
+          "en": "very busy"
+        }
+      ],
+      "notes": [],
+      "page": 152
+    },
+    {
+      "id": 182,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "出",
+      "meaning_en": "come/go out",
+      "kun": [
+        "で-る",
+        "だ-す"
+      ],
+      "on": [
+        "シュツ",
+        "シュッ-"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "出る",
+          "reading": "でる",
+          "word_furigana": "{出|で}る",
+          "en": "to come out"
+        },
+        {
+          "word": "出す",
+          "reading": "だす",
+          "word_furigana": "{出|だ}す",
+          "en": "to put out"
+        },
+        {
+          "word": "出口",
+          "reading": "でぐち",
+          "word_furigana": "{出|で}{口|ぐち}",
+          "en": "an exit"
+        },
+        {
+          "word": "外出する",
+          "reading": "がいしゅつする",
+          "word_furigana": "{外|がい}{出|しゅつ}する",
+          "en": "to go out"
+        }
+      ],
+      "notes": [],
+      "page": 160
+    },
+    {
+      "id": 183,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "入",
+      "meaning_en": "enter, put in",
+      "kun": [
+        "はい-る",
+        "い-れる"
+      ],
+      "on": [
+        "ニュウ"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "入る",
+          "reading": "はいる",
+          "word_furigana": "{入|はい}る",
+          "en": "to enter"
+        },
+        {
+          "word": "入れる",
+          "reading": "いれる",
+          "word_furigana": "{入|い}れる",
+          "en": "to put into"
+        },
+        {
+          "word": "入学する",
+          "reading": "にゅうがくする",
+          "word_furigana": "{入|にゅう}{学|がく}する",
+          "en": "to enter a school"
+        }
+      ],
+      "notes": [],
+      "page": 160
+    },
+    {
+      "id": 184,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "乗",
+      "meaning_en": "ride",
+      "kun": [
+        "の-る",
+        "の-せる"
+      ],
+      "on": [
+        "ジョウ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "乗る",
+          "reading": "のる",
+          "word_furigana": "{乗|の}る",
+          "en": "to ride"
+        },
+        {
+          "word": "乗客",
+          "reading": "じょうきゃく",
+          "word_furigana": "{乗|じょう}{客|きゃく}",
+          "en": "a passenger"
+        },
+        {
+          "word": "乗車する",
+          "reading": "じょうしゃする",
+          "word_furigana": "{乗|じょう}{車|しゃ}する",
+          "en": "to get on a train, a bus, etc."
+        }
+      ],
+      "notes": [],
+      "page": 160
+    },
+    {
+      "id": 185,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "降",
+      "meaning_en": "descend",
+      "kun": [
+        "お-りる",
+        "ふ-る",
+        "お-ろす"
+      ],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "降りる",
+          "reading": "おりる",
+          "word_furigana": "{降|お}りる",
+          "en": "to get off"
+        },
+        {
+          "word": "降る",
+          "reading": "ふる",
+          "word_furigana": "{降|ふ}る",
+          "en": "to fall (rain, snow, etc.)"
+        }
+      ],
+      "notes": [],
+      "page": 161
+    },
+    {
+      "id": 186,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "着",
+      "meaning_en": "reach, arrive, wear",
+      "kun": [
+        "つ-く",
+        "き-る"
+      ],
+      "on": [
+        "チャク"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "着く",
+          "reading": "つく",
+          "word_furigana": "{着|つ}く",
+          "en": "to arrive"
+        },
+        {
+          "word": "着る",
+          "reading": "きる",
+          "word_furigana": "{着|き}る",
+          "en": "to wear"
+        },
+        {
+          "word": "到着する",
+          "reading": "とうちゃくする",
+          "word_furigana": "{到|とう}{着|ちゃく}する",
+          "en": "to arrive"
+        },
+        {
+          "word": "着物",
+          "reading": "きもの",
+          "word_furigana": "{着|き}{物|もの}",
+          "en": "a kimono"
+        }
+      ],
+      "notes": [],
+      "page": 161
+    },
+    {
+      "id": 187,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "渡",
+      "meaning_en": "cross",
+      "kun": [
+        "わた-る",
+        "わた-す"
+      ],
+      "on": [
+        "ト"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "渡る",
+          "reading": "わたる",
+          "word_furigana": "{渡|わた}る",
+          "en": "to cross"
+        },
+        {
+          "word": "渡す",
+          "reading": "わたす",
+          "word_furigana": "{渡|わた}す",
+          "en": "to pass (something) over"
+        },
+        {
+          "word": "渡米する",
+          "reading": "とべいする",
+          "word_furigana": "{渡|と}{米|べい}する",
+          "en": "to visit U.S.A."
+        }
+      ],
+      "notes": [],
+      "page": 161
+    },
+    {
+      "id": 188,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "通",
+      "meaning_en": "pass, commute",
+      "kun": [
+        "とお-る",
+        "かよ-う",
+        "とお-す"
+      ],
+      "on": [
+        "ツウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "通る",
+          "reading": "とおる",
+          "word_furigana": "{通|とお}る",
+          "en": "to pass"
+        },
+        {
+          "word": "通う",
+          "reading": "かよう",
+          "word_furigana": "{通|かよ}う",
+          "en": "to commute"
+        },
+        {
+          "word": "交通",
+          "reading": "こうつう",
+          "word_furigana": "{交|こう}{通|つう}",
+          "en": "traffic"
+        },
+        {
+          "word": "通学する",
+          "reading": "つうがくする",
+          "word_furigana": "{通|つう}{学|がく}する",
+          "en": "to go to school"
+        }
+      ],
+      "notes": [],
+      "page": 161
+    },
+    {
+      "id": 189,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "走",
+      "meaning_en": "run",
+      "kun": [
+        "はし-る"
+      ],
+      "on": [
+        "ソウ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "走る",
+          "reading": "はしる",
+          "word_furigana": "{走|はし}る",
+          "en": "to run"
+        },
+        {
+          "word": "走者",
+          "reading": "そうしゃ",
+          "word_furigana": "{走|そう}{者|しゃ}",
+          "en": "a runner"
+        }
+      ],
+      "notes": [],
+      "page": 162
+    },
+    {
+      "id": 190,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "歩",
+      "meaning_en": "walk",
+      "kun": [
+        "ある-く"
+      ],
+      "on": [
+        "ホ",
+        "-ポ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "歩く",
+          "reading": "あるく",
+          "word_furigana": "{歩|ある}く",
+          "en": "to walk"
+        },
+        {
+          "word": "進歩する",
+          "reading": "しんぽする",
+          "word_furigana": "{進|しん}{歩|ぽ}する",
+          "en": "to progress"
+        },
+        {
+          "word": "歩行者",
+          "reading": "ほこうしゃ",
+          "word_furigana": "{歩|ほ}{行|こう}{者|しゃ}",
+          "en": "a pedestrian"
+        },
+        {
+          "word": "歩道",
+          "reading": "ほどう",
+          "word_furigana": "{歩|ほ}{道|どう}",
+          "en": "a pavement"
+        }
+      ],
+      "notes": [],
+      "page": 162
+    },
+    {
+      "id": 191,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "止",
+      "meaning_en": "stop",
+      "kun": [
+        "と-まる",
+        "と-める"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "止まる",
+          "reading": "とまる",
+          "word_furigana": "{止|と}まる",
+          "en": "to stop"
+        },
+        {
+          "word": "通行止め",
+          "reading": "つうこうどめ",
+          "word_furigana": "{通|つう}{行|こう}{止|ど}め",
+          "en": "closed to traffic"
+        },
+        {
+          "word": "中止する",
+          "reading": "ちゅうしする",
+          "word_furigana": "{中|ちゅう}{止|し}する",
+          "en": "to cancel, to discontinue"
+        }
+      ],
+      "notes": [],
+      "page": 162
+    },
+    {
+      "id": 192,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "動",
+      "meaning_en": "move",
+      "kun": [
+        "うご-く",
+        "うご-かす"
+      ],
+      "on": [
+        "ドウ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "動く",
+          "reading": "うごく",
+          "word_furigana": "{動|うご}く",
+          "en": "to move"
+        },
+        {
+          "word": "行動する",
+          "reading": "こうどうする",
+          "word_furigana": "{行|こう}{動|どう}する",
+          "en": "to act, to behave"
+        },
+        {
+          "word": "自動車",
+          "reading": "じどうしゃ",
+          "word_furigana": "{自|じ}{動|どう}{車|しゃ}",
+          "en": "a car"
+        },
+        {
+          "word": "動物",
+          "reading": "どうぶつ",
+          "word_furigana": "{動|どう}{物|ぶつ}",
+          "en": "an animal"
+        }
+      ],
+      "notes": [],
+      "page": 162
+    },
+    {
+      "id": 193,
+      "lesson": 17,
+      "lesson_title": "動詞の漢字 -2- 移動をあらわす漢字",
+      "lesson_title_en": "Kanji for Verbs -2- Movement",
+      "kanji": "働",
+      "meaning_en": "work",
+      "kun": [
+        "はたら-く"
+      ],
+      "on": [
+        "ドウ"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "働く",
+          "reading": "はたらく",
+          "word_furigana": "{働|はたら}く",
+          "en": "to work"
+        },
+        {
+          "word": "労働",
+          "reading": "ろうどう",
+          "word_furigana": "{労|ろう}{働|どう}",
+          "en": "labor"
+        },
+        {
+          "word": "労働者",
+          "reading": "ろうどうしゃ",
+          "word_furigana": "{労|ろう}{働|どう}{者|しゃ}",
+          "en": "a laborer"
+        }
+      ],
+      "notes": [],
+      "page": 163
+    },
+    {
+      "id": 194,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "右",
+      "meaning_en": "right",
+      "kun": [
+        "みぎ"
+      ],
+      "on": [
+        "ウ",
+        "ユウ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "右",
+          "reading": "みぎ",
+          "word_furigana": "{右|みぎ}",
+          "en": "the right"
+        },
+        {
+          "word": "右手",
+          "reading": "みぎて",
+          "word_furigana": "{右|みぎ}{手|て}",
+          "en": "the right hand"
+        },
+        {
+          "word": "右側",
+          "reading": "みぎがわ",
+          "word_furigana": "{右|みぎ}{側|がわ}",
+          "en": "the right side"
+        },
+        {
+          "word": "左右",
+          "reading": "さゆう",
+          "word_furigana": "{左|さ}{右|ゆう}",
+          "en": "right and left"
+        }
+      ],
+      "notes": [],
+      "page": 169
+    },
+    {
+      "id": 195,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "左",
+      "meaning_en": "left",
+      "kun": [
+        "ひだり"
+      ],
+      "on": [
+        "サ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "左",
+          "reading": "ひだり",
+          "word_furigana": "{左|ひだり}",
+          "en": "the left"
+        },
+        {
+          "word": "左手",
+          "reading": "ひだりて",
+          "word_furigana": "{左|ひだり}{手|て}",
+          "en": "the left hand"
+        },
+        {
+          "word": "左側",
+          "reading": "ひだりがわ",
+          "word_furigana": "{左|ひだり}{側|がわ}",
+          "en": "the left side"
+        }
+      ],
+      "notes": [],
+      "page": 169
+    },
+    {
+      "id": 196,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "東",
+      "meaning_en": "east",
+      "kun": [
+        "ひがし"
+      ],
+      "on": [
+        "トウ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "東",
+          "reading": "ひがし",
+          "word_furigana": "{東|ひがし}",
+          "en": "the east"
+        },
+        {
+          "word": "東口",
+          "reading": "ひがしぐち",
+          "word_furigana": "{東|ひがし}{口|ぐち}",
+          "en": "the east gate"
+        },
+        {
+          "word": "東京",
+          "reading": "とうきょう",
+          "word_furigana": "{東|とう}{京|きょう}",
+          "en": "Tokyo"
+        },
+        {
+          "word": "関東",
+          "reading": "かんとう",
+          "word_furigana": "{関|かん}{東|とう}",
+          "en": "the Kanto region"
+        }
+      ],
+      "notes": [],
+      "page": 169
+    },
+    {
+      "id": 197,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "西",
+      "meaning_en": "west",
+      "kun": [
+        "にし"
+      ],
+      "on": [
+        "セイ",
+        "サイ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "西",
+          "reading": "にし",
+          "word_furigana": "{西|にし}",
+          "en": "the west"
+        },
+        {
+          "word": "西口",
+          "reading": "にしぐち",
+          "word_furigana": "{西|にし}{口|ぐち}",
+          "en": "the west gate"
+        },
+        {
+          "word": "西洋",
+          "reading": "せいよう",
+          "word_furigana": "{西|せい}{洋|よう}",
+          "en": "the Western countries"
+        },
+        {
+          "word": "関西",
+          "reading": "かんさい",
+          "word_furigana": "{関|かん}{西|さい}",
+          "en": "the Kansai region"
+        }
+      ],
+      "notes": [],
+      "page": 170
+    },
+    {
+      "id": 198,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "北",
+      "meaning_en": "north",
+      "kun": [
+        "きた"
+      ],
+      "on": [
+        "ホク",
+        "ホッ-"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "北",
+          "reading": "きた",
+          "word_furigana": "{北|きた}",
+          "en": "the north"
+        },
+        {
+          "word": "北口",
+          "reading": "きたぐち",
+          "word_furigana": "{北|きた}{口|ぐち}",
+          "en": "the north gate"
+        },
+        {
+          "word": "北米",
+          "reading": "ほくべい",
+          "word_furigana": "{北|ほく}{米|べい}",
+          "en": "North America"
+        },
+        {
+          "word": "北海道",
+          "reading": "ほっかいどう",
+          "word_furigana": "{北|ほっ}{海|かい}{道|どう}",
+          "en": "Hokkaido"
+        }
+      ],
+      "notes": [],
+      "page": 170
+    },
+    {
+      "id": 199,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "南",
+      "meaning_en": "south",
+      "kun": [
+        "みなみ"
+      ],
+      "on": [
+        "ナン"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "南",
+          "reading": "みなみ",
+          "word_furigana": "{南|みなみ}",
+          "en": "the south"
+        },
+        {
+          "word": "南口",
+          "reading": "みなみぐち",
+          "word_furigana": "{南|みなみ}{口|ぐち}",
+          "en": "the south gate"
+        },
+        {
+          "word": "南米",
+          "reading": "なんべい",
+          "word_furigana": "{南|なん}{米|べい}",
+          "en": "South America"
+        },
+        {
+          "word": "南北",
+          "reading": "なんぼく",
+          "word_furigana": "{南|なん}{北|ぼく}",
+          "en": "north and south"
+        }
+      ],
+      "notes": [],
+      "page": 170
+    },
+    {
+      "id": 200,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "外",
+      "meaning_en": "out, outer, other, foreign",
+      "kun": [
+        "はず-れる",
+        "そと",
+        "はず-す",
+        "ほか"
+      ],
+      "on": [
+        "ガイ",
+        "ゲ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "外",
+          "reading": "そと",
+          "word_furigana": "{外|そと}",
+          "en": "outside"
+        },
+        {
+          "word": "外出する",
+          "reading": "がいしゅつする",
+          "word_furigana": "{外|がい}{出|しゅつ}する",
+          "en": "to go out"
+        },
+        {
+          "word": "外国",
+          "reading": "がいこく",
+          "word_furigana": "{外|がい}{国|こく}",
+          "en": "a foreign country"
+        },
+        {
+          "word": "外科",
+          "reading": "げか",
+          "word_furigana": "{外|げ}{科|か}",
+          "en": "surgery"
+        }
+      ],
+      "notes": [],
+      "page": 170
+    },
+    {
+      "id": 201,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "内",
+      "meaning_en": "inner, within, inside",
+      "kun": [
+        "うち"
+      ],
+      "on": [
+        "ナイ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "内側",
+          "reading": "うちがわ",
+          "word_furigana": "{内|うち}{側|がわ}",
+          "en": "inside"
+        },
+        {
+          "word": "家内",
+          "reading": "かない",
+          "word_furigana": "{家|か}{内|ない}",
+          "en": "one's own wife"
+        },
+        {
+          "word": "国内",
+          "reading": "こくない",
+          "word_furigana": "{国|こく}{内|ない}",
+          "en": "the interior"
+        },
+        {
+          "word": "内科",
+          "reading": "ないか",
+          "word_furigana": "{内|ない}{科|か}",
+          "en": "internal medicine"
+        }
+      ],
+      "notes": [],
+      "page": 171
+    },
+    {
+      "id": 202,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "部",
+      "meaning_en": "department, part, section, club",
+      "kun": [],
+      "on": [
+        "ブ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "〜部",
+          "reading": "〜ぶ",
+          "word_furigana": "〜{部|ぶ}",
+          "en": "~ department, ~ section, ~ club"
+        },
+        {
+          "word": "部屋",
+          "reading": "へや",
+          "word_furigana": "{部|へ}{屋|や}",
+          "en": "a room"
+        },
+        {
+          "word": "部分",
+          "reading": "ぶぶん",
+          "word_furigana": "{部|ぶ}{分|ぶん}",
+          "en": "a part, a section"
+        }
+      ],
+      "notes": [
+        "部屋 (へや) is marked with * in the book: irregular reading."
+      ],
+      "page": 171
+    },
+    {
+      "id": 203,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "駅",
+      "meaning_en": "station",
+      "kun": [],
+      "on": [
+        "エキ"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "駅",
+          "reading": "えき",
+          "word_furigana": "{駅|えき}",
+          "en": "a station"
+        },
+        {
+          "word": "駅員",
+          "reading": "えきいん",
+          "word_furigana": "{駅|えき}{員|いん}",
+          "en": "a station-employee"
+        },
+        {
+          "word": "駅長",
+          "reading": "えきちょう",
+          "word_furigana": "{駅|えき}{長|ちょう}",
+          "en": "the stationmaster"
+        }
+      ],
+      "notes": [],
+      "page": 171
+    },
+    {
+      "id": 204,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "社",
+      "meaning_en": "shrine, company, assembling",
+      "kun": [],
+      "on": [
+        "シャ",
+        "-ジャ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "会社",
+          "reading": "かいしゃ",
+          "word_furigana": "{会|かい}{社|しゃ}",
+          "en": "a company"
+        },
+        {
+          "word": "社長",
+          "reading": "しゃちょう",
+          "word_furigana": "{社|しゃ}{長|ちょう}",
+          "en": "the president"
+        },
+        {
+          "word": "社会",
+          "reading": "しゃかい",
+          "word_furigana": "{社|しゃ}{会|かい}",
+          "en": "a society"
+        },
+        {
+          "word": "神社",
+          "reading": "じんじゃ",
+          "word_furigana": "{神|じん}{社|じゃ}",
+          "en": "a Shinto shrine"
+        }
+      ],
+      "notes": [],
+      "page": 171
+    },
+    {
+      "id": 205,
+      "lesson": 18,
+      "lesson_title": "位置をあらわす漢字",
+      "lesson_title_en": "Kanji carrying the meaning of Position",
+      "kanji": "院",
+      "meaning_en": "hall, house, institute",
+      "kun": [],
+      "on": [
+        "イン"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "word_furigana": "{病|びょう}{院|いん}",
+          "en": "a hospital"
+        },
+        {
+          "word": "大学院",
+          "reading": "だいがくいん",
+          "word_furigana": "{大|だい}{学|がく}{院|いん}",
+          "en": "a graduate school"
+        },
+        {
+          "word": "入院する",
+          "reading": "にゅういんする",
+          "word_furigana": "{入|にゅう}{院|いん}する",
+          "en": "to be in a hospital"
+        }
+      ],
+      "notes": [],
+      "page": 172
+    },
+    {
+      "id": 206,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "地",
+      "meaning_en": "ground, base",
+      "kun": [],
+      "on": [
+        "ジ",
+        "チ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "地下",
+          "reading": "ちか",
+          "word_furigana": "{地|ち}{下|か}",
+          "en": "underground"
+        },
+        {
+          "word": "地方",
+          "reading": "ちほう",
+          "word_furigana": "{地|ち}{方|ほう}",
+          "en": "a locality, a district"
+        },
+        {
+          "word": "地図",
+          "reading": "ちず",
+          "word_furigana": "{地|ち}{図|ず}",
+          "en": "a map"
+        },
+        {
+          "word": "土地",
+          "reading": "とち",
+          "word_furigana": "{土|と}{地|ち}",
+          "en": "a land"
+        }
+      ],
+      "notes": [],
+      "page": 181
+    },
+    {
+      "id": 207,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "鉄",
+      "meaning_en": "iron",
+      "kun": [],
+      "on": [
+        "テツ"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "鉄",
+          "reading": "てつ",
+          "word_furigana": "{鉄|てつ}",
+          "en": "iron"
+        },
+        {
+          "word": "地下鉄",
+          "reading": "ちかてつ",
+          "word_furigana": "{地|ち}{下|か}{鉄|てつ}",
+          "en": "a subway"
+        },
+        {
+          "word": "鉄道",
+          "reading": "てつどう",
+          "word_furigana": "{鉄|てつ}{道|どう}",
+          "en": "a railroad"
+        },
+        {
+          "word": "私鉄",
+          "reading": "してつ",
+          "word_furigana": "{私|し}{鉄|てつ}",
+          "en": "a private railroad"
+        }
+      ],
+      "notes": [],
+      "page": 181
+    },
+    {
+      "id": 208,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "工",
+      "meaning_en": "craft, skill, construction",
+      "kun": [],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "工場",
+          "reading": "こうじょう",
+          "word_furigana": "{工|こう}{場|じょう}",
+          "en": "a factory"
+        },
+        {
+          "word": "工事",
+          "reading": "こうじ",
+          "word_furigana": "{工|こう}{事|じ}",
+          "en": "construction"
+        },
+        {
+          "word": "工学",
+          "reading": "こうがく",
+          "word_furigana": "{工|こう}{学|がく}",
+          "en": "engineering"
+        },
+        {
+          "word": "工業",
+          "reading": "こうぎょう",
+          "word_furigana": "{工|こう}{業|ぎょう}",
+          "en": "industry"
+        }
+      ],
+      "notes": [],
+      "page": 181
+    },
+    {
+      "id": 209,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "場",
+      "meaning_en": "place, scene",
+      "kun": [
+        "ば"
+      ],
+      "on": [
+        "ジョウ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "場所",
+          "reading": "ばしょ",
+          "word_furigana": "{場|ば}{所|しょ}",
+          "en": "a place"
+        },
+        {
+          "word": "広場",
+          "reading": "ひろば",
+          "word_furigana": "{広|ひろ}{場|ば}",
+          "en": "a square"
+        },
+        {
+          "word": "場合",
+          "reading": "ばあい",
+          "word_furigana": "{場|ば}{合|あい}",
+          "en": "a case"
+        },
+        {
+          "word": "運動場",
+          "reading": "うんどうじょう",
+          "word_furigana": "{運|うん}{動|どう}{場|じょう}",
+          "en": "a playground"
+        }
+      ],
+      "notes": [],
+      "page": 182
+    },
+    {
+      "id": 210,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "図",
+      "meaning_en": "diagram, devise",
+      "kun": [],
+      "on": [
+        "ズ",
+        "ト"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "地図",
+          "reading": "ちず",
+          "word_furigana": "{地|ち}{図|ず}",
+          "en": "a map"
+        },
+        {
+          "word": "図書",
+          "reading": "としょ",
+          "word_furigana": "{図|と}{書|しょ}",
+          "en": "books"
+        },
+        {
+          "word": "天気図",
+          "reading": "てんきず",
+          "word_furigana": "{天|てん}{気|き}{図|ず}",
+          "en": "a weather map"
+        }
+      ],
+      "notes": [],
+      "page": 182
+    },
+    {
+      "id": 211,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "館",
+      "meaning_en": "mansion, hall",
+      "kun": [],
+      "on": [
+        "カン"
+      ],
+      "strokes": 16,
+      "examples": [
+        {
+          "word": "図書館",
+          "reading": "としょかん",
+          "word_furigana": "{図|と}{書|しょ}{館|かん}",
+          "en": "a library"
+        },
+        {
+          "word": "大使館",
+          "reading": "たいしかん",
+          "word_furigana": "{大|たい}{使|し}{館|かん}",
+          "en": "an embassy"
+        },
+        {
+          "word": "映画館",
+          "reading": "えいがかん",
+          "word_furigana": "{映|えい}{画|が}{館|かん}",
+          "en": "a movie theatre"
+        }
+      ],
+      "notes": [],
+      "page": 182
+    },
+    {
+      "id": 212,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "公",
+      "meaning_en": "public, official",
+      "kun": [
+        "(おおやけ)"
+      ],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "公園",
+          "reading": "こうえん",
+          "word_furigana": "{公|こう}{園|えん}",
+          "en": "a park"
+        },
+        {
+          "word": "公立",
+          "reading": "こうりつ",
+          "word_furigana": "{公|こう}{立|りつ}",
+          "en": "public"
+        },
+        {
+          "word": "公開する",
+          "reading": "こうかいする",
+          "word_furigana": "{公|こう}{開|かい}する",
+          "en": "to open to the public"
+        }
+      ],
+      "notes": [],
+      "page": 182
+    },
+    {
+      "id": 213,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "園",
+      "meaning_en": "garden",
+      "kun": [
+        "(その)"
+      ],
+      "on": [
+        "エン"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "公園",
+          "reading": "こうえん",
+          "word_furigana": "{公|こう}{園|えん}",
+          "en": "a park"
+        },
+        {
+          "word": "動物園",
+          "reading": "どうぶつえん",
+          "word_furigana": "{動|どう}{物|ぶつ}{園|えん}",
+          "en": "a zoo"
+        },
+        {
+          "word": "遊園地",
+          "reading": "ゆうえんち",
+          "word_furigana": "{遊|ゆう}{園|えん}{地|ち}",
+          "en": "an amusement park"
+        }
+      ],
+      "notes": [],
+      "page": 183
+    },
+    {
+      "id": 214,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "住",
+      "meaning_en": "dwell, inhabit",
+      "kun": [
+        "す-む"
+      ],
+      "on": [
+        "ジュウ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "住む",
+          "reading": "すむ",
+          "word_furigana": "{住|す}む",
+          "en": "to live"
+        },
+        {
+          "word": "住民",
+          "reading": "じゅうみん",
+          "word_furigana": "{住|じゅう}{民|みん}",
+          "en": "inhabitants"
+        },
+        {
+          "word": "住所",
+          "reading": "じゅうしょ",
+          "word_furigana": "{住|じゅう}{所|しょ}",
+          "en": "an address"
+        },
+        {
+          "word": "住宅",
+          "reading": "じゅうたく",
+          "word_furigana": "{住|じゅう}{宅|たく}",
+          "en": "housing"
+        }
+      ],
+      "notes": [],
+      "page": 183
+    },
+    {
+      "id": 215,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "所",
+      "meaning_en": "place, that which",
+      "kun": [
+        "ところ"
+      ],
+      "on": [
+        "ショ",
+        "-ジョ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "所",
+          "reading": "ところ",
+          "word_furigana": "{所|ところ}",
+          "en": "a place"
+        },
+        {
+          "word": "台所",
+          "reading": "だいどころ",
+          "word_furigana": "{台|だい}{所|どころ}",
+          "en": "a kitchen"
+        },
+        {
+          "word": "研究所",
+          "reading": "けんきゅうじょ",
+          "word_furigana": "{研|けん}{究|きゅう}{所|じょ}",
+          "en": "a research institute"
+        }
+      ],
+      "notes": [],
+      "page": 183
+    },
+    {
+      "id": 216,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "番",
+      "meaning_en": "number, order",
+      "kun": [],
+      "on": [
+        "バン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "番号",
+          "reading": "ばんごう",
+          "word_furigana": "{番|ばん}{号|ごう}",
+          "en": "a number"
+        },
+        {
+          "word": "交番",
+          "reading": "こうばん",
+          "word_furigana": "{交|こう}{番|ばん}",
+          "en": "a police box"
+        },
+        {
+          "word": "番組",
+          "reading": "ばんぐみ",
+          "word_furigana": "{番|ばん}{組|ぐみ}",
+          "en": "a program"
+        },
+        {
+          "word": "一番",
+          "reading": "いちばん",
+          "word_furigana": "{一|いち}{番|ばん}",
+          "en": "the most, No. 1"
+        }
+      ],
+      "notes": [],
+      "page": 183
+    },
+    {
+      "id": 217,
+      "lesson": 19,
+      "lesson_title": "接辞の漢字",
+      "lesson_title_en": "Kanji Affix",
+      "kanji": "号",
+      "meaning_en": "call, naming, [suffix] order",
+      "kun": [],
+      "on": [
+        "ゴウ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "記号",
+          "reading": "きごう",
+          "word_furigana": "{記|き}{号|ごう}",
+          "en": "a sign, a symbol"
+        },
+        {
+          "word": "信号",
+          "reading": "しんごう",
+          "word_furigana": "{信|しん}{号|ごう}",
+          "en": "a traffic light"
+        },
+        {
+          "word": "電話番号",
+          "reading": "でんわばんごう",
+          "word_furigana": "{電|でん}{話|わ}{番|ばん}{号|ごう}",
+          "en": "a telephone number"
+        }
+      ],
+      "notes": [],
+      "page": 184
     }
   ]
 }
