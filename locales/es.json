@@ -96,7 +96,9 @@
     "onlyLearned": "Aprendidas",
     "onlyNotLearned": "Sin aprender",
     "noneLearned": "Todavía no has marcado ninguna tarjeta de este nivel como aprendida.",
-    "allLearned": "Ya tienes aprendidas todas las tarjetas de este nivel."
+    "allLearned": "Ya tienes aprendidas todas las tarjetas de este nivel.",
+    "shuffle": "Barajar",
+    "originalOrder": "Orden original"
   },
   "auth": {
     "loginTitle": "Iniciar sesión",

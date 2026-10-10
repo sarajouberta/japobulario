@@ -96,7 +96,9 @@
     "onlyLearned": "Learned",
     "onlyNotLearned": "Not learned",
     "noneLearned": "You have not marked any card of this level as learned yet.",
-    "allLearned": "You have learned every card of this level."
+    "allLearned": "You have learned every card of this level.",
+    "shuffle": "Shuffle",
+    "originalOrder": "Original order"
   },
   "auth": {
     "loginTitle": "Log in",

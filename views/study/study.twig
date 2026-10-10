@@ -21,7 +21,13 @@ La navegación entre tarjetas está en public/javascripts/study.js.
     {% endif %}
     <h1 class="text-center">{{ mode == 'kanji' ? __('study.titleKanji') : __('study.titleVocabulary') }}</h1>
 
-    <p><strong>{{ selection }}</strong> · {{ __('study.cardsCount', {'count': flashcards|length}) }}</p>
+    <p><strong>{{ selection }}</strong> · {{ __('study.cardsCount', {'count': flashcards|length}) }}
+        {#cambia entre el orden original y uno aleatorio (study.js); con una sola tarjeta no hace falta#}
+        {% if flashcards|length > 1 %}
+            <button id="shuffle-button" class="shuffle" onclick="toggleShuffle()"
+                    data-label="{{ __('study.shuffle') }}" data-label-on="{{ __('study.originalOrder') }}">{{ __('study.shuffle') }}</button>
+        {% endif %}
+    </p>
 
     {% if flashcards|length == 0 %}
         <p>{{ __('study.noCards') }}</p>
