@@ -275,6 +275,48 @@ recordando qué palabra viene después en vez de la palabra misma.
   en otro orden, al volver el orden es el original y empieza en 1 / 50, y una tarjeta aprendida
   sigue marcada después de barajar. Después, a mano en el navegador.
 
+## 2026-10-10 - Kanji del Basic Kanji Book (lecciones 1 a 3)
+
+La parte de kanji estaba vacía desde que se borraron los `.txt` de prueba. Ahora tiene datos de un
+libro, igual que el vocabulario: el **Basic Kanji Book Vol. 1** (基本漢字500), que estaba en PDF en
+la carpeta `japo`.
+
+- **El PDF es un escaneo sin texto** (221 páginas, lecciones 1 a 22, kanji del 1 al 251), así que
+  hay que transcribirlo, como los libros de vocabulario. Cada kanji tiene en el libro una ficha
+  siempre igual: número, significado en inglés, kun (hiragana), on (katakana), nº de trazos, orden
+  de trazos y de 2 a 4 palabras de ejemplo con su lectura. El resto de cada lección (explicaciones,
+  ejercicios, lecturas, juegos) no sirve para tarjetas.
+- **Primero las lecciones 1 a 3** (35 kanji, 119 palabras de ejemplo), para probar el formato en la
+  app antes de transcribir el resto. Están en `seeds/data/kanji_BKB1.json`, con la misma forma que
+  el vocabulario y el furigana en notación `{漢字|かな}`. Las lecturas se guardan como en el libro:
+  `-` antes del okurigana (`い-きる`) y entre paréntesis las poco usadas (`(かど)`).
+- **Las notas a mano del escaneo no se transcriben.** En 七 y 年, la caja de ejemplos del libro
+  está tapada por notas en español: las palabras japonesas salen de esas notas, y los significados
+  en inglés se escribieron al transcribir (la ficha lo indica en `notes`). Una de esas notas tenía
+  un error: 来年 es "next year", no "año pasado".
+- **El nivel JLPT no viene en el libro**, que va por lecciones. Se ha puesto el de jisho.org, que
+  usa las listas anteriores a 2010 (desde entonces no hay lista oficial). Comprobado allí uno a uno,
+  y no todo era como se esperaba: de estas tres lecciones, 田, 口 y 私 son N4 y 門 es N2, aunque
+  estén entre los primeros del libro. El libro ordena por forma (empieza por los que salen de un
+  dibujo) y el JLPT por uso. Por eso los kanji se estudian por lección, y el nivel solo sirve
+  para filtrar. El modelo admite ahora de N5 a N1.
+- **Un fallo que se habría colado:** el importador del vocabulario identificaba cada palabra por
+  nivel y número del libro, y los kanji también tienen los números 1, 2, 3... y nivel N5. Al
+  reimportar el vocabulario se habrían machacado los kanji, y el índice único no dejaba ni
+  guardarlos. Ahora el tipo forma parte de la identidad (índice `(type, level, bookId)`), y cada
+  importador solo toca lo suyo. Comprobado repitiendo los dos: siguen 35 kanji y 1940 palabras.
+- **Importador nuevo**, `npm run import:kanji` (y `import:kanji:atlas`), que también cambia el
+  índice antiguo por el nuevo en la bdd.
+- **Estudio de kanji por lecciones:** "Estudiar kanji" abre la misma pantalla de elegir que el
+  vocabulario, con pestañas, filtro de aprendidas y progreso, pero en Libros salen las lecciones
+  ("Lección 1 · えからできた漢字 -1-", con la traducción al lado). Las dos pantallas y los dos modos
+  de estudio son la misma vista y la misma ruta, que cambian según el tipo. Por detrás de la
+  tarjeta: significado, kun, on, trazos y las palabras de ejemplo con furigana y el kanji en
+  negrita (女の**子**).
+- **Comprobado** con la app de prueba (solo lectura): lecciones de 10, 10 y 15 kanji, filtros de
+  lección, nivel y aprendidas, enlace de volver y el vocabulario igual que antes; los 119 ejemplos
+  salen con el kanji en negrita sin cambiar la palabra. Después, a mano en el navegador.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -286,8 +328,7 @@ recordando qué palabra viene después en vez de la palabra misma.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **No hay kanji:** al borrar los `.txt` de prueba, la parte de kanji se ha quedado sin datos.
-  Hay que decidir de dónde salen (quizá el Basic Kanji Book) y qué datos lleva cada kanji. Deben
-  seguir siendo `Flashcard` con `type: "kanji"`, para que les sirva la marca de aprendida.
+- **Transcribir el resto del Basic Kanji Book:** lecciones 4 a 22 (kanji 36 a 251), con el nivel
+  de jisho.org comprobado en cada tanda.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
