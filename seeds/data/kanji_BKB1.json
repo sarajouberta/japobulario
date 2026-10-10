@@ -23,9 +23,12 @@
     16,
     17,
     18,
-    19
+    19,
+    20,
+    21,
+    22
   ],
-  "entry_count": 217,
+  "entry_count": 251,
   "entries": [
     {
       "id": 1,
@@ -8659,6 +8662,1248 @@
       ],
       "notes": [],
       "page": 184
+    },
+    {
+      "id": 218,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "市",
+      "meaning_en": "city, market",
+      "kun": [
+        "いち"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "市",
+          "reading": "し",
+          "word_furigana": "{市|し}",
+          "en": "a city"
+        },
+        {
+          "word": "市長",
+          "reading": "しちょう",
+          "word_furigana": "{市|し}{長|ちょう}",
+          "en": "a mayor"
+        },
+        {
+          "word": "市民",
+          "reading": "しみん",
+          "word_furigana": "{市|し}{民|みん}",
+          "en": "a citizen"
+        },
+        {
+          "word": "市場",
+          "reading": "いちば",
+          "word_furigana": "{市|いち}{場|ば}",
+          "en": "a market",
+          "reading_alt": "しじょう"
+        }
+      ],
+      "notes": [],
+      "page": 191
+    },
+    {
+      "id": 219,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "町",
+      "meaning_en": "town",
+      "kun": [
+        "まち"
+      ],
+      "on": [
+        "チョウ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "町",
+          "reading": "まち",
+          "word_furigana": "{町|まち}",
+          "en": "a town"
+        },
+        {
+          "word": "下町",
+          "reading": "したまち",
+          "word_furigana": "{下|した}{町|まち}",
+          "en": "downtown"
+        },
+        {
+          "word": "町長",
+          "reading": "ちょうちょう",
+          "word_furigana": "{町|ちょう}{長|ちょう}",
+          "en": "a town headman"
+        }
+      ],
+      "notes": [],
+      "page": 191
+    },
+    {
+      "id": 220,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "村",
+      "meaning_en": "village",
+      "kun": [
+        "むら"
+      ],
+      "on": [
+        "ソン"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "村",
+          "reading": "むら",
+          "word_furigana": "{村|むら}",
+          "en": "a village"
+        },
+        {
+          "word": "農村",
+          "reading": "のうそん",
+          "word_furigana": "{農|のう}{村|そん}",
+          "en": "a farm village"
+        },
+        {
+          "word": "村役場",
+          "reading": "むらやくば",
+          "word_furigana": "{村|むら}{役|やく}{場|ば}",
+          "en": "a village office"
+        }
+      ],
+      "notes": [],
+      "page": 191
+    },
+    {
+      "id": 221,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "区",
+      "meaning_en": "division, section, ward",
+      "kun": [],
+      "on": [
+        "ク"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "区",
+          "reading": "く",
+          "word_furigana": "{区|く}",
+          "en": "a ward"
+        },
+        {
+          "word": "区別する",
+          "reading": "くべつする",
+          "word_furigana": "{区|く}{別|べつ}する",
+          "en": "to distinguish"
+        },
+        {
+          "word": "区役所",
+          "reading": "くやくしょ",
+          "word_furigana": "{区|く}{役|やく}{所|しょ}",
+          "en": "a ward office"
+        },
+        {
+          "word": "地区",
+          "reading": "ちく",
+          "word_furigana": "{地|ち}{区|く}",
+          "en": "a district"
+        }
+      ],
+      "notes": [],
+      "page": 192
+    },
+    {
+      "id": 222,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "都",
+      "meaning_en": "capital, big city, Tokyo",
+      "kun": [
+        "みやこ"
+      ],
+      "on": [
+        "ト"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "都市",
+          "reading": "とし",
+          "word_furigana": "{都|と}{市|し}",
+          "en": "a big city"
+        },
+        {
+          "word": "都会",
+          "reading": "とかい",
+          "word_furigana": "{都|と}{会|かい}",
+          "en": "an urban area"
+        },
+        {
+          "word": "東京都",
+          "reading": "とうきょうと",
+          "word_furigana": "{東|とう}{京|きょう}{都|と}",
+          "en": "Tokyo (metropolis)"
+        }
+      ],
+      "notes": [],
+      "page": 192
+    },
+    {
+      "id": 223,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "府",
+      "meaning_en": "administrative, prefecture",
+      "kun": [],
+      "on": [
+        "フ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "大阪府",
+          "reading": "おおさかふ",
+          "word_furigana": "{大|おお}{阪|さか}{府|ふ}",
+          "en": "Osaka Prefecture"
+        },
+        {
+          "word": "京都府",
+          "reading": "きょうとふ",
+          "word_furigana": "{京|きょう}{都|と}{府|ふ}",
+          "en": "Kyoto Prefecture"
+        },
+        {
+          "word": "政府",
+          "reading": "せいふ",
+          "word_furigana": "{政|せい}{府|ふ}",
+          "en": "the government"
+        }
+      ],
+      "notes": [],
+      "page": 192
+    },
+    {
+      "id": 224,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "県",
+      "meaning_en": "prefecture",
+      "kun": [],
+      "on": [
+        "ケン"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "県",
+          "reading": "けん",
+          "word_furigana": "{県|けん}",
+          "en": "a prefecture"
+        },
+        {
+          "word": "県庁",
+          "reading": "けんちょう",
+          "word_furigana": "{県|けん}{庁|ちょう}",
+          "en": "a prefectural office"
+        }
+      ],
+      "notes": [],
+      "page": 192
+    },
+    {
+      "id": 225,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "島",
+      "meaning_en": "island",
+      "kun": [
+        "しま"
+      ],
+      "on": [
+        "トウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "島",
+          "reading": "しま",
+          "word_furigana": "{島|しま}",
+          "en": "an island"
+        },
+        {
+          "word": "島国",
+          "reading": "しまぐに",
+          "word_furigana": "{島|しま}{国|ぐに}",
+          "en": "an island nation"
+        },
+        {
+          "word": "半島",
+          "reading": "はんとう",
+          "word_furigana": "{半|はん}{島|とう}",
+          "en": "a peninsula"
+        }
+      ],
+      "notes": [],
+      "page": 193
+    },
+    {
+      "id": 226,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "京",
+      "meaning_en": "capital",
+      "kun": [],
+      "on": [
+        "キョウ",
+        "ケイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "東京",
+          "reading": "とうきょう",
+          "word_furigana": "{東|とう}{京|きょう}",
+          "en": "Tokyo"
+        },
+        {
+          "word": "京都",
+          "reading": "きょうと",
+          "word_furigana": "{京|きょう}{都|と}",
+          "en": "Kyoto"
+        },
+        {
+          "word": "上京する",
+          "reading": "じょうきょうする",
+          "word_furigana": "{上|じょう}{京|きょう}する",
+          "en": "to go up to Tokyo"
+        }
+      ],
+      "notes": [],
+      "page": 193
+    },
+    {
+      "id": 227,
+      "lesson": 20,
+      "lesson_title": "日本の行政区分",
+      "lesson_title_en": "Administrative Division",
+      "kanji": "様",
+      "meaning_en": "appearance, Mr., Mrs., Miss",
+      "kun": [
+        "さま"
+      ],
+      "on": [
+        "ヨウ"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "〜様",
+          "reading": "〜さま",
+          "word_furigana": "〜{様|さま}",
+          "en": "Mr./Mrs./Miss"
+        },
+        {
+          "word": "様々な",
+          "reading": "さまざまな",
+          "word_furigana": "{様|さま}{々|ざま}な",
+          "en": "various"
+        },
+        {
+          "word": "様子",
+          "reading": "ようす",
+          "word_furigana": "{様|よう}{子|す}",
+          "en": "appearance"
+        },
+        {
+          "word": "様式",
+          "reading": "ようしき",
+          "word_furigana": "{様|よう}{式|しき}",
+          "en": "mode, style"
+        }
+      ],
+      "notes": [],
+      "page": 193
+    },
+    {
+      "id": 228,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "練",
+      "meaning_en": "knead",
+      "kun": [
+        "(ね-る)"
+      ],
+      "on": [
+        "レン"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "練習する",
+          "reading": "れんしゅうする",
+          "word_furigana": "{練|れん}{習|しゅう}する",
+          "en": "to practice"
+        }
+      ],
+      "notes": [],
+      "page": 203
+    },
+    {
+      "id": 229,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "習",
+      "meaning_en": "practice",
+      "kun": [
+        "なら-う"
+      ],
+      "on": [
+        "シュウ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "習う",
+          "reading": "ならう",
+          "word_furigana": "{習|なら}う",
+          "en": "to learn"
+        },
+        {
+          "word": "学習する",
+          "reading": "がくしゅうする",
+          "word_furigana": "{学|がく}{習|しゅう}する",
+          "en": "to learn"
+        },
+        {
+          "word": "習慣",
+          "reading": "しゅうかん",
+          "word_furigana": "{習|しゅう}{慣|かん}",
+          "en": "a habit, a custom"
+        }
+      ],
+      "notes": [],
+      "page": 203
+    },
+    {
+      "id": 230,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "勉",
+      "meaning_en": "endeavor",
+      "kun": [],
+      "on": [
+        "ベン"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "勉強する",
+          "reading": "べんきょうする",
+          "word_furigana": "{勉|べん}{強|きょう}する",
+          "en": "to study"
+        }
+      ],
+      "notes": [],
+      "page": 203
+    },
+    {
+      "id": 231,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "強",
+      "meaning_en": "force, strong",
+      "kun": [
+        "つよ-い"
+      ],
+      "on": [
+        "キョウ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "強い",
+          "reading": "つよい",
+          "word_furigana": "{強|つよ}い",
+          "en": "strong"
+        },
+        {
+          "word": "強調する",
+          "reading": "きょうちょうする",
+          "word_furigana": "{強|きょう}{調|ちょう}する",
+          "en": "to emphasize"
+        },
+        {
+          "word": "勉強する",
+          "reading": "べんきょうする",
+          "word_furigana": "{勉|べん}{強|きょう}する",
+          "en": "to study"
+        }
+      ],
+      "notes": [],
+      "page": 204
+    },
+    {
+      "id": 232,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "研",
+      "meaning_en": "grind, sharpen",
+      "kun": [],
+      "on": [
+        "ケン"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "研究する",
+          "reading": "けんきゅうする",
+          "word_furigana": "{研|けん}{究|きゅう}する",
+          "en": "to study, to research"
+        },
+        {
+          "word": "研修する",
+          "reading": "けんしゅうする",
+          "word_furigana": "{研|けん}{修|しゅう}する",
+          "en": "to study and train"
+        }
+      ],
+      "notes": [],
+      "page": 204
+    },
+    {
+      "id": 233,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "究",
+      "meaning_en": "to carry to extremity",
+      "kun": [
+        "(きわ-める)"
+      ],
+      "on": [
+        "キュウ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "研究所",
+          "reading": "けんきゅうじょ",
+          "word_furigana": "{研|けん}{究|きゅう}{所|じょ}",
+          "en": "a research institute"
+        },
+        {
+          "word": "研究者",
+          "reading": "けんきゅうしゃ",
+          "word_furigana": "{研|けん}{究|きゅう}{者|しゃ}",
+          "en": "a researcher"
+        }
+      ],
+      "notes": [],
+      "page": 204
+    },
+    {
+      "id": 234,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "留",
+      "meaning_en": "stay, detain",
+      "kun": [
+        "と-まる",
+        "と-める"
+      ],
+      "on": [
+        "リュウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "書留",
+          "reading": "かきとめ",
+          "word_furigana": "{書|かき}{留|とめ}",
+          "en": "a registered letter"
+        },
+        {
+          "word": "留学する",
+          "reading": "りゅうがくする",
+          "word_furigana": "{留|りゅう}{学|がく}する",
+          "en": "to study abroad"
+        }
+      ],
+      "notes": [],
+      "page": 204
+    },
+    {
+      "id": 235,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "質",
+      "meaning_en": "quality, question",
+      "kun": [],
+      "on": [
+        "シツ"
+      ],
+      "strokes": 15,
+      "examples": [
+        {
+          "word": "質",
+          "reading": "しつ",
+          "word_furigana": "{質|しつ}",
+          "en": "quality"
+        },
+        {
+          "word": "性質",
+          "reading": "せいしつ",
+          "word_furigana": "{性|せい}{質|しつ}",
+          "en": "nature, character"
+        },
+        {
+          "word": "質問する",
+          "reading": "しつもんする",
+          "word_furigana": "{質|しつ}{問|もん}する",
+          "en": "to ask a question"
+        }
+      ],
+      "notes": [],
+      "page": 205
+    },
+    {
+      "id": 236,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "問",
+      "meaning_en": "inquire, question",
+      "kun": [
+        "と-う",
+        "とい"
+      ],
+      "on": [
+        "モン"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "問い合わせる",
+          "reading": "といあわせる",
+          "word_furigana": "{問|と}い{合|あ}わせる",
+          "en": "to make inquiries"
+        },
+        {
+          "word": "訪問する",
+          "reading": "ほうもんする",
+          "word_furigana": "{訪|ほう}{問|もん}する",
+          "en": "to visit"
+        },
+        {
+          "word": "問",
+          "reading": "とい",
+          "word_furigana": "{問|とい}",
+          "en": "the question"
+        }
+      ],
+      "notes": [],
+      "page": 205
+    },
+    {
+      "id": 237,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "題",
+      "meaning_en": "title, theme",
+      "kun": [],
+      "on": [
+        "ダイ"
+      ],
+      "strokes": 18,
+      "examples": [
+        {
+          "word": "問題",
+          "reading": "もんだい",
+          "word_furigana": "{問|もん}{題|だい}",
+          "en": "a question, a problem"
+        },
+        {
+          "word": "話題",
+          "reading": "わだい",
+          "word_furigana": "{話|わ}{題|だい}",
+          "en": "a topic"
+        },
+        {
+          "word": "宿題",
+          "reading": "しゅくだい",
+          "word_furigana": "{宿|しゅく}{題|だい}",
+          "en": "homework"
+        },
+        {
+          "word": "題名",
+          "reading": "だいめい",
+          "word_furigana": "{題|だい}{名|めい}",
+          "en": "a title"
+        }
+      ],
+      "notes": [],
+      "page": 205
+    },
+    {
+      "id": 238,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "答",
+      "meaning_en": "answer",
+      "kun": [
+        "こた-える"
+      ],
+      "on": [
+        "トウ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "答える",
+          "reading": "こたえる",
+          "word_furigana": "{答|こた}える",
+          "en": "to answer"
+        },
+        {
+          "word": "返答する",
+          "reading": "へんとうする",
+          "word_furigana": "{返|へん}{答|とう}する",
+          "en": "to reply"
+        },
+        {
+          "word": "答え",
+          "reading": "こたえ",
+          "word_furigana": "{答|こた}え",
+          "en": "an answer"
+        }
+      ],
+      "notes": [],
+      "page": 205
+    },
+    {
+      "id": 239,
+      "lesson": 21,
+      "lesson_title": "ーする動詞",
+      "lesson_title_en": "-suru Verbs",
+      "kanji": "宿",
+      "meaning_en": "lodging, dwelling",
+      "kun": [
+        "やど"
+      ],
+      "on": [
+        "シュク"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "宿題",
+          "reading": "しゅくだい",
+          "word_furigana": "{宿|しゅく}{題|だい}",
+          "en": "homework"
+        },
+        {
+          "word": "宿舎",
+          "reading": "しゅくしゃ",
+          "word_furigana": "{宿|しゅく}{舎|しゃ}",
+          "en": "a dormitory"
+        },
+        {
+          "word": "宿泊する",
+          "reading": "しゅくはくする",
+          "word_furigana": "{宿|しゅく}{泊|はく}する",
+          "en": "to stay"
+        }
+      ],
+      "notes": [],
+      "page": 206
+    },
+    {
+      "id": 240,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "政",
+      "meaning_en": "administration",
+      "kun": [],
+      "on": [
+        "セイ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "政治",
+          "reading": "せいじ",
+          "word_furigana": "{政|せい}{治|じ}",
+          "en": "politics"
+        },
+        {
+          "word": "政府",
+          "reading": "せいふ",
+          "word_furigana": "{政|せい}{府|ふ}",
+          "en": "the government"
+        },
+        {
+          "word": "行政",
+          "reading": "ぎょうせい",
+          "word_furigana": "{行|ぎょう}{政|せい}",
+          "en": "administration"
+        }
+      ],
+      "notes": [],
+      "page": 214
+    },
+    {
+      "id": 241,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "治",
+      "meaning_en": "govern",
+      "kun": [
+        "おさ-まる",
+        "なお-る",
+        "おさ-める",
+        "なお-す"
+      ],
+      "on": [
+        "ジ",
+        "チ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "治す",
+          "reading": "なおす",
+          "word_furigana": "{治|なお}す",
+          "en": "to cure"
+        },
+        {
+          "word": "治める",
+          "reading": "おさめる",
+          "word_furigana": "{治|おさ}める",
+          "en": "to govern"
+        },
+        {
+          "word": "政治家",
+          "reading": "せいじか",
+          "word_furigana": "{政|せい}{治|じ}{家|か}",
+          "en": "a politician"
+        },
+        {
+          "word": "明治",
+          "reading": "めいじ",
+          "word_furigana": "{明|めい}{治|じ}",
+          "en": "name of an era"
+        }
+      ],
+      "notes": [],
+      "page": 214
+    },
+    {
+      "id": 242,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "経",
+      "meaning_en": "control, pass through",
+      "kun": [
+        "へ-る"
+      ],
+      "on": [
+        "ケイ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "経る",
+          "reading": "へる",
+          "word_furigana": "{経|へ}る",
+          "en": "to pass through"
+        },
+        {
+          "word": "経済",
+          "reading": "けいざい",
+          "word_furigana": "{経|けい}{済|ざい}",
+          "en": "economy"
+        },
+        {
+          "word": "経営する",
+          "reading": "けいえいする",
+          "word_furigana": "{経|けい}{営|えい}する",
+          "en": "to manage"
+        }
+      ],
+      "notes": [],
+      "page": 214
+    },
+    {
+      "id": 243,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "済",
+      "meaning_en": "finish, save",
+      "kun": [
+        "す-む",
+        "す-ます"
+      ],
+      "on": [
+        "サイ",
+        "-ザイ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "済む",
+          "reading": "すむ",
+          "word_furigana": "{済|す}む",
+          "en": "to finish"
+        },
+        {
+          "word": "経済学",
+          "reading": "けいざいがく",
+          "word_furigana": "{経|けい}{済|ざい}{学|がく}",
+          "en": "economics"
+        },
+        {
+          "word": "返済する",
+          "reading": "へんさいする",
+          "word_furigana": "{返|へん}{済|さい}する",
+          "en": "to pay back"
+        }
+      ],
+      "notes": [],
+      "page": 215
+    },
+    {
+      "id": 244,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "歴",
+      "meaning_en": "career",
+      "kun": [],
+      "on": [
+        "レキ"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "歴史",
+          "reading": "れきし",
+          "word_furigana": "{歴|れき}{史|し}",
+          "en": "history"
+        },
+        {
+          "word": "学歴",
+          "reading": "がくれき",
+          "word_furigana": "{学|がく}{歴|れき}",
+          "en": "one's educational background"
+        },
+        {
+          "word": "履歴書",
+          "reading": "りれきしょ",
+          "word_furigana": "{履|り}{歴|れき}{書|しょ}",
+          "en": "one's personal history"
+        }
+      ],
+      "notes": [],
+      "page": 215
+    },
+    {
+      "id": 245,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "史",
+      "meaning_en": "history",
+      "kun": [],
+      "on": [
+        "シ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "史学",
+          "reading": "しがく",
+          "word_furigana": "{史|し}{学|がく}",
+          "en": "historical science"
+        },
+        {
+          "word": "日本史",
+          "reading": "にほんし",
+          "word_furigana": "{日|に}{本|ほん}{史|し}",
+          "en": "Japanese history"
+        },
+        {
+          "word": "近代史",
+          "reading": "きんだいし",
+          "word_furigana": "{近|きん}{代|だい}{史|し}",
+          "en": "modern history"
+        }
+      ],
+      "notes": [],
+      "page": 215
+    },
+    {
+      "id": 246,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "育",
+      "meaning_en": "breed, raise",
+      "kun": [
+        "そだ-つ",
+        "そだ-てる"
+      ],
+      "on": [
+        "イク"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "育てる",
+          "reading": "そだてる",
+          "word_furigana": "{育|そだ}てる",
+          "en": "to bring up"
+        },
+        {
+          "word": "教育",
+          "reading": "きょういく",
+          "word_furigana": "{教|きょう}{育|いく}",
+          "en": "education"
+        },
+        {
+          "word": "体育",
+          "reading": "たいいく",
+          "word_furigana": "{体|たい}{育|いく}",
+          "en": "physical exercises"
+        }
+      ],
+      "notes": [],
+      "page": 215
+    },
+    {
+      "id": 247,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "化",
+      "meaning_en": "change, -ization",
+      "kun": [
+        "(ば-ける)"
+      ],
+      "on": [
+        "カ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "化学",
+          "reading": "かがく",
+          "word_furigana": "{化|か}{学|がく}",
+          "en": "chemistry"
+        },
+        {
+          "word": "文化",
+          "reading": "ぶんか",
+          "word_furigana": "{文|ぶん}{化|か}",
+          "en": "culture"
+        },
+        {
+          "word": "近代化",
+          "reading": "きんだいか",
+          "word_furigana": "{近|きん}{代|だい}{化|か}",
+          "en": "modernization"
+        },
+        {
+          "word": "近代化する",
+          "reading": "きんだいかする",
+          "word_furigana": "{近|きん}{代|だい}{化|か}する",
+          "en": "to modernize"
+        }
+      ],
+      "notes": [],
+      "page": 216
+    },
+    {
+      "id": 248,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "理",
+      "meaning_en": "reason, ration, logic",
+      "kun": [],
+      "on": [
+        "リ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "物理",
+          "reading": "ぶつり",
+          "word_furigana": "{物|ぶつ}{理|り}",
+          "en": "physics"
+        },
+        {
+          "word": "料理する",
+          "reading": "りょうりする",
+          "word_furigana": "{料|りょう}{理|り}する",
+          "en": "to cook"
+        },
+        {
+          "word": "理由",
+          "reading": "りゆう",
+          "word_furigana": "{理|り}{由|ゆう}",
+          "en": "a reason"
+        },
+        {
+          "word": "地理学",
+          "reading": "ちりがく",
+          "word_furigana": "{地|ち}{理|り}{学|がく}",
+          "en": "geography"
+        }
+      ],
+      "notes": [],
+      "page": 216
+    },
+    {
+      "id": 249,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "科",
+      "meaning_en": "branch, division",
+      "kun": [],
+      "on": [
+        "カ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "科学",
+          "reading": "かがく",
+          "word_furigana": "{科|か}{学|がく}",
+          "en": "science"
+        },
+        {
+          "word": "外科",
+          "reading": "げか",
+          "word_furigana": "{外|げ}{科|か}",
+          "en": "surgery"
+        },
+        {
+          "word": "教科書",
+          "reading": "きょうかしょ",
+          "word_furigana": "{教|きょう}{科|か}{書|しょ}",
+          "en": "a textbook"
+        }
+      ],
+      "notes": [],
+      "page": 216
+    },
+    {
+      "id": 250,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "数",
+      "meaning_en": "number, some, several",
+      "kun": [
+        "かず",
+        "かぞ-える"
+      ],
+      "on": [
+        "スウ"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "数える",
+          "reading": "かぞえる",
+          "word_furigana": "{数|かぞ}える",
+          "en": "to count"
+        },
+        {
+          "word": "数",
+          "reading": "かず",
+          "word_furigana": "{数|かず}",
+          "en": "number"
+        },
+        {
+          "word": "数学",
+          "reading": "すうがく",
+          "word_furigana": "{数|すう}{学|がく}",
+          "en": "mathematics"
+        },
+        {
+          "word": "数人",
+          "reading": "すうにん",
+          "word_furigana": "{数|すう}{人|にん}",
+          "en": "several people"
+        }
+      ],
+      "notes": [],
+      "page": 216
+    },
+    {
+      "id": 251,
+      "lesson": 22,
+      "lesson_title": "二つの漢字からできた名詞",
+      "lesson_title_en": "Nouns made from two Kanji",
+      "kanji": "医",
+      "meaning_en": "medical, doctor",
+      "kun": [],
+      "on": [
+        "イ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "医学",
+          "reading": "いがく",
+          "word_furigana": "{医|い}{学|がく}",
+          "en": "medical science"
+        },
+        {
+          "word": "医者",
+          "reading": "いしゃ",
+          "word_furigana": "{医|い}{者|しゃ}",
+          "en": "a doctor"
+        },
+        {
+          "word": "医院",
+          "reading": "いいん",
+          "word_furigana": "{医|い}{院|いん}",
+          "en": "a doctor's office"
+        }
+      ],
+      "notes": [],
+      "page": 217
     }
   ]
 }
