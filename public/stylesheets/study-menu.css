@@ -25,7 +25,8 @@
     margin-top: 0;
 }
 
-.level li {
+.level li,
+.lessons li {
     margin: 4px 0;
 }
 

@@ -95,10 +95,17 @@
     "filterLearned": "Learned",
     "onlyLearned": "Learned",
     "onlyNotLearned": "Not learned",
-    "noneLearned": "You have not marked any card of this level as learned yet.",
-    "allLearned": "You have learned every card of this level.",
+    "noneLearned": "You have not marked any of these cards as learned yet.",
+    "allLearned": "You have learned all these cards.",
     "shuffle": "Shuffle",
-    "originalOrder": "Original order"
+    "originalOrder": "Original order",
+    "chooseKanjiBook": "Choose all the kanji in the book or a lesson.",
+    "allKanjiBook": "All the kanji in the book ({{count}})",
+    "lesson": "Lesson {{number}}",
+    "noBookKanji": "There are no kanji from the book. Run",
+    "ownIntroKanji": "Your kanji cards, by level and by the category you gave them.",
+    "ownNoneKanji": "You have not created any kanji cards yet.",
+    "strokes": "Strokes"
   },
   "auth": {
     "loginTitle": "Log in",

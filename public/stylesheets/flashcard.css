@@ -115,6 +115,17 @@ button {
     line-height: 2.2;
 }
 
+/* palabras de ejemplo de los kanji del libro: una por línea, sin viñeta */
+.kanji-examples {
+    margin: 0 0 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.kanji-examples .furigana {
+    line-height: 2;
+}
+
 .furigana rt {
     font-size: 0.5em;
     /* la lectura no se separa de su kanji al justificar */

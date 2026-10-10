@@ -17,8 +17,9 @@ router.get('/', async(req, res) => {
     //dos pestañas: mis tarjetas (por defecto: las creadas con el formulario por este usuario) y las de los libros
     const tab = req.query.tab === 'book' ? 'book' : 'own';
     const filter = tab === 'book' ? BOOK_FILTER : ownFilter(req);
-    //las propias, las más nuevas primero; las del libro, en el orden del libro:
-    const sort = tab === 'book' ? { level: -1, bookId: 1 } : { createdAt: -1 };
+    //las propias, las más nuevas primero; las del libro, en el orden del libro: primero el vocabulario y
+    //después los kanji ('vocabulary' > 'kanji'), porque los números de los dos libros se repiten
+    const sort = tab === 'book' ? { type: -1, level: -1, bookId: 1 } : { createdAt: -1 };
 
     const flashcards = (await Flashcard.find(filter).sort(sort)).map(doc => doc.toObject());
     const ownTotal = await Flashcard.countDocuments(ownFilter(req));

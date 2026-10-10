@@ -7,27 +7,57 @@
     <link rel="stylesheet" href='/stylesheets/study-menu.css'>
 {% endblock %}
 
+{#
+Pantalla para elegir qué estudiar, igual para vocabulario y kanji (mode). Los enlaces de las pestañas
+y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo estudio de este tipo.
+#}
 {% block body %}
     <div class="study-menu">
-        <h1>{{ __('study.titleVocabulary') }}</h1>
-        {#parámetros que se conservan al cambiar de pestaña o de filtro#}
-        {% set tabQuery = tab == 'own' ? 'tab=own&' : '' %}
+        <h1>{{ mode == 'kanji' ? __('study.titleKanji') : __('study.titleVocabulary') }}</h1>
 
         <!--pestañas: tarjetas de los libros / tarjetas propias creadas con el formulario-->
         <nav class="tabs">
-            <a href="/japobulario/study{{ learned ? '?learned=' ~ learned }}" class="{{ tab == 'book' ? 'active' : '' }}">{{ __('tabs.book', {'count': bookTotal}) }}</a>
-            <a href="/japobulario/study?tab=own{{ learned ? '&learned=' ~ learned }}" class="{{ tab == 'own' ? 'active' : '' }}">{{ __('tabs.own', {'count': ownTotal}) }}</a>
+            <a href="{{ links.tabBook }}" class="{{ tab == 'book' ? 'active' : '' }}">{{ __('tabs.book', {'count': bookTotal}) }}</a>
+            <a href="{{ links.tabOwn }}" class="{{ tab == 'own' ? 'active' : '' }}">{{ __('tabs.own', {'count': ownTotal}) }}</a>
         </nav>
 
         <!--qué tarjetas se abren al pulsar un enlace: todas, solo las que faltan por aprender o solo las aprendidas-->
         <p class="learned-filter">
             {{ __('study.learnedFilter') }}
-            <a href="/japobulario/study{{ tab == 'own' ? '?tab=own' }}" class="{{ learned ? '' : 'active' }}">{{ __('study.filterAll') }}</a>
-            <a href="/japobulario/study?{{ tabQuery }}learned=no" class="{{ learned == 'no' ? 'active' : '' }}">{{ __('study.filterNotLearned') }}</a>
-            <a href="/japobulario/study?{{ tabQuery }}learned=yes" class="{{ learned == 'yes' ? 'active' : '' }}">{{ __('study.filterLearned') }}</a>
+            <a href="{{ links.all }}" class="{{ learned ? '' : 'active' }}">{{ __('study.filterAll') }}</a>
+            <a href="{{ links.notLearned }}" class="{{ learned == 'no' ? 'active' : '' }}">{{ __('study.filterNotLearned') }}</a>
+            <a href="{{ links.onlyLearned }}" class="{{ learned == 'yes' ? 'active' : '' }}">{{ __('study.filterLearned') }}</a>
         </p>
 
-        {% if tab == 'book' %}
+        {% if tab == 'book' and mode == 'kanji' %}
+            {#kanji del libro, por lecciones (el título de la lección en original y al lado su traducción)#}
+            <p>{{ __('study.chooseKanjiBook') }}</p>
+
+            {% if kanjiBook.total == 0 %}
+                <p class="info">{{ __('study.noBookKanji') }} <code>npm run import:kanji</code>.</p>
+            {% elseif kanjiBook.matching == 0 %}
+                <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
+            {% else %}
+                <p>
+                    <a class="all" href="{{ studyUrl }}?source=book{{ learnedQuery }}">
+                        {{ __('study.allKanjiBook', {'count': kanjiBook.total}) }}
+                    </a>
+                    <span class="info">· {{ __('study.progress', {'learned': kanjiBook.learned, 'count': kanjiBook.total}) }}</span>
+                </p>
+                <ul class="lessons">
+                    {% for lesson in kanjiBook.lessons %}
+                        <li>
+                            <a href="{{ studyUrl }}?source=book&chapter={{ lesson.lesson }}{{ learnedQuery }}">
+                                {{ __('study.lesson', {'number': lesson.lesson}) }} · {{ lesson.title }}
+                            </a>
+                            {% if lesson.titleEn %}<span class="translation">{{ lesson.titleEn }}</span>{% endif %}
+                            <span class="info">· {{ __('study.progress', {'learned': lesson.learned, 'count': lesson.count}) }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+        {% elseif tab == 'book' %}
             <p>{{ __('study.chooseBook') }}</p>
 
             <div class="levels">
@@ -39,7 +69,7 @@
                             <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
                         {% else %}
                         <p>
-                            <a class="all" href="/japobulario/study/vocabulary?source=book&level={{ level.level }}{{ learnedQuery }}">
+                            <a class="all" href="{{ studyUrl }}?source=book&level={{ level.level }}{{ learnedQuery }}">
                                 {{ __('study.allLevel', {'level': level.level, 'count': level.total}) }}
                             </a>
                             <span class="info">· {{ __('study.progress', {'learned': level.learned, 'count': level.total}) }}</span>
@@ -53,7 +83,7 @@
                             <ul>
                                 {% for section in chapter.sections %}
                                     <li>
-                                        <a href="/japobulario/study/vocabulary?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}{{ learnedQuery }}">
+                                        <a href="{{ studyUrl }}?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}{{ learnedQuery }}">
                                             {{ section.section }}. {{ section.sectionTitle }}
                                         </a>
                                         {% if section.category %}<span class="translation">{{ section.category }}</span>{% endif %}
@@ -70,10 +100,10 @@
             </div>
 
         {% else %}
-            <p>{{ __('study.ownIntro') }}</p>
+            <p>{{ mode == 'kanji' ? __('study.ownIntroKanji') : __('study.ownIntro') }}</p>
 
             {% if ownTotal == 0 %}
-                <p class="info">{{ __('study.ownNone') }} <a href="/japobulario/flashcards/new">{{ __('study.createCard') }}</a></p>
+                <p class="info">{{ mode == 'kanji' ? __('study.ownNoneKanji') : __('study.ownNone') }} <a href="/japobulario/flashcards/new">{{ __('study.createCard') }}</a></p>
             {% else %}
                 <div class="levels">
                     {% for level in ownLevels %}
@@ -85,7 +115,7 @@
                                 <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
                             {% else %}
                                 <p>
-                                    <a class="all" href="/japobulario/study/vocabulary?source=own&level={{ level.level }}{{ learnedQuery }}">
+                                    <a class="all" href="{{ studyUrl }}?source=own&level={{ level.level }}{{ learnedQuery }}">
                                         {{ __('study.ownAllLevel', {'level': level.level, 'count': level.total}) }}
                                     </a>
                                     <span class="info">· {{ __('study.progress', {'learned': level.learned, 'count': level.total}) }}</span>
@@ -93,7 +123,7 @@
                                 <ul>
                                     {% for cat in level.categories %}
                                         <li>
-                                            <a href="/japobulario/study/vocabulary?source=own&level={{ level.level }}&category={{ cat.category|url_encode }}{{ learnedQuery }}">
+                                            <a href="{{ studyUrl }}?source=own&level={{ level.level }}&category={{ cat.category|url_encode }}{{ learnedQuery }}">
                                                 {{ cat.category ?: __('study.noCategory') }}
                                             </a>
                                             <span class="info">· {{ __('study.progress', {'learned': cat.learned, 'count': cat.count}) }}</span>

@@ -73,14 +73,29 @@ La navegación entre tarjetas está en public/javascripts/study.js.
             return `<p class="card-meaning">${card.meaning || '-'}</p>`;
         }
 
+        //palabra de ejemplo de un kanji del libro: con la lectura encima y el kanji de la tarjeta en negrita
+        function kanjiExample(card, example) {
+            const text = example.jaFurigana || example.ja;
+            const pos = furiganaPlain(text).indexOf(card.kanji);
+            const word = furiganaHtml(text, pos >= 0 ? [pos, pos + card.kanji.length] : null);
+            const alt = example.readingAlt ? ` (${example.readingAlt})` : '';
+            return `<li><span class="furigana">${word}</span>${alt} - ${example.en || ''}</li>`;
+        }
+
         function kanjiFaces(card) {
+            //las del libro traen palabras de ejemplo y nº de trazos; las propias, categoría
+            const examples = card.examples && card.examples.length
+                ? `<ul class="kanji-examples">${card.examples.map(ex => kanjiExample(card, ex)).join('')}</ul>`
+                : '';
             return {
                 front: card.kanji,
                 back: `
                     ${meaningTop(card)}
                     <p><strong>{{ __('card.kunReading') }}:</strong> ${card.kunReading || '-'}</p>
                     <p><strong>{{ __('card.onReading') }}:</strong> ${card.onReading || '-'}</p>
-                    <p><strong>{{ __('card.category') }}:</strong> ${card.category || '-'}</p>
+                    ${card.strokes ? `<p><strong>{{ __('study.strokes') }}:</strong> ${card.strokes}</p>` : ''}
+                    ${examples}
+                    ${card.source !== 'book' ? `<p><strong>{{ __('card.category') }}:</strong> ${card.category || '-'}</p>` : ''}
                     <p><strong>{{ __('card.level') }}:</strong> ${card.level || '-'}</p>
                 `,
             };
