@@ -2,7 +2,7 @@
   "source": "Basic Kanji Book Vol. 1 (基本漢字500)",
   "level": "N4",
   "level_note": "Level used in the app for every kanji of this book (decided 2026-10-10): the book does not give JLPT levels, and the 250 kanji of Vol. 1 are about N5 + N4. The per-entry jlpt field is only a reference from unofficial lists and is not used.",
-  "jlpt_source": "jisho.org (unofficial lists; the book does not give JLPT levels). When jisho gives none, the entry has its own jlpt_source",
+  "jlpt_source": "jisho.org (unofficial lists; the book does not give JLPT levels). When jisho gives none, the entry has its own jlpt_source. Only kanji 1-75 have it: it was dropped when the whole book was set to N4",
   "readings": "kun in hiragana, on in katakana, as in the book: '-' separates the okurigana (い-きる) or marks a form used inside words (-ガツ); readings in () are rarely used",
   "lessons_transcribed": [
     1,
@@ -11,9 +11,13 @@
     4,
     5,
     6,
-    7
+    7,
+    8,
+    9,
+    10,
+    11
   ],
-  "entry_count": 75,
+  "entry_count": 121,
   "entries": [
     {
       "id": 1,
@@ -3070,6 +3074,1831 @@
       ],
       "notes": [],
       "page": 63
+    },
+    {
+      "id": 76,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "新",
+      "meaning_en": "new",
+      "kun": [
+        "あたら-しい"
+      ],
+      "on": [
+        "シン"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "新しい",
+          "reading": "あたらしい",
+          "word_furigana": "{新|あたら}しい",
+          "en": "new"
+        },
+        {
+          "word": "新聞",
+          "reading": "しんぶん",
+          "word_furigana": "{新|しん}{聞|ぶん}",
+          "en": "a newspaper"
+        },
+        {
+          "word": "新車",
+          "reading": "しんしゃ",
+          "word_furigana": "{新|しん}{車|しゃ}",
+          "en": "a new car"
+        },
+        {
+          "word": "新年",
+          "reading": "しんねん",
+          "word_furigana": "{新|しん}{年|ねん}",
+          "en": "a new year"
+        }
+      ],
+      "notes": [],
+      "page": 70
+    },
+    {
+      "id": 77,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "古",
+      "meaning_en": "old",
+      "kun": [
+        "ふる-い"
+      ],
+      "on": [
+        "コ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "古い",
+          "reading": "ふるい",
+          "word_furigana": "{古|ふる}い",
+          "en": "old"
+        },
+        {
+          "word": "古本",
+          "reading": "ふるほん",
+          "word_furigana": "{古|ふる}{本|ほん}",
+          "en": "a used book"
+        },
+        {
+          "word": "中古車",
+          "reading": "ちゅうこしゃ",
+          "word_furigana": "{中|ちゅう}{古|こ}{車|しゃ}",
+          "en": "a second-hand car"
+        }
+      ],
+      "notes": [],
+      "page": 70
+    },
+    {
+      "id": 78,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "長",
+      "meaning_en": "long, eldest, chief",
+      "kun": [
+        "なが-い"
+      ],
+      "on": [
+        "チョウ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "長い",
+          "reading": "ながい",
+          "word_furigana": "{長|なが}い",
+          "en": "long"
+        },
+        {
+          "word": "長男",
+          "reading": "ちょうなん",
+          "word_furigana": "{長|ちょう}{男|なん}",
+          "en": "the eldest son"
+        },
+        {
+          "word": "長野",
+          "reading": "ながの",
+          "word_furigana": "{長|なが}{野|の}",
+          "en": "Nagano Prefecture"
+        },
+        {
+          "word": "学長",
+          "reading": "がくちょう",
+          "word_furigana": "{学|がく}{長|ちょう}",
+          "en": "a president"
+        }
+      ],
+      "notes": [],
+      "page": 70
+    },
+    {
+      "id": 79,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "短",
+      "meaning_en": "short",
+      "kun": [
+        "みじか-い"
+      ],
+      "on": [
+        "タン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "短い",
+          "reading": "みじかい",
+          "word_furigana": "{短|みじか}い",
+          "en": "short"
+        },
+        {
+          "word": "短大",
+          "reading": "たんだい",
+          "word_furigana": "{短|たん}{大|だい}",
+          "en": "a junior college"
+        },
+        {
+          "word": "短時間",
+          "reading": "たんじかん",
+          "word_furigana": "{短|たん}{時|じ}{間|かん}",
+          "en": "a short time"
+        }
+      ],
+      "notes": [],
+      "page": 71
+    },
+    {
+      "id": 80,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "高",
+      "meaning_en": "high, expensive",
+      "kun": [
+        "たか-い"
+      ],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "高い",
+          "reading": "たかい",
+          "word_furigana": "{高|たか}い",
+          "en": "high, expensive"
+        },
+        {
+          "word": "高校",
+          "reading": "こうこう",
+          "word_furigana": "{高|こう}{校|こう}",
+          "en": "a high school"
+        },
+        {
+          "word": "高橋",
+          "reading": "たかはし",
+          "word_furigana": "{高|たか}{橋|はし}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "高速",
+          "reading": "こうそく",
+          "word_furigana": "{高|こう}{速|そく}",
+          "en": "high-speed"
+        }
+      ],
+      "notes": [],
+      "page": 71
+    },
+    {
+      "id": 81,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "安",
+      "meaning_en": "safe, cheap",
+      "kun": [
+        "やす-い"
+      ],
+      "on": [
+        "アン"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "安い",
+          "reading": "やすい",
+          "word_furigana": "{安|やす}い",
+          "en": "cheap"
+        },
+        {
+          "word": "安売り",
+          "reading": "やすうり",
+          "word_furigana": "{安|やす}{売|う}り",
+          "en": "bargain sale"
+        },
+        {
+          "word": "安心する",
+          "reading": "あんしんする",
+          "word_furigana": "{安|あん}{心|しん}する",
+          "en": "to be relieved"
+        },
+        {
+          "word": "安全な",
+          "reading": "あんぜんな",
+          "word_furigana": "{安|あん}{全|ぜん}な",
+          "en": "safe"
+        }
+      ],
+      "notes": [],
+      "page": 71
+    },
+    {
+      "id": 82,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "低",
+      "meaning_en": "low",
+      "kun": [
+        "ひく-い"
+      ],
+      "on": [
+        "テイ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "低い",
+          "reading": "ひくい",
+          "word_furigana": "{低|ひく}い",
+          "en": "low"
+        },
+        {
+          "word": "低下する",
+          "reading": "ていかする",
+          "word_furigana": "{低|てい}{下|か}する",
+          "en": "to fall, to go down"
+        },
+        {
+          "word": "低温",
+          "reading": "ていおん",
+          "word_furigana": "{低|てい}{温|おん}",
+          "en": "a low temperature"
+        }
+      ],
+      "notes": [],
+      "page": 71
+    },
+    {
+      "id": 83,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "暗",
+      "meaning_en": "dark",
+      "kun": [
+        "くら-い"
+      ],
+      "on": [
+        "アン"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "暗い",
+          "reading": "くらい",
+          "word_furigana": "{暗|くら}い",
+          "en": "dark"
+        },
+        {
+          "word": "暗室",
+          "reading": "あんしつ",
+          "word_furigana": "{暗|あん}{室|しつ}",
+          "en": "a dark room"
+        }
+      ],
+      "notes": [],
+      "page": 72
+    },
+    {
+      "id": 84,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "多",
+      "meaning_en": "many, much",
+      "kun": [
+        "おお-い"
+      ],
+      "on": [
+        "タ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "多い",
+          "reading": "おおい",
+          "word_furigana": "{多|おお}い",
+          "en": "many, much"
+        },
+        {
+          "word": "多少",
+          "reading": "たしょう",
+          "word_furigana": "{多|た}{少|しょう}",
+          "en": "more or less"
+        },
+        {
+          "word": "多数",
+          "reading": "たすう",
+          "word_furigana": "{多|た}{数|すう}",
+          "en": "a large number"
+        }
+      ],
+      "notes": [],
+      "page": 72
+    },
+    {
+      "id": 85,
+      "lesson": 8,
+      "lesson_title": "形容詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Adjectives -1-",
+      "kanji": "少",
+      "meaning_en": "few, little",
+      "kun": [
+        "すく-ない",
+        "すこ-し"
+      ],
+      "on": [
+        "ショウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "少ない",
+          "reading": "すくない",
+          "word_furigana": "{少|すく}ない",
+          "en": "few, little"
+        },
+        {
+          "word": "少し",
+          "reading": "すこし",
+          "word_furigana": "{少|すこ}し",
+          "en": "a little, a few"
+        },
+        {
+          "word": "少年",
+          "reading": "しょうねん",
+          "word_furigana": "{少|しょう}{年|ねん}",
+          "en": "a boy"
+        },
+        {
+          "word": "少女",
+          "reading": "しょうじょ",
+          "word_furigana": "{少|しょう}{女|じょ}",
+          "en": "a girl"
+        }
+      ],
+      "notes": [],
+      "page": 72
+    },
+    {
+      "id": 86,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "行",
+      "meaning_en": "go, conduct, line",
+      "kun": [
+        "い-く",
+        "おこな-う"
+      ],
+      "on": [
+        "コウ",
+        "ギョウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "行く",
+          "reading": "いく",
+          "word_furigana": "{行|い}く",
+          "en": "to go"
+        },
+        {
+          "word": "行う",
+          "reading": "おこなう",
+          "word_furigana": "{行|おこな}う",
+          "en": "to carry out"
+        },
+        {
+          "word": "旅行する",
+          "reading": "りょこうする",
+          "word_furigana": "{旅|りょ}{行|こう}する",
+          "en": "to travel"
+        },
+        {
+          "word": "〜行",
+          "reading": "〜ぎょう",
+          "word_furigana": "〜{行|ぎょう}",
+          "en": "~ lines"
+        }
+      ],
+      "notes": [],
+      "page": 80
+    },
+    {
+      "id": 87,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "来",
+      "meaning_en": "come, next",
+      "kun": [
+        "く-る",
+        "こ-ない",
+        "き-ます",
+        "き-た"
+      ],
+      "on": [
+        "ライ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "来る",
+          "reading": "くる",
+          "word_furigana": "{来|く}る",
+          "en": "to come"
+        },
+        {
+          "word": "来年",
+          "reading": "らいねん",
+          "word_furigana": "{来|らい}{年|ねん}",
+          "en": "next year"
+        },
+        {
+          "word": "来月",
+          "reading": "らいげつ",
+          "word_furigana": "{来|らい}{月|げつ}",
+          "en": "next month"
+        },
+        {
+          "word": "来日する",
+          "reading": "らいにちする",
+          "word_furigana": "{来|らい}{日|にち}する",
+          "en": "to visit Japan"
+        }
+      ],
+      "notes": [],
+      "page": 80
+    },
+    {
+      "id": 88,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "帰",
+      "meaning_en": "return, go (come) back",
+      "kun": [
+        "かえ-る"
+      ],
+      "on": [
+        "キ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "帰る",
+          "reading": "かえる",
+          "word_furigana": "{帰|かえ}る",
+          "en": "to go/come back"
+        },
+        {
+          "word": "帰国する",
+          "reading": "きこくする",
+          "word_furigana": "{帰|き}{国|こく}する",
+          "en": "to return to one's country"
+        }
+      ],
+      "notes": [],
+      "page": 80
+    },
+    {
+      "id": 89,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "食",
+      "meaning_en": "eat",
+      "kun": [
+        "た-べる"
+      ],
+      "on": [
+        "ショク"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "食べる",
+          "reading": "たべる",
+          "word_furigana": "{食|た}べる",
+          "en": "to eat"
+        },
+        {
+          "word": "食べ物",
+          "reading": "たべもの",
+          "word_furigana": "{食|た}べ{物|もの}",
+          "en": "food"
+        },
+        {
+          "word": "食事",
+          "reading": "しょくじ",
+          "word_furigana": "{食|しょく}{事|じ}",
+          "en": "a meal"
+        },
+        {
+          "word": "夕食",
+          "reading": "ゆうしょく",
+          "word_furigana": "{夕|ゆう}{食|しょく}",
+          "en": "a dinner"
+        }
+      ],
+      "notes": [],
+      "page": 81
+    },
+    {
+      "id": 90,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "飲",
+      "meaning_en": "drink",
+      "kun": [
+        "の-む"
+      ],
+      "on": [
+        "イン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "飲む",
+          "reading": "のむ",
+          "word_furigana": "{飲|の}む",
+          "en": "to drink"
+        },
+        {
+          "word": "飲み物",
+          "reading": "のみもの",
+          "word_furigana": "{飲|の}み{物|もの}",
+          "en": "a beverage"
+        },
+        {
+          "word": "飲酒",
+          "reading": "いんしゅ",
+          "word_furigana": "{飲|いん}{酒|しゅ}",
+          "en": "drinking"
+        }
+      ],
+      "notes": [],
+      "page": 81
+    },
+    {
+      "id": 91,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "見",
+      "meaning_en": "see, look, view",
+      "kun": [
+        "み-る",
+        "み-える",
+        "み-せる"
+      ],
+      "on": [
+        "ケン"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "見る",
+          "reading": "みる",
+          "word_furigana": "{見|み}る",
+          "en": "to look at, to see"
+        },
+        {
+          "word": "意見",
+          "reading": "いけん",
+          "word_furigana": "{意|い}{見|けん}",
+          "en": "an opinion"
+        },
+        {
+          "word": "見せる",
+          "reading": "みせる",
+          "word_furigana": "{見|み}せる",
+          "en": "to show"
+        },
+        {
+          "word": "見物する",
+          "reading": "けんぶつする",
+          "word_furigana": "{見|けん}{物|ぶつ}する",
+          "en": "to do sightseeing"
+        }
+      ],
+      "notes": [],
+      "page": 81
+    },
+    {
+      "id": 92,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "聞",
+      "meaning_en": "hear",
+      "kun": [
+        "き-く",
+        "き-こえる"
+      ],
+      "on": [
+        "ブン"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "聞く",
+          "reading": "きく",
+          "word_furigana": "{聞|き}く",
+          "en": "to hear, to listen to"
+        },
+        {
+          "word": "聞こえる",
+          "reading": "きこえる",
+          "word_furigana": "{聞|き}こえる",
+          "en": "can be heard"
+        },
+        {
+          "word": "新聞",
+          "reading": "しんぶん",
+          "word_furigana": "{新|しん}{聞|ぶん}",
+          "en": "a newspaper"
+        }
+      ],
+      "notes": [],
+      "page": 81
+    },
+    {
+      "id": 93,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "読",
+      "meaning_en": "read",
+      "kun": [
+        "よ-む"
+      ],
+      "on": [
+        "ドク"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "読む",
+          "reading": "よむ",
+          "word_furigana": "{読|よ}む",
+          "en": "to read"
+        },
+        {
+          "word": "読み",
+          "reading": "よみ",
+          "word_furigana": "{読|よ}み",
+          "en": "reading"
+        },
+        {
+          "word": "読書",
+          "reading": "どくしょ",
+          "word_furigana": "{読|どく}{書|しょ}",
+          "en": "reading books"
+        },
+        {
+          "word": "読者",
+          "reading": "どくしゃ",
+          "word_furigana": "{読|どく}{者|しゃ}",
+          "en": "a reader"
+        }
+      ],
+      "notes": [],
+      "page": 82
+    },
+    {
+      "id": 94,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "書",
+      "meaning_en": "write, book, document",
+      "kun": [
+        "か-く"
+      ],
+      "on": [
+        "ショ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "書く",
+          "reading": "かく",
+          "word_furigana": "{書|か}く",
+          "en": "to write"
+        },
+        {
+          "word": "書店",
+          "reading": "しょてん",
+          "word_furigana": "{書|しょ}{店|てん}",
+          "en": "a book shop"
+        },
+        {
+          "word": "書道",
+          "reading": "しょどう",
+          "word_furigana": "{書|しょ}{道|どう}",
+          "en": "calligraphy"
+        }
+      ],
+      "notes": [],
+      "page": 82
+    },
+    {
+      "id": 95,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "話",
+      "meaning_en": "talk",
+      "kun": [
+        "はな-す",
+        "はなし"
+      ],
+      "on": [
+        "ワ"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "話す",
+          "reading": "はなす",
+          "word_furigana": "{話|はな}す",
+          "en": "to speak"
+        },
+        {
+          "word": "話",
+          "reading": "はなし",
+          "word_furigana": "{話|はなし}",
+          "en": "a story, a talk"
+        },
+        {
+          "word": "会話",
+          "reading": "かいわ",
+          "word_furigana": "{会|かい}{話|わ}",
+          "en": "conversation"
+        },
+        {
+          "word": "電話",
+          "reading": "でんわ",
+          "word_furigana": "{電|でん}{話|わ}",
+          "en": "a telephone"
+        }
+      ],
+      "notes": [],
+      "page": 82
+    },
+    {
+      "id": 96,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "買",
+      "meaning_en": "buy",
+      "kun": [
+        "か-う"
+      ],
+      "on": [
+        "バイ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "買う",
+          "reading": "かう",
+          "word_furigana": "{買|か}う",
+          "en": "to buy"
+        },
+        {
+          "word": "買物",
+          "reading": "かいもの",
+          "word_furigana": "{買|かい}{物|もの}",
+          "en": "shopping"
+        }
+      ],
+      "notes": [],
+      "page": 82
+    },
+    {
+      "id": 97,
+      "lesson": 9,
+      "lesson_title": "動詞の漢字 -1-",
+      "lesson_title_en": "Kanji for Verbs -1-",
+      "kanji": "教",
+      "meaning_en": "educate, teach, religion",
+      "kun": [
+        "おし-える"
+      ],
+      "on": [
+        "キョウ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "教える",
+          "reading": "おしえる",
+          "word_furigana": "{教|おし}える",
+          "en": "to teach"
+        },
+        {
+          "word": "教育する",
+          "reading": "きょういくする",
+          "word_furigana": "{教|きょう}{育|いく}する",
+          "en": "to educate"
+        },
+        {
+          "word": "教会",
+          "reading": "きょうかい",
+          "word_furigana": "{教|きょう}{会|かい}",
+          "en": "a church"
+        },
+        {
+          "word": "教室",
+          "reading": "きょうしつ",
+          "word_furigana": "{教|きょう}{室|しつ}",
+          "en": "a classroom"
+        }
+      ],
+      "notes": [],
+      "page": 83
+    },
+    {
+      "id": 98,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "朝",
+      "meaning_en": "morning",
+      "kun": [
+        "あさ"
+      ],
+      "on": [
+        "チョウ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "朝",
+          "reading": "あさ",
+          "word_furigana": "{朝|あさ}",
+          "en": "morning"
+        },
+        {
+          "word": "朝日",
+          "reading": "あさひ",
+          "word_furigana": "{朝|あさ}{日|ひ}",
+          "en": "the morning sun"
+        },
+        {
+          "word": "朝食",
+          "reading": "ちょうしょく",
+          "word_furigana": "{朝|ちょう}{食|しょく}",
+          "en": "breakfast"
+        }
+      ],
+      "notes": [],
+      "page": 89
+    },
+    {
+      "id": 99,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "昼",
+      "meaning_en": "noon, daytime",
+      "kun": [
+        "ひる"
+      ],
+      "on": [
+        "チュウ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "昼",
+          "reading": "ひる",
+          "word_furigana": "{昼|ひる}",
+          "en": "noon, midday"
+        },
+        {
+          "word": "昼寝",
+          "reading": "ひるね",
+          "word_furigana": "{昼|ひる}{寝|ね}",
+          "en": "a nap, a siesta"
+        },
+        {
+          "word": "昼食",
+          "reading": "ちゅうしょく",
+          "word_furigana": "{昼|ちゅう}{食|しょく}",
+          "en": "lunch"
+        },
+        {
+          "word": "昼休み",
+          "reading": "ひるやすみ",
+          "word_furigana": "{昼|ひる}{休|やす}み",
+          "en": "a lunch break"
+        }
+      ],
+      "notes": [],
+      "page": 89
+    },
+    {
+      "id": 100,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "夜",
+      "meaning_en": "night",
+      "kun": [
+        "よる",
+        "よ"
+      ],
+      "on": [
+        "ヤ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "夜",
+          "reading": "よる",
+          "word_furigana": "{夜|よる}",
+          "en": "night"
+        },
+        {
+          "word": "夜食",
+          "reading": "やしょく",
+          "word_furigana": "{夜|や}{食|しょく}",
+          "en": "a midnight meal"
+        },
+        {
+          "word": "今夜",
+          "reading": "こんや",
+          "word_furigana": "{今|こん}{夜|や}",
+          "en": "tonight"
+        }
+      ],
+      "notes": [],
+      "page": 89
+    },
+    {
+      "id": 101,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "晩",
+      "meaning_en": "night",
+      "kun": [],
+      "on": [
+        "バン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "晩",
+          "reading": "ばん",
+          "word_furigana": "{晩|ばん}",
+          "en": "night"
+        },
+        {
+          "word": "今晩",
+          "reading": "こんばん",
+          "word_furigana": "{今|こん}{晩|ばん}",
+          "en": "tonight"
+        },
+        {
+          "word": "晩御飯",
+          "reading": "ばんごはん",
+          "word_furigana": "{晩|ばん}{御|ご}{飯|はん}",
+          "en": "supper, dinner"
+        }
+      ],
+      "notes": [],
+      "page": 90
+    },
+    {
+      "id": 102,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "夕",
+      "meaning_en": "evening",
+      "kun": [
+        "ゆう"
+      ],
+      "on": [
+        "(セキ)"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "夕べ",
+          "reading": "ゆうべ",
+          "word_furigana": "{夕|ゆう}べ",
+          "en": "evening, last night"
+        },
+        {
+          "word": "夕食",
+          "reading": "ゆうしょく",
+          "word_furigana": "{夕|ゆう}{食|しょく}",
+          "en": "supper, dinner"
+        },
+        {
+          "word": "七夕",
+          "reading": "たなばた",
+          "word_furigana": "{七|たな}{夕|ばた}",
+          "en": "Star Festival"
+        }
+      ],
+      "notes": [
+        "七夕 (たなばた) is marked with * in the book: irregular reading."
+      ],
+      "page": 90
+    },
+    {
+      "id": 103,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "方",
+      "meaning_en": "direction, way, means",
+      "kun": [
+        "かた",
+        "-がた"
+      ],
+      "on": [
+        "ホウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "〜方",
+          "reading": "〜かた",
+          "word_furigana": "〜{方|かた}",
+          "en": "how to ~"
+        },
+        {
+          "word": "〜様方",
+          "reading": "〜さまかた",
+          "word_furigana": "〜{様|さま}{方|かた}",
+          "en": "c/o Mr. ~"
+        },
+        {
+          "word": "夕方",
+          "reading": "ゆうがた",
+          "word_furigana": "{夕|ゆう}{方|がた}",
+          "en": "evening"
+        },
+        {
+          "word": "方法",
+          "reading": "ほうほう",
+          "word_furigana": "{方|ほう}{法|ほう}",
+          "en": "a method"
+        }
+      ],
+      "notes": [],
+      "page": 90
+    },
+    {
+      "id": 104,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "午",
+      "meaning_en": "noon",
+      "kun": [],
+      "on": [
+        "ゴ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "午前",
+          "reading": "ごぜん",
+          "word_furigana": "{午|ご}{前|ぜん}",
+          "en": "morning, a.m."
+        },
+        {
+          "word": "午後",
+          "reading": "ごご",
+          "word_furigana": "{午|ご}{後|ご}",
+          "en": "afternoon, p.m."
+        },
+        {
+          "word": "正午",
+          "reading": "しょうご",
+          "word_furigana": "{正|しょう}{午|ご}",
+          "en": "high noon"
+        }
+      ],
+      "notes": [],
+      "page": 90
+    },
+    {
+      "id": 105,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "前",
+      "meaning_en": "before, front, previous",
+      "kun": [
+        "まえ"
+      ],
+      "on": [
+        "ゼン"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "前",
+          "reading": "まえ",
+          "word_furigana": "{前|まえ}",
+          "en": "before, front"
+        },
+        {
+          "word": "前半",
+          "reading": "ぜんはん",
+          "word_furigana": "{前|ぜん}{半|はん}",
+          "en": "the first half"
+        },
+        {
+          "word": "〜年前",
+          "reading": "〜ねんまえ",
+          "word_furigana": "〜{年|ねん}{前|まえ}",
+          "en": "~ years before"
+        }
+      ],
+      "notes": [],
+      "page": 91
+    },
+    {
+      "id": 106,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "後",
+      "meaning_en": "after, later, back, behind",
+      "kun": [
+        "あと",
+        "のち",
+        "うし-ろ"
+      ],
+      "on": [
+        "ゴ",
+        "コウ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "後",
+          "reading": "あと",
+          "word_furigana": "{後|あと}",
+          "en": "after, later"
+        },
+        {
+          "word": "後ろ",
+          "reading": "うしろ",
+          "word_furigana": "{後|うし}ろ",
+          "en": "behind, back"
+        },
+        {
+          "word": "〜年後",
+          "reading": "〜ねんご",
+          "word_furigana": "〜{年|ねん}{後|ご}",
+          "en": "~ years after"
+        },
+        {
+          "word": "後半",
+          "reading": "こうはん",
+          "word_furigana": "{後|こう}{半|はん}",
+          "en": "the last half"
+        }
+      ],
+      "notes": [],
+      "page": 91
+    },
+    {
+      "id": 107,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "毎",
+      "meaning_en": "every",
+      "kun": [],
+      "on": [
+        "マイ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "毎日",
+          "reading": "まいにち",
+          "word_furigana": "{毎|まい}{日|にち}",
+          "en": "every day"
+        },
+        {
+          "word": "毎週",
+          "reading": "まいしゅう",
+          "word_furigana": "{毎|まい}{週|しゅう}",
+          "en": "every week"
+        },
+        {
+          "word": "毎月",
+          "reading": "まいげつ",
+          "word_furigana": "{毎|まい}{月|げつ}",
+          "en": "every month",
+          "reading_alt": "まいつき"
+        }
+      ],
+      "notes": [],
+      "page": 91
+    },
+    {
+      "id": 108,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "週",
+      "meaning_en": "week",
+      "kun": [],
+      "on": [
+        "シュウ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "来週",
+          "reading": "らいしゅう",
+          "word_furigana": "{来|らい}{週|しゅう}",
+          "en": "next week"
+        },
+        {
+          "word": "週末",
+          "reading": "しゅうまつ",
+          "word_furigana": "{週|しゅう}{末|まつ}",
+          "en": "the weekend"
+        },
+        {
+          "word": "先週",
+          "reading": "せんしゅう",
+          "word_furigana": "{先|せん}{週|しゅう}",
+          "en": "last week"
+        },
+        {
+          "word": "一週間",
+          "reading": "いっしゅうかん",
+          "word_furigana": "{一|いっ}{週|しゅう}{間|かん}",
+          "en": "a week"
+        }
+      ],
+      "notes": [],
+      "page": 91
+    },
+    {
+      "id": 109,
+      "lesson": 10,
+      "lesson_title": "時の漢字",
+      "lesson_title_en": "Kanji for Time",
+      "kanji": "曜",
+      "meaning_en": "luminary, day of the week",
+      "kun": [],
+      "on": [
+        "ヨウ"
+      ],
+      "strokes": 18,
+      "examples": [
+        {
+          "word": "月曜日",
+          "reading": "げつようび",
+          "word_furigana": "{月|げつ}{曜|よう}{日|び}",
+          "en": "Monday"
+        },
+        {
+          "word": "火曜日",
+          "reading": "かようび",
+          "word_furigana": "{火|か}{曜|よう}{日|び}",
+          "en": "Tuesday"
+        },
+        {
+          "word": "水曜日",
+          "reading": "すいようび",
+          "word_furigana": "{水|すい}{曜|よう}{日|び}",
+          "en": "Wednesday"
+        },
+        {
+          "word": "木曜日",
+          "reading": "もくようび",
+          "word_furigana": "{木|もく}{曜|よう}{日|び}",
+          "en": "Thursday"
+        }
+      ],
+      "notes": [],
+      "page": 92
+    },
+    {
+      "id": 110,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "作",
+      "meaning_en": "make, produce",
+      "kun": [
+        "つく-る"
+      ],
+      "on": [
+        "サク",
+        "サ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "作る",
+          "reading": "つくる",
+          "word_furigana": "{作|つく}る",
+          "en": "to make"
+        },
+        {
+          "word": "作文",
+          "reading": "さくぶん",
+          "word_furigana": "{作|さく}{文|ぶん}",
+          "en": "composition"
+        },
+        {
+          "word": "作品",
+          "reading": "さくひん",
+          "word_furigana": "{作|さく}{品|ひん}",
+          "en": "a piece of work"
+        },
+        {
+          "word": "動作",
+          "reading": "どうさ",
+          "word_furigana": "{動|どう}{作|さ}",
+          "en": "action"
+        }
+      ],
+      "notes": [],
+      "page": 100
+    },
+    {
+      "id": 111,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "泳",
+      "meaning_en": "swim",
+      "kun": [
+        "およ-ぐ"
+      ],
+      "on": [
+        "エイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "泳ぐ",
+          "reading": "およぐ",
+          "word_furigana": "{泳|およ}ぐ",
+          "en": "to swim"
+        },
+        {
+          "word": "水泳",
+          "reading": "すいえい",
+          "word_furigana": "{水|すい}{泳|えい}",
+          "en": "swimming"
+        }
+      ],
+      "notes": [],
+      "page": 100
+    },
+    {
+      "id": 112,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "油",
+      "meaning_en": "oil",
+      "kun": [
+        "あぶら"
+      ],
+      "on": [
+        "ユ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "油",
+          "reading": "あぶら",
+          "word_furigana": "{油|あぶら}",
+          "en": "oil"
+        },
+        {
+          "word": "油絵",
+          "reading": "あぶらえ",
+          "word_furigana": "{油|あぶら}{絵|え}",
+          "en": "an oil painting"
+        },
+        {
+          "word": "石油",
+          "reading": "せきゆ",
+          "word_furigana": "{石|せき}{油|ゆ}",
+          "en": "petroleum"
+        }
+      ],
+      "notes": [],
+      "page": 100
+    },
+    {
+      "id": 113,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "海",
+      "meaning_en": "sea",
+      "kun": [
+        "うみ"
+      ],
+      "on": [
+        "カイ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "海",
+          "reading": "うみ",
+          "word_furigana": "{海|うみ}",
+          "en": "the sea, the ocean"
+        },
+        {
+          "word": "海外",
+          "reading": "かいがい",
+          "word_furigana": "{海|かい}{外|がい}",
+          "en": "oversea"
+        },
+        {
+          "word": "日本海",
+          "reading": "にほんかい",
+          "word_furigana": "{日|に}{本|ほん}{海|かい}",
+          "en": "the Japan Sea"
+        },
+        {
+          "word": "海水",
+          "reading": "かいすい",
+          "word_furigana": "{海|かい}{水|すい}",
+          "en": "sea water"
+        }
+      ],
+      "notes": [],
+      "page": 101
+    },
+    {
+      "id": 114,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "酒",
+      "meaning_en": "rice wine, liquor",
+      "kun": [
+        "さけ"
+      ],
+      "on": [
+        "シュ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "酒",
+          "reading": "さけ",
+          "word_furigana": "{酒|さけ}",
+          "en": "liquor"
+        },
+        {
+          "word": "日本酒",
+          "reading": "にほんしゅ",
+          "word_furigana": "{日|に}{本|ほん}{酒|しゅ}",
+          "en": "Japanese wine"
+        },
+        {
+          "word": "酒屋",
+          "reading": "さかや",
+          "word_furigana": "{酒|さか}{屋|や}",
+          "en": "a liquor shop"
+        },
+        {
+          "word": "洋酒",
+          "reading": "ようしゅ",
+          "word_furigana": "{洋|よう}{酒|しゅ}",
+          "en": "foreign liquors"
+        }
+      ],
+      "notes": [],
+      "page": 101
+    },
+    {
+      "id": 115,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "待",
+      "meaning_en": "wait, hospitality",
+      "kun": [
+        "ま-つ",
+        "まち"
+      ],
+      "on": [
+        "タイ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "待つ",
+          "reading": "まつ",
+          "word_furigana": "{待|ま}つ",
+          "en": "to wait"
+        },
+        {
+          "word": "待合室",
+          "reading": "まちあいしつ",
+          "word_furigana": "{待|まち}{合|あい}{室|しつ}",
+          "en": "a waiting room"
+        },
+        {
+          "word": "招待する",
+          "reading": "しょうたいする",
+          "word_furigana": "{招|しょう}{待|たい}する",
+          "en": "to invite"
+        }
+      ],
+      "notes": [],
+      "page": 101
+    },
+    {
+      "id": 116,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "校",
+      "meaning_en": "school",
+      "kun": [],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "学校",
+          "reading": "がっこう",
+          "word_furigana": "{学|がっ}{校|こう}",
+          "en": "a school"
+        },
+        {
+          "word": "校長",
+          "reading": "こうちょう",
+          "word_furigana": "{校|こう}{長|ちょう}",
+          "en": "a school principal"
+        },
+        {
+          "word": "高校生",
+          "reading": "こうこうせい",
+          "word_furigana": "{高|こう}{校|こう}{生|せい}",
+          "en": "a high school student"
+        }
+      ],
+      "notes": [],
+      "page": 101
+    },
+    {
+      "id": 117,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "時",
+      "meaning_en": "time, hour",
+      "kun": [
+        "とき"
+      ],
+      "on": [
+        "ジ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "時",
+          "reading": "とき",
+          "word_furigana": "{時|とき}",
+          "en": "time, when"
+        },
+        {
+          "word": "一時間",
+          "reading": "いちじかん",
+          "word_furigana": "{一|いち}{時|じ}{間|かん}",
+          "en": "one hour"
+        },
+        {
+          "word": "四時",
+          "reading": "よじ",
+          "word_furigana": "{四|よ}{時|じ}",
+          "en": "4 o'clock"
+        },
+        {
+          "word": "時計",
+          "reading": "とけい",
+          "word_furigana": "{時|と}{計|けい}",
+          "en": "a watch, a clock"
+        }
+      ],
+      "notes": [
+        "時計 (とけい) is marked with * in the book: irregular reading."
+      ],
+      "page": 102
+    },
+    {
+      "id": 118,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "言",
+      "meaning_en": "say",
+      "kun": [
+        "い-う"
+      ],
+      "on": [
+        "ゲン",
+        "ゴン"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "言う",
+          "reading": "いう",
+          "word_furigana": "{言|い}う",
+          "en": "to say"
+        },
+        {
+          "word": "言葉",
+          "reading": "ことば",
+          "word_furigana": "{言|こと}{葉|ば}",
+          "en": "language, a word"
+        },
+        {
+          "word": "言語",
+          "reading": "げんご",
+          "word_furigana": "{言|げん}{語|ご}",
+          "en": "language"
+        },
+        {
+          "word": "伝言",
+          "reading": "でんごん",
+          "word_furigana": "{伝|でん}{言|ごん}",
+          "en": "a message"
+        }
+      ],
+      "notes": [
+        "言葉 (ことば) is marked with * in the book: irregular reading."
+      ],
+      "page": 102
+    },
+    {
+      "id": 119,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "計",
+      "meaning_en": "measure",
+      "kun": [
+        "(はか-る)"
+      ],
+      "on": [
+        "ケイ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "時計",
+          "reading": "とけい",
+          "word_furigana": "{時|と}{計|けい}",
+          "en": "a watch, a clock"
+        },
+        {
+          "word": "計画する",
+          "reading": "けいかくする",
+          "word_furigana": "{計|けい}{画|かく}する",
+          "en": "to plan"
+        },
+        {
+          "word": "体温計",
+          "reading": "たいおんけい",
+          "word_furigana": "{体|たい}{温|おん}{計|けい}",
+          "en": "a thermometer"
+        }
+      ],
+      "notes": [],
+      "page": 102
+    },
+    {
+      "id": 120,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "語",
+      "meaning_en": "word, language",
+      "kun": [
+        "(かた-る)"
+      ],
+      "on": [
+        "ゴ"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "日本語",
+          "reading": "にほんご",
+          "word_furigana": "{日|に}{本|ほん}{語|ご}",
+          "en": "Japanese language"
+        },
+        {
+          "word": "英語",
+          "reading": "えいご",
+          "word_furigana": "{英|えい}{語|ご}",
+          "en": "English"
+        },
+        {
+          "word": "物語",
+          "reading": "ものがたり",
+          "word_furigana": "{物|もの}{語|がたり}",
+          "en": "a story"
+        }
+      ],
+      "notes": [
+        "物語 (ものがたり) is marked with * in the book: irregular reading."
+      ],
+      "page": 102
+    },
+    {
+      "id": 121,
+      "lesson": 11,
+      "lesson_title": "部首 -1-",
+      "lesson_title_en": "The radicals -1-",
+      "kanji": "飯",
+      "meaning_en": "cooked rice, meal, food",
+      "kun": [
+        "めし"
+      ],
+      "on": [
+        "ハン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "ご飯",
+          "reading": "ごはん",
+          "word_furigana": "ご{飯|はん}",
+          "en": "cooked rice, meal"
+        },
+        {
+          "word": "飯",
+          "reading": "めし",
+          "word_furigana": "{飯|めし}",
+          "en": "cooked rice, meal (colloquial word used by men)"
+        },
+        {
+          "word": "夕飯",
+          "reading": "ゆうはん",
+          "word_furigana": "{夕|ゆう}{飯|はん}",
+          "en": "supper"
+        }
+      ],
+      "notes": [],
+      "page": 103
     }
   ]
 }
