@@ -6,7 +6,9 @@
     "start": "node ./bin/www",
     "start:atlas": "node --env-file=.env.atlas ./bin/www",
     "import": "node seeds/import-book-vocabulary.js",
-    "import:atlas": "node --env-file=.env.atlas seeds/import-book-vocabulary.js"
+    "import:atlas": "node --env-file=.env.atlas seeds/import-book-vocabulary.js",
+    "import:kanji": "node seeds/import-book-kanji.js",
+    "import:kanji:atlas": "node --env-file=.env.atlas seeds/import-book-kanji.js"
   },
   "dependencies": {
     "connect-mongo": "^5.1.0",

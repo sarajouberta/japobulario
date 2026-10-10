@@ -6,9 +6,9 @@ Uso:
     node seeds/import-book-vocabulary.js            -> importa (o actualiza) en MongoDB
     node seeds/import-book-vocabulary.js --dry-run  -> solo valida los datos, sin conectarse
 
-Se puede ejecutar varias veces: cada palabra se identifica por (level, bookId), así que
+Se puede ejecutar varias veces: cada palabra se identifica por (type, level, bookId), así que
 reimportar actualiza las fichas existentes en lugar de duplicarlas.
-Las fichas creadas a mano (source: 'manual') no se tocan.
+Las fichas creadas a mano (source: 'manual') y los kanji del libro (import-book-kanji.js) no se tocan.
  */
 const fs = require('fs');
 const path = require('path');
@@ -76,10 +76,11 @@ async function importLevel(level) {
     console.log(`${level}: ${cards.length} fichas válidas (${incomplete} incompletas)`);
     if (dryRun) return;
 
-    //upsert: inserta si no existe (level + bookId), actualiza si ya existe:
+    //upsert: inserta si no existe (type + level + bookId), actualiza si ya existe. El tipo es necesario:
+    //los kanji del libro también tienen bookId 1, 2, 3... y nivel N5
     const result = await Flashcard.bulkWrite(cards.map(card => ({
         updateOne: {
-            filter: { level: card.level, bookId: card.bookId },
+            filter: { type: 'vocabulary', level: card.level, bookId: card.bookId },
             update: { $set: card },
             upsert: true,
         },
@@ -91,7 +92,7 @@ async function main() {
     if (!dryRun) {
         await mongoose.connect(MONGO_URL);
         console.log('Conectado a MongoDB');
-        await Flashcard.syncIndexes();  //crea el índice único (level, bookId)
+        await Flashcard.syncIndexes();  //crea el índice único (type, level, bookId) y borra el antiguo (level, bookId)
     }
     for (const level of LEVELS) {
         await importLevel(level);

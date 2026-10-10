@@ -7,11 +7,14 @@ usar schemas con Mongoose es la forma recomendada para manejar los datos.
 
 const mongoose = require('mongoose');
 
-//frase de ejemplo del libro (furigana en notación {漢字|かな}):
+//frase de ejemplo del libro (furigana en notación {漢字|かな}). En los kanji del libro, el ejemplo es
+//una palabra con ese kanji: ja = la palabra, y además su lectura (y otra posible, como にっぽん):
 const exampleSchema = new mongoose.Schema({
     ja: { type: String, required: true },
     jaFurigana: { type: String },
     en: { type: String },
+    reading: { type: String },
+    readingAlt: { type: String },
 }, { _id: false });
 
 //palabra relacionada / sinónimo / antónimo que el libro añade debajo de una entrada:
@@ -33,13 +36,16 @@ const flashcardSchema = new mongoose.Schema({
     //las entradas incompletas del libro (páginas ilustradas) pueden no traer significado:
     meaning: { type: String, required: function () { return this.complete !== false; } },
     category: { type: String},
-    level: { type: String, enum: ['N5', 'N4'], required: true },
+    //nivel JLPT. Las tarjetas de vocabulario y las propias son N5 o N4; los kanji del libro pueden
+    //llegar a N1 (el libro no da el nivel: sale de jisho.org, ver seeds/import-book-kanji.js)
+    level: { type: String, enum: ['N5', 'N4', 'N3', 'N2', 'N1'], required: true },
 
     //dueño de las tarjetas propias (las creadas con el formulario); las de los libros no tienen dueño.
     //Cada usuario solo ve y estudia sus propias tarjetas (ver lib/visibility.js):
     owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User', index: true },
 
-    //campos del vocabulario importado de los libros (seeds/data/vocabulary_N*.json):
+    //campos de lo importado de los libros: vocabulario (seeds/data/vocabulary_N*.json) y kanji
+    //(seeds/data/kanji_BKB1.json; en los kanji, chapter = lección del libro):
     source: { type: String, enum: ['manual', 'book'], default: 'manual' },
     bookId: { type: Number },         //número de la palabra en el libro (único por nivel)
     reading: { type: String },        //lectura completa en kana
@@ -54,14 +60,16 @@ const flashcardSchema = new mongoose.Schema({
     related: [relatedSchema],
     notes: [{ type: String }],
     page: { type: Number },
+    strokes: { type: Number },  //nº de trazos (kanji del libro)
     //false si le falta significado o ejemplo; `missing` indica qué le falta:
     complete: { type: Boolean, default: true },
     missing: [{ type: String, enum: ['meaning_en', 'examples'] }],
 }, { timestamps: true });  //añade createdAt/updatedAt (el listado ordena por createdAt)
 
-//cada palabra del libro existe una sola vez por nivel (permite reimportar sin duplicar):
+//cada ficha del libro existe una sola vez por tipo y nivel (permite reimportar sin duplicar). El tipo
+//hace falta porque los números del libro de vocabulario y los del de kanji se repiten (los dos empiezan en 1):
 flashcardSchema.index(
-    { level: 1, bookId: 1 },
+    { type: 1, level: 1, bookId: 1 },
     { unique: true, partialFilterExpression: { bookId: { $exists: true } } }
 );
 

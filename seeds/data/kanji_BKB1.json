@@ -1,0 +1,1455 @@
+{
+  "source": "Basic Kanji Book Vol. 1 (基本漢字500)",
+  "jlpt_source": "jisho.org (unofficial lists; the book does not give JLPT levels)",
+  "readings": "kun in hiragana, on in katakana, as in the book: '-' separates the okurigana (い-きる) or marks a form used inside words (-ガツ); readings in () are rarely used",
+  "lessons_transcribed": [
+    1,
+    2,
+    3
+  ],
+  "entry_count": 35,
+  "entries": [
+    {
+      "id": 1,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "日",
+      "meaning_en": "sun, day",
+      "kun": [
+        "ひ",
+        "-び",
+        "-か"
+      ],
+      "on": [
+        "ニチ",
+        "ニ",
+        "(-ジツ)"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "日",
+          "reading": "ひ",
+          "word_furigana": "{日|ひ}",
+          "en": "the sun, a day"
+        },
+        {
+          "word": "日曜日",
+          "reading": "にちようび",
+          "word_furigana": "{日|にち}{曜|よう}{日|び}",
+          "en": "Sunday"
+        },
+        {
+          "word": "日本",
+          "reading": "にほん",
+          "word_furigana": "{日|に}{本|ほん}",
+          "en": "Japan",
+          "reading_alt": "にっぽん"
+        },
+        {
+          "word": "3日",
+          "reading": "みっか",
+          "word_furigana": "{3|みっ}{日|か}",
+          "en": "the 3rd day"
+        }
+      ],
+      "notes": [],
+      "page": 5
+    },
+    {
+      "id": 2,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "月",
+      "meaning_en": "moon, month",
+      "kun": [
+        "つき"
+      ],
+      "on": [
+        "ゲツ",
+        "-ガツ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "月",
+          "reading": "つき",
+          "word_furigana": "{月|つき}",
+          "en": "the moon, a month"
+        },
+        {
+          "word": "1月",
+          "reading": "いちがつ",
+          "word_furigana": "{1|いち}{月|がつ}",
+          "en": "January"
+        },
+        {
+          "word": "月曜日",
+          "reading": "げつようび",
+          "word_furigana": "{月|げつ}{曜|よう}{日|び}",
+          "en": "Monday"
+        },
+        {
+          "word": "1か月",
+          "reading": "いっかげつ",
+          "word_furigana": "{1|いっ}か{月|げつ}",
+          "en": "one month"
+        }
+      ],
+      "notes": [],
+      "page": 5
+    },
+    {
+      "id": 3,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "木",
+      "meaning_en": "tree",
+      "kun": [
+        "き"
+      ],
+      "on": [
+        "モク",
+        "ボク"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "木",
+          "reading": "き",
+          "word_furigana": "{木|き}",
+          "en": "a tree"
+        },
+        {
+          "word": "木村",
+          "reading": "きむら",
+          "word_furigana": "{木|き}{村|むら}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "木曜日",
+          "reading": "もくようび",
+          "word_furigana": "{木|もく}{曜|よう}{日|び}",
+          "en": "Thursday"
+        }
+      ],
+      "notes": [],
+      "page": 5
+    },
+    {
+      "id": 4,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "山",
+      "meaning_en": "mountain",
+      "kun": [
+        "やま"
+      ],
+      "on": [
+        "サン"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "山",
+          "reading": "やま",
+          "word_furigana": "{山|やま}",
+          "en": "a mountain"
+        },
+        {
+          "word": "山下",
+          "reading": "やました",
+          "word_furigana": "{山|やま}{下|した}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "富士山",
+          "reading": "ふじさん",
+          "word_furigana": "{富|ふ}{士|じ}{山|さん}",
+          "en": "Mt. Fuji"
+        },
+        {
+          "word": "火山",
+          "reading": "かざん",
+          "word_furigana": "{火|か}{山|ざん}",
+          "en": "a volcano"
+        }
+      ],
+      "notes": [],
+      "page": 5
+    },
+    {
+      "id": 5,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "川",
+      "meaning_en": "river",
+      "kun": [
+        "かわ",
+        "-がわ"
+      ],
+      "on": [
+        "(セン)"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "川",
+          "reading": "かわ",
+          "word_furigana": "{川|かわ}",
+          "en": "a river"
+        },
+        {
+          "word": "ナイル川",
+          "reading": "ナイルがわ",
+          "word_furigana": "ナイル{川|がわ}",
+          "en": "the Nile River"
+        }
+      ],
+      "notes": [],
+      "page": 6
+    },
+    {
+      "id": 6,
+      "jlpt": "N4",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "田",
+      "meaning_en": "rice field",
+      "kun": [
+        "た",
+        "-だ"
+      ],
+      "on": [
+        "デン"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "田んぼ",
+          "reading": "たんぼ",
+          "word_furigana": "{田|た}んぼ",
+          "en": "a rice field"
+        },
+        {
+          "word": "田中",
+          "reading": "たなか",
+          "word_furigana": "{田|た}{中|なか}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "山田",
+          "reading": "やまだ",
+          "word_furigana": "{山|やま}{田|だ}",
+          "en": "Japanese name"
+        }
+      ],
+      "notes": [],
+      "page": 6
+    },
+    {
+      "id": 7,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "人",
+      "meaning_en": "man, person",
+      "kun": [
+        "ひと"
+      ],
+      "on": [
+        "ジン",
+        "ニン"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "人",
+          "reading": "ひと",
+          "word_furigana": "{人|ひと}",
+          "en": "man, a person"
+        },
+        {
+          "word": "日本人",
+          "reading": "にほんじん",
+          "word_furigana": "{日|に}{本|ほん}{人|じん}",
+          "en": "a Japanese"
+        },
+        {
+          "word": "3人",
+          "reading": "さんにん",
+          "word_furigana": "{3|さん}{人|にん}",
+          "en": "three people"
+        }
+      ],
+      "notes": [],
+      "page": 6
+    },
+    {
+      "id": 8,
+      "jlpt": "N4",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "口",
+      "meaning_en": "mouth",
+      "kun": [
+        "くち",
+        "-ぐち"
+      ],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "口",
+          "reading": "くち",
+          "word_furigana": "{口|くち}",
+          "en": "a mouth"
+        },
+        {
+          "word": "出口",
+          "reading": "でぐち",
+          "word_furigana": "{出|で}{口|ぐち}",
+          "en": "an exit"
+        },
+        {
+          "word": "入口",
+          "reading": "いりぐち",
+          "word_furigana": "{入|いり}{口|ぐち}",
+          "en": "an entrance"
+        },
+        {
+          "word": "人口",
+          "reading": "じんこう",
+          "word_furigana": "{人|じん}{口|こう}",
+          "en": "population"
+        }
+      ],
+      "notes": [],
+      "page": 6
+    },
+    {
+      "id": 9,
+      "jlpt": "N5",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "車",
+      "meaning_en": "car",
+      "kun": [
+        "くるま"
+      ],
+      "on": [
+        "シャ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "車",
+          "reading": "くるま",
+          "word_furigana": "{車|くるま}",
+          "en": "a car"
+        },
+        {
+          "word": "電車",
+          "reading": "でんしゃ",
+          "word_furigana": "{電|でん}{車|しゃ}",
+          "en": "a train"
+        },
+        {
+          "word": "自動車",
+          "reading": "じどうしゃ",
+          "word_furigana": "{自|じ}{動|どう}{車|しゃ}",
+          "en": "a car, an automobile"
+        }
+      ],
+      "notes": [],
+      "page": 7
+    },
+    {
+      "id": 10,
+      "jlpt": "N2",
+      "lesson": 1,
+      "lesson_title": "えからできた漢字 -1-",
+      "lesson_title_en": "Kanji made from pictures -1-",
+      "kanji": "門",
+      "meaning_en": "gate",
+      "kun": [
+        "(かど)"
+      ],
+      "on": [
+        "モン"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "門",
+          "reading": "もん",
+          "word_furigana": "{門|もん}",
+          "en": "a gate"
+        },
+        {
+          "word": "専門",
+          "reading": "せんもん",
+          "word_furigana": "{専|せん}{門|もん}",
+          "en": "a speciality"
+        }
+      ],
+      "notes": [],
+      "page": 7
+    },
+    {
+      "id": 11,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "火",
+      "meaning_en": "fire",
+      "kun": [
+        "ひ"
+      ],
+      "on": [
+        "カ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "火",
+          "reading": "ひ",
+          "word_furigana": "{火|ひ}",
+          "en": "fire"
+        },
+        {
+          "word": "火山",
+          "reading": "かざん",
+          "word_furigana": "{火|か}{山|ざん}",
+          "en": "a volcano"
+        },
+        {
+          "word": "火曜日",
+          "reading": "かようび",
+          "word_furigana": "{火|か}{曜|よう}{日|び}",
+          "en": "Tuesday"
+        }
+      ],
+      "notes": [],
+      "page": 14
+    },
+    {
+      "id": 12,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "水",
+      "meaning_en": "water",
+      "kun": [
+        "みず"
+      ],
+      "on": [
+        "スイ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "水",
+          "reading": "みず",
+          "word_furigana": "{水|みず}",
+          "en": "water"
+        },
+        {
+          "word": "水田",
+          "reading": "すいでん",
+          "word_furigana": "{水|すい}{田|でん}",
+          "en": "a rice field"
+        },
+        {
+          "word": "水曜日",
+          "reading": "すいようび",
+          "word_furigana": "{水|すい}{曜|よう}{日|び}",
+          "en": "Wednesday"
+        }
+      ],
+      "notes": [],
+      "page": 14
+    },
+    {
+      "id": 13,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "金",
+      "meaning_en": "gold, money, metal",
+      "kun": [
+        "かね"
+      ],
+      "on": [
+        "キン"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "お金",
+          "reading": "おかね",
+          "word_furigana": "お{金|かね}",
+          "en": "money"
+        },
+        {
+          "word": "金田",
+          "reading": "かねだ",
+          "word_furigana": "{金|かね}{田|だ}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "金",
+          "reading": "きん",
+          "word_furigana": "{金|きん}",
+          "en": "gold"
+        },
+        {
+          "word": "金曜日",
+          "reading": "きんようび",
+          "word_furigana": "{金|きん}{曜|よう}{日|び}",
+          "en": "Friday"
+        }
+      ],
+      "notes": [],
+      "page": 14
+    },
+    {
+      "id": 14,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "土",
+      "meaning_en": "ground, earth, soil",
+      "kun": [
+        "つち"
+      ],
+      "on": [
+        "ド"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "土",
+          "reading": "つち",
+          "word_furigana": "{土|つち}",
+          "en": "the ground"
+        },
+        {
+          "word": "土木",
+          "reading": "どぼく",
+          "word_furigana": "{土|ど}{木|ぼく}",
+          "en": "civil engineering"
+        },
+        {
+          "word": "土曜日",
+          "reading": "どようび",
+          "word_furigana": "{土|ど}{曜|よう}{日|び}",
+          "en": "Saturday"
+        }
+      ],
+      "notes": [],
+      "page": 14
+    },
+    {
+      "id": 15,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "子",
+      "meaning_en": "child",
+      "kun": [
+        "こ"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "子ども",
+          "reading": "こども",
+          "word_furigana": "{子|こ}ども",
+          "en": "a child"
+        },
+        {
+          "word": "女の子",
+          "reading": "おんなのこ",
+          "word_furigana": "{女|おんな}の{子|こ}",
+          "en": "a girl"
+        },
+        {
+          "word": "女子学生",
+          "reading": "じょしがくせい",
+          "word_furigana": "{女|じょ}{子|し}{学|がく}{生|せい}",
+          "en": "a girl student"
+        }
+      ],
+      "notes": [],
+      "page": 15
+    },
+    {
+      "id": 16,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "女",
+      "meaning_en": "woman, female",
+      "kun": [
+        "おんな"
+      ],
+      "on": [
+        "ジョ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "女",
+          "reading": "おんな",
+          "word_furigana": "{女|おんな}",
+          "en": "a woman"
+        },
+        {
+          "word": "女の人",
+          "reading": "おんなのひと",
+          "word_furigana": "{女|おんな}の{人|ひと}",
+          "en": "a woman"
+        },
+        {
+          "word": "彼女",
+          "reading": "かのじょ",
+          "word_furigana": "{彼|かの}{女|じょ}",
+          "en": "she"
+        }
+      ],
+      "notes": [],
+      "page": 15
+    },
+    {
+      "id": 17,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "学",
+      "meaning_en": "study",
+      "kun": [
+        "(まな-ぶ)"
+      ],
+      "on": [
+        "ガク",
+        "ガッ-"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "学生",
+          "reading": "がくせい",
+          "word_furigana": "{学|がく}{生|せい}",
+          "en": "a student"
+        },
+        {
+          "word": "大学",
+          "reading": "だいがく",
+          "word_furigana": "{大|だい}{学|がく}",
+          "en": "a university"
+        },
+        {
+          "word": "学校",
+          "reading": "がっこう",
+          "word_furigana": "{学|がっ}{校|こう}",
+          "en": "a school"
+        }
+      ],
+      "notes": [],
+      "page": 15
+    },
+    {
+      "id": 18,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "生",
+      "meaning_en": "live, birth",
+      "kun": [
+        "い-きる",
+        "う-まれる"
+      ],
+      "on": [
+        "セイ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "生きる",
+          "reading": "いきる",
+          "word_furigana": "{生|い}きる",
+          "en": "to live"
+        },
+        {
+          "word": "生まれる",
+          "reading": "うまれる",
+          "word_furigana": "{生|う}まれる",
+          "en": "to be born"
+        },
+        {
+          "word": "先生",
+          "reading": "せんせい",
+          "word_furigana": "{先|せん}{生|せい}",
+          "en": "a teacher"
+        },
+        {
+          "word": "学生",
+          "reading": "がくせい",
+          "word_furigana": "{学|がく}{生|せい}",
+          "en": "a student"
+        }
+      ],
+      "notes": [],
+      "page": 15
+    },
+    {
+      "id": 19,
+      "jlpt": "N5",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "先",
+      "meaning_en": "previous, foregoing",
+      "kun": [
+        "さき"
+      ],
+      "on": [
+        "セン"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "先",
+          "reading": "さき",
+          "word_furigana": "{先|さき}",
+          "en": "ahead"
+        },
+        {
+          "word": "先月",
+          "reading": "せんげつ",
+          "word_furigana": "{先|せん}{月|げつ}",
+          "en": "last month"
+        },
+        {
+          "word": "先生",
+          "reading": "せんせい",
+          "word_furigana": "{先|せん}{生|せい}",
+          "en": "a teacher"
+        }
+      ],
+      "notes": [],
+      "page": 16
+    },
+    {
+      "id": 20,
+      "jlpt": "N4",
+      "lesson": 2,
+      "lesson_title": "えからできた漢字 -2-",
+      "lesson_title_en": "Kanji made from pictures -2-",
+      "kanji": "私",
+      "meaning_en": "private",
+      "kun": [
+        "わたし",
+        "わたくし"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "私",
+          "reading": "わたし",
+          "word_furigana": "{私|わたし}",
+          "en": "I",
+          "reading_alt": "わたくし"
+        },
+        {
+          "word": "私立大学",
+          "reading": "しりつだいがく",
+          "word_furigana": "{私|し}{立|りつ}{大|だい}{学|がく}",
+          "en": "a private university"
+        }
+      ],
+      "notes": [],
+      "page": 16
+    },
+    {
+      "id": 21,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "一",
+      "meaning_en": "one",
+      "kun": [
+        "ひと-つ"
+      ],
+      "on": [
+        "イチ"
+      ],
+      "strokes": 1,
+      "examples": [
+        {
+          "word": "一つ",
+          "reading": "ひとつ",
+          "word_furigana": "{一|ひと}つ",
+          "en": "one (thing)"
+        },
+        {
+          "word": "一人",
+          "reading": "ひとり",
+          "word_furigana": "{一|ひと}{人|り}",
+          "en": "one (person)"
+        },
+        {
+          "word": "一月",
+          "reading": "いちがつ",
+          "word_furigana": "{一|いち}{月|がつ}",
+          "en": "January"
+        },
+        {
+          "word": "一年",
+          "reading": "いちねん",
+          "word_furigana": "{一|いち}{年|ねん}",
+          "en": "one year"
+        }
+      ],
+      "notes": [],
+      "page": 23
+    },
+    {
+      "id": 22,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "二",
+      "meaning_en": "two",
+      "kun": [
+        "ふた-つ"
+      ],
+      "on": [
+        "ニ"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "二つ",
+          "reading": "ふたつ",
+          "word_furigana": "{二|ふた}つ",
+          "en": "two (things)"
+        },
+        {
+          "word": "二人",
+          "reading": "ふたり",
+          "word_furigana": "{二|ふた}{人|り}",
+          "en": "two (people)"
+        },
+        {
+          "word": "二月",
+          "reading": "にがつ",
+          "word_furigana": "{二|に}{月|がつ}",
+          "en": "February"
+        },
+        {
+          "word": "二年",
+          "reading": "にねん",
+          "word_furigana": "{二|に}{年|ねん}",
+          "en": "two years"
+        }
+      ],
+      "notes": [],
+      "page": 23
+    },
+    {
+      "id": 23,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "三",
+      "meaning_en": "three",
+      "kun": [
+        "みっ-つ"
+      ],
+      "on": [
+        "サン"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "三つ",
+          "reading": "みっつ",
+          "word_furigana": "{三|みっ}つ",
+          "en": "three (things)"
+        },
+        {
+          "word": "三日",
+          "reading": "みっか",
+          "word_furigana": "{三|みっ}{日|か}",
+          "en": "the 3rd day"
+        },
+        {
+          "word": "三月",
+          "reading": "さんがつ",
+          "word_furigana": "{三|さん}{月|がつ}",
+          "en": "March"
+        },
+        {
+          "word": "三年",
+          "reading": "さんねん",
+          "word_furigana": "{三|さん}{年|ねん}",
+          "en": "three years"
+        }
+      ],
+      "notes": [],
+      "page": 23
+    },
+    {
+      "id": 24,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "四",
+      "meaning_en": "four",
+      "kun": [
+        "よっ-つ",
+        "よん",
+        "よ"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "四つ",
+          "reading": "よっつ",
+          "word_furigana": "{四|よっ}つ",
+          "en": "four (things)"
+        },
+        {
+          "word": "四日",
+          "reading": "よっか",
+          "word_furigana": "{四|よっ}{日|か}",
+          "en": "the 4th day"
+        },
+        {
+          "word": "四月",
+          "reading": "しがつ",
+          "word_furigana": "{四|し}{月|がつ}",
+          "en": "April"
+        },
+        {
+          "word": "四年",
+          "reading": "よねん",
+          "word_furigana": "{四|よ}{年|ねん}",
+          "en": "four years"
+        }
+      ],
+      "notes": [],
+      "page": 24
+    },
+    {
+      "id": 25,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "五",
+      "meaning_en": "five",
+      "kun": [
+        "いつ-つ"
+      ],
+      "on": [
+        "ゴ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "五つ",
+          "reading": "いつつ",
+          "word_furigana": "{五|いつ}つ",
+          "en": "five (things)"
+        },
+        {
+          "word": "五日",
+          "reading": "いつか",
+          "word_furigana": "{五|いつ}{日|か}",
+          "en": "the 5th day"
+        },
+        {
+          "word": "五月",
+          "reading": "ごがつ",
+          "word_furigana": "{五|ご}{月|がつ}",
+          "en": "May"
+        },
+        {
+          "word": "五年",
+          "reading": "ごねん",
+          "word_furigana": "{五|ご}{年|ねん}",
+          "en": "five years"
+        }
+      ],
+      "notes": [],
+      "page": 24
+    },
+    {
+      "id": 26,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "六",
+      "meaning_en": "six",
+      "kun": [
+        "むっ-つ"
+      ],
+      "on": [
+        "ロク",
+        "ロッ-"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "六つ",
+          "reading": "むっつ",
+          "word_furigana": "{六|むっ}つ",
+          "en": "six (things)"
+        },
+        {
+          "word": "六日",
+          "reading": "むいか",
+          "word_furigana": "{六|むい}{日|か}",
+          "en": "the 6th day"
+        },
+        {
+          "word": "六月",
+          "reading": "ろくがつ",
+          "word_furigana": "{六|ろく}{月|がつ}",
+          "en": "June"
+        },
+        {
+          "word": "六年",
+          "reading": "ろくねん",
+          "word_furigana": "{六|ろく}{年|ねん}",
+          "en": "six years"
+        }
+      ],
+      "notes": [
+        "六日 (むいか) is marked with * in the book: irregular reading."
+      ],
+      "page": 24
+    },
+    {
+      "id": 27,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "七",
+      "meaning_en": "seven",
+      "kun": [
+        "なな-つ"
+      ],
+      "on": [
+        "シチ"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "七つ",
+          "reading": "ななつ",
+          "word_furigana": "{七|なな}つ",
+          "en": "seven (things)"
+        },
+        {
+          "word": "七日",
+          "reading": "なのか",
+          "word_furigana": "{七|なの}{日|か}",
+          "en": "the 7th day"
+        },
+        {
+          "word": "七月",
+          "reading": "しちがつ",
+          "word_furigana": "{七|しち}{月|がつ}",
+          "en": "July"
+        },
+        {
+          "word": "七年",
+          "reading": "しちねん",
+          "word_furigana": "{七|しち}{年|ねん}",
+          "en": "seven years"
+        }
+      ],
+      "notes": [
+        "The examples box is covered by handwritten notes in the scanned copy; the Japanese words are from those notes and the English meanings were added in the transcription."
+      ],
+      "page": 24
+    },
+    {
+      "id": 28,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "八",
+      "meaning_en": "eight",
+      "kun": [
+        "やっ-つ"
+      ],
+      "on": [
+        "ハチ",
+        "ハッ-"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "八つ",
+          "reading": "やっつ",
+          "word_furigana": "{八|やっ}つ",
+          "en": "eight (things)"
+        },
+        {
+          "word": "八日",
+          "reading": "ようか",
+          "word_furigana": "{八|よう}{日|か}",
+          "en": "the 8th day"
+        },
+        {
+          "word": "八月",
+          "reading": "はちがつ",
+          "word_furigana": "{八|はち}{月|がつ}",
+          "en": "August"
+        },
+        {
+          "word": "八年",
+          "reading": "はちねん",
+          "word_furigana": "{八|はち}{年|ねん}",
+          "en": "eight years"
+        }
+      ],
+      "notes": [
+        "八日 (ようか) is marked with * in the book: irregular reading."
+      ],
+      "page": 25
+    },
+    {
+      "id": 29,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "九",
+      "meaning_en": "nine",
+      "kun": [
+        "ここの-つ"
+      ],
+      "on": [
+        "ク",
+        "キュウ"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "九つ",
+          "reading": "ここのつ",
+          "word_furigana": "{九|ここの}つ",
+          "en": "nine (things)"
+        },
+        {
+          "word": "九日",
+          "reading": "ここのか",
+          "word_furigana": "{九|ここの}{日|か}",
+          "en": "the 9th day"
+        },
+        {
+          "word": "九月",
+          "reading": "くがつ",
+          "word_furigana": "{九|く}{月|がつ}",
+          "en": "September"
+        },
+        {
+          "word": "九百",
+          "reading": "きゅうひゃく",
+          "word_furigana": "{九|きゅう}{百|ひゃく}",
+          "en": "900"
+        }
+      ],
+      "notes": [],
+      "page": 25
+    },
+    {
+      "id": 30,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "十",
+      "meaning_en": "ten",
+      "kun": [
+        "とお"
+      ],
+      "on": [
+        "ジュウ",
+        "ジュッ-",
+        "ジッ-"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "十",
+          "reading": "とお",
+          "word_furigana": "{十|とお}",
+          "en": "ten (things)"
+        },
+        {
+          "word": "十日",
+          "reading": "とおか",
+          "word_furigana": "{十|とお}{日|か}",
+          "en": "the 10th day"
+        },
+        {
+          "word": "十月",
+          "reading": "じゅうがつ",
+          "word_furigana": "{十|じゅう}{月|がつ}",
+          "en": "October"
+        },
+        {
+          "word": "十年",
+          "reading": "じゅうねん",
+          "word_furigana": "{十|じゅう}{年|ねん}",
+          "en": "10 years"
+        }
+      ],
+      "notes": [],
+      "page": 25
+    },
+    {
+      "id": 31,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "百",
+      "meaning_en": "hundred",
+      "kun": [],
+      "on": [
+        "ヒャク",
+        "-ビャク",
+        "-ピャク"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "二百",
+          "reading": "にひゃく",
+          "word_furigana": "{二|に}{百|ひゃく}",
+          "en": "200"
+        },
+        {
+          "word": "三百",
+          "reading": "さんびゃく",
+          "word_furigana": "{三|さん}{百|びゃく}",
+          "en": "300"
+        },
+        {
+          "word": "六百",
+          "reading": "ろっぴゃく",
+          "word_furigana": "{六|ろっ}{百|ぴゃく}",
+          "en": "600"
+        },
+        {
+          "word": "八百",
+          "reading": "はっぴゃく",
+          "word_furigana": "{八|はっ}{百|ぴゃく}",
+          "en": "800"
+        }
+      ],
+      "notes": [],
+      "page": 25
+    },
+    {
+      "id": 32,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "千",
+      "meaning_en": "thousand",
+      "kun": [
+        "ち"
+      ],
+      "on": [
+        "セン",
+        "-ゼン"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "千円",
+          "reading": "せんえん",
+          "word_furigana": "{千|せん}{円|えん}",
+          "en": "a thousand yen"
+        },
+        {
+          "word": "千葉",
+          "reading": "ちば",
+          "word_furigana": "{千|ち}{葉|ば}",
+          "en": "Chiba pref."
+        },
+        {
+          "word": "三千",
+          "reading": "さんぜん",
+          "word_furigana": "{三|さん}{千|ぜん}",
+          "en": "3,000"
+        }
+      ],
+      "notes": [],
+      "page": 26
+    },
+    {
+      "id": 33,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "万",
+      "meaning_en": "ten thousand, all, every",
+      "kun": [],
+      "on": [
+        "マン",
+        "バン"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "一万円",
+          "reading": "いちまんえん",
+          "word_furigana": "{一|いち}{万|まん}{円|えん}",
+          "en": "ten thousand yen"
+        },
+        {
+          "word": "万国",
+          "reading": "ばんこく",
+          "word_furigana": "{万|ばん}{国|こく}",
+          "en": "all countries"
+        }
+      ],
+      "notes": [],
+      "page": 26
+    },
+    {
+      "id": 34,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "円",
+      "meaning_en": "circle, yen",
+      "kun": [],
+      "on": [
+        "エン"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "円",
+          "reading": "えん",
+          "word_furigana": "{円|えん}",
+          "en": "a circle, yen"
+        },
+        {
+          "word": "百円",
+          "reading": "ひゃくえん",
+          "word_furigana": "{百|ひゃく}{円|えん}",
+          "en": "100 yen"
+        },
+        {
+          "word": "五千円",
+          "reading": "ごせんえん",
+          "word_furigana": "{五|ご}{千|せん}{円|えん}",
+          "en": "5,000 yen"
+        }
+      ],
+      "notes": [],
+      "page": 26
+    },
+    {
+      "id": 35,
+      "jlpt": "N5",
+      "lesson": 3,
+      "lesson_title": "数字",
+      "lesson_title_en": "Numbers",
+      "kanji": "年",
+      "meaning_en": "year, age",
+      "kun": [
+        "とし"
+      ],
+      "on": [
+        "ネン"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "年上",
+          "reading": "としうえ",
+          "word_furigana": "{年|とし}{上|うえ}",
+          "en": "older"
+        },
+        {
+          "word": "来年",
+          "reading": "らいねん",
+          "word_furigana": "{来|らい}{年|ねん}",
+          "en": "next year"
+        },
+        {
+          "word": "去年",
+          "reading": "きょねん",
+          "word_furigana": "{去|きょ}{年|ねん}",
+          "en": "last year"
+        },
+        {
+          "word": "今年",
+          "reading": "ことし",
+          "word_furigana": "{今|こ}{年|とし}",
+          "en": "this year"
+        }
+      ],
+      "notes": [
+        "The examples box is covered by handwritten notes in the scanned copy; the Japanese words are from those notes and the English meanings were added in the transcription."
+      ],
+      "page": 26
+    }
+  ]
+}
