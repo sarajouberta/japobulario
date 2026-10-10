@@ -256,6 +256,25 @@ tarjeta: cuando lleguen los kanji tendrán la marca sin tocar nada.
   existe da 404, y en la sección 1 del capítulo 1 del N5 salen 13 tarjetas en total, 2 aprendidas
   y 11 sin aprender tras marcar dos. Después, a mano en el navegador.
 
+## 2026-10-10 - Orden aleatorio en el modo estudio
+
+Hasta ahora las tarjetas salían siempre en el orden del libro, y al repasar una sección se acaba
+recordando qué palabra viene después en vez de la palabra misma.
+
+- **Un botón "Barajar"** arriba, al lado de la línea de lo que se está estudiando, y no en la
+  barra de abajo, que en el móvil ya va justa con "Anterior", "Aprendida" y "Siguiente". Al
+  pulsarlo mezcla las tarjetas y vuelve a la primera; pasa a decir "Orden original" (en oscuro) y,
+  pulsándolo otra vez, se vuelve al orden del libro, o al de creación en las propias. Cada vez que
+  se baraja sale un orden distinto. Con una sola tarjeta no aparece.
+- **Se baraja en el navegador**, sin volver a pedir las tarjetas al servidor: ya están todas en la
+  página. Se mezcla una copia con el algoritmo de Fisher-Yates (todos los órdenes igual de
+  probables), y el orden original se queda guardado para poder volver.
+- **Las marcas de aprendida no se pierden**: las dos listas tienen los mismos objetos, solo cambia
+  el orden, así que marcar una tarjeta barajada es marcar la misma tarjeta.
+- **Comprobado con node** sobre una página simulada de 50 tarjetas: al barajar están las mismas 50
+  en otro orden, al volver el orden es el original y empieza en 1 / 50, y una tarjeta aprendida
+  sigue marcada después de barajar. Después, a mano en el navegador.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -267,7 +286,6 @@ tarjeta: cuando lleguen los kanji tendrán la marca sin tocar nada.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Orden aleatorio** en el modo estudio.
 - **No hay kanji:** al borrar los `.txt` de prueba, la parte de kanji se ha quedado sin datos.
   Hay que decidir de dónde salen (quizá el Basic Kanji Book) y qué datos lleva cada kanji. Deben
   seguir siendo `Flashcard` con `type: "kanji"`, para que les sirva la marca de aprendida.
