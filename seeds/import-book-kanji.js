@@ -9,7 +9,9 @@ Se puede ejecutar varias veces: cada kanji se identifica por su número en el li
 reimportar actualiza las fichas existentes en lugar de duplicarlas (también si cambia su nivel).
 El vocabulario de los libros y las fichas creadas a mano no se tocan.
 
-El nivel JLPT no viene en el libro (va por lecciones): está en el JSON, sacado de jisho.org.
+El nivel JLPT no viene en el libro (va por lecciones). Todos los kanji del libro llevan el mismo nivel
+orientativo, el del campo level del JSON (N4: los 250 kanji del Vol. 1 son más o menos los de N5 + N4).
+El jlpt de cada entrada (de listas no oficiales) solo es una referencia y no se usa.
  */
 const fs = require('fs');
 const path = require('path');
@@ -21,11 +23,11 @@ const { MONGO_URL } = require('../config/database');
 const dryRun = process.argv.includes('--dry-run');
 
 //convierte una entrada del JSON del libro al formato del modelo Flashcard:
-function toFlashcard(entry) {
+function toFlashcard(entry, level) {
     return {
         type: 'kanji',
         source: 'book',
-        level: entry.jlpt,
+        level,
         bookId: entry.id,
         kanji: entry.kanji,
         //las lecturas, como en el libro (- separa el okurigana, () = poco usada), en una sola línea:
@@ -68,7 +70,7 @@ function validate(cards) {
 
 async function main() {
     const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'kanji_BKB1.json'), 'utf-8'));
-    const cards = validate(data.entries.map(toFlashcard));
+    const cards = validate(data.entries.map(e => toFlashcard(e, data.level)));
     const lessons = [...new Set(cards.map(c => c.chapter))];
     console.log(`${cards.length} kanji válidos de ${data.entries.length} (lecciones ${lessons.join(', ')})`);
     if (dryRun || cards.length === 0) return;

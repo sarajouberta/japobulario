@@ -1,13 +1,19 @@
 {
   "source": "Basic Kanji Book Vol. 1 (基本漢字500)",
-  "jlpt_source": "jisho.org (unofficial lists; the book does not give JLPT levels)",
+  "level": "N4",
+  "level_note": "Level used in the app for every kanji of this book (decided 2026-10-10): the book does not give JLPT levels, and the 250 kanji of Vol. 1 are about N5 + N4. The per-entry jlpt field is only a reference from unofficial lists and is not used.",
+  "jlpt_source": "jisho.org (unofficial lists; the book does not give JLPT levels). When jisho gives none, the entry has its own jlpt_source",
   "readings": "kun in hiragana, on in katakana, as in the book: '-' separates the okurigana (い-きる) or marks a form used inside words (-ガツ); readings in () are rarely used",
   "lessons_transcribed": [
     1,
     2,
-    3
+    3,
+    4,
+    5,
+    6,
+    7
   ],
-  "entry_count": 35,
+  "entry_count": 75,
   "entries": [
     {
       "id": 1,
@@ -1450,6 +1456,1620 @@
         "The examples box is covered by handwritten notes in the scanned copy; the Japanese words are from those notes and the English meanings were added in the transcription."
       ],
       "page": 26
+    },
+    {
+      "id": 36,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "上",
+      "meaning_en": "above, on, up, superior",
+      "kun": [
+        "うえ",
+        "あ-がる",
+        "のぼ-る",
+        "あ-げる"
+      ],
+      "on": [
+        "ジョウ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "上",
+          "reading": "うえ",
+          "word_furigana": "{上|うえ}",
+          "en": "above, on"
+        },
+        {
+          "word": "上がる",
+          "reading": "あがる",
+          "word_furigana": "{上|あ}がる",
+          "en": "to go up, to rise"
+        },
+        {
+          "word": "上る",
+          "reading": "のぼる",
+          "word_furigana": "{上|のぼ}る",
+          "en": "to go up"
+        },
+        {
+          "word": "上手な",
+          "reading": "じょうずな",
+          "word_furigana": "{上|じょう}{手|ず}な",
+          "en": "skillful"
+        }
+      ],
+      "notes": [],
+      "page": 32
+    },
+    {
+      "id": 37,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "下",
+      "meaning_en": "under, down, inferior",
+      "kun": [
+        "した",
+        "さ-がる",
+        "くだ-る",
+        "さ-げる"
+      ],
+      "on": [
+        "カ",
+        "ゲ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "下",
+          "reading": "した",
+          "word_furigana": "{下|した}",
+          "en": "under"
+        },
+        {
+          "word": "下がる",
+          "reading": "さがる",
+          "word_furigana": "{下|さ}がる",
+          "en": "to go down"
+        },
+        {
+          "word": "年下",
+          "reading": "としした",
+          "word_furigana": "{年|とし}{下|した}",
+          "en": "younger"
+        },
+        {
+          "word": "下車する",
+          "reading": "げしゃする",
+          "word_furigana": "{下|げ}{車|しゃ}する",
+          "en": "to get off"
+        }
+      ],
+      "notes": [],
+      "page": 32
+    },
+    {
+      "id": 38,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "中",
+      "meaning_en": "middle, inside",
+      "kun": [
+        "なか"
+      ],
+      "on": [
+        "チュウ",
+        "-ジュウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "中",
+          "reading": "なか",
+          "word_furigana": "{中|なか}",
+          "en": "inside"
+        },
+        {
+          "word": "中心",
+          "reading": "ちゅうしん",
+          "word_furigana": "{中|ちゅう}{心|しん}",
+          "en": "the center"
+        },
+        {
+          "word": "一日中",
+          "reading": "いちにちじゅう",
+          "word_furigana": "{一|いち}{日|にち}{中|じゅう}",
+          "en": "all day long"
+        }
+      ],
+      "notes": [],
+      "page": 32
+    },
+    {
+      "id": 39,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "大",
+      "meaning_en": "big, large, great",
+      "kun": [
+        "おお-きい"
+      ],
+      "on": [
+        "ダイ",
+        "タイ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "大きい",
+          "reading": "おおきい",
+          "word_furigana": "{大|おお}きい",
+          "en": "big (also 大きな)"
+        },
+        {
+          "word": "大学",
+          "reading": "だいがく",
+          "word_furigana": "{大|だい}{学|がく}",
+          "en": "a university"
+        },
+        {
+          "word": "大切な",
+          "reading": "たいせつな",
+          "word_furigana": "{大|たい}{切|せつ}な",
+          "en": "important"
+        },
+        {
+          "word": "大人",
+          "reading": "おとな",
+          "word_furigana": "{大人|おとな}",
+          "en": "an adult"
+        }
+      ],
+      "notes": [
+        "大人 (おとな) is marked with * in the book: irregular reading."
+      ],
+      "page": 33
+    },
+    {
+      "id": 40,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "小",
+      "meaning_en": "small, little",
+      "kun": [
+        "ちい-さい",
+        "こ",
+        "お"
+      ],
+      "on": [
+        "ショウ"
+      ],
+      "strokes": 3,
+      "examples": [
+        {
+          "word": "小さい",
+          "reading": "ちいさい",
+          "word_furigana": "{小|ちい}さい",
+          "en": "small (also 小さな)"
+        },
+        {
+          "word": "小川",
+          "reading": "おがわ",
+          "word_furigana": "{小|お}{川|がわ}",
+          "en": "a brook, a stream"
+        },
+        {
+          "word": "小学校",
+          "reading": "しょうがっこう",
+          "word_furigana": "{小|しょう}{学|がっ}{校|こう}",
+          "en": "a primary school"
+        },
+        {
+          "word": "小人",
+          "reading": "こども",
+          "word_furigana": "{小人|こども}",
+          "en": "a child"
+        }
+      ],
+      "notes": [
+        "小人 (こども) is marked with * in the book: irregular reading."
+      ],
+      "page": 33
+    },
+    {
+      "id": 41,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "本",
+      "meaning_en": "root, origin, true, main",
+      "kun": [
+        "もと"
+      ],
+      "on": [
+        "ホン"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "山本",
+          "reading": "やまもと",
+          "word_furigana": "{山|やま}{本|もと}",
+          "en": "a Japanese surname"
+        },
+        {
+          "word": "本",
+          "reading": "ほん",
+          "word_furigana": "{本|ほん}",
+          "en": "a book"
+        },
+        {
+          "word": "本日",
+          "reading": "ほんじつ",
+          "word_furigana": "{本|ほん}{日|じつ}",
+          "en": "this day"
+        },
+        {
+          "word": "本店",
+          "reading": "ほんてん",
+          "word_furigana": "{本|ほん}{店|てん}",
+          "en": "the main office"
+        }
+      ],
+      "notes": [],
+      "page": 33
+    },
+    {
+      "id": 42,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "半",
+      "meaning_en": "half",
+      "kun": [
+        "(なか-ば)"
+      ],
+      "on": [
+        "ハン"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "半ば",
+          "reading": "なかば",
+          "word_furigana": "{半|なか}ば",
+          "en": "halfway, middle"
+        },
+        {
+          "word": "半分",
+          "reading": "はんぶん",
+          "word_furigana": "{半|はん}{分|ぶん}",
+          "en": "half"
+        },
+        {
+          "word": "半年",
+          "reading": "はんとし",
+          "word_furigana": "{半|はん}{年|とし}",
+          "en": "half a year"
+        },
+        {
+          "word": "三時半",
+          "reading": "さんじはん",
+          "word_furigana": "{三|さん}{時|じ}{半|はん}",
+          "en": "3:30"
+        }
+      ],
+      "notes": [],
+      "page": 33
+    },
+    {
+      "id": 43,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "分",
+      "meaning_en": "division, part, minute",
+      "kun": [
+        "わ-かれる",
+        "わ-かる",
+        "わ-ける"
+      ],
+      "on": [
+        "ブン",
+        "ブ",
+        "フン",
+        "-プン"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "分ける",
+          "reading": "わける",
+          "word_furigana": "{分|わ}ける",
+          "en": "to divide"
+        },
+        {
+          "word": "分かる",
+          "reading": "わかる",
+          "word_furigana": "{分|わ}かる",
+          "en": "to understand"
+        },
+        {
+          "word": "五分",
+          "reading": "ごふん",
+          "word_furigana": "{五|ご}{分|ふん}",
+          "en": "five minutes"
+        },
+        {
+          "word": "六分",
+          "reading": "ろっぷん",
+          "word_furigana": "{六|ろっ}{分|ぷん}",
+          "en": "six minutes"
+        }
+      ],
+      "notes": [],
+      "page": 34,
+      "jlpt_source": "jlptsensei.com"
+    },
+    {
+      "id": 44,
+      "jlpt": "N4",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "力",
+      "meaning_en": "power, force, ability",
+      "kun": [
+        "ちから"
+      ],
+      "on": [
+        "リョク",
+        "リキ"
+      ],
+      "strokes": 2,
+      "examples": [
+        {
+          "word": "力",
+          "reading": "ちから",
+          "word_furigana": "{力|ちから}",
+          "en": "power"
+        },
+        {
+          "word": "実力",
+          "reading": "じつりょく",
+          "word_furigana": "{実|じつ}{力|りょく}",
+          "en": "one's real ability"
+        },
+        {
+          "word": "力学",
+          "reading": "りきがく",
+          "word_furigana": "{力|りき}{学|がく}",
+          "en": "dynamics"
+        }
+      ],
+      "notes": [],
+      "page": 34
+    },
+    {
+      "id": 45,
+      "jlpt": "N5",
+      "lesson": 4,
+      "lesson_title": "記号からできた漢字",
+      "lesson_title_en": "Kanji made from signs",
+      "kanji": "何",
+      "meaning_en": "what",
+      "kun": [
+        "なに",
+        "なん"
+      ],
+      "on": [
+        "(カ)"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "何",
+          "reading": "なに",
+          "word_furigana": "{何|なに}",
+          "en": "what"
+        },
+        {
+          "word": "何ですか。",
+          "reading": "なんですか。",
+          "word_furigana": "{何|なん}ですか。",
+          "en": "What is it?"
+        },
+        {
+          "word": "何人",
+          "reading": "なんにん",
+          "word_furigana": "{何|なん}{人|にん}",
+          "en": "how many people"
+        },
+        {
+          "word": "何年",
+          "reading": "なんねん",
+          "word_furigana": "{何|なん}{年|ねん}",
+          "en": "what year"
+        }
+      ],
+      "notes": [],
+      "page": 34
+    },
+    {
+      "id": 46,
+      "jlpt": "N4",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "明",
+      "meaning_en": "bright, light",
+      "kun": [
+        "あか-るい",
+        "あ-ける"
+      ],
+      "on": [
+        "メイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "明るい",
+          "reading": "あかるい",
+          "word_furigana": "{明|あか}るい",
+          "en": "bright, cheerful"
+        },
+        {
+          "word": "明ける",
+          "reading": "あける",
+          "word_furigana": "{明|あ}ける",
+          "en": "(dawn) to break"
+        }
+      ],
+      "notes": [],
+      "page": 42
+    },
+    {
+      "id": 47,
+      "jlpt": "N5",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "休",
+      "meaning_en": "rest",
+      "kun": [
+        "やす-む"
+      ],
+      "on": [
+        "キュウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "休む",
+          "reading": "やすむ",
+          "word_furigana": "{休|やす}む",
+          "en": "to rest, to be absent"
+        },
+        {
+          "word": "休み",
+          "reading": "やすみ",
+          "word_furigana": "{休|やす}み",
+          "en": "a break, a holiday"
+        },
+        {
+          "word": "休日",
+          "reading": "きゅうじつ",
+          "word_furigana": "{休|きゅう}{日|じつ}",
+          "en": "a holiday"
+        }
+      ],
+      "notes": [],
+      "page": 42
+    },
+    {
+      "id": 48,
+      "jlpt": "N4",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "体",
+      "meaning_en": "body",
+      "kun": [
+        "からだ"
+      ],
+      "on": [
+        "タイ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "体",
+          "reading": "からだ",
+          "word_furigana": "{体|からだ}",
+          "en": "a body"
+        },
+        {
+          "word": "体育",
+          "reading": "たいいく",
+          "word_furigana": "{体|たい}{育|いく}",
+          "en": "physical exercises"
+        },
+        {
+          "word": "体力",
+          "reading": "たいりょく",
+          "word_furigana": "{体|たい}{力|りょく}",
+          "en": "physical strength"
+        }
+      ],
+      "notes": [],
+      "page": 42
+    },
+    {
+      "id": 49,
+      "jlpt": "N3",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "好",
+      "meaning_en": "love, like, favorite",
+      "kun": [
+        "す-きな",
+        "す-く"
+      ],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "好きな",
+          "reading": "すきな",
+          "word_furigana": "{好|す}きな",
+          "en": "favorite"
+        },
+        {
+          "word": "好かれる",
+          "reading": "すかれる",
+          "word_furigana": "{好|す}かれる",
+          "en": "to be loved"
+        }
+      ],
+      "notes": [],
+      "page": 43
+    },
+    {
+      "id": 50,
+      "jlpt": "N5",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "男",
+      "meaning_en": "man, male",
+      "kun": [
+        "おとこ"
+      ],
+      "on": [
+        "ダン",
+        "ナン"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "男",
+          "reading": "おとこ",
+          "word_furigana": "{男|おとこ}",
+          "en": "a man"
+        },
+        {
+          "word": "男の子",
+          "reading": "おとこのこ",
+          "word_furigana": "{男|おとこ}の{子|こ}",
+          "en": "a boy"
+        },
+        {
+          "word": "男子学生",
+          "reading": "だんしがくせい",
+          "word_furigana": "{男|だん}{子|し}{学|がく}{生|せい}",
+          "en": "a boy student"
+        }
+      ],
+      "notes": [],
+      "page": 43
+    },
+    {
+      "id": 51,
+      "jlpt": "N2",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "林",
+      "meaning_en": "wood, grove",
+      "kun": [
+        "はやし"
+      ],
+      "on": [
+        "リン"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "林",
+          "reading": "はやし",
+          "word_furigana": "{林|はやし}",
+          "en": "a wood"
+        },
+        {
+          "word": "小林",
+          "reading": "こばやし",
+          "word_furigana": "{小|こ}{林|ばやし}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "林業",
+          "reading": "りんぎょう",
+          "word_furigana": "{林|りん}{業|ぎょう}",
+          "en": "forestry"
+        }
+      ],
+      "notes": [],
+      "page": 43
+    },
+    {
+      "id": 52,
+      "jlpt": "N2",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "森",
+      "meaning_en": "forest, jungle",
+      "kun": [
+        "もり"
+      ],
+      "on": [
+        "シン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "森",
+          "reading": "もり",
+          "word_furigana": "{森|もり}",
+          "en": "a forest"
+        },
+        {
+          "word": "森田",
+          "reading": "もりた",
+          "word_furigana": "{森|もり}{田|た}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "森林",
+          "reading": "しんりん",
+          "word_furigana": "{森|しん}{林|りん}",
+          "en": "woods and forests"
+        }
+      ],
+      "notes": [],
+      "page": 43
+    },
+    {
+      "id": 53,
+      "jlpt": "N5",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "間",
+      "meaning_en": "between, interval",
+      "kun": [
+        "あいだ",
+        "ま"
+      ],
+      "on": [
+        "カン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "間",
+          "reading": "あいだ",
+          "word_furigana": "{間|あいだ}",
+          "en": "between"
+        },
+        {
+          "word": "間に合う",
+          "reading": "まにあう",
+          "word_furigana": "{間|ま}に{合|あ}う",
+          "en": "to be on time"
+        },
+        {
+          "word": "一年間",
+          "reading": "いちねんかん",
+          "word_furigana": "{一|いち}{年|ねん}{間|かん}",
+          "en": "a year"
+        },
+        {
+          "word": "時間",
+          "reading": "じかん",
+          "word_furigana": "{時|じ}{間|かん}",
+          "en": "time"
+        }
+      ],
+      "notes": [],
+      "page": 44
+    },
+    {
+      "id": 54,
+      "jlpt": "N1",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "畑",
+      "meaning_en": "cultivated field",
+      "kun": [
+        "はたけ",
+        "はた"
+      ],
+      "on": [],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "畑",
+          "reading": "はたけ",
+          "word_furigana": "{畑|はたけ}",
+          "en": "cultivated field"
+        },
+        {
+          "word": "田畑",
+          "reading": "たはた",
+          "word_furigana": "{田|た}{畑|はた}",
+          "en": "fields of rice and crops"
+        }
+      ],
+      "notes": [
+        "Kanji of Japanese origin: it has no on reading."
+      ],
+      "page": 44,
+      "jlpt_source": "jlptsensei.com"
+    },
+    {
+      "id": 55,
+      "jlpt": "N2",
+      "lesson": 5,
+      "lesson_title": "意味の組み合わせからできた漢字",
+      "lesson_title_en": "Kanji made from a combination of the meanings",
+      "kanji": "岩",
+      "meaning_en": "rock",
+      "kun": [
+        "いわ"
+      ],
+      "on": [
+        "ガン"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "岩",
+          "reading": "いわ",
+          "word_furigana": "{岩|いわ}",
+          "en": "a rock"
+        },
+        {
+          "word": "岩山",
+          "reading": "いわやま",
+          "word_furigana": "{岩|いわ}{山|やま}",
+          "en": "a rocky mountain"
+        },
+        {
+          "word": "岩石",
+          "reading": "がんせき",
+          "word_furigana": "{岩|がん}{石|せき}",
+          "en": "rocks and stones"
+        }
+      ],
+      "notes": [],
+      "page": 44
+    },
+    {
+      "id": 56,
+      "jlpt": "N4",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "目",
+      "meaning_en": "eye, item",
+      "kun": [
+        "め"
+      ],
+      "on": [
+        "モク"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "目",
+          "reading": "め",
+          "word_furigana": "{目|め}",
+          "en": "an eye"
+        },
+        {
+          "word": "目上",
+          "reading": "めうえ",
+          "word_furigana": "{目|め}{上|うえ}",
+          "en": "one's superiors"
+        },
+        {
+          "word": "目次",
+          "reading": "もくじ",
+          "word_furigana": "{目|もく}{次|じ}",
+          "en": "a table of contents"
+        }
+      ],
+      "notes": [],
+      "page": 52
+    },
+    {
+      "id": 57,
+      "jlpt": "N3",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "耳",
+      "meaning_en": "ear",
+      "kun": [
+        "みみ"
+      ],
+      "on": [
+        "ジ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "耳",
+          "reading": "みみ",
+          "word_furigana": "{耳|みみ}",
+          "en": "an ear"
+        },
+        {
+          "word": "耳鼻科",
+          "reading": "じびか",
+          "word_furigana": "{耳|じ}{鼻|び}{科|か}",
+          "en": "study of the nose and ears (otorhinology)"
+        }
+      ],
+      "notes": [],
+      "page": 52
+    },
+    {
+      "id": 58,
+      "jlpt": "N4",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "手",
+      "meaning_en": "hand",
+      "kun": [
+        "て"
+      ],
+      "on": [
+        "シュ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "手",
+          "reading": "て",
+          "word_furigana": "{手|て}",
+          "en": "a hand"
+        },
+        {
+          "word": "手紙",
+          "reading": "てがみ",
+          "word_furigana": "{手|て}{紙|がみ}",
+          "en": "a letter"
+        },
+        {
+          "word": "上手な",
+          "reading": "じょうずな",
+          "word_furigana": "{上|じょう}{手|ず}な",
+          "en": "skillful"
+        },
+        {
+          "word": "下手な",
+          "reading": "へたな",
+          "word_furigana": "{下|へ}{手|た}な",
+          "en": "unskillful"
+        }
+      ],
+      "notes": [
+        "上手 (じょうず) is marked with * in the book: irregular reading.",
+        "下手 (へた) is marked with * in the book: irregular reading."
+      ],
+      "page": 52
+    },
+    {
+      "id": 59,
+      "jlpt": "N4",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "足",
+      "meaning_en": "leg, pair, suffice",
+      "kun": [
+        "あし",
+        "た-りる",
+        "た-す"
+      ],
+      "on": [
+        "ソク"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "足",
+          "reading": "あし",
+          "word_furigana": "{足|あし}",
+          "en": "a leg"
+        },
+        {
+          "word": "足りる",
+          "reading": "たりる",
+          "word_furigana": "{足|た}りる",
+          "en": "to be enough"
+        },
+        {
+          "word": "二足",
+          "reading": "にそく",
+          "word_furigana": "{二|に}{足|そく}",
+          "en": "two pairs"
+        }
+      ],
+      "notes": [],
+      "page": 53
+    },
+    {
+      "id": 60,
+      "jlpt": "N5",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "雨",
+      "meaning_en": "rain",
+      "kun": [
+        "あめ"
+      ],
+      "on": [
+        "ウ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "word_furigana": "{雨|あめ}",
+          "en": "rain"
+        },
+        {
+          "word": "雨天",
+          "reading": "うてん",
+          "word_furigana": "{雨|う}{天|てん}",
+          "en": "rainy weather"
+        }
+      ],
+      "notes": [],
+      "page": 53
+    },
+    {
+      "id": 61,
+      "jlpt": "N2",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "竹",
+      "meaning_en": "bamboo",
+      "kun": [
+        "たけ"
+      ],
+      "on": [
+        "チク"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "竹",
+          "reading": "たけ",
+          "word_furigana": "{竹|たけ}",
+          "en": "a bamboo"
+        },
+        {
+          "word": "竹の子",
+          "reading": "たけのこ",
+          "word_furigana": "{竹|たけ}の{子|こ}",
+          "en": "a bamboo shoot"
+        },
+        {
+          "word": "竹田",
+          "reading": "たけだ",
+          "word_furigana": "{竹|たけ}{田|だ}",
+          "en": "Japanese name"
+        }
+      ],
+      "notes": [],
+      "page": 53
+    },
+    {
+      "id": 62,
+      "jlpt": "N3",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "米",
+      "meaning_en": "rice, (for America)",
+      "kun": [
+        "こめ"
+      ],
+      "on": [
+        "マイ",
+        "ベイ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "米",
+          "reading": "こめ",
+          "word_furigana": "{米|こめ}",
+          "en": "rice"
+        },
+        {
+          "word": "米国",
+          "reading": "べいこく",
+          "word_furigana": "{米|べい}{国|こく}",
+          "en": "U.S.A."
+        },
+        {
+          "word": "中米",
+          "reading": "ちゅうべい",
+          "word_furigana": "{中|ちゅう}{米|べい}",
+          "en": "Central America"
+        }
+      ],
+      "notes": [],
+      "page": 53
+    },
+    {
+      "id": 63,
+      "jlpt": "N2",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "貝",
+      "meaning_en": "shellfish",
+      "kun": [
+        "かい"
+      ],
+      "on": [
+        "(バイ)"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "貝",
+          "reading": "かい",
+          "word_furigana": "{貝|かい}",
+          "en": "a shellfish"
+        },
+        {
+          "word": "貝がら",
+          "reading": "かいがら",
+          "word_furigana": "{貝|かい}がら",
+          "en": "a shell"
+        }
+      ],
+      "notes": [],
+      "page": 54
+    },
+    {
+      "id": 64,
+      "jlpt": "N3",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "石",
+      "meaning_en": "stone",
+      "kun": [
+        "いし"
+      ],
+      "on": [
+        "セキ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "石",
+          "reading": "いし",
+          "word_furigana": "{石|いし}",
+          "en": "a stone"
+        },
+        {
+          "word": "石川",
+          "reading": "いしかわ",
+          "word_furigana": "{石|いし}{川|かわ}",
+          "en": "Japanese name"
+        },
+        {
+          "word": "石油",
+          "reading": "せきゆ",
+          "word_furigana": "{石|せき}{油|ゆ}",
+          "en": "petroleum, oil"
+        },
+        {
+          "word": "化石",
+          "reading": "かせき",
+          "word_furigana": "{化|か}{石|せき}",
+          "en": "a fossil"
+        }
+      ],
+      "notes": [],
+      "page": 54
+    },
+    {
+      "id": 65,
+      "jlpt": "N2",
+      "lesson": 6,
+      "lesson_title": "えからできた漢字 -3-",
+      "lesson_title_en": "Kanji made from pictures -3-",
+      "kanji": "糸",
+      "meaning_en": "thread, string",
+      "kun": [
+        "いと"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "糸",
+          "reading": "いと",
+          "word_furigana": "{糸|いと}",
+          "en": "thread"
+        },
+        {
+          "word": "毛糸",
+          "reading": "けいと",
+          "word_furigana": "{毛|け}{糸|いと}",
+          "en": "woollen yarn"
+        }
+      ],
+      "notes": [],
+      "page": 54
+    },
+    {
+      "id": 66,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "花",
+      "meaning_en": "flower",
+      "kun": [
+        "はな"
+      ],
+      "on": [
+        "カ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "花",
+          "reading": "はな",
+          "word_furigana": "{花|はな}",
+          "en": "a flower"
+        },
+        {
+          "word": "花火",
+          "reading": "はなび",
+          "word_furigana": "{花|はな}{火|び}",
+          "en": "fireworks"
+        },
+        {
+          "word": "花びん",
+          "reading": "かびん",
+          "word_furigana": "{花|か}びん",
+          "en": "a vase"
+        }
+      ],
+      "notes": [],
+      "page": 61
+    },
+    {
+      "id": 67,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "茶",
+      "meaning_en": "tea",
+      "kun": [],
+      "on": [
+        "チャ",
+        "サ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "お茶",
+          "reading": "おちゃ",
+          "word_furigana": "お{茶|ちゃ}",
+          "en": "tea"
+        },
+        {
+          "word": "喫茶店",
+          "reading": "きっさてん",
+          "word_furigana": "{喫|きっ}{茶|さ}{店|てん}",
+          "en": "a coffee shop"
+        },
+        {
+          "word": "日本茶",
+          "reading": "にほんちゃ",
+          "word_furigana": "{日|に}{本|ほん}{茶|ちゃ}",
+          "en": "green tea"
+        },
+        {
+          "word": "紅茶",
+          "reading": "こうちゃ",
+          "word_furigana": "{紅|こう}{茶|ちゃ}",
+          "en": "black tea"
+        }
+      ],
+      "notes": [],
+      "page": 61
+    },
+    {
+      "id": 68,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "肉",
+      "meaning_en": "flesh, meat",
+      "kun": [],
+      "on": [
+        "ニク"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "肉",
+          "reading": "にく",
+          "word_furigana": "{肉|にく}",
+          "en": "meat"
+        },
+        {
+          "word": "牛肉",
+          "reading": "ぎゅうにく",
+          "word_furigana": "{牛|ぎゅう}{肉|にく}",
+          "en": "beef"
+        },
+        {
+          "word": "鳥肉",
+          "reading": "とりにく",
+          "word_furigana": "{鳥|とり}{肉|にく}",
+          "en": "chicken"
+        },
+        {
+          "word": "肉体",
+          "reading": "にくたい",
+          "word_furigana": "{肉|にく}{体|たい}",
+          "en": "the body"
+        }
+      ],
+      "notes": [],
+      "page": 61
+    },
+    {
+      "id": 69,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "文",
+      "meaning_en": "pattern, letter, sentence",
+      "kun": [
+        "(ふみ)"
+      ],
+      "on": [
+        "ブン",
+        "モン"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "文",
+          "reading": "ぶん",
+          "word_furigana": "{文|ぶん}",
+          "en": "a sentence"
+        },
+        {
+          "word": "文学",
+          "reading": "ぶんがく",
+          "word_furigana": "{文|ぶん}{学|がく}",
+          "en": "literature"
+        },
+        {
+          "word": "文部省",
+          "reading": "もんぶしょう",
+          "word_furigana": "{文|もん}{部|ぶ}{省|しょう}",
+          "en": "the Ministry of Education"
+        }
+      ],
+      "notes": [],
+      "page": 62
+    },
+    {
+      "id": 70,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "字",
+      "meaning_en": "letter, character",
+      "kun": [],
+      "on": [
+        "ジ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "字",
+          "reading": "じ",
+          "word_furigana": "{字|じ}",
+          "en": "a letter, a character"
+        },
+        {
+          "word": "文字",
+          "reading": "もじ",
+          "word_furigana": "{文|も}{字|じ}",
+          "en": "a letter",
+          "reading_alt": "もんじ"
+        },
+        {
+          "word": "漢字",
+          "reading": "かんじ",
+          "word_furigana": "{漢|かん}{字|じ}",
+          "en": "Kanji"
+        },
+        {
+          "word": "〜字",
+          "reading": "〜じ",
+          "word_furigana": "〜{字|じ}",
+          "en": "...letters"
+        }
+      ],
+      "notes": [],
+      "page": 62
+    },
+    {
+      "id": 71,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "物",
+      "meaning_en": "thing",
+      "kun": [
+        "もの"
+      ],
+      "on": [
+        "ブツ",
+        "モツ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "物",
+          "reading": "もの",
+          "word_furigana": "{物|もの}",
+          "en": "a thing"
+        },
+        {
+          "word": "買い物",
+          "reading": "かいもの",
+          "word_furigana": "{買|か}い{物|もの}",
+          "en": "shopping"
+        },
+        {
+          "word": "生物",
+          "reading": "せいぶつ",
+          "word_furigana": "{生|せい}{物|ぶつ}",
+          "en": "a living creature"
+        },
+        {
+          "word": "荷物",
+          "reading": "にもつ",
+          "word_furigana": "{荷|に}{物|もつ}",
+          "en": "a baggage"
+        }
+      ],
+      "notes": [],
+      "page": 62
+    },
+    {
+      "id": 72,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "牛",
+      "meaning_en": "cattle, cow, bull, ox",
+      "kun": [
+        "うし"
+      ],
+      "on": [
+        "ギュウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "牛",
+          "reading": "うし",
+          "word_furigana": "{牛|うし}",
+          "en": "cattle"
+        },
+        {
+          "word": "牛肉",
+          "reading": "ぎゅうにく",
+          "word_furigana": "{牛|ぎゅう}{肉|にく}",
+          "en": "beef"
+        },
+        {
+          "word": "牛乳",
+          "reading": "ぎゅうにゅう",
+          "word_furigana": "{牛|ぎゅう}{乳|にゅう}",
+          "en": "cow's milk"
+        }
+      ],
+      "notes": [],
+      "page": 62
+    },
+    {
+      "id": 73,
+      "jlpt": "N3",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "馬",
+      "meaning_en": "horse",
+      "kun": [
+        "うま"
+      ],
+      "on": [
+        "バ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "馬",
+          "reading": "うま",
+          "word_furigana": "{馬|うま}",
+          "en": "a horse"
+        },
+        {
+          "word": "馬力",
+          "reading": "ばりき",
+          "word_furigana": "{馬|ば}{力|りき}",
+          "en": "horsepower (h.p.)"
+        },
+        {
+          "word": "馬車",
+          "reading": "ばしゃ",
+          "word_furigana": "{馬|ば}{車|しゃ}",
+          "en": "a carriage"
+        }
+      ],
+      "notes": [],
+      "page": 63
+    },
+    {
+      "id": 74,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "鳥",
+      "meaning_en": "bird",
+      "kun": [
+        "とり"
+      ],
+      "on": [
+        "チョウ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "鳥",
+          "reading": "とり",
+          "word_furigana": "{鳥|とり}",
+          "en": "a bird"
+        },
+        {
+          "word": "焼き鳥",
+          "reading": "やきとり",
+          "word_furigana": "{焼|や}き{鳥|とり}",
+          "en": "roast chicken"
+        },
+        {
+          "word": "白鳥",
+          "reading": "はくちょう",
+          "word_furigana": "{白|はく}{鳥|ちょう}",
+          "en": "a swan"
+        },
+        {
+          "word": "野鳥",
+          "reading": "やちょう",
+          "word_furigana": "{野|や}{鳥|ちょう}",
+          "en": "a wild bird"
+        }
+      ],
+      "notes": [],
+      "page": 63
+    },
+    {
+      "id": 75,
+      "jlpt": "N4",
+      "lesson": 7,
+      "lesson_title": "えからできた漢字 -4-",
+      "lesson_title_en": "Kanji made from pictures -4-",
+      "kanji": "魚",
+      "meaning_en": "fish",
+      "kun": [
+        "さかな",
+        "うお"
+      ],
+      "on": [
+        "ギョ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "魚",
+          "reading": "さかな",
+          "word_furigana": "{魚|さかな}",
+          "en": "fish"
+        },
+        {
+          "word": "焼き魚",
+          "reading": "やきざかな",
+          "word_furigana": "{焼|や}き{魚|ざかな}",
+          "en": "grilled fish"
+        },
+        {
+          "word": "魚屋",
+          "reading": "さかなや",
+          "word_furigana": "{魚|さかな}{屋|や}",
+          "en": "a fish shop"
+        },
+        {
+          "word": "金魚",
+          "reading": "きんぎょ",
+          "word_furigana": "{金|きん}{魚|ぎょ}",
+          "en": "a goldfish"
+        }
+      ],
+      "notes": [],
+      "page": 63
     }
   ]
 }
