@@ -1,0 +1,11 @@
+/* ESTILOS COMUNES A TODA LA WEB: el layout la carga en todas las páginas, antes que las demás hojas */
+
+/* colores generales, en un solo sitio para poder cambiarlos fácilmente */
+:root {
+    --page-background: #fde8ee;  /* rosa pálido */
+}
+
+/* fondo de la página: queda entre el menú de arriba y el pie de abajo, que tienen su propio color */
+body {
+    background-color: var(--page-background);
+}

@@ -49,6 +49,9 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'twig');
+//twig guarda las plantillas en caché: en desarrollo se desactiva, para ver los cambios de las vistas
+//sin reiniciar el servidor; al publicar (NODE_ENV=production) se mantiene, porque va más rápido
+require('twig').cache(process.env.NODE_ENV === 'production');
 
 app.use(logger('dev'));
 app.use(express.json());
