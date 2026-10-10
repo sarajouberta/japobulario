@@ -15,9 +15,13 @@
     8,
     9,
     10,
-    11
+    11,
+    12,
+    13,
+    14,
+    15
   ],
-  "entry_count": 121,
+  "entry_count": 169,
   "entries": [
     {
       "id": 1,
@@ -4899,6 +4903,1838 @@
       ],
       "notes": [],
       "page": 103
+    },
+    {
+      "id": 122,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "宅",
+      "meaning_en": "house, home, residence",
+      "kun": [],
+      "on": [
+        "タク"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "お宅",
+          "reading": "おたく",
+          "word_furigana": "お{宅|たく}",
+          "en": "one's home"
+        },
+        {
+          "word": "住宅",
+          "reading": "じゅうたく",
+          "word_furigana": "{住|じゅう}{宅|たく}",
+          "en": "housing"
+        },
+        {
+          "word": "自宅",
+          "reading": "じたく",
+          "word_furigana": "{自|じ}{宅|たく}",
+          "en": "my house"
+        },
+        {
+          "word": "帰宅する",
+          "reading": "きたくする",
+          "word_furigana": "{帰|き}{宅|たく}する",
+          "en": "to go home"
+        }
+      ],
+      "notes": [],
+      "page": 109
+    },
+    {
+      "id": 123,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "客",
+      "meaning_en": "guest, customer",
+      "kun": [],
+      "on": [
+        "キャク"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "客",
+          "reading": "きゃく",
+          "word_furigana": "{客|きゃく}",
+          "en": "a guest, a customer"
+        },
+        {
+          "word": "乗客",
+          "reading": "じょうきゃく",
+          "word_furigana": "{乗|じょう}{客|きゃく}",
+          "en": "a passenger"
+        }
+      ],
+      "notes": [],
+      "page": 109
+    },
+    {
+      "id": 124,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "室",
+      "meaning_en": "room",
+      "kun": [],
+      "on": [
+        "シツ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "教室",
+          "reading": "きょうしつ",
+          "word_furigana": "{教|きょう}{室|しつ}",
+          "en": "a classroom"
+        },
+        {
+          "word": "室内",
+          "reading": "しつない",
+          "word_furigana": "{室|しつ}{内|ない}",
+          "en": "indoor"
+        },
+        {
+          "word": "研究室",
+          "reading": "けんきゅうしつ",
+          "word_furigana": "{研|けん}{究|きゅう}{室|しつ}",
+          "en": "an office, a seminar room"
+        }
+      ],
+      "notes": [],
+      "page": 109
+    },
+    {
+      "id": 125,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "家",
+      "meaning_en": "house",
+      "kun": [
+        "いえ",
+        "や"
+      ],
+      "on": [
+        "カ",
+        "ケ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "家",
+          "reading": "いえ",
+          "word_furigana": "{家|いえ}",
+          "en": "a house"
+        },
+        {
+          "word": "大家",
+          "reading": "おおや",
+          "word_furigana": "{大|おお}{家|や}",
+          "en": "a landlord"
+        },
+        {
+          "word": "家族",
+          "reading": "かぞく",
+          "word_furigana": "{家|か}{族|ぞく}",
+          "en": "a family"
+        }
+      ],
+      "notes": [],
+      "page": 110
+    },
+    {
+      "id": 126,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "英",
+      "meaning_en": "superb, (for England)",
+      "kun": [],
+      "on": [
+        "エイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "英国",
+          "reading": "えいこく",
+          "word_furigana": "{英|えい}{国|こく}",
+          "en": "England"
+        },
+        {
+          "word": "英和辞典",
+          "reading": "えいわじてん",
+          "word_furigana": "{英|えい}{和|わ}{辞|じ}{典|てん}",
+          "en": "an English-Japanese dictionary"
+        },
+        {
+          "word": "英語",
+          "reading": "えいご",
+          "word_furigana": "{英|えい}{語|ご}",
+          "en": "English language"
+        }
+      ],
+      "notes": [],
+      "page": 110
+    },
+    {
+      "id": 127,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "薬",
+      "meaning_en": "medicine",
+      "kun": [
+        "くすり"
+      ],
+      "on": [
+        "ヤク"
+      ],
+      "strokes": 16,
+      "examples": [
+        {
+          "word": "薬",
+          "reading": "くすり",
+          "word_furigana": "{薬|くすり}",
+          "en": "medicine"
+        },
+        {
+          "word": "薬屋",
+          "reading": "くすりや",
+          "word_furigana": "{薬|くすり}{屋|や}",
+          "en": "a chemist's shop"
+        },
+        {
+          "word": "目薬",
+          "reading": "めぐすり",
+          "word_furigana": "{目|め}{薬|ぐすり}",
+          "en": "eye lotion"
+        },
+        {
+          "word": "薬局",
+          "reading": "やっきょく",
+          "word_furigana": "{薬|やっ}{局|きょく}",
+          "en": "a pharmacy"
+        }
+      ],
+      "notes": [],
+      "page": 110
+    },
+    {
+      "id": 128,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "会",
+      "meaning_en": "meeting, association",
+      "kun": [
+        "あ-う"
+      ],
+      "on": [
+        "カイ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "会う",
+          "reading": "あう",
+          "word_furigana": "{会|あ}う",
+          "en": "to meet"
+        },
+        {
+          "word": "会話",
+          "reading": "かいわ",
+          "word_furigana": "{会|かい}{話|わ}",
+          "en": "conversation"
+        },
+        {
+          "word": "会社",
+          "reading": "かいしゃ",
+          "word_furigana": "{会|かい}{社|しゃ}",
+          "en": "a company"
+        }
+      ],
+      "notes": [],
+      "page": 110
+    },
+    {
+      "id": 129,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "今",
+      "meaning_en": "now, present",
+      "kun": [
+        "いま"
+      ],
+      "on": [
+        "コン"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "word_furigana": "{今|いま}",
+          "en": "now"
+        },
+        {
+          "word": "今月",
+          "reading": "こんげつ",
+          "word_furigana": "{今|こん}{月|げつ}",
+          "en": "this month"
+        },
+        {
+          "word": "今年",
+          "reading": "ことし",
+          "word_furigana": "{今|こ}{年|とし}",
+          "en": "this year"
+        },
+        {
+          "word": "今日",
+          "reading": "きょう",
+          "word_furigana": "{今日|きょう}",
+          "en": "today"
+        }
+      ],
+      "notes": [
+        "今日 (きょう) is marked with * in the book: irregular reading."
+      ],
+      "page": 111
+    },
+    {
+      "id": 130,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "雪",
+      "meaning_en": "snow",
+      "kun": [
+        "ゆき"
+      ],
+      "on": [
+        "セツ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "雪",
+          "reading": "ゆき",
+          "word_furigana": "{雪|ゆき}",
+          "en": "snow"
+        },
+        {
+          "word": "雪国",
+          "reading": "ゆきぐに",
+          "word_furigana": "{雪|ゆき}{国|ぐに}",
+          "en": "a snowy country"
+        }
+      ],
+      "notes": [],
+      "page": 111
+    },
+    {
+      "id": 131,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "雲",
+      "meaning_en": "cloud",
+      "kun": [
+        "くも"
+      ],
+      "on": [
+        "ウン"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "雲",
+          "reading": "くも",
+          "word_furigana": "{雲|くも}",
+          "en": "a cloud"
+        }
+      ],
+      "notes": [],
+      "page": 111
+    },
+    {
+      "id": 132,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "電",
+      "meaning_en": "electricity",
+      "kun": [],
+      "on": [
+        "デン"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "電気",
+          "reading": "でんき",
+          "word_furigana": "{電|でん}{気|き}",
+          "en": "electricity, an electric light"
+        },
+        {
+          "word": "電話",
+          "reading": "でんわ",
+          "word_furigana": "{電|でん}{話|わ}",
+          "en": "a telephone"
+        },
+        {
+          "word": "電車",
+          "reading": "でんしゃ",
+          "word_furigana": "{電|でん}{車|しゃ}",
+          "en": "an electric train"
+        }
+      ],
+      "notes": [],
+      "page": 111
+    },
+    {
+      "id": 133,
+      "lesson": 12,
+      "lesson_title": "部首 -2- かんむり、あし",
+      "lesson_title_en": "The radicals -2- top, bottom",
+      "kanji": "売",
+      "meaning_en": "sell",
+      "kun": [
+        "う-る"
+      ],
+      "on": [
+        "バイ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "売る",
+          "reading": "うる",
+          "word_furigana": "{売|う}る",
+          "en": "to sell"
+        },
+        {
+          "word": "売店",
+          "reading": "ばいてん",
+          "word_furigana": "{売|ばい}{店|てん}",
+          "en": "a stand, a stall"
+        },
+        {
+          "word": "売り場",
+          "reading": "うりば",
+          "word_furigana": "{売|う}り{場|ば}",
+          "en": "a sales counter"
+        }
+      ],
+      "notes": [],
+      "page": 112
+    },
+    {
+      "id": 134,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "広",
+      "meaning_en": "wide, spacious",
+      "kun": [
+        "ひろ-い"
+      ],
+      "on": [
+        "コウ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "広い",
+          "reading": "ひろい",
+          "word_furigana": "{広|ひろ}い",
+          "en": "wide"
+        },
+        {
+          "word": "広島",
+          "reading": "ひろしま",
+          "word_furigana": "{広|ひろ}{島|しま}",
+          "en": "Hiroshima"
+        },
+        {
+          "word": "広さ",
+          "reading": "ひろさ",
+          "word_furigana": "{広|ひろ}さ",
+          "en": "width"
+        },
+        {
+          "word": "広告",
+          "reading": "こうこく",
+          "word_furigana": "{広|こう}{告|こく}",
+          "en": "an advertisement"
+        }
+      ],
+      "notes": [],
+      "page": 118
+    },
+    {
+      "id": 135,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "店",
+      "meaning_en": "shop",
+      "kun": [
+        "みせ"
+      ],
+      "on": [
+        "テン"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "店",
+          "reading": "みせ",
+          "word_furigana": "{店|みせ}",
+          "en": "a shop"
+        },
+        {
+          "word": "書店",
+          "reading": "しょてん",
+          "word_furigana": "{書|しょ}{店|てん}",
+          "en": "a book store"
+        },
+        {
+          "word": "店員",
+          "reading": "てんいん",
+          "word_furigana": "{店|てん}{員|いん}",
+          "en": "a store clerk"
+        },
+        {
+          "word": "本店",
+          "reading": "ほんてん",
+          "word_furigana": "{本|ほん}{店|てん}",
+          "en": "a main store"
+        }
+      ],
+      "notes": [],
+      "page": 118
+    },
+    {
+      "id": 136,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "度",
+      "meaning_en": "degree, frequency",
+      "kun": [],
+      "on": [
+        "ド"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "一度",
+          "reading": "いちど",
+          "word_furigana": "{一|いち}{度|ど}",
+          "en": "once"
+        },
+        {
+          "word": "温度",
+          "reading": "おんど",
+          "word_furigana": "{温|おん}{度|ど}",
+          "en": "temperature"
+        },
+        {
+          "word": "今度",
+          "reading": "こんど",
+          "word_furigana": "{今|こん}{度|ど}",
+          "en": "next time"
+        },
+        {
+          "word": "速度",
+          "reading": "そくど",
+          "word_furigana": "{速|そく}{度|ど}",
+          "en": "speed"
+        }
+      ],
+      "notes": [],
+      "page": 118
+    },
+    {
+      "id": 137,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "病",
+      "meaning_en": "sick",
+      "kun": [],
+      "on": [
+        "ビョウ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "病気",
+          "reading": "びょうき",
+          "word_furigana": "{病|びょう}{気|き}",
+          "en": "sickness"
+        },
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "word_furigana": "{病|びょう}{院|いん}",
+          "en": "a hospital"
+        },
+        {
+          "word": "病人",
+          "reading": "びょうにん",
+          "word_furigana": "{病|びょう}{人|にん}",
+          "en": "a sick person"
+        }
+      ],
+      "notes": [],
+      "page": 119
+    },
+    {
+      "id": 138,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "疲",
+      "meaning_en": "fatigue, worn out",
+      "kun": [
+        "つか-れる"
+      ],
+      "on": [
+        "ヒ"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "疲れる",
+          "reading": "つかれる",
+          "word_furigana": "{疲|つか}れる",
+          "en": "to be tired"
+        },
+        {
+          "word": "疲れ",
+          "reading": "つかれ",
+          "word_furigana": "{疲|つか}れ",
+          "en": "tiredness"
+        }
+      ],
+      "notes": [],
+      "page": 119
+    },
+    {
+      "id": 139,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "痛",
+      "meaning_en": "pain",
+      "kun": [
+        "いた-い",
+        "いた-む"
+      ],
+      "on": [
+        "ツウ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "痛い",
+          "reading": "いたい",
+          "word_furigana": "{痛|いた}い",
+          "en": "painful"
+        },
+        {
+          "word": "痛み止め",
+          "reading": "いたみどめ",
+          "word_furigana": "{痛|いた}み{止|ど}め",
+          "en": "a painkiller"
+        },
+        {
+          "word": "痛む",
+          "reading": "いたむ",
+          "word_furigana": "{痛|いた}む",
+          "en": "to ache"
+        },
+        {
+          "word": "頭痛",
+          "reading": "ずつう",
+          "word_furigana": "{頭|ず}{痛|つう}",
+          "en": "a headache"
+        }
+      ],
+      "notes": [],
+      "page": 119
+    },
+    {
+      "id": 140,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "屋",
+      "meaning_en": "roof, shop, house",
+      "kun": [
+        "や"
+      ],
+      "on": [
+        "オク"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "本屋",
+          "reading": "ほんや",
+          "word_furigana": "{本|ほん}{屋|や}",
+          "en": "a book shop"
+        },
+        {
+          "word": "屋上",
+          "reading": "おくじょう",
+          "word_furigana": "{屋|おく}{上|じょう}",
+          "en": "the roof"
+        },
+        {
+          "word": "肉屋",
+          "reading": "にくや",
+          "word_furigana": "{肉|にく}{屋|や}",
+          "en": "a butcher"
+        }
+      ],
+      "notes": [],
+      "page": 119
+    },
+    {
+      "id": 141,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "国",
+      "meaning_en": "country",
+      "kun": [
+        "くに"
+      ],
+      "on": [
+        "コク"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "国",
+          "reading": "くに",
+          "word_furigana": "{国|くに}",
+          "en": "a country"
+        },
+        {
+          "word": "外国人",
+          "reading": "がいこくじん",
+          "word_furigana": "{外|がい}{国|こく}{人|じん}",
+          "en": "a foreigner"
+        },
+        {
+          "word": "国立大学",
+          "reading": "こくりつだいがく",
+          "word_furigana": "{国|こく}{立|りつ}{大|だい}{学|がく}",
+          "en": "a national university"
+        }
+      ],
+      "notes": [],
+      "page": 120
+    },
+    {
+      "id": 142,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "回",
+      "meaning_en": "turn, round",
+      "kun": [
+        "まわ-る",
+        "まわ-す"
+      ],
+      "on": [
+        "カイ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "回す",
+          "reading": "まわす",
+          "word_furigana": "{回|まわ}す",
+          "en": "to turn"
+        },
+        {
+          "word": "一回",
+          "reading": "いっかい",
+          "word_furigana": "{一|いっ}{回|かい}",
+          "en": "once"
+        },
+        {
+          "word": "回る",
+          "reading": "まわる",
+          "word_furigana": "{回|まわ}る",
+          "en": "to go round"
+        }
+      ],
+      "notes": [],
+      "page": 120
+    },
+    {
+      "id": 143,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "困",
+      "meaning_en": "trouble",
+      "kun": [
+        "こま-る"
+      ],
+      "on": [
+        "コン"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "困る",
+          "reading": "こまる",
+          "word_furigana": "{困|こま}る",
+          "en": "to fall into trouble"
+        },
+        {
+          "word": "困難な",
+          "reading": "こんなんな",
+          "word_furigana": "{困|こん}{難|なん}な",
+          "en": "difficult"
+        }
+      ],
+      "notes": [],
+      "page": 120
+    },
+    {
+      "id": 144,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "開",
+      "meaning_en": "open",
+      "kun": [
+        "あ-く",
+        "ひら-く",
+        "あ-ける"
+      ],
+      "on": [
+        "カイ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "開く",
+          "reading": "あく",
+          "word_furigana": "{開|あ}く",
+          "en": "to open"
+        },
+        {
+          "word": "開会する",
+          "reading": "かいかいする",
+          "word_furigana": "{開|かい}{会|かい}する",
+          "en": "to open a meeting"
+        },
+        {
+          "word": "開く",
+          "reading": "ひらく",
+          "word_furigana": "{開|ひら}く",
+          "en": "to open"
+        },
+        {
+          "word": "開店する",
+          "reading": "かいてんする",
+          "word_furigana": "{開|かい}{店|てん}する",
+          "en": "to open a store"
+        }
+      ],
+      "notes": [],
+      "page": 120
+    },
+    {
+      "id": 145,
+      "lesson": 13,
+      "lesson_title": "部首 -3- たれ、かまえ",
+      "lesson_title_en": "The radicals -3- upper left, enclosure",
+      "kanji": "閉",
+      "meaning_en": "close",
+      "kun": [
+        "し-まる",
+        "し-める",
+        "と-じる"
+      ],
+      "on": [
+        "ヘイ"
+      ],
+      "strokes": 11,
+      "examples": [
+        {
+          "word": "閉まる",
+          "reading": "しまる",
+          "word_furigana": "{閉|し}まる",
+          "en": "to close"
+        },
+        {
+          "word": "閉会する",
+          "reading": "へいかいする",
+          "word_furigana": "{閉|へい}{会|かい}する",
+          "en": "to close a meeting"
+        },
+        {
+          "word": "閉じる",
+          "reading": "とじる",
+          "word_furigana": "{閉|と}じる",
+          "en": "to close"
+        },
+        {
+          "word": "閉店する",
+          "reading": "へいてんする",
+          "word_furigana": "{閉|へい}{店|てん}する",
+          "en": "to close a store"
+        }
+      ],
+      "notes": [],
+      "page": 121
+    },
+    {
+      "id": 146,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "近",
+      "meaning_en": "near, recent",
+      "kun": [
+        "ちか-い"
+      ],
+      "on": [
+        "キン"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "近い",
+          "reading": "ちかい",
+          "word_furigana": "{近|ちか}い",
+          "en": "near"
+        },
+        {
+          "word": "近く",
+          "reading": "ちかく",
+          "word_furigana": "{近|ちか}く",
+          "en": "near"
+        },
+        {
+          "word": "近所",
+          "reading": "きんじょ",
+          "word_furigana": "{近|きん}{所|じょ}",
+          "en": "the neighborhood"
+        }
+      ],
+      "notes": [],
+      "page": 127
+    },
+    {
+      "id": 147,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "遠",
+      "meaning_en": "far, remote",
+      "kun": [
+        "とお-い"
+      ],
+      "on": [
+        "エン"
+      ],
+      "strokes": 13,
+      "examples": [
+        {
+          "word": "遠い",
+          "reading": "とおい",
+          "word_furigana": "{遠|とお}い",
+          "en": "far"
+        },
+        {
+          "word": "遠く",
+          "reading": "とおく",
+          "word_furigana": "{遠|とお}く",
+          "en": "far"
+        },
+        {
+          "word": "遠足",
+          "reading": "えんそく",
+          "word_furigana": "{遠|えん}{足|そく}",
+          "en": "a picnic"
+        }
+      ],
+      "notes": [],
+      "page": 127
+    },
+    {
+      "id": 148,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "速",
+      "meaning_en": "speedy",
+      "kun": [
+        "はや-い"
+      ],
+      "on": [
+        "ソク"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "速い",
+          "reading": "はやい",
+          "word_furigana": "{速|はや}い",
+          "en": "fast"
+        },
+        {
+          "word": "速達",
+          "reading": "そくたつ",
+          "word_furigana": "{速|そく}{達|たつ}",
+          "en": "express delivery"
+        },
+        {
+          "word": "速度",
+          "reading": "そくど",
+          "word_furigana": "{速|そく}{度|ど}",
+          "en": "speed"
+        }
+      ],
+      "notes": [],
+      "page": 127
+    },
+    {
+      "id": 149,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "遅",
+      "meaning_en": "slow, late",
+      "kun": [
+        "おそ-い",
+        "おく-れる"
+      ],
+      "on": [
+        "チ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "遅い",
+          "reading": "おそい",
+          "word_furigana": "{遅|おそ}い",
+          "en": "late, slow"
+        },
+        {
+          "word": "遅刻する",
+          "reading": "ちこくする",
+          "word_furigana": "{遅|ち}{刻|こく}する",
+          "en": "to come late"
+        },
+        {
+          "word": "遅れる",
+          "reading": "おくれる",
+          "word_furigana": "{遅|おく}れる",
+          "en": "to delay"
+        }
+      ],
+      "notes": [],
+      "page": 128
+    },
+    {
+      "id": 150,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "道",
+      "meaning_en": "way, street",
+      "kun": [
+        "みち"
+      ],
+      "on": [
+        "ドウ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "道",
+          "reading": "みち",
+          "word_furigana": "{道|みち}",
+          "en": "a way, a street"
+        },
+        {
+          "word": "歩道",
+          "reading": "ほどう",
+          "word_furigana": "{歩|ほ}{道|どう}",
+          "en": "a footpath, a sidewalk"
+        },
+        {
+          "word": "水道",
+          "reading": "すいどう",
+          "word_furigana": "{水|すい}{道|どう}",
+          "en": "waterworks"
+        },
+        {
+          "word": "車道",
+          "reading": "しゃどう",
+          "word_furigana": "{車|しゃ}{道|どう}",
+          "en": "a roadway"
+        }
+      ],
+      "notes": [],
+      "page": 128
+    },
+    {
+      "id": 151,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "青",
+      "meaning_en": "blue",
+      "kun": [
+        "あお-い"
+      ],
+      "on": [
+        "セイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "青い",
+          "reading": "あおい",
+          "word_furigana": "{青|あお}い",
+          "en": "blue"
+        },
+        {
+          "word": "青年",
+          "reading": "せいねん",
+          "word_furigana": "{青|せい}{年|ねん}",
+          "en": "a young man"
+        },
+        {
+          "word": "青信号",
+          "reading": "あおしんごう",
+          "word_furigana": "{青|あお}{信|しん}{号|ごう}",
+          "en": "a green light"
+        }
+      ],
+      "notes": [],
+      "page": 128
+    },
+    {
+      "id": 152,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "晴",
+      "meaning_en": "fine, clear up",
+      "kun": [
+        "は-れる",
+        "は-れ"
+      ],
+      "on": [
+        "セイ"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "晴れ",
+          "reading": "はれ",
+          "word_furigana": "{晴|は}れ",
+          "en": "fine weather"
+        },
+        {
+          "word": "晴天",
+          "reading": "せいてん",
+          "word_furigana": "{晴|せい}{天|てん}",
+          "en": "fine weather"
+        },
+        {
+          "word": "晴れる",
+          "reading": "はれる",
+          "word_furigana": "{晴|は}れる",
+          "en": "to clear up"
+        }
+      ],
+      "notes": [],
+      "page": 128
+    },
+    {
+      "id": 153,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "静",
+      "meaning_en": "silent, still",
+      "kun": [
+        "しず-かな"
+      ],
+      "on": [
+        "セイ"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "静かな",
+          "reading": "しずかな",
+          "word_furigana": "{静|しず}かな",
+          "en": "quiet"
+        },
+        {
+          "word": "静止する",
+          "reading": "せいしする",
+          "word_furigana": "{静|せい}{止|し}する",
+          "en": "to stand still"
+        },
+        {
+          "word": "静まる",
+          "reading": "しずまる",
+          "word_furigana": "{静|しず}まる",
+          "en": "to become quiet"
+        }
+      ],
+      "notes": [],
+      "page": 129
+    },
+    {
+      "id": 154,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "寺",
+      "meaning_en": "temple",
+      "kun": [
+        "てら"
+      ],
+      "on": [
+        "ジ"
+      ],
+      "strokes": 6,
+      "examples": [
+        {
+          "word": "寺",
+          "reading": "てら",
+          "word_furigana": "{寺|てら}",
+          "en": "a temple"
+        },
+        {
+          "word": "東大寺",
+          "reading": "とうだいじ",
+          "word_furigana": "{東|とう}{大|だい}{寺|じ}",
+          "en": "Todaiji Temple"
+        }
+      ],
+      "notes": [],
+      "page": 129
+    },
+    {
+      "id": 155,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "持",
+      "meaning_en": "hold",
+      "kun": [
+        "も-つ"
+      ],
+      "on": [
+        "ジ"
+      ],
+      "strokes": 9,
+      "examples": [
+        {
+          "word": "持つ",
+          "reading": "もつ",
+          "word_furigana": "{持|も}つ",
+          "en": "to hold, to own"
+        },
+        {
+          "word": "持続する",
+          "reading": "じぞくする",
+          "word_furigana": "{持|じ}{続|ぞく}する",
+          "en": "to continue"
+        },
+        {
+          "word": "持ち物",
+          "reading": "もちもの",
+          "word_furigana": "{持|も}ち{物|もの}",
+          "en": "one's property"
+        },
+        {
+          "word": "気持ち",
+          "reading": "きもち",
+          "word_furigana": "{気|き}{持|も}ち",
+          "en": "a feeling"
+        }
+      ],
+      "notes": [],
+      "page": 129
+    },
+    {
+      "id": 156,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "荷",
+      "meaning_en": "load",
+      "kun": [
+        "に"
+      ],
+      "on": [
+        "(カ)"
+      ],
+      "strokes": 10,
+      "examples": [
+        {
+          "word": "荷物",
+          "reading": "にもつ",
+          "word_furigana": "{荷|に}{物|もつ}",
+          "en": "luggage, a package"
+        },
+        {
+          "word": "荷作りする",
+          "reading": "にづくりする",
+          "word_furigana": "{荷|に}{作|づく}りする",
+          "en": "to pack"
+        },
+        {
+          "word": "手荷物",
+          "reading": "てにもつ",
+          "word_furigana": "{手|て}{荷|に}{物|もつ}",
+          "en": "hand luggage"
+        }
+      ],
+      "notes": [],
+      "page": 129
+    },
+    {
+      "id": 157,
+      "lesson": 14,
+      "lesson_title": "部首 -4- にょう",
+      "lesson_title_en": "The radicals -4- lower left",
+      "kanji": "歌",
+      "meaning_en": "song",
+      "kun": [
+        "うた",
+        "うた-う"
+      ],
+      "on": [
+        "カ"
+      ],
+      "strokes": 14,
+      "examples": [
+        {
+          "word": "歌",
+          "reading": "うた",
+          "word_furigana": "{歌|うた}",
+          "en": "a song"
+        },
+        {
+          "word": "歌手",
+          "reading": "かしゅ",
+          "word_furigana": "{歌|か}{手|しゅ}",
+          "en": "a singer"
+        },
+        {
+          "word": "歌う",
+          "reading": "うたう",
+          "word_furigana": "{歌|うた}う",
+          "en": "to sing"
+        },
+        {
+          "word": "国歌",
+          "reading": "こっか",
+          "word_furigana": "{国|こっ}{歌|か}",
+          "en": "the national anthem"
+        }
+      ],
+      "notes": [],
+      "page": 130
+    },
+    {
+      "id": 158,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "友",
+      "meaning_en": "friend",
+      "kun": [
+        "とも"
+      ],
+      "on": [
+        "ユウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "友",
+          "reading": "とも",
+          "word_furigana": "{友|とも}",
+          "en": "a friend (also 友だち)"
+        },
+        {
+          "word": "友人",
+          "reading": "ゆうじん",
+          "word_furigana": "{友|ゆう}{人|じん}",
+          "en": "a friend"
+        },
+        {
+          "word": "友情",
+          "reading": "ゆうじょう",
+          "word_furigana": "{友|ゆう}{情|じょう}",
+          "en": "friendship"
+        }
+      ],
+      "notes": [],
+      "page": 137
+    },
+    {
+      "id": 159,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "父",
+      "meaning_en": "father",
+      "kun": [
+        "ちち"
+      ],
+      "on": [
+        "フ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "父",
+          "reading": "ちち",
+          "word_furigana": "{父|ちち}",
+          "en": "one's own father"
+        },
+        {
+          "word": "父親",
+          "reading": "ちちおや",
+          "word_furigana": "{父|ちち}{親|おや}",
+          "en": "male parent"
+        },
+        {
+          "word": "お父さん",
+          "reading": "おとうさん",
+          "word_furigana": "お{父|とう}さん",
+          "en": "father"
+        },
+        {
+          "word": "父母",
+          "reading": "ふぼ",
+          "word_furigana": "{父|ふ}{母|ぼ}",
+          "en": "parents"
+        }
+      ],
+      "notes": [
+        "お父さん (おとうさん) is marked with * in the book: irregular reading."
+      ],
+      "page": 137
+    },
+    {
+      "id": 160,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "母",
+      "meaning_en": "mother",
+      "kun": [
+        "はは"
+      ],
+      "on": [
+        "ボ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "母",
+          "reading": "はは",
+          "word_furigana": "{母|はは}",
+          "en": "one's own mother"
+        },
+        {
+          "word": "母親",
+          "reading": "ははおや",
+          "word_furigana": "{母|はは}{親|おや}",
+          "en": "female parent"
+        },
+        {
+          "word": "お母さん",
+          "reading": "おかあさん",
+          "word_furigana": "お{母|かあ}さん",
+          "en": "mother"
+        },
+        {
+          "word": "母国",
+          "reading": "ぼこく",
+          "word_furigana": "{母|ぼ}{国|こく}",
+          "en": "one's motherland"
+        }
+      ],
+      "notes": [
+        "お母さん (おかあさん) is marked with * in the book: irregular reading."
+      ],
+      "page": 137
+    },
+    {
+      "id": 161,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "兄",
+      "meaning_en": "elder brother",
+      "kun": [
+        "あに"
+      ],
+      "on": [
+        "ケイ",
+        "キョウ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "兄",
+          "reading": "あに",
+          "word_furigana": "{兄|あに}",
+          "en": "one's elder brother"
+        },
+        {
+          "word": "お兄さん",
+          "reading": "おにいさん",
+          "word_furigana": "お{兄|にい}さん",
+          "en": "elder brother"
+        },
+        {
+          "word": "兄弟",
+          "reading": "きょうだい",
+          "word_furigana": "{兄|きょう}{弟|だい}",
+          "en": "brothers"
+        },
+        {
+          "word": "父兄",
+          "reading": "ふけい",
+          "word_furigana": "{父|ふ}{兄|けい}",
+          "en": "guardians"
+        }
+      ],
+      "notes": [
+        "お兄さん (おにいさん) is marked with * in the book: irregular reading."
+      ],
+      "page": 138
+    },
+    {
+      "id": 162,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "姉",
+      "meaning_en": "elder sister",
+      "kun": [
+        "あね"
+      ],
+      "on": [
+        "シ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "姉",
+          "reading": "あね",
+          "word_furigana": "{姉|あね}",
+          "en": "one's elder sister"
+        },
+        {
+          "word": "お姉さん",
+          "reading": "おねえさん",
+          "word_furigana": "お{姉|ねえ}さん",
+          "en": "elder sister"
+        },
+        {
+          "word": "姉妹",
+          "reading": "しまい",
+          "word_furigana": "{姉|し}{妹|まい}",
+          "en": "sisters"
+        }
+      ],
+      "notes": [
+        "お姉さん (おねえさん) is marked with * in the book: irregular reading."
+      ],
+      "page": 138
+    },
+    {
+      "id": 163,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "弟",
+      "meaning_en": "younger brother",
+      "kun": [
+        "おとうと"
+      ],
+      "on": [
+        "テイ",
+        "-ダイ"
+      ],
+      "strokes": 7,
+      "examples": [
+        {
+          "word": "弟",
+          "reading": "おとうと",
+          "word_furigana": "{弟|おとうと}",
+          "en": "one's younger brother"
+        },
+        {
+          "word": "弟子",
+          "reading": "でし",
+          "word_furigana": "{弟|で}{子|し}",
+          "en": "a pupil, a disciple"
+        },
+        {
+          "word": "子弟",
+          "reading": "してい",
+          "word_furigana": "{子|し}{弟|てい}",
+          "en": "sons, children"
+        }
+      ],
+      "notes": [
+        "弟子 (でし) is marked with * in the book: irregular reading."
+      ],
+      "page": 138
+    },
+    {
+      "id": 164,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "妹",
+      "meaning_en": "younger sister",
+      "kun": [
+        "いもうと"
+      ],
+      "on": [
+        "マイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "妹",
+          "reading": "いもうと",
+          "word_furigana": "{妹|いもうと}",
+          "en": "one's younger sister"
+        },
+        {
+          "word": "姉妹",
+          "reading": "しまい",
+          "word_furigana": "{姉|し}{妹|まい}",
+          "en": "sisters"
+        }
+      ],
+      "notes": [],
+      "page": 138
+    },
+    {
+      "id": 165,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "夫",
+      "meaning_en": "husband",
+      "kun": [
+        "おっと"
+      ],
+      "on": [
+        "フ",
+        "フウ"
+      ],
+      "strokes": 4,
+      "examples": [
+        {
+          "word": "夫",
+          "reading": "おっと",
+          "word_furigana": "{夫|おっと}",
+          "en": "one's husband"
+        },
+        {
+          "word": "〜夫人",
+          "reading": "〜ふじん",
+          "word_furigana": "〜{夫|ふ}{人|じん}",
+          "en": "Madam ~, Mrs. ~"
+        },
+        {
+          "word": "夫婦",
+          "reading": "ふうふ",
+          "word_furigana": "{夫|ふう}{婦|ふ}",
+          "en": "a married couple"
+        }
+      ],
+      "notes": [],
+      "page": 139
+    },
+    {
+      "id": 166,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "妻",
+      "meaning_en": "wife",
+      "kun": [
+        "つま"
+      ],
+      "on": [
+        "サイ"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "妻",
+          "reading": "つま",
+          "word_furigana": "{妻|つま}",
+          "en": "one's wife"
+        },
+        {
+          "word": "夫妻",
+          "reading": "ふさい",
+          "word_furigana": "{夫|ふ}{妻|さい}",
+          "en": "husband and wife"
+        },
+        {
+          "word": "〜夫妻",
+          "reading": "〜ふさい",
+          "word_furigana": "〜{夫|ふ}{妻|さい}",
+          "en": "Mr. & Mrs. ~"
+        }
+      ],
+      "notes": [],
+      "page": 139
+    },
+    {
+      "id": 167,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "彼",
+      "meaning_en": "he",
+      "kun": [
+        "かれ",
+        "かの-"
+      ],
+      "on": [
+        "(ヒ)"
+      ],
+      "strokes": 8,
+      "examples": [
+        {
+          "word": "彼",
+          "reading": "かれ",
+          "word_furigana": "{彼|かれ}",
+          "en": "he"
+        },
+        {
+          "word": "彼ら",
+          "reading": "かれら",
+          "word_furigana": "{彼|かれ}ら",
+          "en": "they"
+        },
+        {
+          "word": "彼女",
+          "reading": "かのじょ",
+          "word_furigana": "{彼|かの}{女|じょ}",
+          "en": "she"
+        }
+      ],
+      "notes": [],
+      "page": 139
+    },
+    {
+      "id": 168,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "主",
+      "meaning_en": "chief, main, lord, owner",
+      "kun": [
+        "おも-な",
+        "ぬし"
+      ],
+      "on": [
+        "シュ"
+      ],
+      "strokes": 5,
+      "examples": [
+        {
+          "word": "主な",
+          "reading": "おもな",
+          "word_furigana": "{主|おも}な",
+          "en": "chief, main"
+        },
+        {
+          "word": "持ち主",
+          "reading": "もちぬし",
+          "word_furigana": "{持|も}ち{主|ぬし}",
+          "en": "an owner"
+        },
+        {
+          "word": "主人",
+          "reading": "しゅじん",
+          "word_furigana": "{主|しゅ}{人|じん}",
+          "en": "a master, one's husband"
+        }
+      ],
+      "notes": [],
+      "page": 139
+    },
+    {
+      "id": 169,
+      "lesson": 15,
+      "lesson_title": "人間関係の漢字",
+      "lesson_title_en": "Kanji for human relationships",
+      "kanji": "奥",
+      "meaning_en": "deep, inside, interior",
+      "kun": [
+        "おく"
+      ],
+      "on": [
+        "(オウ)"
+      ],
+      "strokes": 12,
+      "examples": [
+        {
+          "word": "奥",
+          "reading": "おく",
+          "word_furigana": "{奥|おく}",
+          "en": "deep inside"
+        },
+        {
+          "word": "奥さん",
+          "reading": "おくさん",
+          "word_furigana": "{奥|おく}さん",
+          "en": "other's wife, madam"
+        },
+        {
+          "word": "奥様",
+          "reading": "おくさま",
+          "word_furigana": "{奥|おく}{様|さま}",
+          "en": "other's wife, madam"
+        }
+      ],
+      "notes": [],
+      "page": 140
     }
   ]
 }
