@@ -317,6 +317,31 @@ la carpeta `japo`.
   lección, nivel y aprendidas, enlace de volver y el vocabulario igual que antes; los 119 ejemplos
   salen con el kanji en negrita sin cambiar la palabra. Después, a mano en el navegador.
 
+## 2026-10-10 - Kanji: tabla de lecturas, lecciones 4 a 7 y un solo nivel para el libro
+
+- **Lecturas en una minitabla.** Por detrás de la tarjeta, kun y on van ahora en dos columnas,
+  una al lado de la otra, cada lectura en su línea y todo centrado, como en la ficha del libro.
+  Es una tabla sin bordes, solo para alinear.
+- **Bandera de Japón al lado de "Lectura kun"**, para distinguir de un vistazo la lectura
+  japonesa. Está dibujada con CSS, no es un emoji: un rectángulo blanco 2:3 con el círculo rojo de
+  3/5 del alto, igual que la llave inglesa del pie, que está dibujada a mano en SVG.
+- **Lecciones 4 a 7 transcritas** (kanji 36 a 75): kanji hechos con signos (上, 下, 中...), con
+  combinaciones de significados (明 = sol + luna, 林 = dos árboles, 森 = tres) y otras dos tandas
+  de pictogramas. En total 75 kanji y 249 palabras de ejemplo. Las lecturas irregulares que el
+  libro marca con `*` (大人, 小人, 上手, 下手) llevan una nota, y 畑 también: es un kanji creado en
+  Japón y no tiene lectura on.
+- **El nivel JLPT, cambiado a uno solo para todo el libro: N4.** Al buscar el nivel de los
+  nuevos salían cosas raras. 林, 森, 竹, 糸 y 貝 eran N2; 畑, N1, y jisho no daba nivel ni a 畑 ni
+  a 分 (que es claramente N5), así que hubo que mirarlos en otra web, jlptsensei.com. Son kanji
+  básicos, que se conocen de sobra con el N5 aprobado. Esas listas miden cuánto sale un kanji en el
+  vocabulario de cada nivel, no lo básico que es, así que la etiqueta confundía más que
+  ayudaba. Ahora todos los kanji del libro van con N4: los 250 del Vol. 1 son más o menos los de
+  N5 + N4. El nivel va una sola vez arriba del JSON, y el JLPT de cada kanji se queda en el JSON
+  como referencia, sin usarse.
+- **Comprobado** reimportando (40 kanji nuevos y los 35 anteriores pasados a N4, sin
+  duplicados): los 249 ejemplos salen con el kanji en negrita sin cambiar la palabra, el índice
+  enseña las 7 lecciones y los filtros funcionan. Después, a mano en el navegador.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -328,7 +353,6 @@ la carpeta `japo`.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Transcribir el resto del Basic Kanji Book:** lecciones 4 a 22 (kanji 36 a 251), con el nivel
-  de jisho.org comprobado en cada tanda.
+- **Transcribir el resto del Basic Kanji Book:** lecciones 8 a 22 (kanji 76 a 251).
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
