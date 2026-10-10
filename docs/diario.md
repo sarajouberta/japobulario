@@ -342,6 +342,29 @@ la carpeta `japo`.
   duplicados): los 249 ejemplos salen con el kanji en negrita sin cambiar la palabra, el índice
   enseña las 7 lecciones y los filtros funcionan. Después, a mano en el navegador.
 
+## 2026-10-10 - Kanji: lecciones 8 a 11, fondo rosa y caché de las plantillas
+
+- **Lecciones 8 a 11 transcritas** (kanji 76 a 121): adjetivos (新, 古, 長...), verbos (行, 来,
+  食...), el tiempo (朝, 昼, 夜, 週...) y la primera lección de radicales (作, 泳, 海, 語...). En
+  total 121 kanji y 405 palabras de ejemplo. Llevan nota las lecturas irregulares que el libro
+  marca con `*` (七夕, 時計, 言葉, 物語); las palabras con dos lecturas guardan la segunda aparte
+  (毎月: まいげつ / まいつき), y en 飯 el libro explica que 飯 (めし) es la forma coloquial de ご飯,
+  así que salen como dos ejemplos.
+- **El JLPT de referencia ya no se busca.** Desde que todo el libro va con N4, el `jlpt` de cada
+  kanji no se usa, así que solo lo tienen los kanji 1-75, que se comprobaron. Al principio el
+  script que genera el JSON les ponía "N5" a los nuevos por defecto, sin comprobarlo: se quitó
+  para que el JSON no tuviera un dato falso.
+- **Hoja de estilos común**, `public/stylesheets/common.css`, que el layout carga en todas las
+  páginas antes que las demás. Hasta ahora no había ninguna para toda la web (solo la del menú).
+  Los colores generales van como variables en `:root`, para cambiarlos en un solo sitio.
+- **Fondo rosa pálido** (`#fde8ee`) entre el menú y el pie, también en la barra de botones del modo
+  estudio. El primer tono, `#fff5f7`, era tan pálido que no se distinguía del blanco.
+- **Los cambios de las vistas no se veían sin reiniciar el servidor:** twig guarda siempre las
+  plantillas en caché, salvo que se le diga lo contrario, así que el layout nuevo no se leía. Ahora,
+  en desarrollo, la caché está desactivada (`app.js`) y basta con recargar la página; al publicar
+  (`NODE_ENV=production`) se mantiene, porque va más rápido. Esto explica por qué antes algunos
+  cambios no salían hasta reiniciar.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -353,6 +376,6 @@ la carpeta `japo`.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
-- **Transcribir el resto del Basic Kanji Book:** lecciones 8 a 22 (kanji 76 a 251).
+- **Transcribir el resto del Basic Kanji Book:** lecciones 16 a 22 (kanji 170 a 251).
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
