@@ -425,6 +425,21 @@ La página principal era una lista de enlaces. Ahora:
   desarrollo ahora los vuelve a leer cuando cambian (`autoReload`), así que basta con recargar la
   página.
 
+## 2026-10-11 - Lista de tarjetas como fichas y más opciones para estudiar
+
+- **La lista de tarjetas** (`/japobulario/flashcards`) era una lista sin estilo. Ahora cada tarjeta
+  es una ficha blanca, como los botones de la portada: la palabra o el kanji grande, la lectura,
+  el significado en negrita y abajo unas etiquetas en rosa (nivel, tipo y categoría). Van en
+  cuadrícula, tantas por fila como quepan, y en el móvil una debajo de otra.
+- **Todo el vocabulario de los libros de una vez:** arriba de la pestaña Libros hay un enlace para
+  los dos niveles juntos (1940 tarjetas). Con el filtro "Aprendidas" o "Sin aprender" abre solo
+  las que lo cumplen, y se siguen pudiendo elegir "Todo el N5" o "Todo el N4".
+- **Capítulo entero:** el título de cada capítulo es ahora un enlace que lo abre completo, con su
+  progreso al lado ("4 / 102 aprendidas"). Ese número cuenta todo el capítulo, también las
+  secciones que el filtro esconde.
+- Comprobado con la app de prueba: los enlaces llevan el filtro, el capítulo 1 del N5 abre sus 102
+  tarjetas y "todo" con "Aprendidas" abre solo las marcadas.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -436,17 +451,10 @@ La página principal era una lista de enlaces. Ahora:
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Más opciones al elegir qué estudiar:**
-  - Con el filtro "Aprendidas" o "Sin aprender", un enlace para estudiar **todas** las que
-    cumplen el filtro de los dos niveles juntos (N5 y N4), aunque la lista siga mostrando cómo se
-    reparten por secciones. Se mantienen los enlaces de cada nivel ("Todo el N5", "Todo el N4")
-    para poder seguir eligiendo solo uno.
-  - Poder elegir un **capítulo entero**, no solo sus secciones una a una.
   - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
 - **Página "Acerca de" (About):** qué es el proyecto, para quién es y las fuentes que se han
   usado: los libros de vocabulario (はじめての日本語能力試験 N5単語1000 y N4単語1500), el Basic
   Kanji Book Vol. 1 (基本漢字500) y de dónde salen los niveles y significados añadidos (jisho.org,
   jlptsensei.com, los escritos en la transcripción).
-- **Lista de tarjetas (`/japobulario/flashcards`) con formato de tarjeta:** ahora es una lista
-  sin estilo; que cada una se vea como una tarjeta, en la línea de la portada y del modo estudio.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
