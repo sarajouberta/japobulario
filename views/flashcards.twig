@@ -1,11 +1,17 @@
-<!-- Vista para las flashcards: -->
+{#
+Lista de tarjetas, con dos pestañas: las propias (por defecto) y las de los libros.
+Cada tarjeta se pinta como una ficha: arriba la palabra o el kanji, grande; debajo la lectura y el
+significado, y abajo unas etiquetas pequeñas (nivel, categoría...). Estilos en flashcard-list.css.
+#}
 {% extends "layout.twig" %}
 
 {% block styles %}
     <link rel="stylesheet" href='/stylesheets/tabs.css'>
+    <link rel="stylesheet" href='/stylesheets/flashcard-list.css'>
 {% endblock %}
 
 {% block body %}
+<div class="card-list-page">
     <h1>{{ __('flashcards.title') }}</h1>
 
     <!--pestañas: tarjetas propias creadas con el formulario / tarjetas de los libros-->
@@ -14,52 +20,40 @@
         <a href="/japobulario/flashcards?tab=book" class="{{ tab == 'book' ? 'active' : '' }}">{{ __('tabs.book', {'count': bookTotal}) }}</a>
     </nav>
 
+    <p><a class="add-card" href="/japobulario/flashcards/new">{{ __('flashcards.addNew') }}</a></p>
+
     {% if flashcards.length > 0 %}
-        <!--cambio ul por div para usar flexbox-->
-        <div class="flashcard-container">
+        <div class="card-list">
             {% for card in flashcards %}
-                <!-- cambio li: articles.
-                <hr> horizontal rule" (regla horizontal)-->
-                <article class="flashcard">
-                    <!--¡¡ refactorizar !!-->
-                    <!--cada tarjeta se muestra según su tipo (kanji / vocabulario)-->
-                    {% if card.type == 'kanji' %}
-                        <div class="kanji-box">
-                            <h2>{{ card.kanji }}</h2>
-                        </div>
-                        <p><strong>{{ __('card.kunReading') }}:</strong> {{ card.kunReading }}</p>
-                        <p><strong>{{ __('card.onReading') }}:</strong> {{ card.onReading }}</p>
-                        <p><strong>{{ __('card.meaning') }}:</strong> {{ card.meaning }}</p>
-                        <p><strong>{{ __('card.level') }}:</strong> {{ card.level }}</p>
-
-                    {% elseif card.type == 'vocabulary' %}
-                        <div class="kanji-box">
-                            <h2>{{ card.word }}</h2>
-                        </div>
+                <article class="card-item">
+                    {% if card.type == 'vocabulary' %}
+                        {#vocabulario: la palabra, y su lectura si es distinta#}
+                        <h2 class="card-item-main" lang="ja">{{ card.word }}</h2>
                         {% if card.reading and card.reading != card.word %}
-                            <p><strong>{{ __('card.reading') }}:</strong> {{ card.reading }}</p>
+                            <p class="card-item-reading" lang="ja">{{ card.reading }}</p>
                         {% endif %}
-                        <p><strong>{{ __('card.meaning') }}:</strong> {{ card.meaning }}</p>
-                        <p><strong>{{ __('card.level') }}:</strong> {{ card.level }}</p>
-                        <p><strong>{{ __('card.category') }}:</strong> {{ card.category }}</p>
-
                     {% else %}
-                        <div class="kanji-box">
-                            <h2>{{ card.kanji }}</h2>
-                        </div>
-                        <p><strong>{{ __('card.kunReading') }}:</strong> {{ card.kunReading }}</p>
-                        <p><strong>{{ __('card.onReading') }}:</strong> {{ card.onReading }}</p>
-                        <p><strong>{{ __('card.meaning') }}:</strong> {{ card.meaning }}</p>
-                        <p><strong>{{ __('card.level') }}:</strong> {{ card.level }}</p>
-                        <p><strong>{{ __('card.category') }}:</strong> {{ card.category }}</p>
+                        {#kanji: el kanji y sus lecturas kun / on#}
+                        <h2 class="card-item-main" lang="ja">{{ card.kanji }}</h2>
+                        <p class="card-item-reading" lang="ja">
+                            {% if card.kunReading %}<span title="{{ __('card.kunReading') }}">{{ card.kunReading }}</span>{% endif %}
+                            {% if card.kunReading and card.onReading %} / {% endif %}
+                            {% if card.onReading %}<span title="{{ __('card.onReading') }}">{{ card.onReading }}</span>{% endif %}
+                        </p>
                     {% endif %}
+
+                    <p class="card-item-meaning">{{ card.meaning ?: '-' }}</p>
+
+                    <p class="card-item-tags">
+                        <span class="tag">{{ card.level }}</span>
+                        <span class="tag">{{ card.type == 'kanji' ? __('form.kanji') : __('form.vocabulary') }}</span>
+                        {% if card.category %}<span class="tag">{{ card.category }}</span>{% endif %}
+                    </p>
                 </article>
             {% endfor %}
         </div>
     {% else %}
         <p>{{ tab == 'own' ? __('flashcards.emptyOwn') : __('flashcards.emptyBook') }}</p>
     {% endif %}
-
-        <p><a href="/japobulario/flashcards/new">{{ __('flashcards.addNew') }}</a></p>
-
-    {% endblock %}
+</div>
+{% endblock %}
