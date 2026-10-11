@@ -440,11 +440,33 @@ La página principal era una lista de enlaces. Ahora:
 - Comprobado con la app de prueba: los enlaces llevan el filtro, el capítulo 1 del N5 abre sus 102
   tarjetas y "todo" con "Aprendidas" abre solo las marcadas.
 
+## 2026-10-11 - Publicada en Render
+
+La app ya se puede usar desde el móvil, con la base de datos en MongoDB Atlas y el login de Google.
+
+- **Hosting: Render** (plan gratuito, sin tarjeta). Se miró también Vercel, donde ya hay otra app
+  publicada, pero Vercel y Netlify están pensados para webs estáticas y funciones sueltas, y esta
+  app es un servidor Express que se queda encendido (páginas con twig, sesiones, conexión a
+  MongoDB): Render lo ejecuta tal cual, con `npm start`, sin cambiar nada. Publica solo desde el
+  repositorio de GitHub: cada `git push` a `main` vuelve a desplegar.
+- **La pega del plan gratis:** tras unos 15 minutos sin visitas, Render duerme el servidor, y la
+  primera visita después tarda 30-50 segundos. Los datos no se pierden, están en Atlas. Para eso
+  queda pendiente la versión instalable con pantalla de espera.
+- **Pasos que se hicieron:**
+  - Cargar los datos en Atlas con `npm run import:atlas` (vocabulario, ya estaba: se actualizó con
+    los cambios recientes) y `npm run import:kanji:atlas` (los 251 kanji, por primera vez; el
+    importador cambió allí el índice viejo por el nuevo).
+  - En Atlas, Network Access: permitir `0.0.0.0/0`, porque Render gratis no tiene una IP fija. La
+    bdd sigue protegida por el usuario y la contraseña de la dirección de conexión.
+  - En Render: servicio web desde el repositorio, `npm install` / `npm start`, y las variables
+    `MONGO_URL`, `NODE_ENV=production` y `SESSION_SECRET` (una cadena aleatoria generada con
+    `crypto`). En `package.json` se indicó la versión de Node (`engines`).
+  - En Firebase: añadir el dominio de Render a los dominios autorizados, para que funcione el
+    login con Google.
+- Probada en el móvil: login, portada, vocabulario y kanji.
+
 ### Pendiente
 
-- **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
-  `SESSION_SECRET` (ver `.env.example`); añadir el dominio en Firebase (Authorized domains) y la
-  IP del hosting en Atlas.
 - **Importar las tablas de los libros** (`extras`).
 - **Sección de estudio para los contadores y otros grupos de palabras** que no son vocabulario
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
@@ -456,5 +478,9 @@ La página principal era una lista de enlaces. Ahora:
   usado: los libros de vocabulario (はじめての日本語能力試験 N5単語1000 y N4単語1500), el Basic
   Kanji Book Vol. 1 (基本漢字500) y de dónde salen los niveles y significados añadidos (jisho.org,
   jlptsensei.com, los escritos en la transcripción).
+- **App instalable (PWA) con pantalla de espera:** manifiesto con el logo para "Añadir a pantalla
+  de inicio" en el móvil, y un service worker que, si el servidor de Render está dormido (tarda
+  30-50 s en despertar), enseñe una pantalla con el logo y "Despertando..." y entre sola cuando
+  responda. Funciona desde la segunda visita.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
