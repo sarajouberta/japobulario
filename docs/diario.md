@@ -388,12 +388,32 @@ de ejemplo**, todo importado y estudiable por lecciones.
   kanji en negrita sin cambiar la palabra, y el índice enseña las 22 lecciones con sus títulos.
   Después, a mano en el navegador.
 
+## 2026-10-11 - Las 14 palabras del N5 sin significado
+
+Eran las únicas fichas de los libros que no se podían estudiar. Al buscarlas en el PDF se vio que
+no era un fallo de la transcripción: **el libro no les da significado**, solo las enseña con un
+dibujo o una tabla.
+
+- **La familia de Yamada** (pág. 19): ごりょうしん, お父さん, お母さん, おねえさん, おにいさん,
+  おとうとさん e いもうとさん salen solo sobre el árbol familiar. Se entienden por la página
+  anterior, la de la familia propia (父 father, あね older sister...): son las formas para hablar
+  de la familia de otro.
+- **Seis contadores** (〜月, 〜こ, 〜だい, 〜つ, 〜日, 〜かい／がい): la cabecera no tiene
+  traducción; debajo va la tabla con cada forma (1月 January, 2かい second floor...), que sí la
+  tiene.
+- **半**: solo un reloj con 00:30.
+
+Se les ha escrito el significado en inglés, como al resto ("(someone else's) father", "counter for
+floors", "half past (the hour)"...), y una nota en cada ficha que dice que no viene del libro.
+Siguen sin ejemplo, como otras fichas del N5. Con esto se estudian las 1940 palabras de los dos
+libros. Las tablas de los contadores siguen pendientes: van con las `extras`, en la sección de
+contadores.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
   `SESSION_SECRET` (ver `.env.example`); añadir el dominio en Firebase (Authorized domains) y la
   IP del hosting en Atlas.
-- **Las 14 palabras sin significado** del N5 (la familia de la página 19 y algunos contadores).
 - **Importar las tablas de los libros** (`extras`).
 - **Sección de estudio para los contadores y otros grupos de palabras** que no son vocabulario
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
