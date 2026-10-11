@@ -14,7 +14,7 @@
 }
 
 .level {
-    flex: 1 1 400px;
+    flex: 1 1 300px;  /* en el móvil (unos 360px de ancho) cabe entero, sin salirse */
 }
 
 .level h3 {

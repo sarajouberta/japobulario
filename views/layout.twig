@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}">
   <head>
+    <meta charset="utf-8">
+    <!--en el móvil, que la página use el ancho real de la pantalla (sin esto, el navegador la pinta
+        como si fuera de ordenador, unos 980px, y la encoge: se ve todo muy pequeño)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--cada vista puede definir su título con el bloque title; si no, sale "Japobulario"-->
     <title>{% block title %}Japobulario{% endblock %}</title>
     <!--icono de la pestaña del navegador-->
@@ -20,6 +24,10 @@
       <a class="brand" href="/japobulario">Japobulario</a>
       <!--los enlaces de la app solo se muestran con la sesión iniciada (sin sesión, todo lleva al login)-->
       {% if currentUser %}
+      <!--botón "Menú", solo en el móvil (ver menu.css): la casilla oculta guarda si está abierto y los
+          enlaces y el usuario se enseñan cuando está marcada. Sin JavaScript-->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">{{ __('menu.menu') }}</label>
       <ul>
         <li><a href="/japobulario">{{ __('menu.home') }}</a></li>
         <li><a href="/japobulario/study">{{ __('menu.studyVocabulary') }}</a></li>

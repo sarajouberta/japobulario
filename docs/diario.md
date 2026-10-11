@@ -465,6 +465,24 @@ La app ya se puede usar desde el móvil, con la base de datos en MongoDB Atlas y
     login con Google.
 - Probada en el móvil: login, portada, vocabulario y kanji.
 
+## 2026-10-11 - Adaptada al móvil
+
+Al abrirla en el móvil se veía todo muy pequeño.
+
+- **Faltaba la etiqueta `viewport`** en el layout. Sin ella, el navegador del móvil pinta la página
+  como si la pantalla fuera de ordenador (unos 980px de ancho) y luego la encoge entera. Con ella
+  usa el ancho real (unos 360-412px). Vale para todas las páginas.
+- **Dos anchos mínimos ajustados:** cada nivel de la pantalla de elegir pedía 400px, más que el
+  móvil (ahora 300px), y en la lista de tarjetas caben dos por fila en el móvil en vez de una.
+- **El menú se pliega en el móvil:** ocupaba cuatro líneas. Ahora es una sola, con el nombre, ES |
+  EN y un botón "Menú" que despliega los enlaces (cada uno en su fila, fácil de pulsar) y el
+  usuario con "Cerrar sesión". Está hecho sin JavaScript, con una casilla oculta. En el ordenador
+  no cambia.
+- Comprobado con capturas de Chrome a tamaño de móvil (390px): portada, elegir qué estudiar, modo
+  estudio de vocabulario y de kanji, lista de tarjetas y el menú cerrado y abierto.
+- Queda una cosa vista en las capturas: la tarjeta de kanji es muy alta, porque la parte de atrás
+  tiene muchos ejemplos y las dos caras miden lo mismo; en el móvil el kanji queda a media altura.
+
 ### Pendiente
 
 - **Importar las tablas de los libros** (`extras`).

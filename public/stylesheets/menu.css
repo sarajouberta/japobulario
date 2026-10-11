@@ -95,3 +95,79 @@ body {
     height: 1.2em;
     flex-shrink: 0;  /* en pantallas estrechas se encoge el texto, no el dibujo */
 }
+
+/* botón "Menú" y su casilla: solo se usan en el móvil (abajo) */
+.menu-toggle {
+    position: absolute;
+    opacity: 0;  /* oculta, pero se puede usar con el teclado */
+    pointer-events: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* EN EL MÓVIL: una sola línea (nombre, ES | EN y el botón "Menú"); los enlaces, el usuario y
+   cerrar sesión se despliegan debajo al pulsar el botón */
+@media (max-width: 700px) {
+    .main-menu {
+        padding: 8px 12px;
+        gap: 8px 12px;
+    }
+
+    .main-menu .lang-switch {
+        order: 1;
+    }
+
+    .menu-button {
+        display: inline-block;
+        order: 2;
+        padding: 4px 12px;
+        border: 1px solid #999;
+        border-radius: 6px;
+        color: #f7f7f7;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus-visible + .menu-button {
+        outline: 2px solid #f7f7f7;
+    }
+
+    /* abierto: el botón se resalta */
+    .menu-toggle:checked + .menu-button {
+        background-color: #f7f7f7;
+        color: #333;
+    }
+
+    /* enlaces y usuario: ocupan toda la línea, debajo, y solo se ven con el menú abierto */
+    .main-menu ul,
+    .main-menu .user-box {
+        display: none;
+        order: 3;
+        width: 100%;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* cada enlace, una fila fácil de pulsar con el dedo */
+    .main-menu ul a {
+        display: block;
+        padding: 8px 0;
+        border-top: 1px solid #4a4a4a;
+    }
+
+    .main-menu .user-box {
+        order: 4;
+        justify-content: space-between;
+        padding-top: 8px;
+        border-top: 1px solid #4a4a4a;
+    }
+
+    .menu-toggle:checked ~ ul,
+    .menu-toggle:checked ~ .user-box {
+        display: flex;
+    }
+}
