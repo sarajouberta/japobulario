@@ -18683,13 +18683,14 @@
       "reading": "ごりょうしん",
       "word_furigana": "ごりょうしん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) parents",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -18706,13 +18707,14 @@
       "reading": "おとうさん",
       "word_furigana": "お{父|とう}さん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) father",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -18729,13 +18731,14 @@
       "reading": "おかあさん",
       "word_furigana": "お{母|かあ}さん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) mother",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -18752,13 +18755,14 @@
       "reading": "おねえさん",
       "word_furigana": "おねえさん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) older sister",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -18775,13 +18779,14 @@
       "reading": "おにいさん",
       "word_furigana": "おにいさん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) older brother",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -18798,13 +18803,14 @@
       "reading": "おとうとさん",
       "word_furigana": "おとうとさん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) younger brother",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -18821,13 +18827,14 @@
       "reading": "いもうとさん",
       "word_furigana": "いもうとさん",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "(someone else's) younger sister",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 19,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -20098,13 +20105,14 @@
       "reading": "〜がつ",
       "word_furigana": "〜{月|がつ}",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "counter for the months (1月 = January)",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 29,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -21045,7 +21053,7 @@
       "reading": "〜こ",
       "word_furigana": "〜こ",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "counter for small objects",
       "examples": [],
       "related": [
         {
@@ -21109,10 +21117,11 @@
           "meaning_en": null
         }
       ],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 48,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -21129,7 +21138,7 @@
       "reading": "〜だい",
       "word_furigana": "〜だい",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "counter for machines and vehicles",
       "examples": [],
       "related": [
         {
@@ -21193,10 +21202,11 @@
           "meaning_en": null
         }
       ],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 49,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -21439,13 +21449,14 @@
       "reading": "はん",
       "word_furigana": "{半|はん}",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "half past (the hour)",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 52,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -24202,15 +24213,15 @@
       "reading": "〜つ",
       "word_furigana": "〜つ",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "general counter (ひとつ, ふたつ...)",
       "examples": [],
       "related": [],
       "notes": [
-        "“Hitotsu” and “futatsu” are used to count small things like eggs or fruit. It is used as a general counter suffix."
+        "“Hitotsu” and “futatsu” are used to count small things like eggs or fruit. It is used as a general counter suffix.",
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
       ],
       "page": 106,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -24249,13 +24260,14 @@
       "reading": "〜にち",
       "word_furigana": "〜日",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "counter for the days of the month",
       "examples": [],
       "related": [],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 118,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
@@ -25132,7 +25144,7 @@
       "reading": "〜かい／がい",
       "word_furigana": "〜かい／がい",
       "pos": [],
-      "meaning_en": null,
+      "meaning_en": "counter for floors",
       "examples": [],
       "related": [
         {
@@ -25196,10 +25208,11 @@
           "meaning_en": "tenth floor"
         }
       ],
-      "notes": [],
+      "notes": [
+        "Meaning added in the transcription: the book only shows this word with a picture or a table, without a translation."
+      ],
       "page": 141,
       "missing": [
-        "meaning_en",
         "examples"
       ]
     },
