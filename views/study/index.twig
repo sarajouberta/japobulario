@@ -60,6 +60,16 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
         {% elseif tab == 'book' %}
             <p>{{ __('study.chooseBook') }}</p>
 
+            {#los dos niveles juntos (con el filtro de aprendidas, solo las que lo cumplen)#}
+            {% if bookAll.matching > 0 %}
+                <p>
+                    <a class="all" href="{{ studyUrl }}?source=book{{ learnedQuery }}">
+                        {{ __('study.allBooks', {'count': bookAll.total}) }}
+                    </a>
+                    <span class="info">· {{ __('study.progress', {'learned': bookAll.learned, 'count': bookAll.total}) }}</span>
+                </p>
+            {% endif %}
+
             <div class="levels">
                 {% for level in levels %}
                     <section class="level">
@@ -77,8 +87,13 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
 
                         {% for chapter in level.chapters %}
                             {#el título tal cual viene del libro; al lado, más pequeña, su traducción#}
-                            <h3>{{ __('study.chapter', {'number': chapter.chapter}) }} · {{ chapter.chapterTitle }}
+                            {#el título del capítulo es también el enlace para estudiarlo entero#}
+                            <h3>
+                                <a href="{{ studyUrl }}?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}{{ learnedQuery }}">
+                                    {{ __('study.chapter', {'number': chapter.chapter}) }} · {{ chapter.chapterTitle }}
+                                </a>
                                 {% if chapter.chapterTitleEn %}<span class="translation">{{ chapter.chapterTitleEn }}</span>{% endif %}
+                                <span class="info">· {{ __('study.progress', {'learned': chapter.learned, 'count': chapter.count}) }}</span>
                             </h3>
                             <ul>
                                 {% for section in chapter.sections %}

@@ -170,7 +170,15 @@ router.get('/', async (req, res) => {
                 for (const s of sections.filter(s => s._id.level === level && matching(s) > 0)) {
                     let chapter = chapters.find(c => c.chapter === s._id.chapter);
                     if (!chapter) {
-                        chapter = { chapter: s._id.chapter, chapterTitle: s.chapterTitle, chapterTitleEn: s.chapterTitleEn, sections: [] };
+                        //nº de tarjetas y aprendidas del capítulo entero (todas sus secciones, también las
+                        //que el filtro esconde), para el enlace que abre el capítulo completo:
+                        const all = sections.filter(x => x._id.level === level && x._id.chapter === s._id.chapter);
+                        chapter = {
+                            chapter: s._id.chapter, chapterTitle: s.chapterTitle, chapterTitleEn: s.chapterTitleEn,
+                            count: all.reduce((sum, x) => sum + x.count, 0),
+                            learned: all.reduce((sum, x) => sum + x.learned, 0),
+                            sections: [],
+                        };
                         chapters.push(chapter);
                     }
                     chapter.sections.push({
@@ -186,6 +194,12 @@ router.get('/', async (req, res) => {
             });
             bookTotal = levels.reduce((sum, l) => sum + l.total, 0);
         }
+        //los dos niveles juntos (enlace para estudiar todo el vocabulario de los libros de una vez):
+        const bookAll = mode === 'kanji' ? null : {
+            total: bookTotal,
+            learned: levels.reduce((sum, l) => sum + l.learned, 0),
+            matching: levels.reduce((sum, l) => sum + l.matching, 0),
+        };
 
         //enlaces de las pestañas y del filtro de aprendidas (conservan el modo, la pestaña y el filtro):
         const links = {
@@ -200,7 +214,7 @@ router.get('/', async (req, res) => {
         const learnedQuery = learned ? `&learned=${learned}` : '';
 
         res.render('study/index.twig', {
-            mode, tab, levels, kanjiBook, ownLevels, bookTotal, ownTotal, learned, learnedQuery, links, studyUrl,
+            mode, tab, levels, kanjiBook, bookAll, ownLevels, bookTotal, ownTotal, learned, learnedQuery, links, studyUrl,
         });
     } catch (error) {
         console.error('Error en /study:', error);

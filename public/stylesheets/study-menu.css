@@ -62,3 +62,8 @@
     background-color: #333;
     color: #f7f7f7;
 }
+
+/* el título del capítulo es un enlace (estudiar el capítulo entero), pero se sigue leyendo como título */
+.level h3 a {
+    color: inherit;
+}

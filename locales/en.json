@@ -112,7 +112,8 @@
     "noBookKanji": "There are no kanji from the book. Run",
     "ownIntroKanji": "Your kanji cards, by level and by the category you gave them.",
     "ownNoneKanji": "You have not created any kanji cards yet.",
-    "strokes": "Strokes"
+    "strokes": "Strokes",
+    "allBooks": "All the vocabulary from the books, N5 and N4 ({{count}} cards)"
   },
   "auth": {
     "loginTitle": "Log in",

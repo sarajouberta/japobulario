@@ -112,7 +112,8 @@
     "noBookKanji": "No hay kanji del libro. Ejecuta",
     "ownIntroKanji": "Tus tarjetas de kanji, por nivel y por la categoría que les pusiste al crearlas.",
     "ownNoneKanji": "Todavía no has creado tarjetas de kanji.",
-    "strokes": "Trazos"
+    "strokes": "Trazos",
+    "allBooks": "Todo el vocabulario de los libros, N5 y N4 ({{count}} tarjetas)"
   },
   "auth": {
     "loginTitle": "Iniciar sesión",
