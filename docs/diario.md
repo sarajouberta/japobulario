@@ -409,6 +409,22 @@ Siguen sin ejemplo, como otras fichas del N5. Con esto se estudian las 1940 pala
 libros. Las tablas de los contadores siguen pendientes: van con las `extras`, en la sección de
 contadores.
 
+## 2026-10-11 - Una portada con botones
+
+La página principal era una lista de enlaces. Ahora:
+
+- **Arriba**, "Japobulario" grande con la fuente de pincel del menú, una línea que dice para qué
+  es la app, un saludo con el nombre de pila ("Hola, Sara": la cuenta de Google trae el nombre
+  completo, y se coge solo la primera palabra) y cuántas tarjetas se llevan aprendidas.
+- **Cuatro botones grandes** en forma de tarjeta: estudiar vocabulario, estudiar kanji, ver
+  tarjetas y nueva tarjeta. Cada uno lleva un kanji grande (語, 字, 札, 新) en un círculo del rosa
+  de la página, con la fuente de pincel: es texto, no un icono. Al pasar el ratón el botón sube
+  un poco y al pulsarlo baja. En pantalla ancha van en fila y en el móvil, uno debajo de otro.
+- **Los textos nuevos salían como claves** ("home.subtitle"): la librería de traducción lee los
+  `.json` una sola vez, al arrancar el servidor. Igual que se hizo con la caché de twig, en
+  desarrollo ahora los vuelve a leer cuando cambian (`autoReload`), así que basta con recargar la
+  página.
+
 ### Pendiente
 
 - **Al publicar:** elegir hosting y definir allí `MONGO_URL`, `NODE_ENV=production` y
@@ -419,5 +435,18 @@ contadores.
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
   conjunto, no palabra suelta, así que necesitan su propia pantalla dentro de estudio, aparte de
   las secciones de los capítulos. Depende de importar antes las `extras`.
+- **Más opciones al elegir qué estudiar:**
+  - Con el filtro "Aprendidas" o "Sin aprender", un enlace para estudiar **todas** las que
+    cumplen el filtro de los dos niveles juntos (N5 y N4), aunque la lista siga mostrando cómo se
+    reparten por secciones. Se mantienen los enlaces de cada nivel ("Todo el N5", "Todo el N4")
+    para poder seguir eligiendo solo uno.
+  - Poder elegir un **capítulo entero**, no solo sus secciones una a una.
+  - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
+- **Página "Acerca de" (About):** qué es el proyecto, para quién es y las fuentes que se han
+  usado: los libros de vocabulario (はじめての日本語能力試験 N5単語1000 y N4単語1500), el Basic
+  Kanji Book Vol. 1 (基本漢字500) y de dónde salen los niveles y significados añadidos (jisho.org,
+  jlptsensei.com, los escritos en la transcripción).
+- **Lista de tarjetas (`/japobulario/flashcards`) con formato de tarjeta:** ahora es una lista
+  sin estilo; que cada una se vea como una tarjeta, en la línea de la portada y del modo estudio.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
