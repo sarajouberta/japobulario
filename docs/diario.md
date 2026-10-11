@@ -480,6 +480,11 @@ Al abrirla en el móvil se veía todo muy pequeño.
   no cambia.
 - Comprobado con capturas de Chrome a tamaño de móvil (390px): portada, elegir qué estudiar, modo
   estudio de vocabulario y de kanji, lista de tarjetas y el menú cerrado y abierto.
+- **En el móvil no cambiaba nada al principio:** Render solo había hecho el primer despliegue y
+  no se enteraba de los `git push`, aunque el Auto-Deploy estaba en "On Commit". La app de Render
+  estaba autorizada en GitHub (para iniciar sesión con la cuenta) pero no instalada en el
+  repositorio, que es lo que hace que GitHub le avise. Se desplegó a mano (Manual Deploy) y se
+  instaló la app de Render en el repositorio.
 - Queda una cosa vista en las capturas: la tarjeta de kanji es muy alta, porque la parte de atrás
   tiene muchos ejemplos y las dos caras miden lo mismo; en el móvil el kanji queda a media altura.
 
