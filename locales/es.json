@@ -10,11 +10,17 @@
     "logout": "Cerrar sesión"
   },
   "home": {
-    "viewFlashcards": "Ver flashcards",
-    "addCard": "Añadir nueva tarjeta",
-    "study": "Estudiar:",
-    "kanji": "Kanji",
-    "vocabulary": "Vocabulario"
+    "subtitle": "Vocabulario y kanji para el JLPT N5 y N4",
+    "hello": "Hola, {{name}}",
+    "learnedCount": "Llevas {{count}} tarjetas aprendidas",
+    "studyVocabulary": "Estudiar vocabulario",
+    "studyVocabularyDesc": "Las 1940 palabras de los libros N5 y N4",
+    "studyKanji": "Estudiar kanji",
+    "studyKanjiDesc": "Los 251 kanji del Basic Kanji Book, por lecciones",
+    "viewFlashcards": "Ver tarjetas",
+    "viewFlashcardsDesc": "Tus tarjetas y las de los libros",
+    "addCard": "Nueva tarjeta",
+    "addCardDesc": "Crea una tarjeta propia de vocabulario o kanji"
   },
   "tabs": {
     "book": "Libros ({{count}})",

@@ -8,10 +8,16 @@ Los subrouters (flashcards, study) se montan en app.js, no aquí.
 
 const express = require('express');
 const router = express.Router();
+const Learned = require('../models/Learned');
 
-// Página principal de japobulario
-router.get('/', (req, res) => {
-    res.render('japobulario-home.twig');
+// Página principal de japobulario: con el nº de tarjetas que tiene aprendidas el usuario
+router.get('/', async (req, res, next) => {
+    try {
+        const learnedCount = await Learned.countDocuments({ user: req.session.user.id });
+        res.render('japobulario-home.twig', { learnedCount });
+    } catch (error) {
+        next(error);
+    }
 });
 
 module.exports = router;

@@ -1,0 +1,94 @@
+/* CSS DE LA PÁGINA PRINCIPAL (views/japobulario-home.twig) */
+
+.home {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.home-header {
+    text-align: center;
+    margin: 24px 0 32px;
+}
+
+/* el título con la fuente de pincel del menú (Yuji Syuku, cargada en el layout) */
+.home-title {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 3em;
+    margin: 0;
+}
+
+.home-subtitle {
+    margin: 4px 0 16px;
+    color: #555;
+}
+
+.home-hello {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.home-progress {
+    margin: 4px 0 0;
+    color: #555;
+}
+
+/* los cuatro botones: en una cuadrícula que pasa a dos columnas, o a una en el móvil */
+.home-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.home-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 3px 0 #333;  /* sombra dura debajo: parece un botón que se puede pulsar */
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* al pasar por encima sube un poco; al pulsarlo baja, como un botón de verdad */
+.home-button:hover,
+.home-button:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #333;
+}
+
+.home-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #333;
+}
+
+/* el kanji grande de cada botón, en un círculo del rosa de la página */
+.home-glyph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background-color: var(--page-background);
+    font-family: 'Yuji Syuku', serif;
+    font-size: 3em;
+    line-height: 1;
+}
+
+.home-label {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.home-desc {
+    margin-top: 6px;
+    font-size: 0.9em;
+    color: #555;
+}

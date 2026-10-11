@@ -71,6 +71,9 @@ i18n.configure({
   cookie: 'lang',
   objectNotation: true,
   updateFiles: false,  //no crear claves nuevas automáticamente en los .json
+  //en desarrollo vuelve a leer los .json cuando cambian (si no, los textos nuevos no salen hasta
+  //reiniciar el servidor y se ve la clave, p. ej. "home.subtitle"); al publicar no hace falta
+  autoReload: process.env.NODE_ENV !== 'production',
 });
 app.use(i18n.init);  //después de cookieParser, para poder leer la cookie
 //idioma actual disponible en todas las vistas (para <html lang> y el selector del menú):

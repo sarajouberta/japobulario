@@ -1,17 +1,47 @@
+{#
+Página principal de la aplicación: saludo, tarjetas aprendidas y cuatro botones grandes con lo que se
+puede hacer. Cada botón lleva un kanji grande (texto con la fuente de pincel, no un icono).
+Recibe learnedCount (tarjetas que tiene aprendidas el usuario).
+#}
 {% extends "layout.twig" %}
 
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/home.css'>
+{% endblock %}
+
 {% block body %}
-<div class="container">
-    <h1>Japobulario</h1>
-    <ul>
-        <li><a href="/japobulario/flashcards">{{ __('home.viewFlashcards') }}</a></li>
-        <li><a href="/japobulario/flashcards/new">{{ __('home.addCard') }}</a></li>
-        <li>{{ __('home.study') }}
-            <ul>
-                <li><a href="/japobulario/study?mode=kanji">{{ __('home.kanji') }}</a></li>
-                <li><a href="/japobulario/study">{{ __('home.vocabulary') }}</a></li>
-            </ul>
-        </li>
-    </ul>
+<div class="home">
+    <header class="home-header">
+        <h1 class="home-title">Japobulario</h1>
+        <p class="home-subtitle">{{ __('home.subtitle') }}</p>
+        {% if currentUser %}
+            {#solo el nombre de pila (la cuenta de Google trae el nombre completo)#}
+            <p class="home-hello">{{ __('home.hello', {'name': currentUser.name|split(' ')|first}) }}</p>
+        {% endif %}
+        <p class="home-progress">{{ __('home.learnedCount', {'count': learnedCount}) }}</p>
+    </header>
+
+    <nav class="home-buttons">
+        <a class="home-button" href="/japobulario/study">
+            <span class="home-glyph" lang="ja">語</span>
+            <span class="home-label">{{ __('home.studyVocabulary') }}</span>
+            <span class="home-desc">{{ __('home.studyVocabularyDesc') }}</span>
+        </a>
+        <a class="home-button" href="/japobulario/study?mode=kanji">
+            <span class="home-glyph" lang="ja">字</span>
+            <span class="home-label">{{ __('home.studyKanji') }}</span>
+            <span class="home-desc">{{ __('home.studyKanjiDesc') }}</span>
+        </a>
+        <a class="home-button" href="/japobulario/flashcards">
+            <span class="home-glyph" lang="ja">札</span>
+            <span class="home-label">{{ __('home.viewFlashcards') }}</span>
+            <span class="home-desc">{{ __('home.viewFlashcardsDesc') }}</span>
+        </a>
+        <a class="home-button" href="/japobulario/flashcards/new">
+            <span class="home-glyph" lang="ja">新</span>
+            <span class="home-label">{{ __('home.addCard') }}</span>
+            <span class="home-desc">{{ __('home.addCardDesc') }}</span>
+        </a>
+    </nav>
 </div>
-{%  endblock %}
+{% endblock %}
