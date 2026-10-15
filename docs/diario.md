@@ -519,6 +519,27 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   `favicon.svg` del 語 se borró). Se subió la versión de la caché del service worker
   (`japobulario-v2`) para que la pantalla de espera coja el logo nuevo.
 
+## 2026-10-15 - Página "Acerca de"
+
+- **`/japobulario/about`** (`views/about.twig`, estilos en `about.css`): qué es Japobulario, para
+  quién es y qué tiene, la bibliografía y otras fuentes. Todos los textos van en los dos idiomas
+  (claves `about.*`).
+- **Bibliografía con las portadas** (`public/images/books/`): la del Basic Kanji Book se sacó del
+  PDF escaneado (ya era a color) recortando los márgenes blancos; las del N5 y el N4 las buscó la
+  usuaria, y a la del N5 se le recortaron también los márgenes. Los datos de los libros están en
+  `BOOKS`, en `routes/japobulario.js`. Si falta el archivo de una portada, sale un recuadro con el
+  título.
+- Datos de los libros de vocabulario, del colofón de los libros en papel (edición 英語・ベトナム語版):
+  autora アークアカデミー, editorial 株式会社アスク, 初版 第1刷 en 2017 (N5) y 2016 (N4), e ISBN.
+  El PDF del N5 no trae colofón, y el del N4 dice 2015 pero sin "英語・ベトナム語版" en el título:
+  debe de ser el de la edición japonesa original. Del de kanji: Chieko Kano, Yuri Shimizu, Hiroko
+  Takenaka y Eriko Ishii, Bonjinsha, 3.ª edición. Sin año ni ISBN: la usuaria solo tiene el PDF
+  (se lo pasaron en clase) y no los trae. El que se vende ahora en Amazon (2020, ISBN
+  978-4-89358-973-6, 236 páginas) parece una edición posterior, así que no se usan sus datos.
+- **Enlace en la portada**, debajo del título: "¿Qué es Japobulario?" / "What's Japobulario?".
+- Comprobado con capturas de Chrome a 390 y 1000 px de ancho, con una sesión de prueba que se
+  borró al terminar.
+
 ### Pendiente
 
 - **Importar las tablas de los libros** (`extras`).
@@ -528,9 +549,5 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Más opciones al elegir qué estudiar:**
   - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
-- **Página "Acerca de" (About):** qué es el proyecto, para quién es y las fuentes que se han
-  usado: los libros de vocabulario (はじめての日本語能力試験 N5単語1000 y N4単語1500), el Basic
-  Kanji Book Vol. 1 (基本漢字500) y de dónde salen los niveles y significados añadidos (jisho.org,
-  jlptsensei.com, los escritos en la transcripción).
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
