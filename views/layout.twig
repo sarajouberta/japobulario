@@ -9,6 +9,11 @@
     <title>{% block title %}Japobulario{% endblock %}</title>
     <!--icono de la pestaña del navegador-->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!--app instalable (PWA): manifiesto para "Añadir a pantalla de inicio" en el móvil, icono para
+        iPhone y color de la barra del sistema (el gris del menú)-->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#333333">
     <!--link para fuente externa tipo pincel (kanji)-->
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
     <!--estilos comunes a toda la web (fondo de la página...)-->
@@ -65,6 +70,11 @@
       </svg>
       {{ __('menu.developedBy') }}
     </footer>
+
+    <!--service worker: pantalla de espera mientras el servidor de Render despierta (ver public/sw.js)-->
+    <script>
+      if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+    </script>
 
     {% block scripts %}{% endblock %}
   </body>

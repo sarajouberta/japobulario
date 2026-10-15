@@ -122,5 +122,9 @@
     "googleButton": "Log in with Google",
     "loginError": "Could not log in. Please try again.",
     "loggedAs": "Logged in as {{name}}"
+  },
+  "waking": {
+    "title": "Waking up",
+    "text": "The server goes to sleep after a while without visits and takes up to a minute to wake up. The page will open by itself."
   }
 }

@@ -53,6 +53,13 @@ app.set('view engine', 'twig');
 //sin reiniciar el servidor; al publicar (NODE_ENV=production) se mantiene, porque va más rápido
 require('twig').cache(process.env.NODE_ENV === 'production');
 
+//marca en todas las respuestas para que el service worker (public/sw.js) sepa que vienen de la app
+//y no de otra página por medio (p. ej. un aviso de Render mientras despierta el servidor)
+app.use((req, res, next) => {
+  res.set('X-Japobulario', '1');
+  next();
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 //middleware para poder obtener la info del POST (formularios):

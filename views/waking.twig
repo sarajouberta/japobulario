@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--PANTALLA DE ESPERA mientras el servidor de Render despierta (ver public/sw.js).
+    No hereda del layout: el service worker la guarda en caché y la enseña cuando el servidor no
+    contesta, así que no puede depender de nada más del servidor (ni css, ni fuentes, ni sesión).
+    Por eso lleva los estilos dentro y los textos en los dos idiomas: se elige el de la cookie
+    "lang" al mostrarla, no al guardarla.-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#333333">
+    <title>Japobulario</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        box-sizing: border-box;
+        background-color: #fde8ee;  /* el --page-background de common.css */
+        font-family: sans-serif;
+        text-align: center;
+        color: #333;
+      }
+      .logo {
+        width: 96px;
+        height: 96px;
+        border-radius: 18px;
+      }
+      h1 {
+        margin: 20px 0 8px;
+        font-size: 1.6em;
+      }
+      p {
+        max-width: 340px;
+        margin: 0;
+        color: #555;
+      }
+      /* los puntos de "Despertando..." se encienden uno tras otro */
+      .dots span {
+        animation: blink 1.4s infinite;
+      }
+      .dots span:nth-child(2) { animation-delay: 0.2s; }
+      .dots span:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes blink {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="logo" src="/icons/icon-192.png" alt="Japobulario">
+    <h1><span id="waking-title">{{ texts.es.title }}</span><span class="dots"><span>.</span><span>.</span><span>.</span></span></h1>
+    <p id="waking-text">{{ texts.es.text }}</p>
+
+    <script>
+      //textos de los dos idiomas (locales/es.json y en.json, claves waking.*)
+      const texts = {{ texts|json_encode|raw }};
+
+      //idioma de la cookie "lang" (la guarda el selector ES | EN del menú); si no hay, español
+      const match = document.cookie.match(/(?:^|;\s*)lang=(es|en)/);
+      const lang = match ? match[1] : 'es';
+      document.documentElement.lang = lang;
+      document.getElementById('waking-title').textContent = texts[lang].title;
+      document.getElementById('waking-text').textContent = texts[lang].text;
+
+      //preguntar al servidor cada 2 s si ya está despierto; cuando conteste la app (con su cabecera,
+      //ver app.js), recargar: se vuelve a pedir la página que se quería abrir
+      //(si se abrió /waking a mano, se va a la portada, porque recargar la volvería a enseñar)
+      function check() {
+        fetch('/ping', { cache: 'no-store' })
+          .then((response) => {
+            if (!response.ok || !response.headers.has('X-Japobulario')) return setTimeout(check, 2000);
+            if (location.pathname === '/waking') location.href = '/japobulario';
+            else location.reload();
+          })
+          .catch(() => setTimeout(check, 2000));  //sin conexión: se sigue esperando
+      }
+      check();
+    </script>
+  </body>
+</html>

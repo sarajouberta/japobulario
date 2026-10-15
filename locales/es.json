@@ -122,5 +122,9 @@
     "googleButton": "Iniciar sesión con Google",
     "loginError": "No se ha podido iniciar sesión. Inténtalo de nuevo.",
     "loggedAs": "Sesión de {{name}}"
+  },
+  "waking": {
+    "title": "Despertando",
+    "text": "El servidor se duerme tras un rato sin visitas y tarda hasta un minuto en despertar. La página se abrirá sola."
   }
 }

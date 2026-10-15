@@ -23,6 +23,25 @@ router.get('/lang/:locale', function(req, res) {
   res.redirect(back);
 });
 
+/* Pantalla de espera mientras el servidor despierta (la guarda en caché el service worker, public/sw.js).
+   Lleva los textos de los dos idiomas, porque se guarda una vez y el idioma se elige al enseñarla. */
+router.get('/waking', function(req, res) {
+  const texts = {};
+  for (const locale of ['es', 'en']) {
+    texts[locale] = {
+      title: req.__({ phrase: 'waking.title', locale }),
+      text: req.__({ phrase: 'waking.text', locale }),
+    };
+  }
+  res.render('waking', { texts });
+});
+
+/* La pantalla de espera pregunta aquí si el servidor ya está despierto. */
+router.get('/ping', function(req, res) {
+  res.set('Cache-Control', 'no-store');
+  res.type('text').send('ok');
+});
+
 /*RECORDATORIO: las rutas van por orden: si hay dos rutas iguales, solo responde la primera */
 
 module.exports = router;
