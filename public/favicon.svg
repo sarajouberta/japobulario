@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- icono de la pestaña: 語 en blanco sobre el gris oscuro del menú -->
-  <rect width="64" height="64" rx="12" fill="#333"/>
-  <text x="32" y="47" font-size="42" text-anchor="middle" fill="#f7f7f7"
-        font-family="'Noto Sans CJK JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif">語</text>
-</svg>

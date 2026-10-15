@@ -10,7 +10,7 @@
    Se instala en la primera visita, así que la pantalla de espera sale a partir de la segunda. */
 
 //al cambiar /waking o el logo, subir la versión para que se vuelvan a guardar
-const CACHE = 'japobulario-v1';
+const CACHE = 'japobulario-v2';
 const WAKING_URL = '/waking';
 const LOGO_URL = '/icons/icon-192.png';
 const WAIT_MS = 4000;  //lo que se espera al servidor antes de enseñar la pantalla de espera
