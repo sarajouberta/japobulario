@@ -18,6 +18,14 @@
     margin: 0;
 }
 
+/* enlace "What's Japobulario?" debajo del título, a la página Acerca de */
+.home-about {
+    display: inline-block;
+    margin-top: 4px;
+    color: #c2185b;
+    font-size: 0.95em;
+}
+
 .home-subtitle {
     margin: 4px 0 16px;
     color: #555;

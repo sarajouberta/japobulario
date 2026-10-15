@@ -13,6 +13,7 @@ Recibe learnedCount (tarjetas que tiene aprendidas el usuario).
 <div class="home">
     <header class="home-header">
         <h1 class="home-title">Japobulario</h1>
+        <a class="home-about" href="/japobulario/about">{{ __('home.aboutLink') }}</a>
         <p class="home-subtitle">{{ __('home.subtitle') }}</p>
         {% if currentUser %}
             {#solo el nombre de pila (la cuenta de Google trae el nombre completo)#}

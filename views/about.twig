@@ -1,0 +1,69 @@
+{#
+Acerca de: qué es Japobulario, qué tiene y la bibliografía (los libros de los que sale el contenido,
+con sus portadas). Se llega desde el enlace "What's Japobulario?" de la portada.
+Recibe books (ver BOOKS en routes/japobulario.js): coverUrl es null si aún no está la foto.
+#}
+{% extends "layout.twig" %}
+
+{% block title %}{{ __('about.title') }} - Japobulario{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href='/stylesheets/about.css'>
+{% endblock %}
+
+{% block body %}
+<div class="about">
+    <h1 class="about-title">{{ __('about.title') }}</h1>
+
+    <section>
+        <p>{{ __('about.intro') }}</p>
+        <p>{{ __('about.forWhom') }}</p>
+    </section>
+
+    <section>
+        <h2>{{ __('about.contentsTitle') }}</h2>
+        <ul>
+            <li>{{ __('about.contentsVocabulary') }}</li>
+            <li>{{ __('about.contentsKanji') }}</li>
+            <li>{{ __('about.contentsOwn') }}</li>
+            <li>{{ __('about.contentsLearned') }}</li>
+        </ul>
+        <p>{{ __('about.english') }}</p>
+    </section>
+
+    <section>
+        <h2>{{ __('about.booksTitle') }}</h2>
+        <div class="books">
+            {% for book in books %}
+                <article class="book">
+                    {% if book.coverUrl %}
+                        <img class="book-cover" src="{{ book.coverUrl }}" alt="{{ book.title }}" loading="lazy">
+                    {% else %}
+                        {#todavía sin foto de la portada: un recuadro con el título#}
+                        <div class="book-cover book-cover-missing" lang="ja">{{ book.title }}</div>
+                    {% endif %}
+                    <div class="book-info">
+                        <p class="book-title" lang="ja">{{ book.title }}</p>
+                        <p class="book-subtitle">{{ book.subtitle }}</p>
+                        <p>{{ book.authors }}</p>
+                        <p>{{ book.publisher }}{% if book.year %}, {{ book.year }}{% endif %}</p>
+                        {% if book.isbn %}<p>ISBN {{ book.isbn }}</p>{% endif %}
+                        <p class="book-content">{{ __('about.bookContent.' ~ book.content) }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+        <p class="about-note">{{ __('about.rights') }}</p>
+    </section>
+
+    <section>
+        <h2>{{ __('about.otherSourcesTitle') }}</h2>
+        <ul>
+            <li>{{ __('about.otherSourcesLevels') }}</li>
+            <li>{{ __('about.otherSourcesWritten') }}</li>
+        </ul>
+    </section>
+
+    <p class="about-back"><a href="/japobulario">{{ __('about.back') }}</a></p>
+</div>
+{% endblock %}

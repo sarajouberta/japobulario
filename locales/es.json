@@ -21,7 +21,8 @@
     "viewFlashcards": "Ver tarjetas",
     "viewFlashcardsDesc": "Tus tarjetas y las de los libros",
     "addCard": "Nueva tarjeta",
-    "addCardDesc": "Crea una tarjeta propia de vocabulario o kanji"
+    "addCardDesc": "Crea una tarjeta propia de vocabulario o kanji",
+    "aboutLink": "¿Qué es Japobulario?"
   },
   "tabs": {
     "book": "Libros ({{count}})",
@@ -126,5 +127,27 @@
   "waking": {
     "title": "Despertando",
     "text": "El servidor se duerme tras un rato sin visitas y tarda hasta un minuto en despertar. La página se abrirá sola."
+  },
+  "about": {
+    "title": "¿Qué es Japobulario?",
+    "intro": "Japobulario es una aplicación web para estudiar japonés con tarjetas (flashcards): el vocabulario y los kanji de los niveles N5 y N4 del JLPT (Japanese-Language Proficiency Test).",
+    "forWhom": "La está haciendo Saritastar para preparar el JLPT N4 y para compartirla con sus compañeros de estudio. Cada uno entra con su cuenta de Google y tiene sus propias tarjetas y su progreso.",
+    "contentsTitle": "Qué tiene",
+    "contentsVocabulary": "Las 1940 palabras de dos libros de vocabulario (N5 y N4), por capítulos y secciones, con ejemplos y furigana.",
+    "contentsKanji": "Los 251 kanji del Basic Kanji Book Vol. 1, por lecciones, con sus lecturas y palabras de ejemplo.",
+    "contentsOwn": "Tus propias tarjetas de vocabulario o kanji, que solo ves tú.",
+    "contentsLearned": "Marcar las tarjetas que ya sabes y estudiar solo las que te faltan.",
+    "english": "El contenido de los libros (significados y ejemplos) está en inglés, como en los libros. Solo se traduce la interfaz.",
+    "booksTitle": "Bibliografía",
+    "bookContent": {
+      "vocabularyN5": "Vocabulario del nivel N5 (1046 palabras).",
+      "vocabularyN4": "Vocabulario del nivel N4 (894 palabras).",
+      "kanji": "Los kanji de las lecciones 1 a 22 (251 kanji)."
+    },
+    "rights": "El contenido de los libros es de sus autores y editoriales. Se ha transcrito para estudiar con él.",
+    "otherSourcesTitle": "Otras fuentes",
+    "otherSourcesLevels": "El nivel JLPT de los primeros kanji se consultó en jisho.org y jlptsensei.com, solo como referencia: en la app, todos los kanji del libro van como N4.",
+    "otherSourcesWritten": "Algunos significados en inglés se escribieron al transcribir, porque el libro solo los enseña con un dibujo o una tabla (14 palabras del N5) o están tapados en el escaneo (ejemplos de 七 y 年). Lo dicen las notas de cada tarjeta.",
+    "back": "Volver a la portada"
   }
 }

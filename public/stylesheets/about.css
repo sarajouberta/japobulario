@@ -1,0 +1,105 @@
+/* CSS DE LA PÁGINA ACERCA DE (views/about.twig) */
+
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+    line-height: 1.5;
+}
+
+/* el título con la fuente de pincel, como el de la portada */
+.about-title {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 24px 0 16px;
+}
+
+.about h2 {
+    margin: 28px 0 8px;
+    border-bottom: 2px solid #333;
+}
+
+/* bibliografía: una ficha por libro, con la portada a la izquierda */
+.books {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.book {
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.book-cover {
+    flex: 0 0 120px;
+    width: 120px;
+    height: auto;
+    align-self: flex-start;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* recuadro mientras no esté la foto de la portada */
+.book-cover-missing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: var(--page-background);
+    color: #555;
+    font-size: 0.85em;
+    text-align: center;
+    box-shadow: none;
+    border: 2px dashed #bbb;
+}
+
+.book-info p {
+    margin: 0 0 4px;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.book-subtitle,
+.about-note {
+    color: #555;
+}
+
+.book-content {
+    margin-top: 8px !important;
+}
+
+.about-note {
+    font-size: 0.9em;
+}
+
+.about-back {
+    margin: 32px 0;
+    text-align: center;
+}
+
+/* el mismo rosa que el enlace "What's Japobulario?" de la portada */
+.about a {
+    color: #c2185b;
+}
+
+/* en el móvil, la portada más pequeña */
+@media (max-width: 700px) {
+    .book-cover {
+        flex-basis: 80px;
+        width: 80px;
+    }
+    .book-cover-missing {
+        height: 110px;
+    }
+}
