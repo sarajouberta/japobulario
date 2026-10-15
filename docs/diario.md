@@ -540,6 +540,18 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
 - Comprobado con capturas de Chrome a 390 y 1000 px de ancho, con una sesión de prueba que se
   borró al terminar.
 
+## 2026-10-15 - La pantalla de espera no entraba sola
+
+- Probada en el móvil con Render dormido: salió "Despertando...", pero a los dos minutos seguía
+  ahí, y al cerrarla y volver a abrir la app entró directamente (el servidor ya estaba despierto).
+- Causa probable: la pantalla pregunta a `/ping` y esperaba la respuesta sin límite de tiempo.
+  Mientras despierta, Render retiene las peticiones, y si una se queda colgada, la pantalla no
+  vuelve a preguntar nunca.
+- Arreglo: cada pregunta a `/ping` se abandona a los 8 s y se repite, y además la página se
+  recarga sola cada minuto, por si acaso. Probado en local con un proxy que deja colgadas las
+  peticiones a `/ping` mientras el servidor "duerme": entra sola en cuanto despierta.
+- Caché del service worker en `japobulario-v3`, para que el móvil guarde la pantalla nueva.
+
 ### Pendiente
 
 - **Importar las tablas de los libros** (`extras`).
