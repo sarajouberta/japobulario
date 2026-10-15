@@ -511,6 +511,13 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
 - Probado en Chrome headless con un proxy que retiene las peticiones unos segundos, como Render
   dormido: a los 4 s sale la pantalla de espera, en español o en inglés según la cookie, y la
   página entra sola cuando el servidor contesta.
+- **Logo nuevo:** al 語 se le añadió "Japo" en rosa, con una fuente de pincel (Kaushan Script, de
+  Google Fonts), girado y encima de su esquina de arriba a la izquierda. Las letras van dibujadas
+  en los PNG, así que la web no carga la fuente. En el "maskable" el dibujo va más pequeño, para
+  que Android no corte la "J" al recortarlo en círculo. El icono de la pestaña es solo una "J"
+  rosa con la misma fuente, porque con 16 px "Japo" no se leería (`public/favicon.png`; el
+  `favicon.svg` del 語 se borró). Se subió la versión de la caché del service worker
+  (`japobulario-v2`) para que la pantalla de espera coja el logo nuevo.
 
 ### Pendiente
 

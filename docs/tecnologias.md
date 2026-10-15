@@ -104,7 +104,9 @@ Conceptos:
 | **CSS 3D (`transform`, `perspective`)** | Transformaciones en 3D. | El giro de la tarjeta. |
 | **`position: fixed`** | Deja un elemento fijo respecto a la ventana. | La barra de botones Anterior / Siguiente. |
 | **Flexbox** | Sistema de CSS para alinear elementos en una fila o columna. | El menú, las pestañas y la pantalla de elegir sección. |
-| **SVG** | Imagen hecha con código (vectorial). | El icono de la pestaña (`public/favicon.svg`). |
+| **SVG** | Imagen hecha con código (vectorial). | La llave inglesa del pie de página. |
+| **Manifiesto web (PWA)** | Archivo JSON con el nombre, los colores y los iconos de la web. | Poder instalarla en el móvil como una app (`public/manifest.webmanifest`). |
+| **Service worker** | JavaScript que el navegador guarda y que se pone entre la página y el servidor. | Enseñar "Despertando..." mientras el servidor de Render despierta (`public/sw.js`). |
 | **Google Fonts** | Fuentes tipográficas servidas por Google. | Yuji Syuku, la fuente tipo pincel del nombre de la app. |
 
 ## Datos de los libros
