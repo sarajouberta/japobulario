@@ -488,6 +488,30 @@ Al abrirla en el móvil se veía todo muy pequeño.
 - Queda una cosa vista en las capturas: la tarjeta de kanji es muy alta, porque la parte de atrás
   tiene muchos ejemplos y las dos caras miden lo mismo; en el móvil el kanji queda a media altura.
 
+## 2026-10-15 - App instalable y pantalla de espera
+
+En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la primera carga tarda
+30-50 s con la página en blanco.
+
+- **Instalable en el móvil (PWA):** manifiesto (`public/manifest.webmanifest`) con nombre, colores
+  e iconos, para "Añadir a pantalla de inicio". Se abre sin la barra del navegador, como una app.
+  Los iconos (`public/icons/`) son el mismo diseño que el de la pestaña (語 blanco sobre gris), en
+  PNG: 192 y 512 px, uno "maskable" con el kanji más pequeño (Android lo recorta en círculo u otras
+  formas) y uno de 180 px para el iPhone. Se generaron con capturas de Chrome headless.
+- **Pantalla de espera:** un service worker (`public/sw.js`) guarda la pantalla `/waking` (logo y
+  "Despertando...") la primera vez que se visita la web. Desde la segunda, si al abrir una página
+  el servidor no contesta en 4 s, enseña esa pantalla, que pregunta a `/ping` cada 2 s y recarga
+  la página pedida en cuanto el servidor responde.
+- Para saber que una respuesta es de la app (y no, por ejemplo, un aviso de Render mientras
+  despierta), todas llevan la cabecera `X-Japobulario`.
+- La pantalla de espera no puede depender del servidor, así que lleva los estilos dentro y los
+  textos de los dos idiomas (claves `waking.*`); elige el de la cookie `lang` al enseñarse.
+- Justo después de despertar, el service worker espera a la página sin límite de tiempo: si no,
+  una página lenta (más de 4 s) volvería a la espera una y otra vez.
+- Probado en Chrome headless con un proxy que retiene las peticiones unos segundos, como Render
+  dormido: a los 4 s sale la pantalla de espera, en español o en inglés según la cookie, y la
+  página entra sola cuando el servidor contesta.
+
 ### Pendiente
 
 - **Importar las tablas de los libros** (`extras`).
@@ -501,9 +525,5 @@ Al abrirla en el móvil se veía todo muy pequeño.
   usado: los libros de vocabulario (はじめての日本語能力試験 N5単語1000 y N4単語1500), el Basic
   Kanji Book Vol. 1 (基本漢字500) y de dónde salen los niveles y significados añadidos (jisho.org,
   jlptsensei.com, los escritos en la transcripción).
-- **App instalable (PWA) con pantalla de espera:** manifiesto con el logo para "Añadir a pantalla
-  de inicio" en el móvil, y un service worker que, si el servidor de Render está dormido (tarda
-  30-50 s en despertar), enseñe una pantalla con el logo y "Despertando..." y entre sola cuando
-  responda. Funciona desde la segunda visita.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
