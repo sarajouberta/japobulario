@@ -9,3 +9,9 @@
 body {
     background-color: var(--page-background);
 }
+
+/* títulos principales de cada página con la fuente de pincel del menú y de la portada (Yuji Syuku,
+   cargada en el layout) */
+h1 {
+    font-family: 'Yuji Syuku', serif;
+}
