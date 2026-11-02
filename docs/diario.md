@@ -604,6 +604,10 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   regla para todos los `h1` en `common.css`.
 - **Sin aviso al terminar:** se quitó el texto "Has terminado. Vuelves a la primera tarjeta.". En la
   última tarjeta, "Siguiente" sigue volviendo a la primera, sin decir nada.
+- **"Nueva tarjeta" fuera del menú:** el formulario se abre desde Flashcards, con el botón "Añadir
+  nueva flashcard" (antes un enlace azul que apenas se veía; ahora un botón como "Todo el N5"), o
+  desde el botón 新 de la portada, que se queda. Sin esa opción, el menú del ordenador cabe en una
+  línea.
 
 ### Pendiente
 
@@ -616,7 +620,9 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Más opciones al elegir qué estudiar:**
   - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
-- **Revisar el formulario de nueva tarjeta:** no se ajusta a lo que tienen ahora las tarjetas.
+- **Revisar el formulario de nueva tarjeta** (2026-11-02: la usuaria lo está pensando; falta decidir
+  qué campos pide cada tipo, si los secundarios van en una parte desplegable "Más datos" y si la
+  tarjeta "libre" se hace ya o más adelante): no se ajusta a lo que tienen ahora las tarjetas.
   Solo pide tipo, kanji, lecturas kun/on o palabra, significado, categoría y nivel. Las de los
   libros tienen además lectura en kana (`reading`, en las de vocabulario), ejemplos con su
   traducción, notas, nº de trazos (kanji) y palabras relacionadas, y la vista de estudio los usa.
