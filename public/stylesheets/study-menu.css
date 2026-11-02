@@ -101,6 +101,12 @@
     border-bottom: 1px solid #eee;
 }
 
+/* el título del capítulo y su traducción, centrados */
+.chapter-head h3,
+.chapter-head > .translation {
+    text-align: center;
+}
+
 .chapter-head h3 {
     margin: 0;
     font-size: 1.15em;
@@ -117,16 +123,16 @@
     flex: 1;
 }
 
-/* los títulos son enlaces (estudiar ese grupo), pero se leen como títulos: sin azul ni subrayado */
+/* los títulos son los enlaces para empezar a estudiar ese grupo: en el rosa de los enlaces de la
+   portada, para que se vea que se pueden pulsar, y subrayados al pasar por encima */
 .chapter-head h3 a,
 .row-title a {
-    color: #333;
+    color: #c2185b;
     text-decoration: none;
 }
 
 .chapter-head h3 a:hover,
 .row-title a:hover {
-    color: #c2185b;
     text-decoration: underline;
 }
 
