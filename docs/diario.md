@@ -563,6 +563,21 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   primera tarjeta." (`study.finished`, clase `.notice` en `flashcard.css`). El aviso se quita
   al pasar a otra tarjeta o al barajar. Probado con node y un documento simulado (3 tarjetas:
   1 -> 2 -> 3 -> 1 con aviso -> 2 sin aviso).
+- **Botón "Aprendida" más claro:** ahora dice siempre lo que hace al pulsarlo: "Marcar aprendida"
+  o, si la tarjeta ya lo está, "Quitar marca" (claves `study.markLearned` y `study.unmarkLearned`),
+  y en ese caso sale en gris. Cómo está la tarjeta se ve aparte: una etiqueta verde "Aprendida"
+  junto al contador (`#learned-state`, `study.learned`). En el móvil (hasta 700 px) los botones de
+  la barra tienen menos relleno a los lados, para que "Anterior", "Marcar aprendida" y "Siguiente"
+  quepan en una línea (comprobado con capturas de Chrome a 390 px, en los dos idiomas).
+- **Bucle de la pantalla de espera en local:** al abrir `localhost:3000/` se quedaba en
+  "Despertando...", recargando sin parar (`GET /ping` y `GET /` en bucle en el log). Causa: `/`
+  redirige a `/japobulario`, y el service worker recibe las redirecciones de las navegaciones como
+  "opaqueredirect", sin cabeceras que leer. Como no veía `X-Japobulario`, creía que la respuesta no
+  era de la app y volvía a la espera. Pasaría igual en Render al entrar sin sesión (`/japobulario`
+  redirige al login). Arreglo en `public/sw.js`: las redirecciones se dan por buenas. Reproducido y
+  comprobado con Chrome headless (dos visitas con el mismo perfil, la segunda ya con el service
+  worker). El navegador que ya estaba en el bucle no se arregló solo: mientras dura, no vuelve a
+  pedir el `sw.js`. Hubo que forzar la recarga (Ctrl+Shift+R) o quitar el service worker a mano.
 
 ### Pendiente
 
@@ -573,11 +588,6 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Más opciones al elegir qué estudiar:**
   - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
-- **Botón "Aprendida" del modo estudio:** su funcionamiento es un poco confuso (visto al
-  probar la app en el móvil, 2026-10-16). Cuando la tarjeta ya está marcada, el botón pone
-  "OK Aprendida", que dice cómo está la tarjeta pero no qué pasa si se pulsa (la desmarca). Hay que
-  dejar claro que sirve para quitar la marca: por ejemplo, que el botón diga siempre la acción
-  ("Marcar como aprendida" / "Quitar de aprendidas"), o que sea una casilla.
 - **Marcar o desmarcar como aprendido un capítulo o una sección enteros** de una vez.
 - **Revisar el formulario de nueva tarjeta:** no se ajusta a lo que tienen ahora las tarjetas.
   Solo pide tipo, kanji, lecturas kun/on o palabra, significado, categoría y nivel. Las de los
