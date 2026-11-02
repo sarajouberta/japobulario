@@ -48,8 +48,11 @@ self.addEventListener('fetch', (event) => {
 let wakingShownAt = 0;
 
 async function openPage(request) {
+  //una redirección (p. ej. / -> /japobulario, o al login sin sesión) llega como "opaqueredirect", sin
+  //cabeceras que leer: se da por buena, porque si no se volvería a la espera una y otra vez
   const network = fetch(request)
-    .then((response) => (response.headers.has('X-Japobulario') ? response : null))
+    .then((response) => (response.type === 'opaqueredirect' || response.headers.has('X-Japobulario')
+      ? response : null))
     .catch(() => null);  //sin conexión: también la pantalla de espera, que entra cuando vuelva
 
   //justo después de la pantalla de espera el servidor ya contestó a /ping: se le espera lo que haga
