@@ -578,9 +578,37 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   comprobado con Chrome headless (dos visitas con el mismo perfil, la segunda ya con el service
   worker). El navegador que ya estaba en el bucle no se arregló solo: mientras dura, no vuelve a
   pedir el `sw.js`. Hubo que forzar la recarga (Ctrl+Shift+R) o quitar el service worker a mano.
+- **Marcar o desmarcar un grupo entero:** en la pantalla de elegir qué estudiar, cada capítulo,
+  sección, lección de kanji y categoría propia tiene un botón "Marcar aprendidas" (o "Quitar marcas",
+  en gris, si ya están todas aprendidas). Pide confirmación ("¿Marcar como aprendidas estas 102
+  tarjetas?") y hace `POST /japobulario/study/learned-group` con los mismos parámetros que el enlace
+  del grupo. El filtro de esos parámetros se sacó a `selectionFilter()` (`routes/study.js`), que
+  usan también el modo estudio y la ruta nueva. La ruta solo acepta un grupo concreto (nunca todas
+  las tarjetas ni un nivel entero) y vuelve a la pantalla, al ancla del grupo, para no subir al
+  principio de la página. Un grupo a medias solo tiene "Marcar aprendidas", para que cada fila lleve
+  un solo botón. Para quitar la marca a unas pocas tarjetas se usa el modo estudio.
+- **Nuevo diseño de la pantalla de elegir qué estudiar** (`study-menu.css`): cada capítulo es una
+  ficha blanca con borde y sombra, como los botones de la portada, con el título centrado y su
+  traducción debajo. Hay barras de progreso verdes (`fragments/progress.twig`) en los capítulos,
+  las secciones, los niveles y el total. "Todo el N5" y "Todo el vocabulario..." son botones, y N5
+  y N4 salen con la fuente de pincel. En el móvil, el título de cada fila ocupa toda la línea, y la
+  barra y el botón van debajo.
+- Al probarla, no se entendía dónde pulsar para estudiar: los títulos sin azul ni subrayado no
+  parecían enlaces, y "Marcar todas" sonaba a seleccionar. Ahora los títulos salen en el rosa de
+  los enlaces de la portada, el texto de arriba dice "Pulsa un nivel, un capítulo o una sección para
+  empezar a estudiarlo", y el botón se llama "Marcar aprendidas".
+- Comprobado con un usuario y una sesión de prueba en la bdd local (borrados al terminar): capturas
+  a 1000 y 390 px, marcar y desmarcar una sección (0/15 -> 15/15 -> 0/15) y una categoría con
+  comillas, y que el modo estudio abre las mismas tarjetas que dice el índice.
+- **Títulos de las páginas con la fuente de pincel** de "Japobulario" en la portada (Yuji Syuku): una
+  regla para todos los `h1` en `common.css`.
+- **Sin aviso al terminar:** se quitó el texto "Has terminado. Vuelves a la primera tarjeta.". En la
+  última tarjeta, "Siguiente" sigue volviendo a la primera, sin decir nada.
 
 ### Pendiente
 
+- **Diseño de la página de estudio** (`views/study/study.twig`, `flashcard.css`), donde salen las
+  tarjetas: darle algo de diseño o decoración, como se hizo con la pantalla de elegir qué estudiar.
 - **Importar las tablas de los libros** (`extras`).
 - **Sección de estudio para los contadores y otros grupos de palabras** que no son vocabulario
   general (contadores, meses y días, prefecturas, 敬語...): son tablas del libro y se estudian como
@@ -588,7 +616,6 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Más opciones al elegir qué estudiar:**
   - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
-- **Marcar o desmarcar como aprendido un capítulo o una sección enteros** de una vez.
 - **Revisar el formulario de nueva tarjeta:** no se ajusta a lo que tienen ahora las tarjetas.
   Solo pide tipo, kanji, lecturas kun/on o palabra, significado, categoría y nivel. Las de los
   libros tienen además lectura en kana (`reading`, en las de vocabulario), ejemplos con su
