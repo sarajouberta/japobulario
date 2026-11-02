@@ -131,11 +131,11 @@
   "about": {
     "title": "What's Japobulario?",
     "intro": "Japobulario is a web app to study Japanese with flashcards: the vocabulary and kanji of the JLPT (Japanese-Language Proficiency Test) N5 and N4 levels.",
-    "forWhom": "It is being made by Saritastar to prepare for the JLPT N4 and to share with fellow students. Everyone logs in with their Google account and has their own cards and progress.",
-    "contentsTitle": "What's inside",
+    "forWhom": "It is being developed by Saritastar to prepare for the JLPT N4, and also to share with fellow students. Everyone logs in with their Google account and has their own cards and progress.",
+    "contentsTitle": "What it contains",
     "contentsVocabulary": "The 1940 words from two vocabulary books (N5 and N4), by chapters and sections, with examples and furigana.",
     "contentsKanji": "The 251 kanji from Basic Kanji Book Vol. 1, by lessons, with their readings and example words.",
-    "contentsOwn": "Your own vocabulary or kanji cards, which only you can see.",
+    "contentsOwn": "The option to create your own vocabulary or kanji cards, which only you can see.",
     "contentsLearned": "Marking the cards you already know and studying only the ones left.",
     "english": "The book content (meanings and examples) is in English, as in the books. Only the interface is translated.",
     "booksTitle": "Bibliography",
@@ -144,7 +144,7 @@
       "vocabularyN4": "N4 level vocabulary (894 words).",
       "kanji": "The kanji from lessons 1 to 22 (251 kanji)."
     },
-    "rights": "The book content belongs to its authors and publishers. It has been transcribed to study with it.",
+    "rights": "The book content belongs to its authors and publishers. It has been transcribed to study with it away from home, but the printed editions have been bought.",
     "otherSourcesTitle": "Other sources",
     "otherSourcesLevels": "The JLPT level of the first kanji was checked on jisho.org and jlptsensei.com, only as a reference: in the app, all the kanji from the book are N4.",
     "otherSourcesWritten": "Some English meanings were written during the transcription, because the book only shows them with a picture or a table (14 N5 words) or they are covered in the scan (examples of 七 and 年). The notes of each card say so.",
