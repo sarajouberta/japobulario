@@ -1,0 +1,8 @@
+{#
+Progreso de un grupo de tarjetas: barra verde y "x / n" (con long, "x / n aprendidas").
+Recibe: learnedCount, count y, opcional, long.
+#}
+<span class="progress">
+    <span class="progress-bar"><span style="width: {{ count ? (100 * learnedCount / count)|round(0, 'floor') : 0 }}%"></span></span>
+    <span class="progress-text">{{ long ? __('study.progress', {'learned': learnedCount, 'count': count}) : learnedCount ~ ' / ' ~ count }}</span>
+</span>

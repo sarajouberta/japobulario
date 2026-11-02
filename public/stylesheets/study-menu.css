@@ -6,53 +6,23 @@
     padding: 0 16px;
 }
 
-/* un nivel al lado del otro si cabe; si no, uno debajo de otro */
-.levels {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-}
-
-.level {
-    flex: 1 1 300px;  /* en el móvil (unos 360px de ancho) cabe entero, sin salirse */
-}
-
-.level h3 {
-    margin-bottom: 4px;
-}
-
-.level ul {
-    margin-top: 0;
-}
-
-.level li,
-.lessons li {
-    margin: 4px 0;
-}
-
-.all {
-    font-weight: bold;
-}
-
-.info {
-    color: #777;
-    font-size: 0.9em;
-}
-
-/* traducción al inglés del título del libro: al lado del original, en gris y más pequeña, para que
-   se lea como un apoyo y no se confunda con el título ni con el número de tarjetas */
-.translation {
+.intro {
     color: #555;
-    font-size: 0.85em;
-    font-weight: normal;
 }
 
 /* selector de qué tarjetas abrir (todas / sin aprender / aprendidas): la opción elegida, resaltada */
+.learned-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
 .learned-filter a {
-    margin-left: 8px;
     padding: 2px 10px;
     border: 1px solid #ccc;
     border-radius: 12px;
+    background-color: #fff;
     color: #333;
     text-decoration: none;
 }
@@ -63,7 +33,199 @@
     color: #f7f7f7;
 }
 
-/* el título del capítulo es un enlace (estudiar el capítulo entero), pero se sigue leyendo como título */
-.level h3 a {
-    color: inherit;
+/* "Todo el vocabulario", "Todo el N5"...: un botón, como los de la portada, con su progreso al lado */
+.all-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin: 12px 0 20px;
+}
+
+.all {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 3px 0 #333;  /* sombra dura debajo: parece un botón que se puede pulsar */
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.all:hover,
+.all:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #333;
+}
+
+.all-row .progress {
+    flex: 1 1 160px;
+}
+
+/* un nivel al lado del otro si cabe; si no, uno debajo de otro */
+.levels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.level {
+    flex: 1 1 340px;
+    min-width: 0;  /* que los títulos largos no lo ensanchen más de la pantalla */
+}
+
+/* el nivel (N5, N4) con la fuente de pincel del menú (Yuji Syuku, cargada en el layout) */
+.level h2 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 2em;
+    margin: 8px 0 0;
+}
+
+/* cada capítulo (y la lista de lecciones o de categorías) es una ficha blanca */
+.chapter,
+.group.card {
+    margin: 0 0 20px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 3px 0 #333;
+    overflow: hidden;
+}
+
+.chapter-head {
+    padding: 12px 16px;
+    background-color: #fff6f9;  /* un poco del rosa de la página, para separarla de las secciones */
+    border-bottom: 1px solid #eee;
+}
+
+.chapter-head h3 {
+    margin: 0;
+    font-size: 1.15em;
+}
+
+.chapter-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.chapter-progress .progress {
+    flex: 1;
+}
+
+/* los títulos son enlaces (estudiar ese grupo), pero se leen como títulos: sin azul ni subrayado */
+.chapter-head h3 a,
+.row-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.chapter-head h3 a:hover,
+.row-title a:hover {
+    color: #c2185b;
+    text-decoration: underline;
+}
+
+/* traducción al inglés del título del libro: debajo del original, en gris y más pequeña, para que
+   se lea como un apoyo y no se confunda con el título ni con el número de tarjetas */
+.translation {
+    display: block;
+    color: #777;
+    font-size: 0.85em;
+    font-weight: normal;
+}
+
+/* las secciones (o lecciones, o categorías): una fila cada una, con el título, el progreso y el botón */
+.group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 110px auto;
+    align-items: center;
+    gap: 4px 12px;
+    padding: 8px 16px;
+    border-top: 1px solid #eee;
+}
+
+.row:first-child {
+    border-top: none;
+}
+
+/* progreso: barra verde (el verde de "Aprendida" del modo estudio) y "x / n" */
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress-bar {
+    flex: 1;
+    min-width: 50px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e6e6e6;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #2e7d32;
+}
+
+.progress-text {
+    color: #777;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+/* botón de marcar o desmarcar el grupo entero: pequeño, para que no quite protagonismo al título */
+.mark-group {
+    margin: 0;
+}
+
+.mark-group button {
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.8em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.mark-group button:hover {
+    background-color: #f1f1f1;
+}
+
+/* "Desmarcar todas" (el grupo ya está aprendido): en gris, como "Quitar marca" en el modo estudio */
+.mark-group button.is-learned {
+    border-color: #757575;
+    background-color: #757575;
+    color: #fff;
+}
+
+.info {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* en el móvil, el título de cada fila ocupa todo el ancho, y el progreso y el botón van debajo */
+@media (max-width: 500px) {
+    .row {
+        grid-template-columns: 1fr auto;
+    }
+
+    .row-title {
+        grid-column: 1 / -1;
+    }
 }

@@ -42,6 +42,32 @@ function sourceFilter(req, source) {
     return visibleFilter(req);
 }
 
+//filtro de un grupo de tarjetas a partir de sus parámetros (q: req.query en el modo estudio, req.body al
+//marcar un grupo entero):
+//  vocabulario de los libros: source=book&level=N4&chapter=2&section=1
+//  kanji del libro: source=book&chapter=3 (chapter = lección; level, opcional, es el nivel JLPT)
+//  propias: source=own&level=N5&category=verbos (category vacía = tarjetas sin categoría)
+//Devuelve también source y category (null si no vienen), para el texto de lo que se estudia.
+function selectionFilter(req, mode, q) {
+    const filter = { ...studyFilter(mode) };
+    const source = ['book', 'own'].includes(q.source) ? q.source : null;
+    Object.assign(filter, sourceFilter(req, source));  //sin source: libros + propias del usuario
+
+    const chapter = parseInt(q.chapter, 10);
+    const section = parseInt(q.section, 10);
+    if ((mode === 'kanji' ? KANJI_LEVELS : LEVELS).includes(q.level)) filter.level = q.level;
+    if (mode === 'kanji') {
+        //en los kanji, la lección no depende del nivel
+        if (Number.isInteger(chapter)) filter.chapter = chapter;
+    } else if (filter.level && Number.isInteger(chapter)) {
+        filter.chapter = chapter;
+        if (Number.isInteger(section)) filter.section = section;
+    }
+    const category = source === 'own' && typeof q.category === 'string' ? q.category : null;
+    if (category !== null) filter.category = category === '' ? { $in: [null, ''] } : category;
+    return { filter, source, category };
+}
+
 //valor de ?learned= (yes | no), o null si no viene o no es válido (= todas):
 function learnedParam(req) {
     return LEARNED_VALUES.includes(req.query.learned) ? req.query.learned : null;
@@ -212,9 +238,11 @@ router.get('/', async (req, res) => {
         //modo estudio de este tipo, y el filtro que se añade a sus enlaces (vacío si son todas):
         const studyUrl = `/japobulario/study/${mode}`;
         const learnedQuery = learned ? `&learned=${learned}` : '';
+        //esta misma pantalla: a ella vuelven los botones de marcar un grupo entero
+        const indexUrl = studyIndexUrl(mode, tab, learned);
 
         res.render('study/index.twig', {
-            mode, tab, levels, kanjiBook, bookAll, ownLevels, bookTotal, ownTotal, learned, learnedQuery, links, studyUrl,
+            mode, tab, levels, kanjiBook, bookAll, ownLevels, bookTotal, ownTotal, learned, learnedQuery, links, studyUrl, indexUrl,
         });
     } catch (error) {
         console.error('Error en /study:', error);
@@ -240,27 +268,8 @@ router.get('/:mode', async (req, res, next) => {
     const mode = req.params.mode;
     if (!MODES.includes(mode)) return next();  //no es un modo de estudio: sigue buscando (404)
     try {
-        //filtros opcionales desde la pantalla de elección:
-        //  vocabulario de los libros: ?source=book&level=N4&chapter=2&section=1
-        //  kanji del libro: ?source=book&chapter=3 (chapter = lección; level, opcional, es el nivel JLPT)
-        //  propias: ?source=own&level=N5&category=verbos
-        const filter = { ...studyFilter(mode) };
-        const source = ['book', 'own'].includes(req.query.source) ? req.query.source : null;
-        Object.assign(filter, sourceFilter(req, source));  //sin source: libros + propias del usuario
-
-        const chapter = parseInt(req.query.chapter, 10);
-        const section = parseInt(req.query.section, 10);
-        if ((mode === 'kanji' ? KANJI_LEVELS : LEVELS).includes(req.query.level)) filter.level = req.query.level;
-        if (mode === 'kanji') {
-            //en los kanji, la lección no depende del nivel
-            if (Number.isInteger(chapter)) filter.chapter = chapter;
-        } else if (filter.level && Number.isInteger(chapter)) {
-            filter.chapter = chapter;
-            if (Number.isInteger(section)) filter.section = section;
-        }
-        //categoría de las propias (vacía = tarjetas sin categoría):
-        const category = source === 'own' && typeof req.query.category === 'string' ? req.query.category : null;
-        if (category !== null) filter.category = category === '' ? { $in: [null, ''] } : category;
+        //filtros opcionales desde la pantalla de elección (ver selectionFilter):
+        const { filter, source, category } = selectionFilter(req, mode, req.query);
 
         //orden del libro (vocabulario: primero N5, después N4, y por número de palabra; kanji: por número);
         //las propias, por fecha de creación.
@@ -320,6 +329,42 @@ router.post('/learned/:id', async (req, res) => {
     } catch (error) {
         console.error('Error en /study/learned:', error);
         res.status(500).json({ error: req.__('errors.saveLearned') });
+    }
+});
+
+
+//marcar (learned=1) o desmarcar (learned=0) de una vez todas las tarjetas de un capítulo, una sección,
+//una lección de kanji o una categoría propia. Lo llaman los formularios de la pantalla de elegir qué
+//estudiar, con los mismos parámetros que sus enlaces (selectionFilter), y vuelve a ella (back).
+router.post('/learned-group', async (req, res) => {
+    const mode = req.body.mode;
+    //solo se vuelve a la pantalla de estudio (nunca a otra web), con el ancla del grupo
+    const back = typeof req.body.back === 'string' && req.body.back.startsWith('/japobulario/study')
+        ? req.body.back : '/japobulario/study';
+    try {
+        if (!MODES.includes(mode) || !['0', '1'].includes(req.body.learned)) {
+            return res.status(400).send(req.__('errors.invalidRequest'));
+        }
+        const { filter, source } = selectionFilter(req, mode, req.body);
+        //tiene que ser un grupo concreto: nunca todas las tarjetas, ni un nivel entero por error
+        const isGroup = source === 'own' ? 'category' in filter && filter.level : source === 'book' && filter.chapter;
+        if (!isGroup) return res.status(400).send(req.__('errors.invalidRequest'));
+
+        const user = req.session.user.id;
+        const ids = (await Flashcard.find(filter, { _id: 1 }).lean()).map(d => d._id);
+        if (ids.length === 0) return res.redirect(back);
+        if (req.body.learned === '1') {
+            //upsert: las que ya estaban marcadas no se duplican
+            await Learned.bulkWrite(ids.map(flashcard => ({
+                updateOne: { filter: { user, flashcard }, update: { $setOnInsert: { user, flashcard } }, upsert: true },
+            })));
+        } else {
+            await Learned.deleteMany({ user, flashcard: { $in: ids } });
+        }
+        res.redirect(back);
+    } catch (error) {
+        console.error('Error en /study/learned-group:', error);
+        res.status(500).send(req.__('errors.saveLearned'));
     }
 });
 

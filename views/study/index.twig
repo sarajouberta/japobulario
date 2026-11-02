@@ -10,6 +10,9 @@
 {#
 Pantalla para elegir qué estudiar, igual para vocabulario y kanji (mode). Los enlaces de las pestañas
 y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo estudio de este tipo.
+Cada capítulo, sección, lección o categoría lleva su progreso (fragments/progress) y un botón para
+marcarlo o desmarcarlo entero (fragments/mark-group), que vuelve aquí (indexUrl) a su ancla (id).
+Los enlaces van en una sola línea: si no, el espacio de dentro del <a> también sale subrayado.
 #}
 {% block body %}
     <div class="study-menu">
@@ -23,7 +26,7 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
 
         <!--qué tarjetas se abren al pulsar un enlace: todas, solo las que faltan por aprender o solo las aprendidas-->
         <p class="learned-filter">
-            {{ __('study.learnedFilter') }}
+            <span>{{ __('study.learnedFilter') }}</span>
             <a href="{{ links.all }}" class="{{ learned ? '' : 'active' }}">{{ __('study.filterAll') }}</a>
             <a href="{{ links.notLearned }}" class="{{ learned == 'no' ? 'active' : '' }}">{{ __('study.filterNotLearned') }}</a>
             <a href="{{ links.onlyLearned }}" class="{{ learned == 'yes' ? 'active' : '' }}">{{ __('study.filterLearned') }}</a>
@@ -31,43 +34,40 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
 
         {% if tab == 'book' and mode == 'kanji' %}
             {#kanji del libro, por lecciones (el título de la lección en original y al lado su traducción)#}
-            <p>{{ __('study.chooseKanjiBook') }}</p>
+            <p class="intro">{{ __('study.chooseKanjiBook') }}</p>
 
             {% if kanjiBook.total == 0 %}
                 <p class="info">{{ __('study.noBookKanji') }} <code>npm run import:kanji</code>.</p>
             {% elseif kanjiBook.matching == 0 %}
                 <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
             {% else %}
-                <p>
-                    <a class="all" href="{{ studyUrl }}?source=book{{ learnedQuery }}">
-                        {{ __('study.allKanjiBook', {'count': kanjiBook.total}) }}
-                    </a>
-                    <span class="info">· {{ __('study.progress', {'learned': kanjiBook.learned, 'count': kanjiBook.total}) }}</span>
-                </p>
-                <ul class="lessons">
+                <div class="all-row">
+                    <a class="all" href="{{ studyUrl }}?source=book{{ learnedQuery }}">{{ __('study.allKanjiBook', {'count': kanjiBook.total}) }}</a>
+                    {% include 'fragments/progress.twig' with {'learnedCount': kanjiBook.learned, 'count': kanjiBook.total, 'long': true} %}
+                </div>
+                <ul class="group card">
                     {% for lesson in kanjiBook.lessons %}
-                        <li>
-                            <a href="{{ studyUrl }}?source=book&chapter={{ lesson.lesson }}{{ learnedQuery }}">
-                                {{ __('study.lesson', {'number': lesson.lesson}) }} · {{ lesson.title }}
-                            </a>
-                            {% if lesson.titleEn %}<span class="translation">{{ lesson.titleEn }}</span>{% endif %}
-                            <span class="info">· {{ __('study.progress', {'learned': lesson.learned, 'count': lesson.count}) }}</span>
+                        <li class="row" id="lesson-{{ lesson.lesson }}">
+                            <div class="row-title">
+                                <a href="{{ studyUrl }}?source=book&chapter={{ lesson.lesson }}{{ learnedQuery }}">{{ __('study.lesson', {'number': lesson.lesson}) }} · {{ lesson.title }}</a>
+                                {% if lesson.titleEn %}<span class="translation">{{ lesson.titleEn }}</span>{% endif %}
+                            </div>
+                            {% include 'fragments/progress.twig' with {'learnedCount': lesson.learned, 'count': lesson.count} %}
+                            {% include 'fragments/mark-group.twig' with {'fields': {'source': 'book', 'chapter': lesson.lesson}, 'count': lesson.count, 'learnedCount': lesson.learned, 'anchor': 'lesson-' ~ lesson.lesson} %}
                         </li>
                     {% endfor %}
                 </ul>
             {% endif %}
 
         {% elseif tab == 'book' %}
-            <p>{{ __('study.chooseBook') }}</p>
+            <p class="intro">{{ __('study.chooseBook') }}</p>
 
             {#los dos niveles juntos (con el filtro de aprendidas, solo las que lo cumplen)#}
             {% if bookAll.matching > 0 %}
-                <p>
-                    <a class="all" href="{{ studyUrl }}?source=book{{ learnedQuery }}">
-                        {{ __('study.allBooks', {'count': bookAll.total}) }}
-                    </a>
-                    <span class="info">· {{ __('study.progress', {'learned': bookAll.learned, 'count': bookAll.total}) }}</span>
-                </p>
+                <div class="all-row">
+                    <a class="all" href="{{ studyUrl }}?source=book{{ learnedQuery }}">{{ __('study.allBooks', {'count': bookAll.total}) }}</a>
+                    {% include 'fragments/progress.twig' with {'learnedCount': bookAll.learned, 'count': bookAll.total, 'long': true} %}
+                </div>
             {% endif %}
 
             <div class="levels">
@@ -78,34 +78,38 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
                         {% if level.total > 0 and level.matching == 0 %}
                             <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
                         {% else %}
-                        <p>
-                            <a class="all" href="{{ studyUrl }}?source=book&level={{ level.level }}{{ learnedQuery }}">
-                                {{ __('study.allLevel', {'level': level.level, 'count': level.total}) }}
-                            </a>
-                            <span class="info">· {{ __('study.progress', {'learned': level.learned, 'count': level.total}) }}</span>
-                        </p>
+                        <div class="all-row">
+                            <a class="all" href="{{ studyUrl }}?source=book&level={{ level.level }}{{ learnedQuery }}">{{ __('study.allLevel', {'level': level.level, 'count': level.total}) }}</a>
+                            {% include 'fragments/progress.twig' with {'learnedCount': level.learned, 'count': level.total, 'long': true} %}
+                        </div>
 
                         {% for chapter in level.chapters %}
-                            {#el título tal cual viene del libro; al lado, más pequeña, su traducción#}
-                            {#el título del capítulo es también el enlace para estudiarlo entero#}
-                            <h3>
-                                <a href="{{ studyUrl }}?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}{{ learnedQuery }}">
-                                    {{ __('study.chapter', {'number': chapter.chapter}) }} · {{ chapter.chapterTitle }}
-                                </a>
-                                {% if chapter.chapterTitleEn %}<span class="translation">{{ chapter.chapterTitleEn }}</span>{% endif %}
-                                <span class="info">· {{ __('study.progress', {'learned': chapter.learned, 'count': chapter.count}) }}</span>
-                            </h3>
-                            <ul>
-                                {% for section in chapter.sections %}
-                                    <li>
-                                        <a href="{{ studyUrl }}?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}{{ learnedQuery }}">
-                                            {{ section.section }}. {{ section.sectionTitle }}
-                                        </a>
-                                        {% if section.category %}<span class="translation">{{ section.category }}</span>{% endif %}
-                                        <span class="info">· {{ __('study.progress', {'learned': section.learned, 'count': section.count}) }}</span>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                            {% set chapterId = level.level ~ '-' ~ chapter.chapter %}
+                            <article class="chapter" id="{{ chapterId }}">
+                                {#el título tal cual viene del libro, y debajo, más pequeña, su traducción;
+                                  el título es también el enlace para estudiar el capítulo entero#}
+                                <header class="chapter-head">
+                                    <h3><a href="{{ studyUrl }}?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}{{ learnedQuery }}">{{ __('study.chapter', {'number': chapter.chapter}) }} · {{ chapter.chapterTitle }}</a></h3>
+                                    {% if chapter.chapterTitleEn %}<span class="translation">{{ chapter.chapterTitleEn }}</span>{% endif %}
+                                    <div class="chapter-progress">
+                                        {% include 'fragments/progress.twig' with {'learnedCount': chapter.learned, 'count': chapter.count, 'long': true} %}
+                                        {% include 'fragments/mark-group.twig' with {'fields': {'source': 'book', 'level': level.level, 'chapter': chapter.chapter}, 'count': chapter.count, 'learnedCount': chapter.learned, 'anchor': chapterId} %}
+                                    </div>
+                                </header>
+                                <ul class="group">
+                                    {% for section in chapter.sections %}
+                                        {% set sectionId = chapterId ~ '-' ~ section.section %}
+                                        <li class="row" id="{{ sectionId }}">
+                                            <div class="row-title">
+                                                <a href="{{ studyUrl }}?source=book&level={{ level.level }}&chapter={{ chapter.chapter }}&section={{ section.section }}{{ learnedQuery }}">{{ section.section }}. {{ section.sectionTitle }}</a>
+                                                {% if section.category %}<span class="translation">{{ section.category }}</span>{% endif %}
+                                            </div>
+                                            {% include 'fragments/progress.twig' with {'learnedCount': section.learned, 'count': section.count} %}
+                                            {% include 'fragments/mark-group.twig' with {'fields': {'source': 'book', 'level': level.level, 'chapter': chapter.chapter, 'section': section.section}, 'count': section.count, 'learnedCount': section.learned, 'anchor': sectionId} %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </article>
                         {% else %}
                             <p class="info">{{ __('study.noBookVocabulary') }} <code>node seeds/import-book-vocabulary.js</code>.</p>
                         {% endfor %}
@@ -115,7 +119,7 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
             </div>
 
         {% else %}
-            <p>{{ mode == 'kanji' ? __('study.ownIntroKanji') : __('study.ownIntro') }}</p>
+            <p class="intro">{{ mode == 'kanji' ? __('study.ownIntroKanji') : __('study.ownIntro') }}</p>
 
             {% if ownTotal == 0 %}
                 <p class="info">{{ mode == 'kanji' ? __('study.ownNoneKanji') : __('study.ownNone') }} <a href="/japobulario/flashcards/new">{{ __('study.createCard') }}</a></p>
@@ -129,19 +133,19 @@ y del filtro de aprendidas vienen hechos de la ruta (links); studyUrl es el modo
                             {% elseif level.matching == 0 %}
                                 <p class="info">{{ learned == 'yes' ? __('study.noneLearned') : __('study.allLearned') }}</p>
                             {% else %}
-                                <p>
-                                    <a class="all" href="{{ studyUrl }}?source=own&level={{ level.level }}{{ learnedQuery }}">
-                                        {{ __('study.ownAllLevel', {'level': level.level, 'count': level.total}) }}
-                                    </a>
-                                    <span class="info">· {{ __('study.progress', {'learned': level.learned, 'count': level.total}) }}</span>
-                                </p>
-                                <ul>
+                                <div class="all-row">
+                                    <a class="all" href="{{ studyUrl }}?source=own&level={{ level.level }}{{ learnedQuery }}">{{ __('study.ownAllLevel', {'level': level.level, 'count': level.total}) }}</a>
+                                    {% include 'fragments/progress.twig' with {'learnedCount': level.learned, 'count': level.total, 'long': true} %}
+                                </div>
+                                <ul class="group card">
                                     {% for cat in level.categories %}
-                                        <li>
-                                            <a href="{{ studyUrl }}?source=own&level={{ level.level }}&category={{ cat.category|url_encode }}{{ learnedQuery }}">
-                                                {{ cat.category ?: __('study.noCategory') }}
-                                            </a>
-                                            <span class="info">· {{ __('study.progress', {'learned': cat.learned, 'count': cat.count}) }}</span>
+                                        {% set catId = 'own-' ~ level.level ~ '-' ~ loop.index %}
+                                        <li class="row" id="{{ catId }}">
+                                            <div class="row-title">
+                                                <a href="{{ studyUrl }}?source=own&level={{ level.level }}&category={{ cat.category|url_encode }}{{ learnedQuery }}">{{ cat.category ? cat.category|e : __('study.noCategory') }}</a>
+                                            </div>
+                                            {% include 'fragments/progress.twig' with {'learnedCount': cat.learned, 'count': cat.count} %}
+                                            {% include 'fragments/mark-group.twig' with {'fields': {'source': 'own', 'level': level.level, 'category': cat.category}, 'count': cat.count, 'learnedCount': cat.learned, 'anchor': catId} %}
                                         </li>
                                     {% endfor %}
                                 </ul>

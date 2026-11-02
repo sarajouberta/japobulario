@@ -1,0 +1,17 @@
+{#
+Botón para marcar (o desmarcar, si ya están todas aprendidas) todas las tarjetas de un grupo: capítulo,
+sección, lección de kanji o categoría propia. Pide confirmación y hace POST /japobulario/study/learned-group.
+Recibe: fields (los parámetros del grupo, los mismos que su enlace de estudio), count, learnedCount,
+anchor (id del grupo en la página, para volver a él) y, de la vista, mode e indexUrl.
+#}
+{% set allDone = learnedCount == count %}
+<form class="mark-group" method="post" action="/japobulario/study/learned-group" onsubmit="return confirm(this.dataset.confirm)"
+      data-confirm="{{ (allDone ? __('study.confirmUnmark', {'count': count}) : __('study.confirmMark', {'count': count}))|e }}">
+    <input type="hidden" name="mode" value="{{ mode }}">
+    {% for name, value in fields %}
+        <input type="hidden" name="{{ name }}" value="{{ value|e }}">
+    {% endfor %}
+    <input type="hidden" name="learned" value="{{ allDone ? 0 : 1 }}">
+    <input type="hidden" name="back" value="{{ indexUrl }}#{{ anchor }}">
+    <button type="submit" class="{{ allDone ? 'is-learned' : '' }}">{{ allDone ? __('study.unmarkAll') : __('study.markAll') }}</button>
+</form>
