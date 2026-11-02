@@ -41,11 +41,13 @@ La navegación entre tarjetas está en public/javascripts/study.js.
 
     <div class="controls">
         <button onclick="prevCard()">{{ __('study.prev') }}</button>
-        <!--pone o quita la marca de aprendida (los dos textos los usa study.js según el estado)-->
+        <!--pone o quita la marca de aprendida: el texto dice siempre lo que hace al pulsarlo (study.js
+            elige uno de los dos según el estado), y el estado se ve aparte, junto al contador-->
         <button id="learned-button" onclick="toggleLearned()"
-                data-label="{{ __('study.markLearned') }}" data-label-on="{{ __('study.learned') }}"></button>
+                data-label="{{ __('study.markLearned') }}" data-label-on="{{ __('study.unmarkLearned') }}"></button>
         <button onclick="nextCard()">{{ __('study.next') }}</button>
-        <p id="counter"></p>
+        <p><span id="counter"></span>
+            <span id="learned-state" class="learned-state" hidden>{{ __('study.learned') }}</span></p>
         <p id="finished-notice" class="notice" hidden>{{ __('study.finished') }}</p>
         <p id="learned-error" class="error" hidden>{{ __('errors.saveLearned') }}</p>
     </div>

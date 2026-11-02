@@ -74,11 +74,28 @@ button {
     font-size: 1em;
 }
 
-/* botón "Aprendida" cuando la tarjeta ya lo está: en verde, para verlo de un vistazo */
+/* en el móvil, menos relleno a los lados para que los tres botones de la barra quepan en una línea */
+@media (max-width: 700px) {
+    .controls button {
+        padding: 8px 10px;
+    }
+}
+
+/* botón "Quitar marca" (la tarjeta ya está aprendida): en gris, para que se note que está marcada */
 #learned-button.is-learned {
-    background-color: #2e7d32;
-    border: 1px solid #2e7d32;
+    background-color: #757575;
+    border: 1px solid #757575;
     color: #fff;
+}
+
+/* junto al contador, si la tarjeta está aprendida: en verde, para verlo de un vistazo */
+.learned-state {
+    margin-left: 8px;
+    padding: 1px 8px;
+    border-radius: 4px;
+    background-color: #2e7d32;
+    color: #fff;
+    font-size: 0.9em;
 }
 
 /* botón "Barajar", al lado de lo que se está estudiando: más pequeño que los de la barra de abajo,

@@ -20,15 +20,18 @@ function startStudy(flashcards, renderFaces) {
     const counter = document.getElementById('counter');
     const flashcard = document.getElementById('flashcard');
     const learnedButton = document.getElementById('learned-button');
+    const learnedState = document.getElementById('learned-state');
     const learnedError = document.getElementById('learned-error');
     const shuffleButton = document.getElementById('shuffle-button');
     const finishedNotice = document.getElementById('finished-notice');
 
-    //el botón dice si la tarjeta actual está aprendida (los textos vienen traducidos de la vista)
+    //el botón dice lo que hará (marcar o quitar la marca) y, junto al contador, se ve si la tarjeta
+    //actual está aprendida (los textos vienen traducidos de la vista)
     function renderLearned() {
         const learned = cards[currentIndex].learned;
         learnedButton.textContent = learned ? learnedButton.dataset.labelOn : learnedButton.dataset.label;
         learnedButton.classList.toggle('is-learned', learned);
+        learnedState.hidden = !learned;
     }
 
     function renderCard(index) {
