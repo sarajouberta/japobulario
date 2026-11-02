@@ -552,6 +552,18 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   peticiones a `/ping` mientras el servidor "duerme": entra sola en cuanto despierta.
 - Caché del service worker en `japobulario-v3`, para que el móvil guarde la pantalla nueva.
 
+## 2026-11-02 - Texto de "Acerca de" y volver a empezar al terminar
+
+- **Texto de "Acerca de" revisado** por la usuaria (claves `about.*` de `es.json`), y pasado
+  igual a `en.json`: "Está siendo desarrollada por...", "Qué contiene", "Posibilidad de crear
+  tus propias tarjetas..." y, en los derechos, que se transcribió para estudiar fuera de casa y
+  que se han comprado las ediciones en papel.
+- **Volver a la primera tarjeta al terminar:** en la última tarjeta, "Siguiente" ya no se queda
+  parado: vuelve a la primera y, debajo del contador, sale el aviso "Has terminado. Vuelves a la
+  primera tarjeta." (`study.finished`, clase `.notice` en `flashcard.css`). El aviso se quita
+  al pasar a otra tarjeta o al barajar. Probado con node y un documento simulado (3 tarjetas:
+  1 -> 2 -> 3 -> 1 con aviso -> 2 sin aviso).
+
 ### Pendiente
 
 - **Importar las tablas de los libros** (`extras`).
@@ -561,5 +573,29 @@ En el plan gratuito, Render duerme el servidor tras un rato sin visitas y la pri
   las secciones de los capítulos. Depende de importar antes las `extras`.
 - **Más opciones al elegir qué estudiar:**
   - Quizá, poder **juntar secciones de capítulos distintos** y estudiarlas a la vez.
+- **Botón "Aprendida" del modo estudio:** su funcionamiento es un poco confuso (visto al
+  probar la app en el móvil, 2026-10-16). Cuando la tarjeta ya está marcada, el botón pone
+  "OK Aprendida", que dice cómo está la tarjeta pero no qué pasa si se pulsa (la desmarca). Hay que
+  dejar claro que sirve para quitar la marca: por ejemplo, que el botón diga siempre la acción
+  ("Marcar como aprendida" / "Quitar de aprendidas"), o que sea una casilla.
+- **Marcar o desmarcar como aprendido un capítulo o una sección enteros** de una vez.
+- **Revisar el formulario de nueva tarjeta:** no se ajusta a lo que tienen ahora las tarjetas.
+  Solo pide tipo, kanji, lecturas kun/on o palabra, significado, categoría y nivel. Las de los
+  libros tienen además lectura en kana (`reading`, en las de vocabulario), ejemplos con su
+  traducción, notas, nº de trazos (kanji) y palabras relacionadas, y la vista de estudio los usa.
+  - **Dos formularios, uno para kanji y otro para vocabulario:** no se estudian igual. Ahora es
+    uno solo con un selector de tipo que cambia algunos campos (`fragments/form-kanji` y
+    `form-vocabulary`). Kanji: kanji, significado, lecturas kun/on, trazos y palabras de
+    ejemplo. Vocabulario: palabra, lectura en kana, significado, tipo de palabra y frases de
+    ejemplo con traducción.
+  - **Categoría -> "Tema (opcional)":** sirve para agrupar las tarjetas propias al estudiar
+    (pestaña "Mis tarjetas"; sin tema van a "sin categoría"). Cambiarle el nombre para que se
+    entienda y que al escribir sugiera los temas ya usados (`<datalist>`), para no tener
+    "comida" y "Comida" como dos grupos distintos.
+  - Decidir qué campos se piden: con todos, el formulario sería muy largo en el móvil.
+  - Idea (sin decidir): un tercer tipo de tarjeta **"libre"**, para estudiar lo que no encaja en
+    vocabulario ni kanji (gramática, frases hechas...): solo texto por delante y por detrás. Haría
+    falta un tipo nuevo en el modelo (ahora `type` solo admite `kanji` y `vocabulary`) y en el
+    estudio.
 - **Más adelante:** opción de compartir tarjetas con otros usuarios (por ahora son siempre
   privadas).
