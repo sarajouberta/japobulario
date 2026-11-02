@@ -7,6 +7,7 @@ También lleva el botón "Aprendida": cada tarjeta trae card.learned, y al pulsa
 servidor (POST /japobulario/study/learned/:id) para el usuario de la sesión.
 Y el botón "Barajar", que cambia entre el orden en que llegan las tarjetas (el del libro, o el de
 creación en las propias) y uno aleatorio. Se baraja aquí, en el navegador, sin volver a pedir nada.
+En la última tarjeta, "Siguiente" vuelve a la primera y enseña un aviso de que se ha terminado.
  */
 function startStudy(flashcards, renderFaces) {
     let currentIndex = 0;
@@ -21,6 +22,7 @@ function startStudy(flashcards, renderFaces) {
     const learnedButton = document.getElementById('learned-button');
     const learnedError = document.getElementById('learned-error');
     const shuffleButton = document.getElementById('shuffle-button');
+    const finishedNotice = document.getElementById('finished-notice');
 
     //el botón dice si la tarjeta actual está aprendida (los textos vienen traducidos de la vista)
     function renderLearned() {
@@ -35,6 +37,7 @@ function startStudy(flashcards, renderFaces) {
         back.innerHTML = faces.back;      //HTML: significado, lectura, ejemplo...
         counter.textContent = `${index + 1} / ${total}`;
         learnedError.hidden = true;
+        finishedNotice.hidden = true;
         renderLearned();
         //asegurarse de que la carta está "frontal" al cambiar
         flashcard.classList.remove('is-flipped');
@@ -82,11 +85,12 @@ function startStudy(flashcards, renderFaces) {
         currentIndex = 0;
         renderCard(currentIndex);
     }
+    //después de la última se vuelve a empezar, con el aviso (renderCard lo esconde, así que va después)
     function nextCard() {
-        if (currentIndex < total - 1) {
-            currentIndex++;
-            renderCard(currentIndex);
-        }
+        const finished = currentIndex === total - 1;
+        currentIndex = finished ? 0 : currentIndex + 1;
+        renderCard(currentIndex);
+        finishedNotice.hidden = !finished;
     }
     function prevCard() {
         if (currentIndex > 0) {

@@ -46,6 +46,7 @@ La navegación entre tarjetas está en public/javascripts/study.js.
                 data-label="{{ __('study.markLearned') }}" data-label-on="{{ __('study.learned') }}"></button>
         <button onclick="nextCard()">{{ __('study.next') }}</button>
         <p id="counter"></p>
+        <p id="finished-notice" class="notice" hidden>{{ __('study.finished') }}</p>
         <p id="learned-error" class="error" hidden>{{ __('errors.saveLearned') }}</p>
     </div>
     {% endif %}

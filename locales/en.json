@@ -81,6 +81,7 @@
     "noCards": "There are no cards for this selection.",
     "prev": "Previous",
     "next": "Next",
+    "finished": "You have finished. Back to the first card.",
     "chooseBook": "Choose a whole level or a section of the book.",
     "allLevel": "All of {{level}} ({{count}} cards)",
     "chapter": "Chapter {{number}}",
