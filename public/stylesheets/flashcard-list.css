@@ -6,8 +6,25 @@
     padding: 0 16px;
 }
 
+/* "Añadir nueva flashcard": la única entrada al formulario fuera de la portada (no está en el menú),
+   así que es un botón, como los de "Todo el N5" de la pantalla de elegir qué estudiar */
 .add-card {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
     font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 3px 0 #333;  /* sombra dura debajo: parece un botón que se puede pulsar */
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.add-card:hover,
+.add-card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #333;
 }
 
 /* las tarjetas en cuadrícula: tantas columnas como quepan, y una sola en el móvil */
