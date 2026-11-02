@@ -117,12 +117,6 @@ button {
     margin: 4px 0;
 }
 
-/* aviso de que se ha llegado al final y se vuelve a la primera tarjeta */
-.notice {
-    color: #555;
-    margin: 4px 0;
-}
-
 /* el significado: lo primero de la parte de atrás, centrado y algo más grande que el resto, igual
    en todas las tarjetas (las que tienen lectura y las que no) */
 .card-meaning {
